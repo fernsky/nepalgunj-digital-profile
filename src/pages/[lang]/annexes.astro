@@ -14,7 +14,7 @@ const annexItems = getAnnexes();
 <Layout lang={lang} title={t(lang, "nav.annexes")}>
   <section class="relative py-20 overflow-hidden">
     <div class="absolute inset-0" style="background:linear-gradient(135deg, rgba(29,78,216,0.06) 0%, transparent 50%);"></div>
-    <div class="relative z-10 px-6 lg:px-10">
+    <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-14">
       <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full mb-4" style="background:rgba(29,78,216,0.15);border:1px solid rgba(29,78,216,0.3);">
         <span class="text-primary-400 text-sm font-medium">{t(lang, "nav.annexes")}</span>
       </div>
@@ -24,7 +24,7 @@ const annexItems = getAnnexes();
       </p>
     </div>
   </section>
-  <div class="px-6 lg:px-10 pb-20">
+  <div class="max-w-7xl mx-auto px-6 lg:px-14 pb-20">
     <div class="space-y-6">
       {annexItems.map((annex, i) => (
         <section id={annex.id} class="scroll-mt-24 rounded-xl p-6 transition-all duration-300" style={`background:var(--card-bg);border:1px solid var(--card-border);`}>
