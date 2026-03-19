@@ -1,0 +1,19 @@
+{
+  "sectionNumber": "1.4",
+  "title": "Preparation Stages",
+  "type": "bullet-stages",
+  "description": "The following methods were used in preparing the situational profile of this sub-metropolitan city –",
+  "bullets": [
+    "Data available from various thematic branches, thematic offices, and various organizations of the sub-metropolitan city were included.",
+    "Data was collected through direct interview methods with ward chairpersons and other officials of all wards.",
+    "Results of the National Census 2078 and other various surveys were included.",
+    "During the analysis of data in this study report, various tables, charts, and maps were used to carry out descriptive and comparative analyses."
+  ],
+  "stages": [
+    {
+      "sectionNumber": "",
+      "title": "Primary and Secondary Data Collection",
+      "content": "The work of preparing the situational profile was carried out using both Primary and Secondary information collection methods. Data such as land use, roads and their quality, and environmental problems were collected using Geographic Information System data (GIS Data), topographic maps, aerial maps, survey maps, field inspection, and interview methods. Additionally, information about the major problems and development possibilities of the sub-metropolitan city was obtained by holding discussions and interviews with officials of various government and non-government bodies, intellectuals, and reputable personalities located in the sub-metropolitan city. Overall data of the sub-metropolitan city such as physical, environmental, social, economic, financial, and institutional data was collected from the records of the sub-metropolitan city office and government and non-government offices in the sub-metropolitan city, and some data were collected by studying reports and books published by relevant departments and other bodies."
+    }
+  ]
+}

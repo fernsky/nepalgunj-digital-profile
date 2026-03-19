@@ -1,5 +1,15 @@
 {
-  "title": "Objectives",
   "sectionNumber": "1.2",
-  "content": "This is the objectives content."
+  "title": "Objectives",
+  "type": "description-list",
+  "description": "The main objective of preparing the situational profile is to systematically record the overall situational information of the sub-metropolitan city and to update those data or information and make them available to stakeholders when necessary. The other specific objectives of the situational profile are as follows:",
+  "list": [
+    "(a)  To prepare a record of information and data related to the overall physical infrastructure, economic aspects, social aspects, natural resources, and disaster management of the sub-metropolitan city.",
+    "(b)  To prepare a record of information and data about service delivery and institutional mechanisms.",
+    "(c)  To analyze strengths, weaknesses, opportunities, challenges, and possibilities.",
+    "(d)  To prepare thematic base maps for various subjects.",
+    "(e)  To explain and analyze overall demographic, economic, social, physical, natural, historical, religious, and cultural data.",
+    "(f)  To classify the received information, organize it in a systematic and simple manner, and present it divided into various sections so that it can be understood by the general public.",
+    "(g)  To prepare a consolidated statistical base related to all the subjects mentioned above."
+  ]
 }
