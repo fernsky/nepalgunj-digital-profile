@@ -1,0 +1,59 @@
+{
+  "sectionNumber": "2.4",
+  "title": "Terrain",
+  "type": "multi-block",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "When preparing descriptions of the physical state of the sub-metropolis, it is essential to mention its terrain. Although Nepal is small in terms of area, it is considered one of the leading countries in the world in terms of terrain diversity. During the geological process, specifically during the formation of the Mahalangur Himalayan range, the collision between the Tibetan plate and the Indian subcontinent led to the end of the Tethys Sea that existed between these two landmasses. This resulted in the formation of high mountains, the Mahabharat range, the lower Chure range, and the vast Gangetic plain in the southernmost part (flat Terai region), forming the overall land surface of Nepal. This terrain's objective character exists in one form or another in almost all local levels of Nepal. The terrain shape plays a crucial role in development and construction. The physical state includes basic aspects such as slope, aspect, elevation, land cover, and soil texture."
+    },
+    {
+      "type": "subsections",
+      "content": [
+        {
+          "title": "A) Soil Texture",
+          "content": "The geological structure of the sub-metropolis was formed during the collision of the Indian Plate and the Tibetan Plate, resulting in the formation of the Mahabharat Mountain Range. This sub-metropolis represents a very minor part of the vast Gangetic plain formed by the continuous flow of the large Ganga River. The soil here, being part of the Gangetic plain, is primarily fertile silt-mixed soil. In areas directly affected by rivers and streams, the sand content is higher, while some inner parts contain clay and loam with organic matter. The level of organic matter is higher in continuously cultivated areas but gradually decreases in barren areas. Overall, the soil in this sub-metropolis is fertile and suitable for agriculture."
+        },
+        {
+          "title": "B) Slope Description",
+          "content": [
+            "Based on land structure, systems, and landslide tendencies, the land classification is categorized in decreasing order of potential use and intensity (Degrading). In other words, the tendency for landslides or erosion varies according to the land structure. Accordingly, soil conditions and slope are analyzed based on physical characteristics that strengthen land stability. Looking at land classification based on factors such as land structure, ecosystem, and landslide propensity in Nepalgunj Sub-Metropolitan City, it is found that flat land is predominant, and thus there is no significant diversity in slope.",
+            "Slope 0°-5°: The soil depth is sufficient in such land, and water drains easily both on the surface and underground. For monsoon farming, embankments (Gadbhras) should be built. Control measures should be adopted to prevent soil erosion from surface and sub-surface drainage. Due to the physical properties of the soil and the slope of the land, rainwater can create new gullies, which can eventually widen and increase the erosion trend, necessitating special attention to the conservation of this class of land. Traditional or modern farming can be practiced here, and monsoon farming benefits both grazing and vegetation. Rice farming is possible, and irrigation facilities are available. Even with granular soil, rice crops can be planted, and with irrigation, winter and summer crops are also feasible.",
+            "Slope 5°-10°: Land with 5°-30° slope, good water drainage, and a soil layer depth of 50 cm to 100 cm falls into this category. Trends such as landslides and land sinking are commonly seen here. This land is not very favorable for forests and vegetation. Grazing should not be encouraged as the movement of livestock can increase erosion. However, controlled grazing in designated areas at certain times can help land productivity. Controlled irrigation and embankments are necessary for monsoon farming.",
+            "Slope 30°-40°: Land with a soil layer of only 20 cm depth, easy water drainage, and a slope of more than 30° (over 1 meter in 1.7 meters) falls in this category. Farming using embankments is not beneficial here. It is more suitable for vegetation, particularly for increasing forest product output for timber and fuel. Landslides and flood damage are common characteristics of this land.",
+            "Slope > 40°: Very steep land with a soil layer (layer) of less than 20 cm, or any slope with summer rain damage and multiple gullies falls in this category. Such land must be kept green by planting grass or trees/shrubs."
+          ]
+        },
+        {
+          "title": "C) Description of Aspect",
+          "content": "A detailed description concerning the aspect of the land of Nepalgunj Sub-Metropolitan City will be provided, analyzed based on the orientation of the land and the availability of sunlight."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "caption": "Map No. 3: Map of Sub-Metropolitan City"
+    },
+    {
+      "type": "paragraph",
+      "content": "Land slope and aspect are generally complementary to each other. This means that when the slope is irregular, the aspect also tends to be irregular. Although there is no significant diversity in aspect in flat areas, the following is the aspect description for the sub-metropolis:"
+    },
+    {
+      "type": "table",
+      "data": {
+        "headers": ["Aspect (Facing)", "Area (sq. km.)", "Area (Percentage)"],
+        "rows": [
+          ["North", "11.69", "13.60"],
+          ["North-East", "10.12", "11.77"],
+          ["East", "9.89", "11.50"],
+          ["South-East", "11.35", "13.21"],
+          ["South", "11.48", "13.35"],
+          ["South-West", "10.65", "12.40"],
+          ["West", "10.06", "11.71"],
+          ["North-West", "10.71", "12.46"]
+        ],
+        "footer": "Total: 85.94 | 100 (Source: Based on GIS data)"
+      }
+    }
+  ]
+}

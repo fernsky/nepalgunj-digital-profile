@@ -1,0 +1,55 @@
+{
+  "sectionNumber": "2.3",
+  "title": "Political and Administrative Structure",
+  "type": "multi-block",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "Nepalgunj Sub-Metropolitan City was declared with 27 wards. By the decision dated 2072/06/1, Puraini VDC was merged, and 28 wards were maintained. According to the decision dated 2073/11/27, the former 28 wards were modified, and currently, 23 wards are maintained. The detailed description is presented in the table below."
+    },
+    {
+      "type": "table",
+      "data": {
+        "headers": ["Ward No.", "Included VDC/Municipality", "Population", "Area (sq. km.)"],
+        "rows": [
+          ["1", "Nepalgunj (1)", "8990", "0.96"],
+          ["2", "Nepalgunj (2,3)", "6244", "0.32"],
+          ["3", "Nepalgunj (4,9)", "3313", "0.16"],
+          ["4", "Nepalgunj (5)", "12738", "0.78"],
+          ["5", "Nepalgunj (6)", "5872", "1.27"],
+          ["6", "Nepalgunj (7)", "6366", "1.11"],
+          ["7", "Nepalgunj (8)", "3415", "0.16"],
+          ["8", "Nepalgunj (10,11)", "4617", "0.25"],
+          ["9", "Nepalgunj (12)", "5534", "1.01"],
+          ["10", "Nepalgunj (13)", "9455", "3.25"],
+          ["11", "Nepalgunj (14,15)", "5522", "0.23"],
+          ["12", "Nepalgunj (16)", "7244", "1.25"],
+          ["13", "Nepalgunj (17,18)", "6999", "7.56"],
+          ["14", "Nepalgunj (19)", "6352", "6.36"],
+          ["15", "Nepalgunj (20)", "6489", "3.92"],
+          ["16", "Nepalgunj (21)", "7672", "3.61"],
+          ["17", "Nepalgunj (22)", "6274", "5.74"],
+          ["18", "Nepalgunj (24)", "12047", "5.48"],
+          ["19", "Nepalgunj (25)", "8537", "8.78"],
+          ["20", "Nepalgunj (26)", "14767", "16.35"],
+          ["21", "Nepalgunj (27)", "8217", "7.46"],
+          ["22", "Nepalgunj (28)", "5934", "5.61"],
+          ["23", "Hirminia (7)", "1846", "3.92"]
+        ],
+        "footer": "Total: 164,444 | 85.94"
+      }
+    },
+    {
+      "type": "image",
+      "caption": "Map No. 1: Administrative Division Map"
+    },
+    {
+      "type": "image",
+      "caption": "Map No. 2: Ward Division Map of Sub-Metropolitan City"
+    },
+    {
+      "type": "paragraph",
+      "content": "By the decision of the Council of Ministers of the Government of Nepal dated 2071 Mangsir 16, the sub-metropolis was declared by merging 10 former VDCs, including Udaipur, Bhawaniapur, Piprahawa, Jaispur, Paraspur, Khaskarkando, Basudevpur, Manikapur, and Puraina."
+    }
+  ]
+}
