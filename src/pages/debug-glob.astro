@@ -1,0 +1,14 @@
+---
+const components = import.meta.glob('../../components/chapters/**/*.{astro}');
+const jsonFiles = import.meta.glob('../../lib/i18n/chapters/**/*.{json}');
+const allCompKeys = Object.keys(components);
+const allJsonKeys = Object.keys(jsonFiles);
+---
+<html>
+<body>
+<h2>Component glob keys:</h2>
+<pre>{allCompKeys.join('\n')}</pre>
+<h2>JSON glob keys:</h2>
+<pre>{allJsonKeys.join('\n')}</pre>
+</body>
+</html>

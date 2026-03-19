@@ -1,0 +1,8 @@
+{
+  "sectionNumber": "1.4.4",
+  "title": "Data Processing, Analysis and Resource Mapping",
+  "type": "paragraphs",
+  "paragraphs": [
+    "Computer software was designed and developed to organize and analyze the received data, tables were prepared as needed, and MS Excel was also used for additional analysis. All types of received data were analyzed using MS Excel. For resource map preparation, both methods were used: creating GIS-based resource maps using software based on GIS Database, and using Mapping through Google Map by entering GIS Coordinates in the software developed for data management."
+  ]
+}
