@@ -1,0 +1,105 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import { type Lang, chapters } from "../../../i18n/translations";
+import { t, getAllSections, formatSectionId } from "../../../i18n/utils";
+
+export async function getStaticPaths() {
+  const allSections = getAllSections();
+  const paths: any[] = [];
+  for (const { chapterNum, chapterSlug, section } of allSections) {
+    paths.push({ 
+      params: { lang: "ne", chapter: chapterSlug, section: section.slug }, 
+      props: { chapterNum, section } 
+    });
+    paths.push({ 
+      params: { lang: "en", chapter: chapterSlug, section: section.slug }, 
+      props: { chapterNum, section } 
+    });
+  }
+  return paths;
+}
+
+const { lang, chapter: chapterSlug, section: sectionSlug } = Astro.params;
+const { chapterNum, section } = Astro.props;
+
+// Load JSON content dynamically
+let content: any = { title: section.title[lang as Lang], sectionNumber: formatSectionId(section.id), content: "" };
+try {
+  const jsonFiles = import.meta.glob('../../../lib/i18n/chapters/**/*.{json}');
+  const jsonPath = `../../../lib/i18n/chapters/${chapterNum}/${sectionSlug}/${lang}.json`;
+  if (jsonFiles[jsonPath]) {
+    const jsonModule: any = await jsonFiles[jsonPath]();
+    content = jsonModule.default;
+  }
+} catch (e) {
+  console.error("Failed to load JSON for section", sectionSlug, lang, e);
+}
+
+// Map chapter numbers to component filenames (CamelCase)
+const formatSlugToCompName = (slug: string) => {
+  return slug.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('');
+};
+
+const compName = formatSlugToCompName(sectionSlug as string);
+const compPath = `../../../components/chapters/${chapterNum}/${compName}.astro`;
+
+// Load Component dynamically using glob
+const components = import.meta.glob('../../../components/chapters/**/*.{astro}');
+let DynamicComponent: any = null;
+if (components[compPath]) {
+  DynamicComponent = (await components[compPath]() as any).default;
+}
+---
+
+<Layout lang={lang as Lang} title={`${formatSectionId(section.id)} ${section.title[lang as Lang]}`}>
+  <div class="px-6 lg:px-10 py-12">
+    <!-- Breadcrumb -->
+    <a href={`/${lang}/${chapterSlug}`} class="inline-flex items-center gap-1 text-sm mb-6 no-underline hover:text-primary-400 transition-colors" style="color:var(--text-muted);">
+      ← {t(lang as Lang, "chapter.label")} {chapterNum}: {chapters.find(ch => ch.num === chapterNum)?.title[lang as Lang]}
+    </a>
+    
+    <div class="min-h-[400px]">
+      {DynamicComponent ? (
+        <DynamicComponent content={content} />
+      ) : (
+        <div class="prose prose-invert max-w-none">
+          <h1 class="text-3xl font-extrabold mb-4" style="color:var(--text-heading);">
+            {formatSectionId(section.id)} {section.title[lang as Lang]}
+          </h1>
+          <div class="rounded-xl p-8 mb-10" style={`background:var(--card-bg);border:1px solid var(--card-border);`}>
+            <p class="italic text-lg" style="color:var(--text-muted);">
+              {lang === "ne" ? "सामग्री चाँडै थपिनेछ..." : "Content coming soon..."}
+            </p>
+          </div>
+        </div>
+      )}
+    </div>
+
+    <!-- Sub-sections if any -->
+    {section.children && section.children.length > 0 && (
+      <div class="mt-16 rounded-xl p-6" style={`background:var(--card-bg);border:1px solid var(--card-border);`}>
+        <h2 class="text-lg font-bold mb-4" style="color:var(--text-heading);">
+          {lang === "ne" ? "उप-विषयहरू" : "Sub-sections"}
+        </h2>
+        <div class="space-y-1">
+          {section.children.map((child: any) => (
+            <a href={`/${lang}/${chapterSlug}/${child.slug}`} class="block py-2 text-sm no-underline hover:text-primary-400 transition-colors" style="color:var(--text-body);">
+              <span style="color:var(--text-muted);" class="mr-2">{formatSectionId(child.id)}</span>
+              {child.title[lang as Lang]}
+            </a>
+          ))}
+        </div>
+      </div>
+    )}
+
+    <!-- Navigation footer -->
+    <div class="flex justify-between items-center mt-12 pt-8" style={`border-top:1px solid var(--border);`}>
+      <a href={`/${lang}/${chapterSlug}`} class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium no-underline transition-all" style="color:var(--text-body);background:var(--card-bg);border:1px solid var(--card-border);">
+        {lang === "ne" ? "परिच्छेद विवरणमा फर्कनुहोस्" : "Back to Chapter Details"}
+      </a>
+      <a href={`/${lang}`} class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium no-underline transition-all" style="color:var(--text-body);background:var(--card-bg);border:1px solid var(--card-border);">
+        {t(lang as Lang, "nav.home")}
+      </a>
+    </div>
+  </div>
+</Layout>
