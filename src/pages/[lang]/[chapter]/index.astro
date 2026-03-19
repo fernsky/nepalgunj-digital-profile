@@ -1,0 +1,79 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import { type Lang, chapters } from "../../../i18n/translations";
+import { t, formatSectionId } from "../../../i18n/utils";
+
+export function getStaticPaths() {
+  const paths: any[] = [];
+  for (const ch of chapters) {
+    paths.push({ params: { lang: "ne", chapter: ch.slug }, props: { chapter: ch } });
+    paths.push({ params: { lang: "en", chapter: ch.slug }, props: { chapter: ch } });
+  }
+  return paths;
+}
+
+const lang = Astro.params.lang as Lang;
+const { chapter } = Astro.props;
+const chapterIdx = chapters.findIndex((c) => c.num === chapter.num);
+const prevChapter = chapterIdx > 0 ? chapters[chapterIdx - 1] : null;
+const nextChapter = chapterIdx < chapters.length - 1 ? chapters[chapterIdx + 1] : null;
+---
+
+<Layout lang={lang} title={`${t(lang, "chapter.label")} ${chapter.num} - ${chapter.title[lang]}`}>
+  <!-- Chapter Hero -->
+  <section class="relative py-20 overflow-hidden">
+    <div class="absolute inset-0" style="background:linear-gradient(135deg, rgba(29,78,216,0.08) 0%, transparent 50%);"></div>
+    <div class="relative z-10 px-6 lg:px-10">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full mb-4" style="background:rgba(29,78,216,0.15);border:1px solid rgba(29,78,216,0.3);">
+        <span class="text-primary-400 text-sm font-medium">{t(lang, "chapter.label")} {chapter.num}</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-4" style="color:var(--text-heading);">
+        {chapter.title[lang]}
+      </h1>
+      <p class="text-lg max-w-2xl" style="color:var(--text-body);">{chapter.description[lang]}</p>
+    </div>
+  </section>
+
+  <div class="px-6 lg:px-10 pb-20">
+    <!-- Table of Contents -->
+    <div class="rounded-xl p-6 mb-10" style={`background:var(--card-bg);border:1px solid var(--card-border);`}>
+      <h2 class="text-xl font-bold mb-4" style="color:var(--text-heading);">
+        {lang === "ne" ? "विषयसूची" : "Table of Contents"}
+      </h2>
+      <div class="space-y-1">
+        {chapter.sections.map((section: any) => (
+          <div>
+            <a href={`/${lang}/${chapter.slug}/${section.slug}`} class="block py-2 text-sm font-medium transition-colors no-underline hover:text-primary-400" style="color:var(--text-body);">
+              <span style="color:var(--text-muted);" class="mr-2">{formatSectionId(section.id)}</span>
+              {section.title[lang]}
+            </a>
+            {section.children && section.children.map((child: any) => (
+              <a href={`/${lang}/${chapter.slug}/${child.slug}`} class="block py-1.5 pl-6 text-sm transition-colors no-underline hover:text-primary-400" style="color:var(--text-muted);">
+                <span class="mr-2">{formatSectionId(child.id)}</span>
+                {child.title[lang]}
+              </a>
+            ))}
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Nav between chapters -->
+    <div class="flex justify-between items-center pt-8" style={`border-top:1px solid var(--border);`}>
+      {prevChapter ? (
+        <a href={`/${lang}/${prevChapter.slug}`} class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium no-underline transition-all" style="color:var(--text-body);background:var(--card-bg);border:1px solid var(--card-border);">
+          ← {t(lang, "chapter.label")} {prevChapter.num}
+        </a>
+      ) : <div></div>}
+      {nextChapter ? (
+        <a href={`/${lang}/${nextChapter.slug}`} class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium no-underline transition-all" style="color:var(--text-body);background:var(--card-bg);border:1px solid var(--card-border);">
+          {t(lang, "chapter.label")} {nextChapter.num} →
+        </a>
+      ) : (
+        <a href={`/${lang}/annexes`} class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium no-underline transition-all" style="color:var(--text-body);background:var(--card-bg);border:1px solid var(--card-border);">
+          {t(lang, "nav.annexes")} →
+        </a>
+      )}
+    </div>
+  </div>
+</Layout>

@@ -1,0 +1,12 @@
+---
+interface Props {
+  content: any;
+}
+const { content } = Astro.props;
+---
+<div class="prose prose-invert max-w-none">
+  <h2 class="text-2xl font-bold mb-4" style="color:var(--text-heading);">{content.sectionNumber} {content.title}</h2>
+  <div class="text-lg leading-relaxed" style="color:var(--text-body);">
+    {content.content || "Content coming soon..."}
+  </div>
+</div>

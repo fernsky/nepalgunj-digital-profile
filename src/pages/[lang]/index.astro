@@ -1,0 +1,66 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { type Lang } from "../../i18n/translations";
+import { t, getChapters } from "../../i18n/utils";
+
+export function getStaticPaths() {
+  return [{ params: { lang: "ne" } }, { params: { lang: "en" } }];
+}
+
+const lang = Astro.params.lang as Lang;
+const chapters = getChapters();
+---
+
+<Layout lang={lang}>
+  <!-- Hero Section - full viewport -->
+  <section class="relative min-h-screen flex items-center overflow-hidden">
+    <div class="absolute inset-0" style="background:linear-gradient(135deg, rgba(29,78,216,0.1) 0%, transparent 50%);"></div>
+    <div class="absolute inset-0 opacity-[0.03]" style="background-image: url('data:image/svg+xml,%3Csvg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cg fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;%3E%3Cpath d=&quot;M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z&quot; fill=&quot;%23888&quot;/%3E%3C/g%3E%3C/svg%3E');"></div>
+    <div class="relative z-10 px-6 lg:px-10 max-w-3xl">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full mb-6" style="background:rgba(29,78,216,0.15);border:1px solid rgba(29,78,216,0.3);">
+        <div class="w-2 h-2 rounded-full bg-primary-400 animate-pulse"></div>
+        <span class="text-primary-400 text-sm font-medium">{t(lang, "hero.subtitle")}</span>
+      </div>
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight" style="color:var(--text-heading);">
+        {t(lang, "hero.title")}
+      </h1>
+      <p class="text-lg mb-10 leading-relaxed" style="color:var(--text-body);">
+        {t(lang, "hero.description")}
+      </p>
+      <a href="#chapters-overview" class="inline-flex items-center gap-2 px-8 py-3.5 bg-primary-600 hover:bg-primary-500 text-white font-semibold rounded-xl transition-all duration-300 shadow-lg hover:-translate-y-0.5 no-underline">
+        {t(lang, "hero.exploreChapters")} ↓
+      </a>
+    </div>
+  </section>
+
+  <!-- Chapters Grid - left aligned -->
+  <section id="chapters-overview" class="py-20 px-6 lg:px-10">
+    <h2 class="text-3xl font-bold mb-2" style="color:var(--text-heading);">{t(lang, "nav.chapters")}</h2>
+    <div class="w-20 h-1 bg-primary-500 mb-12 rounded-full"></div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      {chapters.map((chapter) => (
+        <a href={`/${lang}/${chapter.slug}`} class="group relative rounded-xl p-6 no-underline transition-all duration-300 hover:-translate-y-1 hover:shadow-xl overflow-hidden" style={`background:var(--card-bg);border:1px solid var(--card-border);`}>
+          <div class="text-4xl font-black mb-3" style="color:var(--text-muted);">{String(chapter.num).padStart(2, "0")}</div>
+          <h3 class="text-base font-semibold mb-2 group-hover:text-primary-400 transition-colors" style="color:var(--text-heading);">
+            {t(lang, "chapter.label")} {chapter.num}
+          </h3>
+          <p class="text-sm leading-relaxed" style="color:var(--text-body);">{chapter.title[lang]}</p>
+        </a>
+      ))}
+    </div>
+    <!-- Annexes card -->
+    <div class="mt-6">
+      <a href={`/${lang}/annexes`} class="group block rounded-xl p-6 no-underline transition-all duration-300 hover:-translate-y-1 hover:shadow-xl" style={`background:var(--card-bg);border:1px solid var(--card-border);`}>
+        <div class="flex items-center gap-4">
+          <div class="text-3xl">📋</div>
+          <div>
+            <h3 class="text-base font-semibold mb-1 group-hover:text-primary-400 transition-colors" style="color:var(--text-heading);">{t(lang, "nav.annexes")}</h3>
+            <p class="text-sm" style="color:var(--text-body);">
+              {lang === "ne" ? "निर्वाचित पदाधिकारी, कर्मचारी, एम्बुलेन्स, होटल, बालकल्याण, कृषि फर्म, र स्रोत नक्सा" : "Elected officials, staff, ambulances, hotels, childcare, agriculture firms, and resource map"}
+            </p>
+          </div>
+        </div>
+      </a>
+    </div>
+  </section>
+</Layout>
