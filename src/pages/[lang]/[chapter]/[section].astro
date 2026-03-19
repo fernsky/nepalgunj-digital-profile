@@ -32,7 +32,8 @@ const content = jsonFiles[key]?.default ?? null;
 ---
 
 <Layout lang={currentLang} title={`${formatSectionId(section.id)} ${section.title[currentLang]}`}>
-  <div class="px-6 lg:px-10 py-12 max-w-4xl mx-auto">
+  <div class="max-w-7xl mx-auto px-6 lg:px-14 py-12">
+    <div class="max-w-4xl">
     
     <!-- Breadcrumb -->
     <a href={`/${lang}/${chapterSlug}`} class="inline-flex items-center gap-1 text-sm mb-8 no-underline hover:text-primary-400 transition-colors" style="color:var(--text-muted);">
