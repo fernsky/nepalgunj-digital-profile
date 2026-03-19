@@ -1,0 +1,217 @@
+---
+/**
+ * WardMap Component
+ * Pre-rendered SVG structure for maximum reliability
+ */
+interface Props {
+  lang: string;
+}
+const { lang } = Astro.props;
+
+interface Ward {
+  id: number;
+  name: Record<string, string>;
+  pop: number;
+  households: number;
+}
+
+const wardData: Ward[] = [
+  { id: 1, name: { ne: "वडा १", en: "Ward 1" }, pop: 8500, households: 1650 },
+  { id: 2, name: { ne: "वडा २", en: "Ward 2" }, pop: 11200, households: 2100 },
+  { id: 3, name: { ne: "वडा ३", en: "Ward 3" }, pop: 9400, households: 1800 },
+  { id: 4, name: { ne: "वडा ४", en: "Ward 4" }, pop: 6800, households: 1300 },
+  { id: 5, name: { ne: "वडा ५", en: "Ward 5" }, pop: 7200, households: 1400 },
+  { id: 6, name: { ne: "वडा ६", en: "Ward 6" }, pop: 5900, households: 1150 },
+  { id: 7, name: { ne: "वडा ७", en: "Ward 7" }, pop: 10800, households: 2050 },
+  { id: 8, name: { ne: "वडा ८", en: "Ward 8" }, pop: 12500, households: 2350 },
+  { id: 9, name: { ne: "वडा ९", en: "Ward 9" }, pop: 6100, households: 1200 },
+  { id: 10, name: { ne: "वडा १०", en: "Ward 10" }, pop: 13200, households: 2500 },
+  { id: 11, name: { ne: "वडा ११", en: "Ward 11" }, pop: 10500, households: 1950 },
+  { id: 12, name: { ne: "वडा १२", en: "Ward 12" }, pop: 7800, households: 1500 },
+  { id: 13, name: { ne: "वडा १३", en: "Ward 13" }, pop: 5200, households: 1000 },
+  { id: 14, name: { ne: "वडा १४", en: "Ward 14" }, pop: 4500, households: 850 },
+  { id: 15, name: { ne: "वडा १५", en: "Ward 15" }, pop: 4800, households: 900 },
+  { id: 16, name: { ne: "वडा १६", en: "Ward 16" }, pop: 5400, households: 1050 },
+  { id: 17, name: { ne: "वडा १७", en: "Ward 17" }, pop: 4200, households: 800 },
+  { id: 18, name: { ne: "वडा १८", en: "Ward 18" }, pop: 6300, households: 1250 },
+  { id: 19, name: { ne: "वडा १९", en: "Ward 19" }, pop: 5700, households: 1100 },
+  { id: 20, name: { ne: "वडा २०", en: "Ward 20" }, pop: 8344, households: 1600 },
+  { id: 21, name: { ne: "वडा २१", en: "Ward 21" }, pop: 4100, households: 780 },
+  { id: 22, name: { ne: "वडा २२", en: "Ward 22" }, pop: 3800, households: 720 },
+  { id: 23, name: { ne: "वडा २३", en: "Ward 23" }, pop: 3000, households: 580 },
+];
+
+const wardShapes = [
+  "M150,120 L180,110 L210,130 L190,160 L160,170 Z", // 1
+  "M210,130 L240,120 L270,140 L250,170 L210,180 Z", // 2
+  "M270,140 L300,130 L330,150 L310,180 L270,190 Z", // 3
+  "M330,150 L360,140 L390,160 L370,190 L330,200 Z", // 4
+  "M140,170 L190,160 L200,200 L150,210 Z", // 5
+  "M200,180 L250,170 L260,210 L210,220 Z", // 6
+  "M260,190 L310,180 L320,220 L270,230 Z", // 7
+  "M310,200 L370,190 L380,230 L320,240 Z", // 8
+  "M130,210 L180,200 L170,250 L120,260 Z", // 9
+  "M180,220 L230,210 L220,260 L170,270 Z", // 10
+  "M230,230 L280,220 L270,270 L220,280 Z", // 11
+  "M280,240 L340,230 L330,280 L270,290 Z", // 12
+  "M110,260 L160,250 L140,310 L90,320 Z", // 13
+  "M160,270 L210,260 L190,320 L140,330 Z", // 14
+  "M210,280 L260,270 L240,330 L190,340 Z", // 15
+  "M260,290 L320,280 L300,340 L240,350 Z", // 16
+  "M90,320 L140,310 L120,370 L70,380 Z", // 17
+  "M140,330 L190,320 L170,380 L120,390 Z", // 18
+  "M190,340 L240,330 L220,390 L170,400 Z", // 19
+  "M240,350 L300,340 L280,400 L220,410 Z", // 20
+  "M70,380 L120,370 L100,440 L50,450 Z", // 21
+  "M120,390 L170,380 L150,450 L100,460 Z", // 22
+  "M170,400 L220,390 L200,460 L150,470 Z"  // 23
+];
+
+function generateStylizedPath(i: number) {
+  // Use pre-defined shapes to avoid "rectangular boxes"
+  return wardShapes[i] || "M0,0 L10,0 L10,10 Z";
+}
+---
+
+<div class="relative w-full" id="map-section" style="min-height: 600px;">
+  <div class="flex flex-col lg:flex-row gap-16 items-center lg:items-center">
+    <!-- Left Stats -->
+    <div class="w-full lg:w-1/3 flex flex-col gap-10">
+      <div class="map-stat-card">
+        <h3 class="text-5xl font-black mb-2 leading-none" style="color:var(--text-heading);">164,444</h3>
+        <p class="text-xs tracking-[0.2em] uppercase font-bold text-primary-400">Total Population / कुल जनसंख्या</p>
+      </div>
+      
+      <div class="map-stat-card">
+        <h3 class="text-5xl font-black mb-2 leading-none" style="color:var(--text-heading);">82,755 / 81,689</h3>
+        <p class="text-xs tracking-[0.2em] uppercase font-bold text-primary-400">Male / Female</p>
+      </div>
+
+      <div class="map-stat-card">
+         <h3 class="text-5xl font-black mb-2 leading-none" style="color:var(--text-heading);">76.24%</h3>
+         <p class="text-xs tracking-[0.2em] uppercase font-bold text-primary-400">Literacy Rate / साक्षरता दर</p>
+      </div>
+
+      <div id="hover-info-box" class="p-6 rounded-2xl border border-primary-500/10 bg-primary-500/5 backdrop-blur-xl opacity-0 transition-opacity duration-300">
+        <h4 id="ward-name" class="text-2xl font-black mb-1" style="color:var(--text-heading);">-</h4>
+        <div class="space-y-2 mt-4">
+           <div class="flex justify-between text-sm"><span style="color:var(--text-muted)">Population:</span><span id="ward-pop-val" class="font-bold text-primary-400">-</span></div>
+           <div class="flex justify-between text-sm"><span style="color:var(--text-muted)">Households:</span><span id="ward-house-val" class="font-bold text-primary-400">-</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Map Container - Explicit Dimensions -->
+    <div class="w-full lg:w-2/3 relative flex justify-center">
+      <div class="relative w-full aspect-square max-w-[650px]" id="d3-map-wrapper">
+         <svg id="main-map-svg" viewBox="0 0 600 600" class="w-full h-full overflow-visible">
+            <g id="wards-group">
+               {wardData.map((ward, i) => (
+                  <g class="ward-group" data-ward-id={ward.id}>
+                    <path 
+                      id={`ward-path-${ward.id}`}
+                      class="ward-path cursor-pointer transition-all duration-300" 
+                      d={generateStylizedPath(i)}
+                      fill="#2563eb"
+                      fill-opacity="0.1"
+                      stroke="#3b82f6"
+                      stroke-width="1.5"
+                      stroke-opacity="0.5"
+                    />
+                    <text
+                      class="ward-label pointer-events-none font-bold text-[10px]"
+                      x={80 + (i % 4) * 110 + 20}
+                      y={80 + Math.floor(i / 4) * 90 + 10}
+                      fill="var(--text-heading)"
+                      fill-opacity="0"
+                      text-anchor="middle"
+                    >
+                      {ward.id}
+                    </text>
+                  </g>
+               ))}
+            </g>
+         </svg>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script is:inline define:vars={{ wardData, lang }}>
+  document.addEventListener('DOMContentLoaded', () => {
+    if (typeof d3 === 'undefined') {
+        console.error('D3 not loaded');
+        return;
+    }
+
+    const svg = d3.select('#main-map-svg');
+    const minPop = 3000, maxPop = 13200;
+
+    // Animation
+    d3.selectAll('.ward-path')
+      .each(function(d, i) {
+          const ward = wardData[i];
+          const opacity = 0.15 + ((ward.pop - minPop) / (maxPop - minPop)) * 0.7;
+          const path = d3.select(this);
+          const length = this.getTotalLength();
+          path.attr('stroke-dasharray', length)
+              .attr('stroke-dashoffset', length)
+              .transition()
+              .duration(1200)
+              .delay(i * 60)
+              .attr('stroke-dashoffset', 0)
+              .attr('fill-opacity', opacity);
+      });
+
+    d3.selectAll('.ward-label')
+      .transition()
+      .duration(1000)
+      .delay((d, i) => i * 60 + 500)
+      .attr('fill-opacity', 0.8);
+
+    // Interaction
+    const infoBox = document.getElementById('hover-info-box');
+    const nameLabel = document.getElementById('ward-name');
+    const popVal = document.getElementById('ward-pop-val');
+    const houseVal = document.getElementById('ward-house-val');
+
+    d3.selectAll('.ward-group')
+      .on('mouseenter', function(event) {
+          const id = parseInt(this.getAttribute('data-ward-id'));
+          const ward = wardData.find(w => w.id === id);
+          
+          d3.select(this).select('path')
+            .transition().duration(200)
+            .attr('fill-opacity', 0.9)
+            .attr('stroke-opacity', 1)
+            .attr('transform', 'scale(1.05)');
+
+          infoBox.style.opacity = '1';
+          nameLabel.textContent = ward.name[lang];
+          popVal.textContent = ward.pop.toLocaleString();
+          houseVal.textContent = ward.households.toLocaleString();
+      })
+      .on('mouseleave', function() {
+          const id = parseInt(this.getAttribute('data-ward-id'));
+          const ward = wardData.find(w => w.id === id);
+          const opacity = 0.15 + ((ward.pop - minPop) / (maxPop - minPop)) * 0.7;
+
+          d3.select(this).select('path')
+            .transition().duration(400)
+            .attr('fill-opacity', opacity)
+            .attr('stroke-opacity', 0.5)
+            .attr('transform', 'scale(1)');
+      });
+  });
+</script>
+
+<style>
+  .map-stat-card {
+    border-left: 5px solid #2563eb;
+    padding-left: 2rem;
+  }
+  .ward-path {
+     transform-origin: center center;
+     vector-effect: non-scaling-stroke;
+  }
+</style>
