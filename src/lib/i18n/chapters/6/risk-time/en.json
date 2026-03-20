@@ -1,5 +1,23 @@
 {
-  "title": "Risk Time by Disaster Type",
   "sectionNumber": "6.4.2",
-  "content": ""
+  "title": "Risk Time by Disaster Type",
+  "type": "table",
+  "data": {
+    "title": "Table No. 86: Details of Potential Disasters within the Sub-Metropolitan City",
+    "headers": ["S.N.", "Potential Disaster", "Current Status", "Time"],
+    "rows": [
+      ["1.", "Flooding (Inundation, Erosion)", "Rivers and streams cause erosion and inundation of land and settlements during monsoon. Numerous families are affected annually.", "June-October"],
+      ["2.", "Strong Wind/Lightning", "Blowing away roofs of houses made of thatch, straw, or tile; problems with lightning strikes.", "March-May"],
+      ["3.", "Pandemic", "Increase in waterborne diseases like diarrhea, lack of resources and awareness, lack of adaptive capacity.", "Post-disaster, others"],
+      ["4.", "Fire / Forest Fire", "Electrical short circuits, human negligence, dense settlements, lack of fire-fighting equipment, other causes.", "March-May"],
+      ["5.", "Hailstorm", "Impacts cereal crops and roofs of unpaved houses.", "March-May"],
+      ["6.", "Viruses (COVID, Bird Flu, etc.)", "Lack of pure drinking water and sanitation, unmanaged poultry farming, swine flu, etc.", "Anytime"],
+      ["7.", "Earthquake", "Nepal ranks 11th in seismic risk; building code not fully implemented in municipal buildings.", "Anytime"],
+      ["8.", "Cold Wave", "Vulnerable groups like elderly and children fall ill; extreme poor families highly affected.", "December-January"],
+      ["9.", "Heatwave (Loo)", "Extreme heat reaching up to 46° causing fainting, swelling, cramping, and mental health issues.", "June-August"],
+      ["10.", "Drought (Extreme Heat)", "Impacts the production of food crops and vegetable crops due to drought.", "May-July"],
+      ["11.", "Insects and Pests", "Damage to crops and production due to insects along with climate change.", "As per season"]
+    ],
+    "source": "Source: Municipal Executive Office"
+  }
 }

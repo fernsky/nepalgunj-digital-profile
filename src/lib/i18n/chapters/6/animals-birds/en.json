@@ -1,5 +1,24 @@
 {
-  "title": "Important Animals and Birds",
   "sectionNumber": "6.3.1",
-  "content": ""
+  "title": "Important Animals and Birds Based on Habitat",
+  "type": "multi-block",
+  "blocks": [
+    {
+      "type": "subsections",
+      "content": [
+        {
+          "title": "a) Major Wildlife",
+          "content": "Major wildlife found in this sub-metropolitan city include rabbits, monkeys, foxes, porcupines, and others."
+        },
+        {
+          "title": "b) Reptiles and Amphibians",
+          "content": "Reptiles and amphibians found in this sub-metropolitan city especially include snakes, water snakes, lizards, monitor lizards, and frogs."
+        },
+        {
+          "title": "c) Insects and Small Creatures",
+          "content": "Butterflies, grasshoppers, dragonflies, crickets, fireflies, wasps, bees, spiders, mites, and centipedes are among the insects and small creatures found here."
+        }
+      ]
+    }
+  ]
 }

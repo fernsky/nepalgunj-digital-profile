@@ -34,7 +34,7 @@ const { content, lang, id } = Astro.props;
             {content.blocks.map((block: any, idx: number) => (
               <div class="space-y-6">
                 {/* Paragraphs in block (supports both string and array) */}
-                {(block.type === "paragraph" || block.content) && (
+                {(block.type === "paragraph" || (block.content && typeof (Array.isArray(block.content) ? block.content[0] : block.content) === 'string' && block.type !== "subsections" && block.type !== "list")) && (
                    <p class="text-lg leading-relaxed text-justify m-0" style="color:var(--text-body);" set:html={block.content}></p>
                 )}
                 {block.paragraphs && (

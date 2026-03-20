@@ -1,5 +1,59 @@
 {
-  "title": "Major Rivers and Streams",
   "sectionNumber": "6.2.1",
-  "content": ""
+  "title": "Major Rivers and Streams",
+  "type": "multi-block",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "The streams and rivulets spread across various geographical areas and wards of the sub-metropolitan city provide abundant water storage as well as shelter as a safe habitat for various types of aquatic animals and birds. Additionally, animals drink water from these streams, and farmers occasionally use the water for partial irrigation. Along with the development of human settlements and the pressure of migration, excessive grazing by unproductive animals and utilization are leading to soil erosion and the gradual filling up of natural rivers and streams."
+    },
+    {
+      "type": "image",
+      "image": {
+        "src": "/map3.jpg",
+        "alt": "Rivers and Streams Map",
+        "caption": "Map of Rivers and Streams in Nepalgunj Sub-Metropolitan City"
+      }
+    },
+    {
+      "type": "table",
+      "data": {
+        "title": "Table No. 84: Details of Rivers and Streams within the Sub-Metropolitan City",
+        "headers": ["S.N.", "Rivers and Streams in the City", "Address"],
+        "rows": [
+          ["1.", "Duduwa River", ""],
+          ["2.", "Rapti River", ""]
+        ],
+        "source": "Source: Municipal Executive Office"
+      }
+    },
+    {
+      "type": "table",
+      "data": {
+        "title": "Table No. 85: Details of Lakes, Ponds, and Wetlands within the Sub-Metropolitan City",
+        "headers": ["S.N.", "Name of Lakes, Ponds, and Wetlands", "(Number of Ponds)", "Ward No."],
+        "rows": [
+          ["1.", "Waterpark Pond", "1", "1"],
+          ["2.", "Phulteka Pond", "1", "6"],
+          ["3.", "Rani Pond", "1", "8"],
+          ["4.", "Futaha Pond", "1", "19"],
+          ["5.", "Kanti Pond", "1", "22"],
+          ["6.", "Pakaniya Pond", "1", "15"],
+          ["7.", "Bhatarawanwa Pond", "1", "15"],
+          ["8.", "Suiya Pond", "1", "15"],
+          ["9.", "Gahaha Pond", "1", "15"],
+          ["10.", "Pripahwa Pond", "1", "15"],
+          ["11.", "Paschim Pond", "1", "15"],
+          ["12.", "Idgah Pond", "1", "16"],
+          ["13.", "Kanti Pond", "1", "22"],
+          ["14.", "Lakdhawa Pond", "1", "18"],
+          ["15.", "Muniya Pond", "1", "20"],
+          ["16.", "Khaiju Pond", "1", "20"],
+          ["17.", "Marghatiya Pond", "1", "20"],
+          ["18.", "Pandit Pond", "1", "20"]
+        ],
+        "source": "Source: Municipal Executive Office"
+      }
+    }
+  ]
 }

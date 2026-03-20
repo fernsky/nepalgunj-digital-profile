@@ -1,5 +1,28 @@
 {
-  "title": "Emergency Transportation",
   "sectionNumber": "6.4.4",
-  "content": ""
+  "title": "Details of Emergency Transportation",
+  "type": "multi-block",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "Although health services are accessible in the center of the sub-metropolitan city, it has not been possible to provide emergency health services from health institutions in all wards. To provide health services to patients in emergency situations, 28 ambulances with 24-hour service and 3 fire engines are in operation within the city. This sub-metropolitan city has also not been untouched by the effects of uncontrolled forest fires. Therefore, while fire engine management is good, it is necessary to arrange for ward-wise ambulances to provide services in emergency situations in various communities. The details of emergency transportation vehicles are included in the table below."
+    },
+    {
+      "type": "table",
+      "data": {
+        "title": "Table No. 88: Details of Emergency Transportation Vehicles",
+        "headers": ["S.N.", "Name of Vehicles", "Number"],
+        "rows": [
+          ["1.", "Fire Engine", "3"],
+          ["2.", "Fire Bike", "1"],
+          ["3.", "Animal Ambulance", "1"],
+          ["4.", "JCB", "2"],
+          ["5.", "Chain Dozer", "1"],
+          ["6.", "Water Tanker", "1"],
+          ["7.", "Ambulance (within Sub-Metropolitan City)", "28"]
+        ],
+        "source": "Source: Municipal Executive Office"
+      }
+    }
+  ]
 }
