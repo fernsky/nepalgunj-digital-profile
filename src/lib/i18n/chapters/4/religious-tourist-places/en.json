@@ -1,0 +1,74 @@
+{
+  "sectionNumber": "4.7.1",
+  "title": "Religious and Tourist Places Details",
+  "blocks": [
+    {
+      "paragraphs": [
+        "Nepalgunj Sub-Metropolitan City is characterized by multi-ethnic, multi-lingual, multi-religious and social diversity, and contains traditional temples, mosques and historical sites. The details of various tourist and religious sites in this sub-metropolitan city are mentioned in the table below."
+      ],
+      "table": {
+        "title": "Table No. 58: Details of Main Tourist and Religious Places",
+        "headers": [
+          [
+            { "text": "S.N." },
+            { "text": "Name" },
+            { "text": "Importance" }
+          ]
+        ],
+        "rows": [
+          ["1", "Bageshwori Temple", "Religious and Tourist"],
+          ["2", "Rani Talau", "Religious and Tourist Area"],
+          ["3", "Statue of Mahadev with Moustache", "Cultural and Religious"],
+          ["4", "Mahendra Park", "Tourist Area"],
+          ["5", "Jamjam Masjid", "Cultural and Religious"],
+          ["6", "Phulbari Masjid", "Cultural and Religious"],
+          ["7", "Bhawani Bagh Talau", "Tourist Area"],
+          ["8", "Ramlila Maidan", "Tourist Area"]
+        ],
+        "source": "Source: Office of the Municipal Executive"
+      }
+    },
+    {
+      "image": {
+        "src": "/map.jpg",
+        "alt": "Religious and Tourist Places Map",
+        "caption": "Map No. 5: Religious Places Map of Nepalgunj Sub-Metropolitan City"
+      }
+    },
+    {
+      "image": {
+        "src": "/rani-taal.jpg",
+        "alt": "Rani Talau",
+        "caption": "Rani Talau"
+      }
+    },
+    {
+      "image": {
+        "src": "/bageshwori-temple.jpg",
+        "alt": "Bageshwori Temple",
+        "caption": "Bageshwori Temple"
+      }
+    },
+    {
+      "image": {
+        "src": "/temple.jpg",
+        "alt": "Temple",
+        "caption": "Temple"
+      }
+    },
+    {
+      "image": {
+        "src": "/dhamboji.jpg",
+        "alt": "Dhamboji Masjid",
+        "caption": "Dhamboji Masjid"
+      }
+    },
+    {
+      "image": {
+        "src": "/map2.jpg",
+        "alt": "Tourist Area Map",
+        "caption": "Map No. 6: Tourist Area Map of the Sub-Metropolitan City"
+      }
+    }
+  ]
+}

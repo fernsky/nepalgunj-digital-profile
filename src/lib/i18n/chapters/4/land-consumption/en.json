@@ -1,0 +1,592 @@
+{
+  "title": "4.5 Land Consumption Description",
+  "blocks": [
+    {
+      "paragraphs": [
+        "According to the results of the National Agriculture Census 2078, regarding land consumption in this sub-metropolitan city, the number of agricultural families farming only on family-owned land is 5,864 (81.20%), covering an area of 3,288.1 hectares (74.13%). Similarly, the number of agricultural families farming only on land owned by others under certain agreements is 146 (2.02%), covering 127.3 hectares (2.87%). There are no farmers practicing agriculture under other types of consumption in this sub-metropolitan city. Furthermore, the number of agricultural families farming on land with more than one type of ownership is 1,212 (16.78%), covering an area of 1,020 hectares (23%)."
+      ],
+      "table": {
+        "title": "Table No. 37: Description of the Number of Families Utilizing Land and the Area of Land Utilized According to Land Ownership",
+        "headers": [
+          [
+            { "text": "Province/District/Local Level", "rowspan": 3 },
+            { "text": "Total Agricultural Families", "rowspan": 3 },
+            { "text": "Total Land Area Utilized (Hectares)", "rowspan": 3 },
+            { "text": "Single Type of Ownership", "colspan": 6 },
+            { "text": "More than One Type of Ownership", "colspan": 2, "rowspan": 2 }
+          ],
+          [
+            { "text": "Farming Only on Family Owned Land", "colspan": 2 },
+            { "text": "Farming Only on Land Owned by Others", "colspan": 2 },
+            { "text": "Farming Under Other Types of Consumption", "colspan": 2 }
+          ],
+          [
+            { "text": "Number of Families" },
+            { "text": "Area (Hectares)" },
+            { "text": "Number of Families" },
+            { "text": "Area (Hectares)" },
+            { "text": "Number of Families" },
+            { "text": "Area (Hectares)" },
+            { "text": "Number of Families" },
+            { "text": "Area (Hectares)" }
+          ]
+        ],
+        "rows": [
+          ["Lumbini Province", "75,092", "426,614.4", "633,504", "330,352.5", "6,722", "3,299.5", "2,573", "663.5", "122,293", "92,299.0"],
+          ["Banke District", "63,885", "36,828.3", "54,206", "27,257.1", "1,549", "656.3", "516", "97.8", "11,615", "8,817.1"],
+          ["Nepalgunj Sub-Metropolitan City", "7,222", "4,435.5", "5,864", "3,288.1", "146", "127.3", "0", "0", "1,212", "1,020.0"]
+        ],
+        "source": "Source: National Agriculture Census 2078"
+      }
+    },
+    {
+      "table": {
+        "title": "Table No. 38: Area and Number of Agricultural Families for Various Temporary Crops",
+        "headers": [
+          [
+            { "text": "Province/District/Local Level", "rowspan": 2 },
+            { "text": "Food Crops", "colspan": 2 },
+            { "text": "Pulse/Lentil Crops", "colspan": 2 },
+            { "text": "Tuber Crops", "colspan": 2 },
+            { "text": "Oilseed Crops", "colspan": 2 },
+            { "text": "Vegetable Crops", "colspan": 2 },
+            { "text": "Other Temporary Crops", "colspan": 2 }
+          ],
+          [
+            { "text": "No. of Families" }, { "text": "Area" },
+            { "text": "No. of Families" }, { "text": "Area" },
+            { "text": "No. of Families" }, { "text": "Area" },
+            { "text": "No. of Families" }, { "text": "Area" },
+            { "text": "No. of Families" }, { "text": "Area" },
+            { "text": "No. of Families" }, { "text": "Area" }
+          ]
+        ],
+        "rows": [
+          ["Lumbini Province", "729,496", "511,178.0", "388,616", "44,965.4", "400,375", "15,057.6", "382,429", "57,798.5", "363,129", "16,587.8", "352,086", "17,639.0"],
+          ["Banke District", "63,246", "50,535.7", "31,645", "7,247.9", "24,406", "1,021.0", "20,761", "3,914.3", "21,962", "1,539.2", "25,268", "815.4"],
+          ["Nepalgunj Sub-Metropolitan City", "6,636", "7,279.3", "2,359", "353.5", "847", "35.6", "827", "170.3", "2,186", "246.6", "1,711", "73.3"]
+        ],
+        "source": "Source: National Agriculture Census 2078"
+      }
+    },
+    {
+      "table": {
+        "title": "Table No. 39: Area and Number of Agricultural Families for Main Temporary Crops",
+        "headers": [
+          [
+            { "text": "Province/District/Local Level", "rowspan": 2 },
+            { "text": "Paddy Crop", "colspan": 2 },
+            { "text": "Wheat Crop", "colspan": 2 },
+            { "text": "Maize Crop", "colspan": 2 },
+            { "text": "Millet Crop", "colspan": 2 },
+            { "text": "Barley Crop", "colspan": 2 },
+            { "text": "Buckwheat Crop", "colspan": 2 }
+          ],
+          [
+            { "text": "No. of Families" }, { "text": "Area" },
+            { "text": "No. of Families" }, { "text": "Area" },
+            { "text": "No. of Families" }, { "text": "Area" },
+            { "text": "No. of Families" }, { "text": "Area" },
+            { "text": "No. of Families" }, { "text": "Area" },
+            { "text": "No. of Families" }, { "text": "Area" }
+          ]
+        ],
+        "rows": [
+          ["Lumbini Province", "0.25", "248,818.8", "495,137", "168,826.1", "452,282", "77,719.0", "64,500", "7,305.6", "81,533", "7,567.2", "8,577", "616.1"],
+          ["Banke District", "59,395", "28,898.4", "46,626", "18,355.9", "25,840", "3,201.9", "54", "8.1", "82", "7.1", "133", "57.2"],
+          ["Nepalgunj Sub-Metropolitan City", "6,375", "3,189.3", "5,885", "3,129.7", "1,164", "160.2", "0", "", "0", "", "0", ""]
+        ],
+        "source": "Source: National Agriculture Census 2078"
+      }
+    },
+    {
+      "table": {
+        "title": "Table No. 40: Description of Area, Number of Trees, Number of Scattered Trees, and Number of Agricultural Families for Total Permanent Crops Planted as Orchards",
+        "headers": [
+          [
+            { "text": "Province/District/Local Level", "rowspan": 4 },
+            { "text": "Total Agricultural Families", "rowspan": 4 },
+            { "text": "Total Area Utilized (Ha.)", "rowspan": 4 },
+            { "text": "Permanent Crops", "colspan": 10 }
+          ],
+          [
+            { "text": "Number of Agricultural Families", "rowspan": 3 },
+            { "text": "Total Area of Permanent Crops (Ha.)", "rowspan": 3 },
+            { "text": "Planted as Orchards", "colspan": 6 },
+            { "text": "Scattered Trees", "colspan": 2 }
+          ],
+          [
+            { "text": "Productive Age", "colspan": 3 },
+            { "text": "Non-productive Age", "colspan": 3 },
+            { "text": "Productive Age", "rowspan": 2 },
+            { "text": "Non-productive Age", "rowspan": 2 }
+          ],
+          [
+            { "text": "No. of Families" }, { "text": "Area (Ha.)" }, { "text": "No. of Trees" },
+            { "text": "No. of Families" }, { "text": "Area (Ha.)" }, { "text": "No. of Trees" }
+          ]
+        ],
+        "rows": [
+          ["Lumbini Province", "75,092", "426,614.4", "463,750", "29,379.5", "102,704", "6,265.5", "5,098,107", "130,664", "23,114.1", "2,709,953", "5,608,128", "2,021,997"],
+          ["Banke District", "63,885", "36,828.3", "30,321", "398.2", "3405", "333.0", "65,979", "1,130", "65.2", "53,893", "140,560", "76,661"],
+          ["Nepalgunj Sub-Metropolitan City", "7,222", "4,435.5", "1,665", "97.0", "615", "91.0", "10,314", "63", "6.0", "37,907", "2,990", "2,421"]
+        ],
+        "source": "Source: National Agriculture Census 2078"
+      }
+    },
+    {
+      "table": {
+        "title": "Table No. 41: Area, Number of Trees, Number of Scattered Trees, and Number of Agricultural Families for Main Permanent Crops Planted as Orchards",
+        "headers": [
+          [
+            { "text": "Province/ District/ Local Level", "rowspan": 3 },
+            { "text": "Orange", "colspan": 4 },
+            { "text": "Lime", "colspan": 4 },
+            { "text": "Mango", "colspan": 4 },
+            { "text": "Banana", "colspan": 4 }
+          ],
+          [
+            { "text": "No. of Families", "rowspan": 2 },
+            { "text": "Planted as Orchards", "colspan": 2 },
+            { "text": "No. of Scattered Trees", "rowspan": 2 },
+            { "text": "No. of Families", "rowspan": 2 },
+            { "text": "Planted as Orchards", "colspan": 2 },
+            { "text": "No. of Scattered Trees", "rowspan": 2 },
+            { "text": "No. of Families", "rowspan": 2 },
+            { "text": "Planted as Orchards", "colspan": 2 },
+            { "text": "No. of Scattered Trees", "rowspan": 2 },
+            { "text": "No. of Families", "rowspan": 2 },
+            { "text": "Planted as Orchards", "colspan": 2 },
+            { "text": "No. of Scattered Trees", "rowspan": 2 }
+          ],
+          [
+            { "text": "Area" }, { "text": "No. of Trees" },
+            { "text": "Area" }, { "text": "No. of Trees" },
+            { "text": "Area" }, { "text": "No. of Trees" },
+            { "text": "Area" }, { "text": "No. of Trees" }
+          ]
+        ],
+        "rows": [
+          ["Lumbini Province", "68,491", "865.4", "616,503", "350,468", "126,694", "597.2", "461,633", "385,126", "68,491", "865.4", "616,503", "350,468", "126,694", "597.2", "461,633", "385,126"],
+          ["Banke District", "47", "0.0", "0", "47", "7,546", "25.2", "6,544", "16,583", "24,020", "294.8", "48,006", "77,368", "5,559", "12.5", "6,806", "23,744"],
+          ["Nepalgunj Sub-Metropolitan City", "", "0.0", "0", "0", "100", "0.1", "25", "163", "1,265", "74.9", "5,980", "3,141", "138", "5.6", "552", "188"]
+        ],
+        "source": "Source: National Agriculture Census 2078"
+      }
+    },
+    {
+      "table": {
+        "title": "Table No. 42: Number of Agricultural Families Using Agricultural Inputs (Seeds, Pesticides, Fertilizer) in Major Crops",
+        "headers": [
+          [
+            { "text": "Province/ District/ Local Level", "rowspan": 4 },
+            { "text": "Total Number of Agricultural Families", "rowspan": 4 },
+            { "text": "Paddy", "colspan": 8 }
+          ],
+          [
+            { "text": "No. of Families", "rowspan": 3 },
+            { "text": "Type of Seeds", "colspan": 3 },
+            { "text": "Families Using Pesticides", "rowspan": 3 },
+            { "text": "Use of Fertilizers", "colspan": 3 }
+          ],
+          [
+            { "text": "No. of Families Using Inputs", "colspan": 3 },
+            { "text": "No. of Families", "colspan": 3 }
+          ],
+          [
+            { "text": "Local" }, { "text": "Improved" }, { "text": "Hybrid" },
+            { "text": "Local/ Organic" }, { "text": "Mineral/ Chemical" }, { "text": "Both" }
+          ]
+        ],
+        "rows": [
+          ["Lumbini Province", "75,092", "520,581", "154,309", "175,261", "191,011", "219,450", "70,016", "190,750", "259,815"],
+          ["Banke District", "63,885", "59,395", "18,588", "12,516", "28,291", "27,496", "6,886", "14,528", "37,981"],
+          ["Nepalgunj Sub-Metropolitan City", "7,222", "6,375", "1,532", "1,353", "3,489", "3,583", "808", "2,178", "3,390"]
+        ],
+        "source": "Source: National Agriculture Census 2078"
+      }
+    },
+    {
+      "table": {
+        "headers": [
+          [
+            { "text": "Province/District/Local Level", "rowspan": 4 },
+            { "text": "Total Number of Agricultural Families", "rowspan": 4 },
+            { "text": "Maize", "colspan": 8 }
+          ],
+          [
+            { "text": "No. of Families", "rowspan": 3 },
+            { "text": "Type of Seeds", "colspan": 3 },
+            { "text": "Families Using Pesticides", "rowspan": 3 },
+            { "text": "Use of Fertilizers", "colspan": 3 }
+          ],
+          [
+            { "text": "No. of Families Using Inputs", "colspan": 3 },
+            { "text": "No. of Families", "colspan": 3 }
+          ],
+          [
+            { "text": "Local" }, { "text": "Improved" }, { "text": "Hybrid" },
+            { "text": "Local/ Organic" }, { "text": "Mineral/ Chemical" }, { "text": "Both" }
+          ]
+        ],
+        "rows": [
+          ["Lumbini Province", "75,092", "452,282", "311,770", "81,455", "59,058", "66,474", "282,034", "41,401", "128,847"],
+          ["Banke District", "63,885", "63,885", "25,840", "13,089", "5,752", "6,999", "5,903", "12,933", "4,022"],
+          ["Nepalgunj Sub-Metropolitan City", "7,222", "7,222", "1,164", "428", "369", "367", "252", "497", "241"]
+        ],
+        "source": "Source: National Agriculture Census 2078"
+      }
+    },
+    {
+      "table": {
+        "headers": [
+          [
+            { "text": "Province/District/Local Level", "rowspan": 4 },
+            { "text": "Total Number of Agricultural Families", "rowspan": 4 },
+            { "text": "Wheat", "colspan": 8 }
+          ],
+          [
+            { "text": "No. of Families", "rowspan": 3 },
+            { "text": "Type of Seeds", "colspan": 3 },
+            { "text": "Families Using Pesticides", "rowspan": 3 },
+            { "text": "Use of Fertilizers", "colspan": 3 }
+          ],
+          [
+            { "text": "No. of Families Using Inputs", "colspan": 3 },
+            { "text": "No. of Families", "colspan": 3 }
+          ],
+          [
+            { "text": "Local" }, { "text": "Improved" }, { "text": "Hybrid" },
+            { "text": "Local/ Organic" }, { "text": "Mineral/ Chemical" }, { "text": "Both" }
+          ]
+        ],
+        "rows": [
+          ["Lumbini Province", "75,092", "495,137", "266,944", "228,192", "132,833", "176,623", "164,064", "154,450", "495,137"],
+          ["Banke District", "63,885", "46,626", "21,307", "25,320", "15,689", "8,746", "12,091", "25,789", "46,626"],
+          ["Nepalgunj Sub-Metropolitan City", "7,222", "5,885", "2,017", "3,868", "1,789", "1,244", "1,947", "2,693", "5,885"]
+        ],
+        "source": "Source: National Agriculture Census 2078"
+      }
+    },
+    {
+      "table": {
+        "title": "Table No. 43: Number of Domestic Animals and Birds and Agricultural Families",
+        "headers": [
+          [
+            { "text": "Province/ District/ Local Level", "rowspan": 3 },
+            { "text": "Total Agricultural Families", "rowspan": 3 },
+            { "text": "Domestic Animals", "colspan": 13 },
+            { "text": "Domestic Birds", "colspan": 4 }
+          ],
+          [
+            { "text": "Total Families Raising Livestock", "rowspan": 2 },
+            { "text": "Cow/Ox", "colspan": 2 },
+            { "text": "Buffalo", "colspan": 2 },
+            { "text": "Goat/Chyangra", "colspan": 2 },
+            { "text": "Sheep", "colspan": 2 },
+            { "text": "Pig/Boar", "colspan": 2 },
+            { "text": "Other Animals", "colspan": 2 },
+            { "text": "Chicken", "colspan": 2 },
+            { "text": "Other Birds", "colspan": 2 }
+          ],
+          [
+            { "text": "No. of Families" }, { "text": "No. of Cow/Ox" },
+            { "text": "No. of Families" }, { "text": "No. of Buffalo" },
+            { "text": "No. of Families" }, { "text": "No. of Goat/Chyangra" },
+            { "text": "No. of Families" }, { "text": "No. of Sheep" },
+            { "text": "No. of Families" }, { "text": "No. of Pig/Boar" },
+            { "text": "No. of Families" }, { "text": "No. of Other Animals" },
+            { "text": "No. of Families" }, { "text": "No. of Chicken" },
+            { "text": "No. of Families" }, { "text": "No. of Other Birds" }
+          ]
+        ],
+        "rows": [
+          ["Lumbini Province", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""],
+          ["Banke District", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""],
+          ["Nepalgunj Sub-Metropolitan City", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]
+        ],
+        "source": "Source: National Agriculture Census 2078"
+      }
+    },
+    {
+      "table": {
+        "title": "Table No. 44: Number of Workers and Agricultural Families Using Workers According to the Type of Agricultural Worker",
+        "headers": [
+          [
+            { "text": "Province/District/ Local Level", "rowspan": 3 },
+            { "text": "Total Agricultural Families", "rowspan": 3 },
+            { "text": "Permanent Workers", "colspan": 4 },
+            { "text": "Temporary Workers", "colspan": 4 },
+            { "text": "Labor Exchange (Parma) Workers", "colspan": 4 },
+            { "text": "Contract Workers", "colspan": 4 }
+          ],
+          [
+            { "text": "Families Using Workers", "rowspan": 2 },
+            { "text": "Number of Permanent Workers", "colspan": 3 },
+            { "text": "Families Using Workers", "rowspan": 2 },
+            { "text": "Temporary Worker Person-days", "colspan": 3 },
+            { "text": "Families Using Workers", "rowspan": 2 },
+            { "text": "Labor Exchange Worker Person-days", "colspan": 3 },
+            { "text": "Families Using Workers", "rowspan": 2 },
+            { "text": "Contract Worker Person-days", "colspan": 3 }
+          ],
+          [
+            { "text": "Total" }, { "text": "Male" }, { "text": "Female" },
+            { "text": "Total" }, { "text": "Male" }, { "text": "Female" },
+            { "text": "Total" }, { "text": "Male" }, { "text": "Female" },
+            { "text": "Total" }, { "text": "Male" }, { "text": "Female" }
+          ]
+        ],
+        "rows": [
+          ["Lumbini Province", "75,092", "5,163", "10,942", "5,923", "5,019", "290,350", "7,231,030", "2,464,998", "4,766,032", "290,560", "4,532,270", "1,427,936", "3,104,334", "8,525", "140,745", "62,315", "78,431"],
+          ["Banke District", "63,885", "962", "2,083", "989", "1,094", "20,166", "426,777", "140,195", "286,582", "18,126", "275,566", "53,755", "151,811", "1,430", "18,088", "6,895", "11,193"],
+          ["Nepalgunj Sub-Metropolitan City", "7,222", "50", "100", "87", "13", "2,475", "36,933", "12,373", "24,561", "2,157", "20,347", "9,586", "10,761", "113", "588", "313", "275"]
+        ],
+        "source": "Source: National Agriculture Census 2078"
+      }
+    },
+    {
+      "table": {
+        "title": "Table No. 45: Number of Agricultural Families Receiving Agricultural Loans, Needing Additional Loans, Insurance, and Grants",
+        "headers": [
+          [
+            { "text": "Province/ District/ Local Level" },
+            { "text": "Total Agricultural Families" },
+            { "text": "Families Taking Agricultural Loans" },
+            { "text": "Families Stating Need for Additional Loans" },
+            { "text": "Families Insured for Agricultural Activities" },
+            { "text": "Families Receiving Government Grants" }
+          ]
+        ],
+        "rows": [
+          ["Lumbini Province", "75,092", "71,651", "193,373", "30,160", "54,205"],
+          ["Banke District", "63,885", "9,268", "11,951", "2,548", "1,778"],
+          ["Nepalgunj Sub-Metropolitan City", "7,222", "1,090", "2,767", "326", "201"]
+        ],
+        "source": "Source: National Agriculture Census 2078"
+      }
+    },
+    {
+      "table": {
+        "title": "Table No. 46: Number of Agricultural Families According to the Impact of Climate Change",
+        "headers": [
+          [
+            { "text": "Province/District/Local Level", "rowspan": 3 },
+            { "text": "Total Number of Agricultural Families", "rowspan": 3 },
+            { "text": "Number of Agricultural Families Aware of Climate Change", "rowspan": 3 },
+            { "text": "Agricultural Families Stating Climate Change Impact on Agriculture", "rowspan": 3 },
+            { "text": "Agricultural Families According to Climate Change Impact on Agricultural Activities", "colspan": 10 }
+          ],
+          [
+            { "text": "Decrease in Production", "rowspan": 2 },
+            { "text": "Increase in Production", "rowspan": 2 },
+            { "text": "Change in Size of Fruit/Crop", "rowspan": 2 },
+            { "text": "Change in Taste", "rowspan": 2 },
+            { "text": "Difference in Planting Time", "rowspan": 2 },
+            { "text": "More or Less Rainfall", "rowspan": 2 },
+            { "text": "Increase in Pest/Disease Outbreak", "rowspan": 2 },
+            { "text": "Change in Breeding Time", "rowspan": 2 },
+            { "text": "Loss/Emergence of Species", "rowspan": 2 },
+            { "text": "Other", "rowspan": 2 }
+          ],
+          []
+        ],
+        "rows": [
+          ["Lumbini Province", "75092", "346768", "314193", "266768", "32019", "74468", "54821", "136711", "180477", "184875", "13963", "16175", "576"],
+          ["Banke District", "63885", "29165", "25915", "21142", "4804", "7377", "8286", "9474", "13537", "14433", "1512", "2202", "37"],
+          ["Nepalgunj Sub-Metropolitan City", "7222", "2408", "2366", "1739", "338", "251", "339", "626", "464", "1502", "13", "0", "0"]
+        ],
+        "source": "Source: National Agriculture Census 2078"
+      }
+    },
+    {
+      "table": {
+        "title": "Table No. 47: Number of Agricultural Families Managing Waste from Agricultural Practices",
+        "headers": [
+          [
+            { "text": "Province/District/Local Level", "rowspan": 2 },
+            { "text": "Total Number of Agricultural Families", "rowspan": 2 },
+            { "text": "Number of Agricultural Families Managing Waste from Agricultural Practices", "colspan": 7 }
+          ],
+          [
+            { "text": "By Burying" },
+            { "text": "By Burning" },
+            { "text": "By Sending to Waste Managers" },
+            { "text": "By Making Compost" },
+            { "text": "Using as Fuel" },
+            { "text": "By Other Methods" },
+            { "text": "No Management Done" }
+          ]
+        ],
+        "rows": [
+          ["Lumbini Province", "75092", "213317", "368676", "38617", "382202", "126581", "196818", "63116"],
+          ["Banke District", "63885", "16603", "30357", "5411", "33972", "5258", "14894", "3782"],
+          ["Nepalgunj Sub-Metropolitan City", "7222", "918", "2023", "1405", "2119", "162", "2649", "585"]
+        ],
+        "source": "Source: National Agriculture Census 2078"
+      }
+    },
+    {
+      "table": {
+        "title": "Table No. 48: Number of Main Farmers and Agricultural Family Population by Gender",
+        "headers": [
+          [
+            { "text": "Province/District/Local Level", "rowspan": 2 },
+            { "text": "Total Number of Agricultural Families", "rowspan": 2 },
+            { "text": "Number of Main Farmers by Gender", "colspan": 2 },
+            { "text": "Agricultural Family Population", "colspan": 2 }
+          ],
+          [
+            { "text": "Male" }, { "text": "Female" },
+            { "text": "Male" }, { "text": "Female" }
+          ]
+        ],
+        "rows": [
+          ["Lumbini Province", "75092", "493454", "271638", "1786863", "1919119"],
+          ["Banke District", "63885", "47447", "20439", "176262", "177055"],
+          ["Nepalgunj Sub-Metropolitan City", "7222", "6093", "1129", "23774", "21301"]
+        ],
+        "source": "Source: National Agriculture Census 2078"
+      }
+    },
+    {
+      "table": {
+        "title": "Table No. 49: Number of Agricultural Families of Age 10 and Above Stating Participation in Agricultural Decisions and Average Time Spent on Agricultural Activities by Gender",
+        "headers": [
+          [
+            { "text": "Province/District/Local Level", "rowspan": 3 },
+            { "text": "Pop. of Families Participating in Formal Training", "colspan": 2 },
+            { "text": "Pop. of Families Participating in Agr. Decisions", "colspan": 2 },
+            { "text": "Pop. of Families According to Average Time Spent on Agr. Activities", "colspan": 10 }
+          ],
+          [
+            { "text": "Male", "rowspan": 2 }, { "text": "Female", "rowspan": 2 },
+            { "text": "Male", "rowspan": 2 }, { "text": "Female", "rowspan": 2 },
+            { "text": "Less (40%)", "colspan": 2 },
+            { "text": "Approx. Half (40%-59%)", "colspan": 2 },
+            { "text": "Most (60%-99%)", "colspan": 2 },
+            { "text": "All (100%)", "colspan": 2 },
+            { "text": "No Time Given", "colspan": 2 }
+          ],
+          [
+            { "text": "Male" }, { "text": "Female" },
+            { "text": "Male" }, { "text": "Female" },
+            { "text": "Male" }, { "text": "Female" },
+            { "text": "Male" }, { "text": "Female" },
+            { "text": "Male" }, { "text": "Female" }
+          ]
+        ],
+        "rows": [
+          ["Lumbini Province", "92890", "87354", "914553", "965870", "323413", "302797", "291516", "320610", "374507", "430487", "245286", "326891", "234527", "241189"],
+          ["Banke District", "9914", "8891", "83426", "76239", "33988", "30959", "28224", "29301", "32982", "32217", "25601", "32298", "23881", "22990"],
+          ["Nepalgunj Sub-Metropolitan City", "1067", "779", "9136", "5463", "2538", "1794", "4368", "3941", "4458", "3486", "3288", "3061", "5016", "5009"]
+        ],
+        "source": "Source: National Agriculture Census 2078"
+      }
+    },
+    {
+      "table": {
+        "title": "Table No. 50: Status of Household Head and Agricultural Practice Status",
+        "headers": [
+          [
+            { "text": "Province/District/Local Level", "rowspan": 2 },
+            { "text": "Total Number of Agricultural Families", "rowspan": 2 },
+            { "text": "Household Head", "colspan": 2 },
+            { "text": "Agr. Practice Status", "colspan": 3 }
+          ],
+          [
+            { "text": "Main Farmer is Household Head" },
+            { "text": "Other Person is Household Head" },
+            { "text": "Single-Practice Family" },
+            { "text": "Multi-Practice Family" },
+            { "text": "Shared-Practice Family" }
+          ]
+        ],
+        "rows": [
+          ["Lumbini Province", "75092", "695375", "69717", "746900", "15470", "2722"],
+          ["Banke District", "63885", "62281", "5604", "63648", "4081", "157"],
+          ["Nepalgunj Sub-Metropolitan City", "7222", "6984", "239", "7059", "164", "0"]
+        ],
+        "source": "Source: National Agriculture Census 2078"
+      }
+    },
+    {
+      "table": {
+        "title": "Table No. 51: Number of Agricultural Families According to Major Production Activities of Agricultural Practice",
+        "headers": [
+          [
+            { "text": "Province/District/ Local Level", "rowspan": 2 },
+            { "text": "Total Number of Agricultural Families", "rowspan": 2 },
+            { "text": "Major Production Activities/Activities of Agricultural Practice", "colspan": 7 }
+          ],
+          [
+            { "text": "Food Crops" },
+            { "text": "Vegetables" },
+            { "text": "Fruits" },
+            { "text": "Cash Crops" },
+            { "text": "Livestock Farming" },
+            { "text": "Poultry Farming" },
+            { "text": "Other" }
+          ]
+        ],
+        "rows": [
+          ["Lumbini Province", "75092", "707366", "31756", "1887", "1521", "17226", "3248", "2088"],
+          ["Banke District", "63885", "59873", "5956", "56", "0", "1621", "284", "96"],
+          ["Nepalgunj Sub-Metropolitan City", "7222", "6463", "529", "12", "0", "193", "13", "12"]
+        ],
+        "source": "Source: National Agriculture Census 2078"
+      }
+    },
+    {
+      "table": {
+        "title": "Table No. 52: Number of Agricultural Families According to Major Use of Agricultural Production",
+        "headers": [
+          [
+            { "text": "Province/District/Local Level", "rowspan": 2 },
+            { "text": "Total Number of Agricultural Families", "rowspan": 2 },
+            { "text": "Major Use of Agricultural Production", "colspan": 4 }
+          ],
+          [
+            { "text": "All Household Use" },
+            { "text": "Mainly HH Use and Some Sale" },
+            { "text": "Mainly Sale and Some HH Use" },
+            { "text": "All Sale" }
+          ]
+        ],
+        "rows": [
+          ["Lumbini Province", "75092", "533075", "204059", "25221", "2737"],
+          ["Banke District", "63885", "50429", "15601", "1622", "233"],
+          ["Nepalgunj Sub-Metropolitan City", "7222", "5010", "1548", "626", "38"]
+        ],
+        "source": "Source: National Agriculture Census 2078"
+      }
+    },
+    {
+      "table": {
+        "title": "Table No. 53: Number of Agricultural Families According to Major Source of Income and Duration for which Own Production is Insufficient for Food",
+        "headers": [
+          [
+            { "text": "Province/ District/ Local Level", "rowspan": 2 },
+            { "text": "Total Number of Agricultural Families", "rowspan": 2 },
+            { "text": "Major Source of Income of Agr. Family", "colspan": 2 },
+            { "text": "Families whose Income from Own Production is Insufficient for the Year", "rowspan": 2 },
+            { "text": "Number of Families According to Duration of Food Insufficiency", "colspan": 4 }
+          ],
+          [
+            { "text": "Agriculture" }, { "text": "Non-Agriculture" },
+            { "text": "1 to 3 Months" },
+            { "text": "4 to 6 Months" },
+            { "text": "7 to 9 Months" },
+            { "text": "10 to 12 Months" }
+          ]
+        ],
+        "rows": [
+          ["Lumbini Province", "75092", "507488", "257604", "390474", "97342", "175354", "85524", "32253"],
+          ["Banke District", "63885", "46448", "21438", "29801", "8128", "10661", "6475", "4537"],
+          ["Nepalgunj Sub-Metropolitan City", "7222", "5461", "1761", "4145", "1303", "1630", "917", "296"]
+        ],
+        "source": "Source: National Agriculture Census 2078"
+      }
+    }
+  ]
+}

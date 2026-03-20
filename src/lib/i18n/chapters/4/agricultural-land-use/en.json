@@ -1,0 +1,39 @@
+{
+  "title": "4.6 Agricultural Land Use Details",
+  "blocks": [
+    {
+      "paragraphs": [
+        "When analyzing what crops are planted in what area by agricultural practice, according to the National Agriculture Census results, out of 7,222 total agricultural families in this sub-metropolitan city, 7,054 families are engaged in agricultural practices on cultivable land, with a total area of 4,044.0 hectares, which is 91.17%.",
+        "Out of the total area, 4,023.8 hectares (90.72%) are under temporary crops by all 7,054 families. Likewise, 100 agricultural families have 20.2 hectares (0.46%) under other cultivable land. Furthermore, 640 agricultural families use 57.9 hectares (2.19%) for permanent crops. Similarly, the area of permanent pastures, private open spaces, ponds, and other land is 294.4 hectares (6.64%)."
+      ],
+      "table": {
+        "title": "Table No. 54: Details Regarding agricultural Land Use",
+        "headers": [
+          [
+            { "text": "Province/District/Local Level", "rowspan": 2 },
+            { "text": "Total Number of Agricultural Families", "rowspan": 2 },
+            { "text": "Total Area of Land Used by Agricultural Families", "rowspan": 2 },
+            { "text": "Total Cultivable Land", "colspan": 2 },
+            { "text": "Land Under Temporary Crops", "colspan": 2 },
+            { "text": "Other Cultivable Land", "colspan": 2 },
+            { "text": "Land Under Permanent Crops", "colspan": 2 },
+            { "text": "Other Land", "colspan": 2 }
+          ],
+          [
+            { "text": "No. of Families" }, { "text": "Area (Hectare)" },
+            { "text": "No. of Families" }, { "text": "Area (Hectare)" },
+            { "text": "No. of Families" }, { "text": "Area (Hectare)" },
+            { "text": "No. of Families" }, { "text": "Area (Hectare)" },
+            { "text": "No. of Families" }, { "text": "Area (Hectare)" }
+          ]
+        ],
+        "rows": [
+          ["Lumbini Province", "", "", "", "", "", "", "", "", "", "", " "],
+          ["Banke District", "", "", "", "", "", "", "", "", "", "", " "],
+          ["Nepalgunj Sub-Metropolitan City", "", "", "", "", "", "", "", "", "", "", " "]
+        ],
+        "source": "Source: National Agriculture Census 2078"
+      }
+    }
+  ]
+}

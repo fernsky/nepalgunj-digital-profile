@@ -1,0 +1,13 @@
+---
+import SectionRenderer from "../../SectionRenderer.astro";
+
+interface Props {
+  content: any;
+  lang: string;
+  id: string;
+}
+
+const { content, lang, id } = Astro.props;
+---
+
+<SectionRenderer content={content} lang={lang} id={id} />

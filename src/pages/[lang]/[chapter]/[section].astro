@@ -2,6 +2,9 @@
 import Layout from "../../../layouts/Layout.astro";
 import { type Lang, chapters } from "../../../i18n/translations";
 import { t, getAllSections, formatSectionId } from "../../../i18n/utils";
+import SectionRenderer from "../../../components/SectionRenderer.astro";
+import Chapter4Renderer from "../../../components/chapters/4/Chapter4Renderer.astro";
+
 
 export async function getStaticPaths() {
   const allSections = getAllSections();
@@ -42,92 +45,11 @@ const content = jsonFiles[key]?.default ?? null;
 
     <div class="min-h-[400px]">
       {content ? (
-        <div class="prose prose-invert max-w-none">
-          <!-- Section heading -->
-          <h1 class="text-3xl font-extrabold mb-8" style="color:var(--text-heading);">
-            {content.sectionNumber} {content.title}
-          </h1>
-
-          <!-- PARAGRAPHS type -->
-          {content.type === "paragraphs" && content.paragraphs && (
-            <div class="space-y-6">
-              {content.paragraphs.map((p: string) => (
-                <p class="text-lg leading-relaxed text-justify" style="color:var(--text-body);">{p}</p>
-              ))}
-            </div>
-          )}
-
-          <!-- DESCRIPTION + LIST type -->
-          {content.type === "description-list" && (
-            <div>
-              {content.description && (
-                <p class="text-lg leading-relaxed mb-8 text-justify" style="color:var(--text-body);">{content.description}</p>
-              )}
-              {content.list && (
-                <div class="space-y-4">
-                  {content.list.map((item: string) => (
-                    <div class="flex gap-4 p-5 rounded-xl" style="background:var(--card-bg);border:1px solid var(--card-border);">
-                      <p class="text-lg leading-relaxed m-0" style="color:var(--text-body);">{item}</p>
-                    </div>
-                  ))}
-                </div>
-              )}
-            </div>
-          )}
-
-          <!-- SUBSECTIONS type -->
-          {content.type === "subsections" && (
-            <div>
-              {content.description && (
-                <p class="text-lg leading-relaxed mb-10 text-justify" style="color:var(--text-body);">{content.description}</p>
-              )}
-              {content.subsections && (
-                <div class="space-y-8">
-                  {content.subsections.map((sub: any) => (
-                    <div class="p-8 rounded-2xl" style="background:var(--card-bg);border:1px solid var(--card-border);">
-                      <h3 class="text-xl font-bold mb-4" style="color:var(--text-heading);">{sub.title}</h3>
-                      <p class="text-lg leading-relaxed text-justify" style="color:var(--text-body);">{sub.content}</p>
-                      {sub.extra && (
-                        <p class="text-lg leading-relaxed mt-6 pt-6 border-t text-justify" style="color:var(--text-body);border-color:var(--border);">{sub.extra}</p>
-                      )}
-                    </div>
-                  ))}
-                </div>
-              )}
-            </div>
-          )}
-
-          <!-- BULLET-STAGES type (for preparation stages) -->
-          {content.type === "bullet-stages" && (
-            <div>
-              {content.description && (
-                <p class="text-lg leading-relaxed mb-8 text-justify" style="color:var(--text-body);">{content.description}</p>
-              )}
-              {content.bullets && (
-                <div class="space-y-4 mb-12">
-                  {content.bullets.map((b: string) => (
-                    <div class="flex gap-3 p-5 rounded-xl" style="background:var(--card-bg);border:1px solid var(--card-border);">
-                      <span class="mt-2 w-2 h-2 rounded-full shrink-0" style="background:var(--primary-400);"></span>
-                      <p class="text-lg leading-relaxed m-0 text-justify" style="color:var(--text-body);">{b}</p>
-                    </div>
-                  ))}
-                </div>
-              )}
-              {content.stages && (
-                <div class="space-y-8">
-                  {content.stages.map((stage: any) => (
-                    <div class="p-8 rounded-2xl" style="background:var(--card-bg);border:1px solid var(--card-border);">
-                      <h3 class="text-xl font-bold mb-4" style="color:var(--text-heading);">
-                        <span class="mr-2 opacity-50 font-mono text-base">{stage.sectionNumber}</span>{stage.title}
-                      </h3>
-                      <p class="text-lg leading-relaxed text-justify" style="color:var(--text-body);">{stage.content}</p>
-                    </div>
-                  ))}
-                </div>
-              )}
-            </div>
-          )}
-        </div>
+        chapterNum === 4 ? (
+          <Chapter4Renderer content={content} lang={currentLang} id={sectionSlug!} chapterNum={chapterNum} />
+        ) : (
+          <SectionRenderer content={content} lang={currentLang} id={sectionSlug!} />
+        )
       ) : (
         <!-- No content yet -->
         <div class="prose prose-invert max-w-none">

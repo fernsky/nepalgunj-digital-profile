@@ -1,0 +1,23 @@
+{
+  "sectionNumber": "4.6.2",
+  "title": "Diseases and Pests in Vegetables and Fruits",
+  "table": {
+    "title": "Table No. 56: Diseases and Pests in Vegetables and Fruits",
+    "headers": [
+      [
+        { "text": "S.N." },
+        { "text": "Crop" },
+        { "text": "Major Diseases" },
+        { "text": "Major Pests" }
+      ]
+    ],
+    "rows": [
+      ["1", "Tomato", "Tuta absoluta, Whitefly, Aphids, Fruit borer, Shield bug, etc.", "Early Blight, Late Blight, Mosaic, etc."],
+      ["2", "Cauliflower, Cabbage", "Diamondback Moth, Tobacco Caterpillar, Aphids, Flea Hopper, etc.", "Soft Rot, Black Rot, Alternaria, Club Root, Damping Off, etc."],
+      ["3", "Potato", "Late Blight, Mosaic, Brown Pith, Cutworm, Aphids, Leaf Spot, etc.", "Potato Tuber Moth, Red Ant, Leaf Eating Caterpillar, etc."],
+      ["4", "Mustard Greens (Rayo)", "Diamondback Moth, Tobacco Caterpillar, Aphids, Flea Hopper, etc.", "Soft Rot, Black Rot, Alternaria, Club Root, Damping Off, etc."],
+      ["5", "Citrus (Lemon)", "Shield bug, Aphids, Fruit fly, Scale insects, Root rot, Foot rot, Mildew, Leaf miner, Pink disease, Anthracnose, Citrus scab, Gummosis, Sooty mould, Canker, Citrus greening, (Citrus tristeza virus CTV), Lemon dog, etc.", "Canker, Foot rot, Green bug, Fruit fly, Sooty mould, Citrus psylla, Leaf miner, Red spider mite, Blue beetle, Stem & Trunk borer, Aphids, Thrips, Nematodes, Lemon butterfly, etc."]
+    ],
+    "source": "Source: Office of the Municipal Executive"
+  }
+}

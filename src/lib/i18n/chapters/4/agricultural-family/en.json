@@ -1,0 +1,31 @@
+{
+  "title": "4.4 Agricultural Family, Area, Parcel and Irrigated Area",
+  "blocks": [
+    {
+      "paragraphs": [
+        "In the National Census 2078, a Sample Frame was prepared for conducting the National Agriculture Census based on agricultural family details, including land and livestock information for each family. Wards or enumeration areas were selected based on that frame, and detailed information on agricultural families was collected. According to the results of the National Agriculture Census 2078, the total number of agricultural families in Nepalgunj Sub-Metropolitan City is 7,222.",
+        "The 7,222 agricultural families in this sub-metropolitan city are observed to be practicing agriculture on 4,435.5 hectares of land across 16,557 parcels. On average, an agricultural family farms on 2.3 parcels. The total irrigated area here is 3,423.5 hectares."
+      ],
+      "table": {
+        "title": "Table No. 36: Details of Agricultural Family Number, Area, Parcel Number, Average Parcel Number and Irrigated Area by Local Level",
+        "headers": [
+          [
+            { "text": "Province/District/Local Level" },
+            { "text": "Total Agricultural Families" },
+            { "text": "Total Land Area Utilized (Hectares)" },
+            { "text": "Total Number of Parcels" },
+            { "text": "Average Number of Parcels" },
+            { "text": "Families Using Irrigation" },
+            { "text": "Irrigated Area (Hectares)" }
+          ]
+        ],
+        "rows": [
+          ["Lumbini Province", "75,092", "426,614.4", "2,252,764", "2.9", "548,799", "241,944.3"],
+          ["Banke District", "63,885", "36,828.3", "149,775", "2.2", "56,981", "25,115.3"],
+          ["Nepalgunj Sub-Metropolitan City", "7,222", "4,435.5", "16,557", "2.3", "6,849", "3,423.5"]
+        ],
+        "source": "Source: National Agriculture Census 2078"
+      }
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "sectionNumber": "4.8.3",
+  "title": "Local Market and Commercial Centers",
+  "blocks": [
+    {
+      "image": {
+        "src": "/market.jpg",
+        "alt": "Market Area",
+        "caption": "Market Area"
+      }
+    },
+    {
+      "paragraphs": [
+        "Apart from the big cities of the country, in areas with dense settlements in rural areas, human activities such as education, health, other services, trade and commerce are found to be concentrated. Such centers are called market centers. Although they have not been fully developed from the perspective of urban development and facilities, such centers are found to be concentrating and developing human activities as areas that can be developed in the future. It is not that markets cannot be developed in new areas looking at suitability; however, it is easy to further develop such areas that have already been developed to some extent. The main commercial centers of this sub-metropolitan city are as follows."
+      ]
+    },
+    {
+      "image": {
+        "src": "/market1.jpg",
+        "alt": "Gharbari Tole Market Area",
+        "caption": "Gharbari Tole Market Area"
+      }
+    },
+    {
+      "table": {
+        "alignLeft": true,
+        "title": "Table No. 60: Details of Major Markets",
+        "headers": [
+          [
+            { "text": "Ward No." },
+            { "text": "Commercial Area" }
+          ]
+        ],
+        "rows": [
+          ["1", "Dhamboji, Khajura Road"],
+          ["2", "Gharbari Tole"],
+          ["3", "Surajline, Eklaini, Birendra Keshari Tole, Sonar Tole, Bishkoriyan Tole"],
+          ["5", "Phultekra"],
+          ["6", "Phultekra Area"],
+          ["7", "Sahawa Mod, Pipal Chautara"],
+          ["8", "Tribhuvan Chowk, Sadar Line"],
+          ["9", "Ramlila Road, Charbahini Army Barrack, Electricity Office"],
+          ["10", "Charbahini Chowk, Surkhet Road, Ganeshman Chowk Industrial Area"],
+          ["11", "Surkhet Road, Pasang Marga, Sadar Line, Idgah Road, Sunar Mandi"],
+          ["12", "B.P. Chowk Surkhet Road, Kaushalya Marga, Belaspur"],
+          ["13", "Ramlila Maidan, Nepal Bank Road from Mero Hospital, Udayapur Chauraha"],
+          ["14", "Balegaun, Babugaun, Chaulikka, Bhatanpurwa"],
+          ["15", "Jamunaha Chauki"],
+          ["16", "Bhansar, Kabrastan, Ismail Chowk, Shiva Temple"],
+          ["17", "Paraspur, Bhruti Nagar"],
+          ["18", "Karkado"],
+          ["19", "Bhaiyapur, Sujigaun, Katalia, Alannagar, Mohanpur"],
+          ["20", "Ranjha Airport"],
+          ["21", "Nayanbasti, Birta"],
+          ["22", "Shantichowk, Narapurwa, Pureni Bazar, Kasnital Chowk"],
+          ["23", "Bekari Singh Purwa, Bhajjupurwa, Loharpurwa"]
+        ],
+        "source": "Source: Office of the Municipal Executive"
+      }
+    }
+  ]
+}

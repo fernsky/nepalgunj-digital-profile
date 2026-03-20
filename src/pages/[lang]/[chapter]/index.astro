@@ -3,6 +3,8 @@ import Layout from "../../../layouts/Layout.astro";
 import { type Lang, chapters } from "../../../i18n/translations";
 import { t, formatSectionId } from "../../../i18n/utils";
 import SectionRenderer from "../../../components/SectionRenderer.astro";
+import Chapter4Renderer from "../../../components/chapters/4/Chapter4Renderer.astro";
+
 
 export function getStaticPaths() {
   const paths: any[] = [];
@@ -74,29 +76,31 @@ function getSectionContent(slug: string) {
         </div>
       </section>
 
-      <!-- All Sections Rendered via SectionRenderer component -->
-      <div class="space-y-4">
-        {chapter.sections.map((section: any) => {
-          const content = getSectionContent(section.slug);
-          
-          return (
-            <div class="scroll-mt-24">
-              {/* Top level section */}
+      <!-- All Sections Rendered Here -->
+      {chapter.sections.map((section: any) => {
+        const content = getSectionContent(section.slug);
+        
+        return (
+          <>
+            {/* Top level section */}
+            {chapter.num === 4 ? (
+              <Chapter4Renderer content={content} lang={lang} id={section.slug} chapterNum={chapter.num} />
+            ) : (
               <SectionRenderer content={content} lang={lang} id={section.slug} />
-              
-              {/* Child sections rendered completely flattened inline if any */}
-              {section.children && section.children.map((child: any) => {
-                const childContent = getSectionContent(child.slug);
-                return (
-                  <div class="ml-4 lg:ml-8 mt-4 scroll-mt-24">
-                    <SectionRenderer content={childContent} lang={lang} id={child.slug} />
-                  </div>
-                );
-              })}
-            </div>
-          );
-        })}
-      </div>
+            )}
+            
+            {/* Child sections rendered completely flattened inline if any */}
+            {section.children && section.children.map((child: any) => {
+              const childContent = getSectionContent(child.slug);
+              return chapter.num === 4 ? (
+                 <Chapter4Renderer content={childContent} lang={lang} id={child.slug} chapterNum={chapter.num} />
+              ) : (
+                 <SectionRenderer content={childContent} lang={lang} id={child.slug} />
+              );
+            })}
+          </>
+        );
+      })}
 
       <!-- Nav between chapters footer -->
       <div class="flex justify-between items-center pt-12 mt-20" style={`border-top:1px solid var(--border);`}>

@@ -1,0 +1,41 @@
+{
+  "title": "4.2.1 Land Use Distribution",
+  "blocks": [
+    {
+      "paragraphs": [
+        "Land is an important natural resource. It should be properly used for economic development. Land is used for management of agriculture, housing, roads, drinking water, irrigation, electricity and energy, information and communication, etc. In this section, a factual depiction of the land use and land cover of the sub-metropolitan city has been provided.",
+        "Looking at the current land use of this sub-metropolitan city, 80.14 percent, i.e., the largest area, is occupied by the agricultural sector, followed by settlements in the second position. Among the available land, the portion of cultivable land is good. There seems to be a good possibility of production if scientific agricultural systems can be adopted in all the cultivable land. Another notable aspect of land use in this city is the area covered by its agriculture. It is positive for the city dwellers that 80.14 percent of the total land area remains cultivable. Detailed descriptions of other land uses are mentioned in the table below:-"
+      ],
+      "table": {
+        "title": "Table No. 35: Detailed Description of Land Use Table",
+        "headers": [
+          [
+            { "text": "Land Use Category" },
+            { "text": "Sub-Metropolitan City Land Use Description Area (Sq. Km.)" },
+            { "text": "Area in Percentage" }
+          ]
+        ],
+        "rows": [
+          ["Agriculture", "68.87", "80.14"],
+          ["Public Use Area", "2.97", "3.45"],
+          ["Religious Area", "0.02", "0.03"],
+          ["Shrub/Bushes Area", "2.25", "2.61"],
+          ["Water Area", "0.74", "0.86"],
+          ["Industrial Area", "0.89", "1.03"],
+          ["Public Place", "2.97", "3.45"],
+          ["Residential Area", "6.96", "8.10"],
+          ["Other Area", "0.28", "0.33"],
+          ["<b>Total</b>", "<b>85.94</b>", "<b>100</b>"]
+        ],
+        "source": "Source: Based on GIS Data"
+      }
+    },
+    {
+      "image": {
+        "src": "/map1.jpg",
+        "alt": "Land Use Map of Nepalgunj Sub-Metropolitan City",
+        "caption": "Map No. 4: Land Use Map of the Sub-Metropolitan City"
+      }
+    }
+  ]
+}
