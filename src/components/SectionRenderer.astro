@@ -51,19 +51,23 @@ const { content, lang, id } = Astro.props;
                     <table class="w-full text-left border-collapse min-w-[600px]">
                       { (block.table?.headers || block.data?.headers) && (
                         <thead class="bg-blue-500 text-white" style="background-color: #4A88D0;">
-                          {(block.table?.headers || block.data?.headers).map((headerRow: any[]) => (
-                             <tr>
-                               {headerRow.map((h: any) => (
-                                 <th 
-                                   rowspan={h.rowspan > 1 ? Number(h.rowspan) : undefined} 
-                                   colspan={h.colspan > 1 ? Number(h.colspan) : undefined} 
-                                   class="px-4 py-3 font-semibold border border-white/30 text-center align-middle"
-                                 >
-                                   {typeof h === 'string' ? h : h.text}
-                                 </th>
-                               ))}
-                             </tr>
-                          ))}
+                          {(() => {
+                            const rawHeaders = block.table?.headers || block.data?.headers;
+                            const normalizedHeaders = Array.isArray(rawHeaders[0]) ? rawHeaders : [rawHeaders];
+                            return normalizedHeaders.map((headerRow: any[]) => (
+                              <tr>
+                                {headerRow.map((h: any) => (
+                                  <th 
+                                    rowspan={h.rowspan > 1 ? Number(h.rowspan) : undefined} 
+                                    colspan={h.colspan > 1 ? Number(h.colspan) : undefined} 
+                                    class="px-4 py-3 font-semibold border border-white/30 text-center align-middle"
+                                  >
+                                    {typeof h === 'string' ? h : h.text}
+                                  </th>
+                                ))}
+                              </tr>
+                            ));
+                          })()}
                         </thead>
                       )}
                       <tbody style="background:var(--card-bg);">
@@ -97,7 +101,7 @@ const { content, lang, id } = Astro.props;
               {(block.type === "chart" || block.chart) && (
                 <div class="my-12 p-8 rounded-3xl bg-white/5 border border-white/10 shadow-2xl backdrop-blur-sm relative overflow-hidden group">
                   <div class="absolute inset-0 bg-gradient-to-br from-primary-500/5 to-transparent opacity-50"></div>
-                  <h3 class="text-xl font-bold mb-8 text-center" style="color:var(--text-heading);">{ (block.chart || block.data).title }</h3>
+                  <h3 class="text-xl font-bold mb-8 text-center" style="color:var(--text-heading);">{ (block.chart || block.data)?.title }</h3>
                   <div class="d3-chart-wrapper" data-chart={JSON.stringify(block.chart || block.data)}>
                     <div class="d3-container min-h-[400px]"></div>
                   </div>
@@ -158,8 +162,8 @@ const { content, lang, id } = Astro.props;
       )}
 
       <!-- DESCRIPTION + LIST type -->
-      {content.type === "description-list" && (
-        <div>
+      { (content.type === "description-list" || content.list) && (
+        <div class="mb-8">
           {content.description && (
             <p class="text-lg leading-relaxed mb-8 text-justify" style="color:var(--text-body);">{content.description}</p>
           )}
@@ -187,14 +191,14 @@ const { content, lang, id } = Astro.props;
       )}
 
       <!-- SUBSECTIONS type (Standalone check) -->
-      {content.type === "subsections" && (
+      { (content.type === "subsections" || content.subsections) && (
         <div class="mb-8">
           {content.description && (
             <p class="text-lg leading-relaxed mb-10 text-justify" style="color:var(--text-body);">{content.description}</p>
           )}
-          {content.subsections && (
+          {(content.subsections || content.content) && (
             <div class="space-y-8">
-              {content.subsections.map((sub: any) => (
+              {(content.subsections || (Array.isArray(content.content) ? content.content : [])).map((sub: any) => (
                 <div class="p-8 rounded-2xl" style="background:var(--card-bg);border:1px solid var(--card-border);">
                   <h3 class="text-xl font-bold mb-4" style="color:var(--text-heading);">{sub.title}</h3>
                   <p class="text-lg leading-relaxed text-justify" style="color:var(--text-body);">{sub.content}</p>
@@ -229,34 +233,38 @@ const { content, lang, id } = Astro.props;
       )}
 
       <!-- TABLE in any type -->
-      {content.table && (
+      {(content.type === "table" || content.table) && (
         <div class="my-8">
-          {content.table.title && (
+          {content.table?.title && (
             <div class="text-center font-bold text-lg mb-4" style="color:var(--primary-500);">
               {content.table.title}
             </div>
           )}
           <div class="overflow-x-auto rounded-xl shadow-sm border" style="border-color:var(--card-border);">
             <table class="w-full text-left border-collapse min-w-[600px]">
-              {content.table.headers && (
+              { (content.table?.headers || content.data?.headers) && (
                 <thead class="bg-blue-500 text-white" style="background-color: #4A88D0;">
-                  {content.table.headers.map((headerRow: any[]) => (
-                    <tr>
-                      {headerRow.map((h: any) => (
-                        <th 
-                          rowspan={h.rowspan > 1 ? Number(h.rowspan) : undefined} 
-                          colspan={h.colspan > 1 ? Number(h.colspan) : undefined} 
-                          class="px-4 py-3 font-semibold border border-white/30 text-center align-middle"
-                        >
-                          {h.text}
-                        </th>
-                      ))}
-                    </tr>
-                  ))}
+                  {(() => {
+                    const rawHeaders = content.table?.headers || content.data?.headers;
+                    const normalizedHeaders = Array.isArray(rawHeaders[0]) ? rawHeaders : [rawHeaders];
+                    return normalizedHeaders.map((headerRow: any[]) => (
+                      <tr>
+                        {headerRow.map((h: any) => (
+                          <th 
+                            rowspan={h.rowspan > 1 ? Number(h.rowspan) : undefined} 
+                            colspan={h.colspan > 1 ? Number(h.colspan) : undefined} 
+                            class="px-4 py-3 font-semibold border border-white/30 text-center align-middle"
+                          >
+                            {typeof h === 'string' ? h : h.text}
+                          </th>
+                        ))}
+                      </tr>
+                    ));
+                  })()}
                 </thead>
               )}
               <tbody style="background:var(--card-bg);">
-                {content.table.rows && content.table.rows.map((row: any[], i: number) => (
+                {(content.table?.rows || content.data?.rows || []).map((row: any[], i: number) => (
                   <tr class={i % 2 === 0 ? "" : "bg-blue-50/10 dark:bg-white/5"}>
                      {row.map((cell: any, j: number) => {
                        const isObj = typeof cell === 'object' && cell !== null;
@@ -279,14 +287,14 @@ const { content, lang, id } = Astro.props;
               </tbody>
             </table>
           </div>
-          {content.table.source && (
+          {(content.table?.source || content.data?.source) && (
             <div class="text-right italic text-sm mt-3 font-medium opacity-80" style="color:var(--text-body);">
-              {content.table.source}
+              {content.table?.source || content.data?.source}
             </div>
           )}
-          {content.table.description && (
+          {(content.table?.description || content.data?.description) && (
             <p class="text-lg leading-relaxed mt-6 text-justify" style="color:var(--text-body);">
-              {content.table.description}
+              {content.table?.description || content.data?.description}
             </p>
           )}
         </div>
