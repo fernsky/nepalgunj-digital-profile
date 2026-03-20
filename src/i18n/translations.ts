@@ -168,7 +168,7 @@ export const chapters: Chapter[] = [
         { id: "5-1-4", slug: "ict-lab-schools", title: { ne: "उप-महानगरपालिकाको ICT Lab उपलब्ध भएका विद्यालयको विवरण", en: "Schools with ICT Lab" } },
         { id: "5-1-5", slug: "library-schools", title: { ne: "नमूना तथा पुस्तकालय सुविधा उपलब्ध भएका विद्यालयको विवरण", en: "Schools with Library Facilities" } },
         { id: "5-1-6", slug: "educational-quality", title: { ne: "शैक्षिक गुणस्तर सम्बन्धी विवरण", en: "Educational Quality" } },
-        { id: "5-1-7", slug: "child-friendly-education", title: { ne: "वातमैत्री शिक्षा सम्बन्धी विवरण", en: "Child-Friendly Education" } },
+        { id: "5-1-7", slug: "child-friendly-education", title: { ne: "बालमैत्री शिक्षा सम्बन्धी विवरण", en: "Child-Friendly Education" } },
       ]},
       { id: "5-2", slug: "health-nutrition", title: { ne: "स्वास्थ्य तथा पोषण", en: "Health and Nutrition" }, children: [
         { id: "5-2-1", slug: "health-institutions", title: { ne: "स्वास्थ्य संस्थाको विवरण", en: "Health Institutions" } },

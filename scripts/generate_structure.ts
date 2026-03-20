@@ -1,10 +1,10 @@
-import fs from 'fs';
-import path from 'path';
-import { chapters } from './src/i18n/translations.ts';
+import fs from 'node:fs';
+import path from 'node:path';
+import { chapters, type Chapter, type ChapterSection } from '../src/i18n/translations';
 
 const baseDir = process.cwd();
 
-chapters.forEach(chapter => {
+chapters.forEach((chapter: Chapter) => {
   const chapterDir = path.join(baseDir, 'src/components/chapters', String(chapter.num));
   if (!fs.existsSync(chapterDir)) fs.mkdirSync(chapterDir, { recursive: true });
 
@@ -17,17 +17,17 @@ chapters.forEach(chapter => {
   fs.writeFileSync(path.join(heroDir, 'ne.json'), JSON.stringify({ title: chapter.title.ne, sectionNumber: String(chapter.num), content: chapter.description.ne }, null, 2));
   fs.writeFileSync(path.join(heroDir, 'en.json'), JSON.stringify({ title: chapter.title.en, sectionNumber: String(chapter.num), content: chapter.description.en }, null, 2));
 
-  chapter.sections.forEach(section => {
+  chapter.sections.forEach((section: ChapterSection) => {
     createSectionFiles(chapter.num, section, chapterDir, i18nChapterDir);
     if (section.children) {
-      section.children.forEach(child => {
+      section.children.forEach((child: ChapterSection) => {
         createSectionFiles(chapter.num, child, chapterDir, i18nChapterDir);
       });
     }
   });
 });
 
-function createSectionFiles(chapterNum, section, compDir, i18nDir) {
+function createSectionFiles(chapterNum: number, section: ChapterSection, compDir: string, i18nDir: string) {
   const sectionSlug = section.slug;
   const sectionId = section.id.replace(/-/g, '.');
 

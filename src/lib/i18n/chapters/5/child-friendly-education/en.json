@@ -1,0 +1,23 @@
+{
+  "sectionNumber": "5.1.7",
+  "title": "Child-Friendly Education Details",
+  "type": "multi-block",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "Currently, efforts made by Nepalgunj Sub-Metropolitan City regarding child-friendly education are as follows:"
+    },
+    {
+      "type": "list",
+      "title": "Efforts:",
+      "content": [
+        "Punishment-free Education",
+        "Arrangement of Play Materials in Child Development",
+        "Arrangement of Capacity Development Training",
+        "Arrangement of Child-Friendly Drinking Water and Toilets",
+        "Formation of Child Clubs",
+        "Operation of Programs Related to Child Education"
+      ]
+    }
+  ]
+}

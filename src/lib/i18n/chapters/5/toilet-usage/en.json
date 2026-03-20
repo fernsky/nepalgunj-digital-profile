@@ -1,0 +1,69 @@
+{
+  "sectionNumber": "5.3.2",
+  "title": "Toilet Usage Status",
+  "type": "multi-block",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "Even now, in some remote town settlements, people defecate in water sources and open places. For a civilized society, this practice is a symbol of incivility. Defecation in open areas leads to the entry of germs into the human body through food, water, and respiration. Therefore, the construction of a toilet in every household is a mandatory requirement. Currently, the government and various non-governmental organizations are seen to have given priority to toilet construction. Private houses and public places must have mandatory toilets along with handwashing water. In case poor community families cannot construct toilets themselves, the government, especially the local government, should provide subsidies for toilet construction."
+    },
+    {
+      "type": "paragraph",
+      "content": "Table No. 78: Details of households based on the type of toilet used by the family"
+    },
+    {
+      "type": "table",
+      "data": {
+        "headers": ["Ward No.", "Flush system (Public sewerage)", "Flush system (Septic tank)", "Pit toilet", "Community toilet", "No toilet", "Total"],
+        "rows": [
+          ["1", "28", "1900", "225", "1", "13", "2167"],
+          ["2", "17", "1142", "197", "4", "3", "1363"],
+          ["3", "83", "408", "59", "3", "3", "556"],
+          ["4", "70", "2679", "119", "13", "37", "2918"],
+          ["5", "34", "702", "387", "5", "9", "1137"],
+          ["6", "39", "881", "469", "1", "21", "1411"],
+          ["7", "7", "478", "188", "2", "7", "682"],
+          ["8", "68", "695", "47", "13", "29", "852"],
+          ["9", "80", "1235", "102", "5", "3", "1425"],
+          ["10", "90", "2411", "134", "4", "24", "2663"],
+          ["11", "38", "876", "52", "9", "26", "1001"],
+          ["12", "13", "1329", "373", "4", "19", "1738"],
+          ["13", "67", "633", "486", "20", "260", "1466"],
+          ["14", "14", "289", "442", "4", "307", "1056"],
+          ["15", "70", "378", "230", "10", "457", "1145"],
+          ["16", "9", "483", "489", "5", "114", "1100"],
+          ["17", "60", "675", "227", "6", "252", "1220"],
+          ["18", "59", "2005", "585", "10", "43", "2702"],
+          ["19", "13", "1029", "448", "41", "180", "1711"],
+          ["20", "280", "1967", "710", "19", "322", "3298"],
+          ["21", "2", "554", "655", "18", "324", "1553"],
+          ["22", "8", "449", "155", "0", "454", "1066"],
+          ["23", "1", "128", "35", "0", "171", "335"],
+          ["Total", "1150", "23326", "6814", "197", "3078", "34565"],
+          ["Percentage", "3.33", "67.48", "19.71", "0.57", "8.90", "100"]
+        ],
+        "footer": "Source: National Census, 2078"
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "Out of the total households in the sub-metropolitan city, the highest 67.48 percent use Flush system (Septic tank), 3.33 percent use Flush system (Public sewerage), 19.71 percent use Pit toilet, 0.57 percent use Community toilet and 8.90 percent do not use a toilet and defecate in open places. Whose detailed breakdown by ward is mentioned in the table."
+    },
+    {
+      "type": "chart",
+      "chartType": "pie",
+      "data": [
+        { "label": "Flush system (Public sewerage)", "value": 3.33 },
+        { "label": "Flush system (Septic tank)", "value": 67.48 },
+        { "label": "Pit toilet", "value": 19.71 },
+        { "label": "Community toilet", "value": 0.57 },
+        { "label": "No toilet", "value": 8.90 }
+      ],
+      "config": {
+        "title": "Details of households based on the type of toilet used by the family",
+        "labels": ["Flush system (Public sewerage)", "Flush system (Septic tank)", "Pit toilet", "Community toilet", "No toilet"],
+        "colors": ["#3b82f6", "#ef4444", "#10b981", "#f59e0b", "#8b5cf6"]
+      }
+    }
+  ]
+}

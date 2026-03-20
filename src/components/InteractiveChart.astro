@@ -1,0 +1,257 @@
+---
+interface Props {
+  type: "bar" | "pie";
+  data: any[];
+  config: {
+    xKey?: string;
+    groupKey?: string;
+    valueKey?: string;
+    colors?: string[];
+    labels: string[];
+    xAxisLabel?: string;
+    yAxisLabel?: string;
+    title?: string;
+  };
+  id: string;
+}
+
+const { type, data, config, id } = Astro.props;
+---
+
+<div class="my-12 p-8 rounded-3xl group relative overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-primary-500/10" 
+     style="background: var(--card-bg); border: 1px solid var(--card-border);">
+  
+  {config.title && (
+    <h4 class="text-xl font-bold mb-8 text-center" style="color: var(--text-heading);">
+      {config.title}
+    </h4>
+  )}
+
+  <div id={`chart-${id}`} class="w-full aspect-[16/9] min-h-[400px]"></div>
+
+  <!-- Legend -->
+  <div class="mt-8 flex flex-wrap justify-center gap-6">
+    {config.labels.map((label, idx) => (
+      <div class="flex items-center gap-2">
+        <div class="w-4 h-4 rounded-full shadow-inner" style={`background: ${config.colors?.[idx] || '#ccc'}`}></div>
+        <span class="text-sm font-medium" style="color: var(--text-body);">{label}</span>
+      </div>
+    ))}
+  </div>
+</div>
+
+<script is:inline define:vars={{ type, data, config, id }}>
+  (async () => {
+    // Load D3 from CDN if not bundled
+    if (typeof d3 === 'undefined') {
+      await new Promise((resolve) => {
+        const script = document.createElement('script');
+        script.src = 'https://cdn.jsdelivr.net/npm/d3@7';
+        script.onload = resolve;
+        document.head.appendChild(script);
+      });
+    }
+
+    const containerId = `#chart-${id}`;
+    const container = document.querySelector(containerId);
+    if (!container) return;
+
+    const margin = { top: 40, right: 30, bottom: 60, left: 80 };
+    const width = container.clientWidth - margin.left - margin.right;
+    const height = container.clientHeight - margin.top - margin.bottom;
+
+    const svg = d3.select(containerId)
+      .append("svg")
+      .attr("width", "100%")
+      .attr("height", "100%")
+      .attr("viewBox", `0 0 ${width + margin.left + margin.right} ${height + margin.top + margin.bottom}`)
+      .append("g")
+      .attr("transform", `translate(${margin.left},${margin.top})`);
+
+    // Add gradients for bars
+    const defs = svg.append("defs");
+    (config.colors || []).forEach((color, i) => {
+      const gradient = defs.append("linearGradient")
+        .attr("id", `grad-${id}-${i}`)
+        .attr("x1", "0%").attr("y1", "0%")
+        .attr("x2", "0%").attr("y2", "100%");
+      
+      gradient.append("stop").attr("offset", "0%").attr("stop-color", color).attr("stop-opacity", 1);
+      gradient.append("stop").attr("offset", "100%").attr("stop-color", color).attr("stop-opacity", 0.7);
+    });
+
+      // Tooltip
+      const tooltip = d3.select("body").append("div")
+        .attr("class", "chart-tooltip")
+        .style("position", "absolute")
+        .style("background", "rgba(15, 23, 42, 0.9)")
+        .style("color", "white")
+        .style("padding", "8px 12px")
+        .style("border-radius", "8px")
+        .style("font-size", "12px")
+        .style("pointer-events", "none")
+        .style("opacity", 0)
+        .style("z-index", 100)
+        .style("backdrop-filter", "blur(4px)")
+        .style("border", "1px solid rgba(255,255,255,0.1)");
+
+    if (type === "bar") {
+      const x0 = d3.scaleBand()
+        .domain(data.map(d => d[config.xKey]))
+        .rangeRound([0, width])
+        .paddingInner(0.2);
+
+      const x1 = d3.scaleBand()
+        .domain(config.labels)
+        .rangeRound([0, x0.bandwidth()])
+        .padding(0.1);
+
+      const y = d3.scaleLinear()
+        .domain([0, d3.max(data, d => d3.max(config.labels, label => d[label]))])
+        .nice()
+        .rangeRound([height, 0]);
+
+      // Axes
+      svg.append("g")
+        .attr("transform", `translate(0,${height})`)
+        .call(d3.axisBottom(x0))
+        .attr("font-size", "14px")
+        .attr("font-weight", "600")
+        .selectAll("text")
+        .style("fill", "var(--text-body)");
+
+      svg.append("g")
+        .call(d3.axisLeft(y).ticks(null, "s"))
+        .attr("font-size", "14px")
+        .selectAll("text")
+        .style("fill", "var(--text-body)");
+
+      // Grid lines
+      svg.append("g")
+        .attr("class", "grid")
+        .call(d3.axisLeft(y).tickSize(-width).tickFormat(""))
+        .style("stroke-opacity", 0.1)
+        .style("stroke-dasharray", "3,3");
+
+      // Bars
+      const groups = svg.selectAll(".group")
+        .data(data)
+        .enter().append("g")
+        .attr("transform", d => `translate(${x0(d[config.xKey])},0)`);
+
+      groups.selectAll("rect")
+        .data(d => config.labels.map(label => ({ key: label, value: d[label] })))
+        .enter().append("rect")
+        .attr("x", d => x1(d.key))
+        .attr("y", height)
+        .attr("width", x1.bandwidth())
+        .attr("height", 0)
+        .attr("rx", 4)
+        .attr("fill", (d, i) => `url(#grad-${id}-${i})`)
+        .transition()
+        .duration(1000)
+        .delay((d, i) => i * 100)
+        .attr("y", d => y(d.value))
+        .attr("height", d => height - y(d.value));
+
+      groups.selectAll("rect")
+        .on("mouseover", function(event, d) {
+          d3.select(this).attr("filter", "brightness(1.2)");
+          tooltip.transition().duration(200).style("opacity", 1);
+          tooltip.html(`<strong>${d.key}</strong>: ${d.value.toLocaleString()}`)
+            .style("left", (event.pageX + 10) + "px")
+            .style("top", (event.pageY - 28) + "px");
+        })
+        .on("mouseout", function() {
+          d3.select(this).attr("filter", null);
+          tooltip.transition().duration(500).style("opacity", 0);
+        });
+    } else if (type === "pie") {
+      const radius = Math.min(width, height) / 2;
+      const g = svg.append("g")
+        .attr("transform", `translate(${width / 2},${height / 2})`);
+
+      const colorScale = d3.scaleOrdinal()
+        .domain(data.map(d => d.label))
+        .range(config.colors || d3.schemeSet2);
+
+      const pie = d3.pie()
+        .value(d => d.value)
+        .sort(null);
+
+      const arc = d3.arc()
+        .innerRadius(radius * 0.4) // donut style
+        .outerRadius(radius * 0.8)
+        .cornerRadius(6);
+
+      const arcs = g.selectAll(".arc")
+        .data(pie(data))
+        .enter().append("g")
+        .attr("class", "arc");
+
+      arcs.append("path")
+        .attr("fill", d => colorScale(d.data.label))
+        .attr("stroke", "var(--card-bg)")
+        .style("stroke-width", "3px")
+        .attr("filter", "drop-shadow(0px 4px 6px rgba(0,0,0,0.1))")
+        .on("mouseover", function(event, d) {
+          d3.select(this)
+            .transition().duration(200)
+            .attr("transform", function(d) {
+               const dist = 12;
+               const angle = (d.startAngle + d.endAngle) / 2;
+               const x = Math.sin(angle) * dist;
+               const y = -Math.cos(angle) * dist;
+               return `translate(${x},${y})`;
+            })
+            .style("filter", "brightness(1.1) drop-shadow(0px 8px 12px rgba(0,0,0,0.2))");
+          
+          tooltip.html(`<strong>${d.data.label}</strong>: ${d.data.value}%`)
+            .style("left", (event.pageX + 10) + "px")
+            .style("top", (event.pageY - 28) + "px")
+            .transition().duration(200).style("opacity", 1);
+        })
+        .on("mouseout", function() {
+          d3.select(this)
+            .transition().duration(300)
+            .attr("transform", "translate(0,0)")
+            .style("filter", "drop-shadow(0px 4px 6px rgba(0,0,0,0.1))");
+          tooltip.transition().duration(500).style("opacity", 0);
+        })
+        .transition()
+        .duration(1500)
+        .attrTween("d", function(d) {
+          const i = d3.interpolate({startAngle: 0, endAngle: 0}, d);
+          return function(t) { return arc(i(t)); };
+        });
+
+      // Add labels (for arcs > 5%)
+      const arcLabel = d3.arc().innerRadius(radius * 0.9).outerRadius(radius * 0.9);
+      arcs.append("text")
+        .attr("transform", d => `translate(${arcLabel.centroid(d)})`)
+        .attr("dy", "0.35em")
+        .style("text-anchor", d => (d.endAngle + d.startAngle) / 2 > Math.PI ? "end" : "start")
+        .text(d => d.data.value >= 2 ? `${d.data.value}%` : '')
+        .style("fill", "var(--text-heading)")
+        .style("font-weight", "bold")
+        .style("font-size", "14px")
+        .style("opacity", 0)
+        .transition()
+        .delay(1000)
+        .duration(500)
+        .style("opacity", 1);
+    }
+  })();
+</script>
+
+<style is:global>
+  .grid line {
+    stroke: var(--border);
+  }
+  .grid path {
+    stroke-width: 0;
+  }
+  .chart-tooltip {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+</style>
