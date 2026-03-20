@@ -131,11 +131,16 @@ const { content, lang, id } = Astro.props;
                 {(block.type === "chart" || block.chart || block.chartType) && (
                   <div class="my-12 p-8 rounded-3xl bg-white/5 border border-white/10 shadow-2xl backdrop-blur-sm relative overflow-hidden group">
                     <div class="absolute inset-0 bg-gradient-to-br from-primary-500/5 to-transparent opacity-50"></div>
-                    { (block.chart?.title || block.data?.title) && (
-                      <h3 class="text-xl font-bold mb-8 text-center" style="color:var(--text-heading);">{ block.chart?.title || block.data?.title }</h3>
+                    { (block.chart?.title || block.chart?.config?.title || block.data?.title) && (
+                      <h3 class="text-xl font-bold mb-8 text-center" style="color:var(--text-heading);">{ block.chart?.title || block.chart?.config?.title || block.data?.title }</h3>
                     )}
-                    { block.chartType ? (
-                       <InteractiveChart type={block.chartType} data={block.data} config={block.config} id={`${id}-${idx}`} />
+                    { (block.chartType || block.chart?.chartType) ? (
+                       <InteractiveChart 
+                         type={block.chartType || block.chart?.chartType} 
+                         data={block.chart?.data || block.data} 
+                         config={block.chart?.config || block.config} 
+                         id={`${id}-${idx}`} 
+                       />
                     ) : (
                       <div class="d3-chart-wrapper" data-chart={JSON.stringify(block.chart || block.data)}>
                         <div class="d3-container min-h-[400px]"></div>
