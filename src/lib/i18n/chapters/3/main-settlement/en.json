@@ -1,5 +1,119 @@
 {
-  "title": "Main Settlement",
-  "sectionNumber": "3.1.1",
-  "content": ""
+    "sectionNumber": "3.1.1",
+    "title": "Main Settlement",
+    "type": "multi-block",
+    "blocks": [
+        {
+            "type": "paragraph",
+            "content": "Since Nepalgunj Sub-metropolitan City is located in the Terai region, its climate is very hot in the summer and very cold in the winter. However, due to its fertile soil and flat land, it is considered suitable for settlement. Due to the availability of services, facilities, and opportunities such as access to airports, hospitals, industries, telephones, and schools, as well as transportation facilities, migrations to Nepalgunj are observed from nearby districts and even from hilly districts. Accordingly, the pressure of population is seen to be increasing in the settlement and market areas of the sub-metropolitan city. In addition, internal transportation routes have been created by the sub-metropolitan city in various places, managing markets in public sectors and gradually developing as a commercial center."
+        },
+        {
+            "type": "paragraph",
+            "content": "To develop the housing areas of this place in a systematic manner, programs such as land pooling or service facilities must be operated to develop systematic settlements including the construction of physical and infrastructure such as motor roads to reach each settlement, provisions for open areas, and square-shaped residential plots. When operating such land development programs, priority should be given to support the areas proposed for urban expansion. The details of the main settlements currently located here are included in the table below."
+        },
+        {
+            "type": "table",
+            "data": {
+                "headers": [
+                    "Ward No.",
+                    "Details of Main Settlements"
+                ],
+                "rows": [
+                    [
+                        "1",
+                        "Shiv Parvati Tol, Dailekhi Marg, Sangam Tol, Deep Nagar, Chandan Tol, Muslim Tol, Bilaspur, Nandani Mill Tol, Bishal Nagar, D.P.O. Area, Khajura Road"
+                    ],
+                    [
+                        "2",
+                        "New Road, Buddha Tol, Gharbare Tol, Bageshwori Tol, Maniharan Tol, Kaharan Tol, Latian Tol, Buddha Tol, Bikas Nagar"
+                    ],
+                    [
+                        "3",
+                        "Cinemahall Road, Kasgar Tol, Ekaini Tol, Rani Talau Tol, Kumhas Tol, Debiganj Tol, Subba Biredhu Keshari Tol, Sadar Line, Sonarmandi, Biskorian Tol"
+                    ],
+                    [
+                        "4",
+                        "Ganeshpur, Dewa Phulawari, ABC School Area, Salyani Bag, Ghositol, Buddhatol"
+                    ],
+                    [
+                        "5",
+                        "Jinnat Bawa Tol, Bhattahatol, Baccha Purwa, Behanatol, Phultekra"
+                    ],
+                    [
+                        "6",
+                        "Madrasa Tol, Ramnagar, Phultekra Village, Ektanagar, Naya Basti, Phultekra to Fatebal Eye Hospital, Barrack Tol, Kalika Tol"
+                    ],
+                    [
+                        "7",
+                        "Gaganganj, D.S.P. Road"
+                    ],
+                    [
+                        "8",
+                        "Ghasiyaran Tol, Naka Tol, Pashupati Tol, Shantinagar Tol, Shiv Santoshi Tol, Shraddhanagar Tol, Samabeshi Tol, Anandnagar Tol"
+                    ],
+                    [
+                        "9",
+                        "Dhapali Tol, Bouddha Tol, Piripurwa"
+                    ],
+                    [
+                        "10",
+                        "Bhrikuti Nagar, Adarsh Nagar, Bhrikuti Nagar, Sheetal Nagar, Gosai Gaun, Siddharth Tol, Chaulika, Chetnanagar, Sugandha Binayak Tol, Sokia Tol, Annapurna Tol, Pragatisheel Tol, Balaji Tol, Hanuman Marg Tol, Bindhyabasini Tol, Surkhet Tol, Pasang Lhamu Marg, Charbahini"
+                    ],
+                    [
+                        "11",
+                        "Bhattahatol, Kasgar Tol, Nabha Tol, Bhawani Bag, Sadarline, Surkhet Road, Jabdahatol, Medicine Dealers Association Tol, Sunar Mandi, Bhatti Tol, Idgah Road"
+                    ],
+                    [
+                        "12",
+                        "Belaspur, Koreanpur, Muktipur, Belaspur, Surkhet Road West Shiv Bhairav Tol, Kammarsaha Tol"
+                    ],
+                    [
+                        "13",
+                        "Ghasiyaran Tol, Bul Buliya, Chamar Tol, Lodhaigaun, Lalpurja, Bulbuliya, Gangapur, Lothaigaun, Udaipur, Lolanpur, Telanpur"
+                    ],
+                    [
+                        "14",
+                        "Bawagaun, Kairati Purwa, Balegaun, Bhatjapurwa, Gulam Purwa, Suthkupurwa, Bhawaniyapur, Kairatipurwa, Babhanpurwa, Bawagaun, Balegaun, Bhannupurwa, Riharpurwa, Balapur, Gosapurwa, Udhaupurwa, Kallupurwa"
+                    ],
+                    [
+                        "15",
+                        "Jamunaha, Suiya, Tangpasari Village, Piprahwa Village, Suiya Village, Naya Basti"
+                    ],
+                    [
+                        "16",
+                        "Jaispur, Sakir Tol, Janupurwa Tol, Adharbhut Tol, Badi Masjid Tol"
+                    ],
+                    [
+                        "17",
+                        "Thakaila, Nandagaun, Paraspur, Dandaigaun, Paraspur, Dhodegaun, Bhrikuti Nagar"
+                    ],
+                    [
+                        "18",
+                        "Nagdahawa, Bhujahawa, Karkado, Lakdhabha, Khaskarkado, Bhujargaun"
+                    ],
+                    [
+                        "19",
+                        "Sano Bhaiyapur, Alanagar, Banwansa, Katalia, Suiya, Phutaha, Subhigaun, Shantinagar, Mohanpur, Pharamtol, Alanagar"
+                    ],
+                    [
+                        "20",
+                        "Madanapur, Pharamtol, Thapuwa, Natanpur, Rameshpur, Maigaun, Gayanpur, Potedar Pur, Sukhrampur, Thapuwa Bauntol, Ranjha Airport"
+                    ],
+                    [
+                        "21",
+                        "Gangaram purwa, Birta, Telian Purwa Bhagnapur, Gangaram Buruba, Puraina, Pirta Village, Tilenpur, Bhagatpur, Baladevnagar, Mohanpur, Naya Basti"
+                    ],
+                    [
+                        "22",
+                        "Kidhariyanpurwa, Jodhapur Khalla, Paraininahar Purwa, Loniyanpur, Teliyanpur, Shahapurwa, Naharpurwa, Puraini, Khalla Puraini, Loniyan Purwa, Shahapurwa, Jodhpurwa, Kidhariyanpurwa"
+                    ],
+                    [
+                        "23",
+                        "Junglisingh Puruwa, Bhajju Puruwa, Lohatanpurwa"
+                    ]
+                ],
+                "footer": "Source: Municipal Executive Office"
+            }
+        }
+    ]
 }

@@ -1,5 +1,359 @@
 {
-  "title": "Social Security",
-  "sectionNumber": "3.14",
-  "content": ""
+    "sectionNumber": "3.14",
+    "title": "Social Security",
+    "type": "multi-block",
+    "blocks": [
+        {
+            "type": "paragraph",
+            "content": "The concept of assisting marginalized and vulnerable senior citizens, single women, and persons with disabilities through state funds in the name of social security allowance is part of the concept of a welfare state. Since B.S. 2051, the social security allowance, which started with the slogan of providing 100 rupees monthly to senior citizens, is now being provided to senior citizens, single women, persons with disabilities, and Dalit senior citizens. It is believed that this encourages disabled people who are backwards in society to live with dignity."
+        },
+        {
+            "type": "paragraph",
+            "content": "According to the Social Security Act, 2075, the following Nepali citizens are mentioned to receive social security allowance. The ward-wise breakdown of beneficiaries is presented in the table below."
+        },
+        {
+            "type": "table",
+            "data": {
+                "headers": [
+                    "Ward",
+                    "Senior Citizen",
+                    "Dalit Senior",
+                    "Single Female",
+                    "Widow",
+                    "Fully Disabled",
+                    "Severely Disabled",
+                    "Dalit Child",
+                    "Endangered",
+                    "Total"
+                ],
+                "rows": [
+                    [
+                        "1",
+                        "248",
+                        "16",
+                        "73",
+                        "160",
+                        "18",
+                        "21",
+                        "38",
+                        "-",
+                        "574"
+                    ],
+                    [
+                        "2",
+                        "214",
+                        "9",
+                        "52",
+                        "91",
+                        "14",
+                        "11",
+                        "9",
+                        "-",
+                        "400"
+                    ],
+                    [
+                        "3",
+                        "181",
+                        "4",
+                        "52",
+                        "62",
+                        "18",
+                        "25",
+                        "1",
+                        "-",
+                        "343"
+                    ],
+                    [
+                        "4",
+                        "312",
+                        "11",
+                        "83",
+                        "135",
+                        "29",
+                        "18",
+                        "23",
+                        "-",
+                        "611"
+                    ],
+                    [
+                        "5",
+                        "124",
+                        "6",
+                        "53",
+                        "71",
+                        "17",
+                        "23",
+                        "4",
+                        "-",
+                        "298"
+                    ],
+                    [
+                        "6",
+                        "184",
+                        "27",
+                        "42",
+                        "67",
+                        "7",
+                        "19",
+                        "30",
+                        "32",
+                        "408"
+                    ],
+                    [
+                        "7",
+                        "129",
+                        "8",
+                        "37",
+                        "60",
+                        "9",
+                        "12",
+                        "10",
+                        "-",
+                        "265"
+                    ],
+                    [
+                        "8",
+                        "182",
+                        "9",
+                        "50",
+                        "87",
+                        "21",
+                        "21",
+                        "8",
+                        "-",
+                        "378"
+                    ],
+                    [
+                        "9",
+                        "169",
+                        "20",
+                        "40",
+                        "78",
+                        "14",
+                        "17",
+                        "31",
+                        "-",
+                        "369"
+                    ],
+                    [
+                        "10",
+                        "238",
+                        "22",
+                        "55",
+                        "98",
+                        "23",
+                        "18",
+                        "20",
+                        "-",
+                        "474"
+                    ],
+                    [
+                        "11",
+                        "223",
+                        "17",
+                        "64",
+                        "119",
+                        "16",
+                        "23",
+                        "7",
+                        "-",
+                        "469"
+                    ],
+                    [
+                        "12",
+                        "233",
+                        "41",
+                        "56",
+                        "112",
+                        "18",
+                        "21",
+                        "87",
+                        "10",
+                        "578"
+                    ],
+                    [
+                        "13",
+                        "275",
+                        "60",
+                        "40",
+                        "124",
+                        "20",
+                        "35",
+                        "158",
+                        "-",
+                        "712"
+                    ],
+                    [
+                        "14",
+                        "196",
+                        "50",
+                        "32",
+                        "74",
+                        "21",
+                        "38",
+                        "97",
+                        "6",
+                        "514"
+                    ],
+                    [
+                        "15",
+                        "191",
+                        "27",
+                        "34",
+                        "86",
+                        "36",
+                        "41",
+                        "53",
+                        "-",
+                        "468"
+                    ],
+                    [
+                        "16",
+                        "320",
+                        "13",
+                        "56",
+                        "97",
+                        "34",
+                        "44",
+                        "15",
+                        "-",
+                        "579"
+                    ],
+                    [
+                        "17",
+                        "231",
+                        "35",
+                        "42",
+                        "110",
+                        "21",
+                        "28",
+                        "139",
+                        "-",
+                        "606"
+                    ],
+                    [
+                        "18",
+                        "388",
+                        "58",
+                        "73",
+                        "142",
+                        "23",
+                        "32",
+                        "151",
+                        "-",
+                        "867"
+                    ],
+                    [
+                        "11",
+                        "264",
+                        "41",
+                        "55",
+                        "113",
+                        "12",
+                        "35",
+                        "87",
+                        "62",
+                        "669"
+                    ],
+                    [
+                        "20",
+                        "588",
+                        "78",
+                        "71",
+                        "173",
+                        "49",
+                        "66",
+                        "176",
+                        "70",
+                        "1271"
+                    ],
+                    [
+                        "21",
+                        "281",
+                        "45",
+                        "47",
+                        "106",
+                        "23",
+                        "54",
+                        "147",
+                        "-",
+                        "703"
+                    ],
+                    [
+                        "22",
+                        "188",
+                        "15",
+                        "33",
+                        "83",
+                        "19",
+                        "27",
+                        "51",
+                        "-",
+                        "416"
+                    ],
+                    [
+                        "23",
+                        "70",
+                        "10",
+                        "6",
+                        "17",
+                        "4",
+                        "16",
+                        "40",
+                        "-",
+                        "163"
+                    ],
+                    [
+                        "Total",
+                        "5429",
+                        "630",
+                        "1146",
+                        "2265",
+                        "466",
+                        "645",
+                        "1382",
+                        "180",
+                        "12143"
+                    ]
+                ],
+                "footer": "Source: Office of Municipal Executive"
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "The types and criteria for social security allowances are as follows:"
+        },
+        {
+            "type": "paragraph",
+            "content": "1. Senior Citizen Allowance: Dalit and single women senior citizens after completing 60 years of age and other senior citizens after completing 68 years of age receive senior citizen allowance as prescribed by the Government of Nepal."
+        },
+        {
+            "type": "paragraph",
+            "content": "2. Indigent Citizen Allowance: Economically indigent citizens receive a certain amount as prescribed by the Government of Nepal as social security allowance."
+        },
+        {
+            "type": "paragraph",
+            "content": "3. Disabled and Helpless Allowance: Citizens in a disabled and helpless state receive a certain amount as prescribed by the Government of Nepal as social security allowance."
+        },
+        {
+            "type": "paragraph",
+            "content": "4. Helpless Single Woman Allowance: Widows and other single women who have lower income than prescribed by the Government and have no family members for support, or have family members who are economically indigent or not providing support, also receive this allowance."
+        },
+        {
+            "type": "paragraph",
+            "content": "5. Disability Allowance: Citizens with full or severe disability receive disability allowance as prescribed by the Government of Nepal."
+        },
+        {
+            "type": "paragraph",
+            "content": "6. Child Nutrition Allowance: Highly indigent, endangered, and children under five years of age as prescribed by the Government receive child nutrition allowance."
+        },
+        {
+            "type": "paragraph",
+            "content": "7. Endangered Caste Allowance: Citizens of endangered castes receive social security allowance as prescribed by the Government of Nepal."
+        },
+        {
+            "type": "paragraph",
+            "content": "8. Caretaker Allowance for those unable to care for themselves: Citizens who are unable to take care of themselves receive social security allowance as prescribed by the Government of Nepal."
+        }
+    ]
 }

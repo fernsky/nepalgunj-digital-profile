@@ -1,0 +1,219 @@
+---
+interface Props {
+    content: {
+        caption?: string;
+        barChartData?: any[];
+    };
+}
+
+const { content } = Astro.props;
+const barChartData = content?.barChartData ?? [];
+const caption = content?.caption ?? "Migration Population Detail";
+---
+
+<div class="w-full">
+    <div
+        class="my-10 p-6 rounded-xl overflow-hidden"
+        style="background:var(--card-bg); border:1px solid var(--card-border);"
+    >
+        <h3
+            class="text-xl font-bold mb-6 text-center text-balance max-w-2xl mx-auto"
+            style="color:var(--text-heading);"
+        >
+            {caption}
+        </h3>
+        <div
+            id="migration-bar-chart"
+            class="w-full h-[400px] flex justify-center items-center"
+            data-chart={JSON.stringify(barChartData)}
+        >
+        </div>
+    </div>
+</div>
+
+<script>
+    import * as d3 from "d3";
+
+    function renderChart() {
+        const container = document.getElementById("migration-bar-chart");
+        if (!container) return;
+
+        container.innerHTML = "";
+        const dataString = container.getAttribute("data-chart");
+        if (!dataString) return;
+
+        const data = JSON.parse(dataString);
+        if (data.length === 0) return;
+
+        const width = container.clientWidth || 800;
+        const height = 400;
+        const margin = { top: 40, right: 30, bottom: 80, left: 70 };
+
+        const subgroups = Object.keys(data[0]).filter(k => k !== 'category');
+        const groups = data.map((d: any) => d.category);
+
+        const svg = d3.select(container)
+            .append("svg")
+            .attr("width", width)
+            .attr("height", height)
+            .append("g")
+            .attr("transform", `translate(${margin.left},${margin.top})`);
+
+        const x = d3.scaleBand()
+            .domain(groups)
+            .range([0, width - margin.left - margin.right])
+            .padding(0.2);
+
+        svg.append("g")
+            .attr("transform", `translate(0,${height - margin.top - margin.bottom})`)
+            .call(d3.axisBottom(x).tickSize(0))
+            .selectAll("text")
+            .style("text-anchor", "middle")
+            .style("font-size", "12px")
+            .style("fill", "var(--text-body)")
+            .attr("dy", "1em")
+            .call(wrap, x.bandwidth()); // wrap text for long labels
+
+        const maxY = (d3.max(data, (d: any) => d3.max(subgroups, key => Number(d[key]))) as unknown) as number;
+        const y = d3.scaleLinear()
+            .domain([0, maxY * 1.1])
+            .range([height - margin.top - margin.bottom, 0]);
+
+        // Y-axis
+        svg.append("g")
+            .call(d3.axisLeft(y).ticks(5).tickFormat(d3.format(".2s")))
+            .selectAll("text")
+            .style("font-size", "12px")
+            .style("fill", "var(--text-body)");
+            
+        // Grid lines
+        svg.append("g")
+            .attr("class", "grid")
+            .call(d3.axisLeft(y).ticks(5).tickSize(-(width - margin.left - margin.right)).tickFormat(() => ""))
+            .selectAll('line').style("stroke", "rgba(100, 100, 100, 0.1)");
+        svg.selectAll('.domain').remove();
+
+        const xSubgroup = d3.scaleBand()
+            .domain(subgroups)
+            .range([0, x.bandwidth()])
+            .padding(0.05);
+
+        const color = d3.scaleOrdinal()
+            .domain(subgroups)
+            .range(["#0284c7", "#e879f9"]); // Custom blue and pink for male/female
+
+        // Tooltip
+        d3.selectAll(".migration-tooltip").remove();
+        const tooltip = d3.select("body")
+            .append("div")
+            .attr("class", "migration-tooltip absolute hidden bg-gray-900 border border-gray-700 text-white p-3 rounded-lg shadow-xl shadow-black/50 z-50 text-sm pointer-events-none transform -translate-x-1/2 -translate-y-full mt-[-10px]")
+            .style("opacity", 0);
+
+        svg.append("g")
+            .selectAll("g")
+            .data(data)
+            .join("g")
+            .attr("transform", (d: any) => `translate(${x(d.category)},0)`)
+            .selectAll("rect")
+            .data((d: any) => subgroups.map(key => ({key, value: d[key], category: d.category})))
+            .join("rect")
+            .attr("x", (d: any) => xSubgroup(d.key) as number)
+            .attr("y", (d: any) => y(d.value))
+            .attr("width", xSubgroup.bandwidth())
+            .attr("height", (d: any) => (height - margin.top - margin.bottom) - y(d.value))
+            .attr("fill", (d: any) => color(d.key) as string)
+            .on("mouseover", function(event, d: any) {
+                d3.select(this).attr("opacity", 0.8);
+                tooltip.html(`
+                    <div class="font-bold text-gray-300 mb-1">${d.category}</div>
+                    <div class="flex justify-between gap-4">
+                        <span style="color:${color(d.key)}">${d.key}:</span>
+                        <span class="font-medium">${d.value.toLocaleString()}</span>
+                    </div>
+                `);
+                tooltip.style("display", "block").style("opacity", 1);
+            })
+            .on("mousemove", function(event) {
+                tooltip.style("left", event.pageX + "px").style("top", event.pageY - 10 + "px");
+            })
+            .on("mouseout", function() {
+                d3.select(this).attr("opacity", 1);
+                tooltip.style("display", "none").style("opacity", 0);
+            });
+
+        // Legend
+        const legend = svg.append("g")
+            .attr("transform", `translate(${(width - margin.left - margin.right) / 2}, ${height - margin.top - 10})`)
+            .attr("text-anchor", "middle");
+
+        let legendWidth = 0;
+        const legendItems = legend.selectAll("g")
+            .data(subgroups)
+            .join("g")
+            .attr("transform", function() {
+                const transform = `translate(${legendWidth}, 0)`;
+                legendWidth += 100;
+                return transform;
+            });
+            
+        legendItems.append("rect")
+            .attr("width", 12)
+            .attr("height", 12)
+            .attr("x", -15)
+            .attr("y", -10)
+            .attr("fill", d => color(d) as string);
+            
+        legendItems.append("text")
+            .text(d => d)
+            .attr("x", 5)
+            .attr("y", 0)
+            .style("font-size", "12px")
+            .style("fill", "var(--text-body)")
+            .attr("text-anchor", "start");
+            
+        legend.attr("transform", `translate(${((width - margin.left - margin.right) - legendWidth + 80) / 2}, ${height - margin.top + 20})`);
+    }
+
+    // Helper function to wrap text
+    function wrap(text: any, width: number) {
+        text.each(function(this: any) {
+            var text = d3.select(this),
+                words = text.text().split(/[ \/]+/).reverse(),
+                word,
+                line: string[] = [],
+                lineNumber = 0,
+                lineHeight = 1.1, // ems
+                y = text.attr("y"),
+                dy = parseFloat(text.attr("dy")),
+                tspan = text.text(null).append("tspan").attr("x", 0).attr("y", y).attr("dy", dy + "em");
+            while (word = words.pop()) {
+                line.push(word);
+                tspan.text(line.join(" "));
+                if ((tspan.node()?.getComputedTextLength() || 0) > width) {
+                    line.pop();
+                    tspan.text(line.join(" "));
+                    line = [word];
+                    tspan = text.append("tspan").attr("x", 0).attr("y", y).attr("dy", ++lineNumber * lineHeight + dy + "em").text(word);
+                }
+            }
+        });
+    }
+
+    let observerInitialized = false;
+    function init() {
+        renderChart();
+        if (!observerInitialized) {
+            window.addEventListener("resize", renderChart);
+            const observer = new MutationObserver(() => renderChart());
+            observer.observe(document.documentElement, {
+                attributes: true,
+                attributeFilter: ["class"],
+            });
+            observerInitialized = true;
+        }
+    }
+
+    document.addEventListener("astro:page-load", init);
+    if (document.readyState === "complete") init();
+    else document.addEventListener("DOMContentLoaded", init);
+</script>

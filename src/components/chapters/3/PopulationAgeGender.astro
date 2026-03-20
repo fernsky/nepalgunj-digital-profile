@@ -1,0 +1,269 @@
+---
+interface Props {
+    content: {
+        title: string;
+        pyramidData?: any[];
+    };
+}
+
+const { content } = Astro.props;
+const pyramidData = content?.pyramidData ?? [];
+---
+
+<div class="w-full">
+    <!-- Population Pyramid Chart -->
+    <div
+        class="my-10 p-6 rounded-xl overflow-hidden"
+        style="background:var(--card-bg); border:1px solid var(--card-border);"
+    >
+        <h3
+            class="text-xl font-bold mb-6 text-center"
+            style="color:var(--text-heading);"
+        >
+            {content.title}
+        </h3>
+        <div
+            id="population-pyramid"
+            class="w-full h-[500px] flex justify-center items-center"
+            data-chart={JSON.stringify(pyramidData)}
+        >
+        </div>
+    </div>
+</div>
+
+<script>
+    import * as d3 from "d3";
+
+    function renderChart() {
+        const container = document.getElementById("population-pyramid");
+        if (!container) return;
+
+        container.innerHTML = "";
+        const dataString = container.getAttribute("data-chart");
+        if (!dataString) return;
+
+        const data = JSON.parse(dataString);
+        const width = container.clientWidth || 800;
+        const height = 450;
+        const margin = { top: 30, right: 30, bottom: 40, left: 30 };
+        const center = width / 2;
+
+        const maxVal =
+            d3.max(data, (d: any) => Math.max(d.male, d.female)) || 1000;
+        const xMax = Math.ceil(Number(maxVal) / 100) * 100;
+
+        // Cleanup old tooltips if present
+        d3.selectAll(".pyramid-tooltip").remove();
+
+        const tooltip = d3
+            .select("body")
+            .append("div")
+            .attr(
+                "class",
+                "pyramid-tooltip absolute hidden bg-gray-900 border border-gray-700 text-white p-3 rounded-lg shadow-xl shadow-black/50 z-50 text-sm pointer-events-none transform -translate-x-1/2 -translate-y-full mt-[-10px]"
+            )
+            .style("opacity", 0);
+
+        const xScaleMale = d3
+            .scaleLinear()
+            .domain([0, xMax])
+            .range([center - 40, margin.left]);
+
+        const xScaleFemale = d3
+            .scaleLinear()
+            .domain([0, xMax])
+            .range([center + 40, width - margin.right]);
+
+        const yScale = d3
+            .scaleBand()
+            .domain(data.map((d: any) => d.age))
+            .range([height - margin.bottom, margin.top])
+            .padding(0.2);
+
+        const svg = d3
+            .select(container)
+            .append("svg")
+            .attr("width", width)
+            .attr("height", height)
+            .attr("viewBox", `0 0 ${width} ${height}`)
+            .attr("style", "max-width: 100%; height: auto;");
+
+        const colorMale = "#1e3a8a";
+        const colorFemale = "#60a5fa";
+
+        const xAxisMale = d3.axisBottom(xScaleMale).ticks(5);
+        const xAxisFemale = d3.axisBottom(xScaleFemale).ticks(5);
+
+        const isLight = document.documentElement.classList.contains("light");
+        const tickColor = isLight ? "#555555" : "#a1a1aa";
+
+        svg.append("g")
+            .attr("transform", `translate(0,${height - margin.bottom})`)
+            .call(xAxisMale)
+            .call((g) => g.select(".domain").remove())
+            .call((g) =>
+                g
+                    .selectAll(".tick line")
+                    .attr("stroke", tickColor)
+                    .attr("opacity", 0.3)
+            )
+            .call((g) =>
+                g
+                    .selectAll(".tick text")
+                    .attr("fill", tickColor)
+                    .attr("font-size", "11px")
+            );
+
+        svg.append("g")
+            .attr("transform", `translate(0,${height - margin.bottom})`)
+            .call(xAxisFemale)
+            .call((g) => g.select(".domain").remove())
+            .call((g) =>
+                g
+                    .selectAll(".tick line")
+                    .attr("stroke", tickColor)
+                    .attr("opacity", 0.3)
+            )
+            .call((g) =>
+                g
+                    .selectAll(".tick text")
+                    .attr("fill", tickColor)
+                    .attr("font-size", "11px")
+            );
+
+        svg.append("g")
+            .selectAll("text")
+            .data(data)
+            .join("text")
+            .attr("x", center)
+            .attr(
+                "y",
+                (d: any) => (yScale(d.age) || 0) + yScale.bandwidth() / 2
+            )
+            .attr("dy", "0.32em")
+            .attr("text-anchor", "middle")
+            .attr("fill", tickColor)
+            .attr("font-size", "12px")
+            .attr("font-weight", "500")
+            .text((d: any) => d.age);
+
+        svg.append("g")
+            .selectAll("rect.male")
+            .data(data)
+            .join("rect")
+            .attr("class", "male")
+            .attr("x", (d: any) => xScaleMale(d.male))
+            .attr("y", (d: any) => yScale(d.age) || 0)
+            .attr("width", (d: any) =>
+                Math.max(0, xScaleMale(0) - xScaleMale(d.male))
+            )
+            .attr("height", yScale.bandwidth())
+            .attr("fill", colorMale)
+            .attr("rx", 2)
+            .on("mouseover", function (event, d: any) {
+                d3.select(this).attr("opacity", 0.8);
+                tooltip.html(
+                    `<div class="font-bold text-gray-300 mb-1">Age: ${
+                        d.age
+                    }</div><div class="flex justify-between gap-4"><span class="text-blue-400">Male:</span><span class="font-medium">${d.male.toLocaleString()}</span></div>`
+                );
+                tooltip.style("display", "block").style("opacity", 1);
+            })
+            .on("mousemove", function (event) {
+                tooltip
+                    .style("left", event.pageX + "px")
+                    .style("top", event.pageY - 10 + "px");
+            })
+            .on("mouseout", function () {
+                d3.select(this).attr("opacity", 1);
+                tooltip.style("display", "none").style("opacity", 0);
+            });
+
+        svg.append("g")
+            .selectAll("rect.female")
+            .data(data)
+            .join("rect")
+            .attr("class", "female")
+            .attr("x", xScaleFemale(0))
+            .attr("y", (d: any) => yScale(d.age) || 0)
+            .attr("width", (d: any) =>
+                Math.max(0, xScaleFemale(d.female) - xScaleFemale(0))
+            )
+            .attr("height", yScale.bandwidth())
+            .attr("fill", colorFemale)
+            .attr("rx", 2)
+            .on("mouseover", function (event, d: any) {
+                d3.select(this).attr("opacity", 0.8);
+                tooltip.html(
+                    `<div class="font-bold text-gray-300 mb-1">Age: ${
+                        d.age
+                    }</div><div class="flex justify-between gap-4"><span class="text-blue-300">Female:</span><span class="font-medium">${d.female.toLocaleString()}</span></div>`
+                );
+                tooltip.style("display", "block").style("opacity", 1);
+            })
+            .on("mousemove", function (event) {
+                tooltip
+                    .style("left", event.pageX + "px")
+                    .style("top", event.pageY - 10 + "px");
+            })
+            .on("mouseout", function () {
+                d3.select(this).attr("opacity", 1);
+                tooltip.style("display", "none").style("opacity", 0);
+            });
+
+        const legend = svg
+            .append("g")
+            .attr(
+                "transform",
+                `translate(${center - 100}, ${margin.top - 20})`
+            );
+        legend
+            .append("rect")
+            .attr("x", 0)
+            .attr("y", 0)
+            .attr("width", 16)
+            .attr("height", 16)
+            .attr("fill", colorMale)
+            .attr("rx", 2);
+        legend
+            .append("text")
+            .attr("x", 24)
+            .attr("y", 12)
+            .text("Male / पुरुष")
+            .attr("fill", tickColor)
+            .attr("font-size", "12px");
+        legend
+            .append("rect")
+            .attr("x", 120)
+            .attr("y", 0)
+            .attr("width", 16)
+            .attr("height", 16)
+            .attr("fill", colorFemale)
+            .attr("rx", 2);
+        legend
+            .append("text")
+            .attr("x", 144)
+            .attr("y", 12)
+            .text("Female / महिला")
+            .attr("fill", tickColor)
+            .attr("font-size", "12px");
+    }
+
+    let observerInitialized = false;
+    function init() {
+        renderChart();
+        if (!observerInitialized) {
+            window.addEventListener("resize", renderChart);
+            const observer = new MutationObserver(() => renderChart());
+            observer.observe(document.documentElement, {
+                attributes: true,
+                attributeFilter: ["class"],
+            });
+            observerInitialized = true;
+        }
+    }
+
+    document.addEventListener("astro:page-load", init);
+    if (document.readyState === "complete") init();
+    else document.addEventListener("DOMContentLoaded", init);
+</script>

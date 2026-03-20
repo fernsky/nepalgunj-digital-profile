@@ -1,5 +1,1102 @@
 {
-  "title": "Personal Incident Related Description",
-  "sectionNumber": "3.13",
-  "content": ""
+    "sectionNumber": "3.13",
+    "title": "Registration of Personal Incidents",
+    "type": "multi-block",
+    "blocks": [
+        {
+            "type": "paragraph",
+            "content": "Citizens must follow legal procedures to exercise their personal rights. To obtain citizenship, passports, or other identity cards, and to engage in employment, enterprise, or travel abroad, certain legal processes must be completed. For this, the government provides official certificates. Events such as birth, death, migration, marriage, and divorce must be registered in a timely manner. The Constitution has guaranteed various rights to citizens. The starting point for this is the registration of personal incidents. It is universally recognized that national statistics are compiled based on the registration of these personal incidents. Where? How many were born? How many died? How many migrated? How many got divorced? The state must have information about such matters. Since the government formulates service delivery policies based on this, it seems necessary to raise public awareness to register personal incidents in a timely manner."
+        },
+        {
+            "type": "paragraph",
+            "content": "a) Population Distribution According to Birth Registration of Children Under 5 Years"
+        },
+        {
+            "type": "table",
+            "data": {
+                "headers": [
+                    "Province/District/Local Level",
+                    "Registration Status",
+                    "Boy",
+                    "Girl",
+                    "Total",
+                    "Percentage"
+                ],
+                "rows": [
+                    [
+                        "Lumbini",
+                        "Total",
+                        "28386",
+                        "25723",
+                        "54109",
+                        "100"
+                    ],
+                    [
+                        "",
+                        "Registered",
+                        "20443",
+                        "18485",
+                        "38928",
+                        "71.93"
+                    ],
+                    [
+                        "",
+                        "Not Registered",
+                        "7943",
+                        "7238",
+                        "15181",
+                        "28.05"
+                    ],
+                    [
+                        "Banke",
+                        "Total",
+                        "3581",
+                        "3184",
+                        "6765",
+                        "100"
+                    ],
+                    [
+                        "",
+                        "Registered",
+                        "2517",
+                        "2182",
+                        "4699",
+                        "69.39"
+                    ],
+                    [
+                        "",
+                        "Not Registered",
+                        "1074",
+                        "993",
+                        "2077",
+                        "30.60"
+                    ],
+                    [
+                        "Nepalgunj Sub-metropolitan",
+                        "Total",
+                        "9217",
+                        "8311",
+                        "17528",
+                        "100"
+                    ],
+                    [
+                        "",
+                        "Registered",
+                        "5772",
+                        "5069",
+                        "10841",
+                        "61.85"
+                    ],
+                    [
+                        "",
+                        "Not Registered",
+                        "3445",
+                        "3242",
+                        "6687",
+                        "38.15"
+                    ]
+                ],
+                "footer": "Source: National Census, 2021"
+            }
+        },
+        {
+            "type": "component",
+            "name": "GroupedBarChart",
+            "chapter": 3,
+            "data": {
+                "caption": "Birth Registration Status of Children Under 5 Years",
+                "colors": [
+                    "#22c55e",
+                    "#ef4444"
+                ],
+                "barChartData": [
+                    {
+                        "category": "Lumbini",
+                        "Registered": 38928,
+                        "Not Registered": 15181
+                    },
+                    {
+                        "category": "Banke",
+                        "Registered": 4699,
+                        "Not Registered": 2077
+                    },
+                    {
+                        "category": "Nepalgunj Sub-metropolitan",
+                        "Registered": 10841,
+                        "Not Registered": 6687
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "b) Ward-wise Distribution of Children Under 5 Years Based on Birth Registration"
+        },
+        {
+            "type": "table",
+            "data": {
+                "headers": [
+                    "Ward",
+                    "Birth Reg.",
+                    "Boy",
+                    "Girl",
+                    "Total"
+                ],
+                "rows": [
+                    [
+                        "1",
+                        "Total",
+                        "385",
+                        "331",
+                        "716"
+                    ],
+                    [
+                        "",
+                        "Yes",
+                        "212",
+                        "193",
+                        "405"
+                    ],
+                    [
+                        "",
+                        "No",
+                        "173",
+                        "138",
+                        "311"
+                    ],
+                    [
+                        "2",
+                        "Total",
+                        "281",
+                        "239",
+                        "520"
+                    ],
+                    [
+                        "",
+                        "Yes",
+                        "185",
+                        "172",
+                        "357"
+                    ],
+                    [
+                        "",
+                        "No",
+                        "96",
+                        "67",
+                        "163"
+                    ],
+                    [
+                        "3",
+                        "Total",
+                        "172",
+                        "152",
+                        "324"
+                    ],
+                    [
+                        "",
+                        "Yes",
+                        "82",
+                        "80",
+                        "162"
+                    ],
+                    [
+                        "",
+                        "No",
+                        "90",
+                        "72",
+                        "162"
+                    ],
+                    [
+                        "4",
+                        "Total",
+                        "627",
+                        "557",
+                        "1184"
+                    ],
+                    [
+                        "",
+                        "Yes",
+                        "409",
+                        "346",
+                        "755"
+                    ],
+                    [
+                        "",
+                        "No",
+                        "218",
+                        "211",
+                        "429"
+                    ],
+                    [
+                        "5",
+                        "Total",
+                        "340",
+                        "293",
+                        "633"
+                    ],
+                    [
+                        "",
+                        "Yes",
+                        "185",
+                        "135",
+                        "320"
+                    ],
+                    [
+                        "",
+                        "No",
+                        "155",
+                        "158",
+                        "313"
+                    ],
+                    [
+                        "6",
+                        "Total",
+                        "297",
+                        "263",
+                        "560"
+                    ],
+                    [
+                        "",
+                        "Yes",
+                        "181",
+                        "148",
+                        "329"
+                    ],
+                    [
+                        "",
+                        "No",
+                        "116",
+                        "115",
+                        "231"
+                    ],
+                    [
+                        "7",
+                        "Total",
+                        "159",
+                        "139",
+                        "298"
+                    ],
+                    [
+                        "",
+                        "Yes",
+                        "98",
+                        "84",
+                        "182"
+                    ],
+                    [
+                        "",
+                        "No",
+                        "61",
+                        "55",
+                        "116"
+                    ],
+                    [
+                        "8",
+                        "Total",
+                        "225",
+                        "211",
+                        "436"
+                    ],
+                    [
+                        "",
+                        "Yes",
+                        "168",
+                        "146",
+                        "314"
+                    ],
+                    [
+                        "",
+                        "No",
+                        "57",
+                        "65",
+                        "122"
+                    ],
+                    [
+                        "9",
+                        "Total",
+                        "237",
+                        "207",
+                        "444"
+                    ],
+                    [
+                        "",
+                        "Yes",
+                        "157",
+                        "140",
+                        "297"
+                    ],
+                    [
+                        "",
+                        "No",
+                        "80",
+                        "67",
+                        "147"
+                    ],
+                    [
+                        "10",
+                        "Total",
+                        "353",
+                        "305",
+                        "658"
+                    ],
+                    [
+                        "",
+                        "Yes",
+                        "229",
+                        "205",
+                        "434"
+                    ],
+                    [
+                        "",
+                        "No",
+                        "124",
+                        "100",
+                        "224"
+                    ],
+                    [
+                        "11",
+                        "Total",
+                        "296",
+                        "249",
+                        "545"
+                    ],
+                    [
+                        "",
+                        "Yes",
+                        "180",
+                        "153",
+                        "333"
+                    ],
+                    [
+                        "",
+                        "No",
+                        "116",
+                        "96",
+                        "212"
+                    ],
+                    [
+                        "12",
+                        "Total",
+                        "337",
+                        "272",
+                        "609"
+                    ],
+                    [
+                        "",
+                        "Yes",
+                        "227",
+                        "180",
+                        "407"
+                    ],
+                    [
+                        "",
+                        "No",
+                        "110",
+                        "92",
+                        "202"
+                    ],
+                    [
+                        "13",
+                        "Total",
+                        "403",
+                        "425",
+                        "828"
+                    ],
+                    [
+                        "",
+                        "Yes",
+                        "249",
+                        "261",
+                        "510"
+                    ],
+                    [
+                        "",
+                        "No",
+                        "154",
+                        "164",
+                        "318"
+                    ],
+                    [
+                        "14",
+                        "Total",
+                        "473",
+                        "490",
+                        "963"
+                    ],
+                    [
+                        "",
+                        "Yes",
+                        "275",
+                        "292",
+                        "567"
+                    ],
+                    [
+                        "",
+                        "No",
+                        "198",
+                        "198",
+                        "396"
+                    ],
+                    [
+                        "15",
+                        "Total",
+                        "466",
+                        "445",
+                        "911"
+                    ],
+                    [
+                        "",
+                        "Yes",
+                        "227",
+                        "195",
+                        "422"
+                    ],
+                    [
+                        "",
+                        "No",
+                        "239",
+                        "250",
+                        "489"
+                    ],
+                    [
+                        "16",
+                        "Total",
+                        "568",
+                        "536",
+                        "1104"
+                    ],
+                    [
+                        "",
+                        "Yes",
+                        "298",
+                        "277",
+                        "575"
+                    ],
+                    [
+                        "",
+                        "No",
+                        "270",
+                        "259",
+                        "529"
+                    ],
+                    [
+                        "17",
+                        "Total",
+                        "404",
+                        "312",
+                        "716"
+                    ],
+                    [
+                        "",
+                        "Yes",
+                        "274",
+                        "198",
+                        "472"
+                    ],
+                    [
+                        "",
+                        "No",
+                        "130",
+                        "114",
+                        "244"
+                    ],
+                    [
+                        "18",
+                        "Total",
+                        "656",
+                        "513",
+                        "1169"
+                    ],
+                    [
+                        "",
+                        "Yes",
+                        "464",
+                        "338",
+                        "802"
+                    ],
+                    [
+                        "",
+                        "No",
+                        "192",
+                        "175",
+                        "367"
+                    ],
+                    [
+                        "19",
+                        "Total",
+                        "513",
+                        "465",
+                        "978"
+                    ],
+                    [
+                        "",
+                        "Yes",
+                        "349",
+                        "304",
+                        "653"
+                    ],
+                    [
+                        "",
+                        "No",
+                        "164",
+                        "161",
+                        "325"
+                    ],
+                    [
+                        "20",
+                        "Total",
+                        "835",
+                        "723",
+                        "1558"
+                    ],
+                    [
+                        "",
+                        "Yes",
+                        "544",
+                        "467",
+                        "1011"
+                    ],
+                    [
+                        "",
+                        "No",
+                        "291",
+                        "256",
+                        "547"
+                    ],
+                    [
+                        "21",
+                        "Total",
+                        "571",
+                        "584",
+                        "1155"
+                    ],
+                    [
+                        "",
+                        "Yes",
+                        "412",
+                        "397",
+                        "809"
+                    ],
+                    [
+                        "",
+                        "No",
+                        "159",
+                        "187",
+                        "346"
+                    ],
+                    [
+                        "22",
+                        "Total",
+                        "436",
+                        "419",
+                        "855"
+                    ],
+                    [
+                        "",
+                        "Yes",
+                        "214",
+                        "226",
+                        "440"
+                    ],
+                    [
+                        "",
+                        "No",
+                        "222",
+                        "193",
+                        "415"
+                    ],
+                    [
+                        "23",
+                        "Total",
+                        "163",
+                        "181",
+                        "344"
+                    ],
+                    [
+                        "",
+                        "Yes",
+                        "110",
+                        "127",
+                        "237"
+                    ],
+                    [
+                        "",
+                        "No",
+                        "53",
+                        "54",
+                        "107"
+                    ],
+                    [
+                        "Total",
+                        "Total",
+                        "9217",
+                        "8311",
+                        "17528"
+                    ],
+                    [
+                        "",
+                        "Yes",
+                        "5772",
+                        "5069",
+                        "10841"
+                    ],
+                    [
+                        "",
+                        "No",
+                        "3445",
+                        "3242",
+                        "6687"
+                    ]
+                ],
+                "footer": "Source: National Census, 2021"
+            }
+        },
+        {
+            "type": "component",
+            "name": "GroupedBarChart",
+            "chapter": 3,
+            "data": {
+                "caption": "Ward-wise Distribution of Children Under 5 Years Based on Birth Registration",
+                "colors": [
+                    "#22c55e",
+                    "#ef4444"
+                ],
+                "barChartData": [
+                    {
+                        "category": "Ward 1",
+                        "Registered": 405,
+                        "Not Registered": 311
+                    },
+                    {
+                        "category": "Ward 2",
+                        "Registered": 357,
+                        "Not Registered": 163
+                    },
+                    {
+                        "category": "Ward 3",
+                        "Registered": 162,
+                        "Not Registered": 162
+                    },
+                    {
+                        "category": "Ward 4",
+                        "Registered": 755,
+                        "Not Registered": 429
+                    },
+                    {
+                        "category": "Ward 5",
+                        "Registered": 320,
+                        "Not Registered": 313
+                    },
+                    {
+                        "category": "Ward 6",
+                        "Registered": 329,
+                        "Not Registered": 231
+                    },
+                    {
+                        "category": "Ward 7",
+                        "Registered": 182,
+                        "Not Registered": 116
+                    },
+                    {
+                        "category": "Ward 8",
+                        "Registered": 314,
+                        "Not Registered": 122
+                    },
+                    {
+                        "category": "Ward 9",
+                        "Registered": 297,
+                        "Not Registered": 147
+                    },
+                    {
+                        "category": "Ward 10",
+                        "Registered": 434,
+                        "Not Registered": 224
+                    },
+                    {
+                        "category": "Ward 11",
+                        "Registered": 333,
+                        "Not Registered": 212
+                    },
+                    {
+                        "category": "Ward 12",
+                        "Registered": 407,
+                        "Not Registered": 202
+                    },
+                    {
+                        "category": "Ward 13",
+                        "Registered": 510,
+                        "Not Registered": 318
+                    },
+                    {
+                        "category": "Ward 14",
+                        "Registered": 567,
+                        "Not Registered": 396
+                    },
+                    {
+                        "category": "Ward 15",
+                        "Registered": 422,
+                        "Not Registered": 489
+                    },
+                    {
+                        "category": "Ward 16",
+                        "Registered": 575,
+                        "Not Registered": 529
+                    },
+                    {
+                        "category": "Ward 17",
+                        "Registered": 472,
+                        "Not Registered": 244
+                    },
+                    {
+                        "category": "Ward 18",
+                        "Registered": 802,
+                        "Not Registered": 367
+                    },
+                    {
+                        "category": "Ward 19",
+                        "Registered": 653,
+                        "Not Registered": 325
+                    },
+                    {
+                        "category": "Ward 20",
+                        "Registered": 1011,
+                        "Not Registered": 547
+                    },
+                    {
+                        "category": "Ward 21",
+                        "Registered": 809,
+                        "Not Registered": 346
+                    },
+                    {
+                        "category": "Ward 22",
+                        "Registered": 440,
+                        "Not Registered": 415
+                    },
+                    {
+                        "category": "Ward 23",
+                        "Registered": 237,
+                        "Not Registered": 107
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "c) Details Regarding Deaths in the Last 12 Months"
+        },
+        {
+            "type": "paragraph",
+            "content": "Out of the total population of 164,444 in this sub-metropolitan city, 1,077 deaths occurred in the last 12 months. This includes 615 males (57.10%) and 462 females (42.90%). The highest number of deaths was recorded in the age group of 80 years and above, with 155 deaths."
+        },
+        {
+            "type": "table",
+            "data": {
+                "headers": [
+                    "Age Group of Deceased",
+                    "Male",
+                    "Female",
+                    "Total"
+                ],
+                "rows": [
+                    [
+                        "1 year",
+                        "61",
+                        "33",
+                        "94"
+                    ],
+                    [
+                        "1-4 years",
+                        "14",
+                        "14",
+                        "28"
+                    ],
+                    [
+                        "5-9 years",
+                        "7",
+                        "5",
+                        "12"
+                    ],
+                    [
+                        "10-14 years",
+                        "5",
+                        "3",
+                        "8"
+                    ],
+                    [
+                        "15-19 years",
+                        "11",
+                        "5",
+                        "16"
+                    ],
+                    [
+                        "20-24 years",
+                        "18",
+                        "9",
+                        "27"
+                    ],
+                    [
+                        "25-29 years",
+                        "24",
+                        "12",
+                        "36"
+                    ],
+                    [
+                        "30-34 years",
+                        "17",
+                        "12",
+                        "29"
+                    ],
+                    [
+                        "35-39 years",
+                        "25",
+                        "19",
+                        "44"
+                    ],
+                    [
+                        "40-44 years",
+                        "33",
+                        "15",
+                        "48"
+                    ],
+                    [
+                        "45-49 years",
+                        "40",
+                        "22",
+                        "62"
+                    ],
+                    [
+                        "50-54 years",
+                        "42",
+                        "31",
+                        "73"
+                    ],
+                    [
+                        "55-59 years",
+                        "34",
+                        "48",
+                        "82"
+                    ],
+                    [
+                        "60-64 years",
+                        "46",
+                        "27",
+                        "73"
+                    ],
+                    [
+                        "65-69 years",
+                        "51",
+                        "41",
+                        "92"
+                    ],
+                    [
+                        "70-74 years",
+                        "71",
+                        "53",
+                        "124"
+                    ],
+                    [
+                        "75-79 years",
+                        "37",
+                        "36",
+                        "73"
+                    ],
+                    [
+                        "80 and above",
+                        "78",
+                        "77",
+                        "155"
+                    ],
+                    [
+                        "Not stated",
+                        "1",
+                        "0",
+                        "1"
+                    ],
+                    [
+                        "Total",
+                        "615",
+                        "462",
+                        "1077"
+                    ]
+                ],
+                "footer": "Source: National Census, 2021"
+            }
+        },
+        {
+            "type": "component",
+            "name": "GroupedBarChart",
+            "chapter": 3,
+            "data": {
+                "caption": "Details of Deceased by Age Group",
+                "colors": [
+                    "#0284c7",
+                    "#e879f9"
+                ],
+                "barChartData": [
+                    {
+                        "category": "1 year",
+                        "Male": 61,
+                        "Female": 33
+                    },
+                    {
+                        "category": "1-4 years",
+                        "Male": 14,
+                        "Female": 14
+                    },
+                    {
+                        "category": "5-9 years",
+                        "Male": 7,
+                        "Female": 5
+                    },
+                    {
+                        "category": "10-14 years",
+                        "Male": 5,
+                        "Female": 3
+                    },
+                    {
+                        "category": "15-19 years",
+                        "Male": 11,
+                        "Female": 5
+                    },
+                    {
+                        "category": "20-24 years",
+                        "Male": 18,
+                        "Female": 9
+                    },
+                    {
+                        "category": "25-29 years",
+                        "Male": 24,
+                        "Female": 12
+                    },
+                    {
+                        "category": "30-34 years",
+                        "Male": 17,
+                        "Female": 12
+                    },
+                    {
+                        "category": "35-39 years",
+                        "Male": 25,
+                        "Female": 19
+                    },
+                    {
+                        "category": "40-44 years",
+                        "Male": 33,
+                        "Female": 15
+                    },
+                    {
+                        "category": "45-49 years",
+                        "Male": 40,
+                        "Female": 22
+                    },
+                    {
+                        "category": "50-54 years",
+                        "Male": 42,
+                        "Female": 31
+                    },
+                    {
+                        "category": "55-59 years",
+                        "Male": 34,
+                        "Female": 48
+                    },
+                    {
+                        "category": "60-64 years",
+                        "Male": 46,
+                        "Female": 27
+                    },
+                    {
+                        "category": "65-69 years",
+                        "Male": 51,
+                        "Female": 41
+                    },
+                    {
+                        "category": "70-74 years",
+                        "Male": 71,
+                        "Female": 53
+                    },
+                    {
+                        "category": "75-79 years",
+                        "Male": 37,
+                        "Female": 36
+                    },
+                    {
+                        "category": "80 and above",
+                        "Male": 78,
+                        "Female": 77
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "d) Number of Deceased by Cause of Death"
+        },
+        {
+            "type": "table",
+            "data": {
+                "headers": [
+                    "Cause of Death",
+                    "Number",
+                    "Percentage"
+                ],
+                "rows": [
+                    [
+                        "Non-communicable disease",
+                        "457",
+                        "42.43"
+                    ],
+                    [
+                        "Communicable disease",
+                        "216",
+                        "20.06"
+                    ],
+                    [
+                        "Other causes",
+                        "200",
+                        "18.57"
+                    ],
+                    [
+                        "Natural disaster",
+                        "79",
+                        "7.33"
+                    ],
+                    [
+                        "Other accidents",
+                        "67",
+                        "6.22"
+                    ],
+                    [
+                        "Road accident",
+                        "16",
+                        "1.48"
+                    ],
+                    [
+                        "Suicide",
+                        "14",
+                        "1.30"
+                    ],
+                    [
+                        "Maternal death",
+                        "9",
+                        "0.84"
+                    ],
+                    [
+                        "Murder",
+                        "2",
+                        "0.19"
+                    ],
+                    [
+                        "Not stated",
+                        "17",
+                        "1.58"
+                    ],
+                    [
+                        "Total",
+                        "1077",
+                        "100"
+                    ]
+                ],
+                "footer": "Source: Household Statistics Collection, 2021"
+            }
+        }
+    ]
 }

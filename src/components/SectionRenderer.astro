@@ -1,304 +1,221 @@
 ---
-import InteractiveChart from "./InteractiveChart.astro";
-
 interface Props {
   content: any;
   lang: string;
   id: string;
 }
 const { content, lang, id } = Astro.props;
+
+// Dynamically discover all chapter components
+const chapterComponents = import.meta.glob("/src/components/chapters/**/*.astro");
+
+// Pre-load any components mentioned in the blocks
+const loadedComponents: Record<string, any> = {};
+if (content?.type === "multi-block" && content.blocks) {
+  for (const block of content.blocks) {
+    if (block.type === "component" && block.name && block.chapter) {
+      const key = Object.keys(chapterComponents).find(k => 
+        k.includes(`/chapters/${block.chapter}/`) && k.endsWith(`${block.name}.astro`)
+      );
+      if (key) {
+        const mod = await chapterComponents[key]() as any;
+        loadedComponents[`${block.chapter}-${block.name}`] = mod.default;
+      }
+    }
+  }
+}
 ---
 <div id={id} class="scroll-mt-24 mb-16">
   {content ? (
     <div class="prose prose-invert max-w-none">
       <h2 class="text-3xl font-extrabold mb-8" style="color:var(--text-heading);">
-        {content.sectionNumber && <span>{content.sectionNumber} </span>}
-        {content.title}
+        {content.sectionNumber} {content.title}
       </h2>
 
-      {/* RENDER CONTENT BLOCKS */}
-      <div class="space-y-10">
-        
-        {/* PARAGRAPHS type or content.paragraphs */}
-        {(content.type === "paragraphs" || content.paragraphs) && (
-          <div class="space-y-6">
-            {content.paragraphs.map((p: string) => (
-              <p class="text-lg leading-relaxed text-justify" style="color:var(--text-body);" set:html={p}></p>
-            ))}
-          </div>
-        )}
+      <!-- Standard PARAGRAPHS type -->
+      {content.type === "paragraphs" && content.paragraphs && (
+        <div class="space-y-6">
+          {content.paragraphs.map((p: string) => (
+            <p class="text-lg leading-relaxed text-justify" style="color:var(--text-body);">{p}</p>
+          ))}
+        </div>
+      )}
 
-        {/* MULTI-BLOCK type or content.blocks */}
-        {(content.type === "multi-block" || content.blocks) && (
-          <div class="space-y-10">
-            {content.blocks.map((block: any, idx: number) => (
-              <div class="space-y-6">
-                {/* Paragraphs in block (supports both string and array) */}
-                {(block.type === "paragraph" || (block.content && typeof (Array.isArray(block.content) ? block.content[0] : block.content) === 'string' && block.type !== "subsections" && block.type !== "list")) && (
-                   <p class="text-lg leading-relaxed text-justify m-0" style="color:var(--text-body);" set:html={block.content}></p>
-                )}
-                {block.paragraphs && (
-                  <div class="space-y-6">
-                    {block.paragraphs.map((p: string) => (
-                      <p class="text-lg leading-relaxed text-justify m-0" style="color:var(--text-body);" set:html={p}></p>
-                    ))}
-                  </div>
-                )}
-
-                {/* Image in block */}
-                {(block.type === "image" || block.image) && (
-                  <div class="my-10 space-y-4">
-                    <img 
-                      src={block.image?.src || block.src} 
-                      alt={block.image?.alt || block.alt} 
-                      class="w-full rounded-2xl shadow-lg border border-white/10"
-                    />
-                    {(block.image?.caption || block.caption) && (
-                      <p class="text-center text-sm font-bold italic" style="color:var(--text-muted);">{block.image?.caption || block.caption}</p>
-                    )}
-                  </div>
-                )}
-
-                {/* Table in block */}
-                {(block.type === "table" || block.table || block.data?.rows) && (
-                  <div class="my-8">
-                    { (block.table?.title || block.data?.title) && (
-                      <div class="text-center font-bold text-lg mb-4" style="color:var(--primary-500);">
-                        {block.table?.title || block.data?.title}
-                      </div>
-                    )}
-                    <div class="overflow-x-auto rounded-xl shadow-sm border" style="border-color:var(--card-border);">
-                      <table class="w-full text-left border-collapse min-w-[600px]">
-                        { (block.table?.headers || block.data?.headers) && (
-                          <thead class="bg-blue-500 text-white" style="background-color: #4A88D0;">
-                            {(() => {
-                              const rawHeaders = block.table?.headers || block.data?.headers;
-                              const normalizedHeaders = Array.isArray(rawHeaders[0]) ? rawHeaders : [rawHeaders];
-                              return normalizedHeaders.map((headerRow: any[]) => (
-                                <tr>
-                                  {headerRow.map((h: any) => (
-                                    <th 
-                                      rowspan={h.rowspan > 1 ? Number(h.rowspan) : undefined} 
-                                      colspan={h.colspan > 1 ? Number(h.colspan) : undefined} 
-                                      class="px-4 py-3 font-semibold border border-white/30 text-center align-middle"
-                                    >
-                                      {typeof h === 'string' ? h : h.text}
-                                    </th>
-                                  ))}
-                                </tr>
-                              ));
-                            })()}
-                          </thead>
-                        )}
-                        <tbody style="background:var(--card-bg);">
-                          {(block.table?.rows || block.data?.rows || []).map((row: any[], i: number) => (
-                            <tr class={i % 2 === 0 ? "" : "bg-blue-50/10 dark:bg-white/5"}>
-                               {row.map((cell: any, j: number) => {
-                                 const isObj = typeof cell === 'object' && cell !== null;
-                                 const text = isObj ? cell.text : cell;
-                                 const rowSpan = isObj && cell.rowspan ? cell.rowspan : 1;
-                                 const colSpan = isObj && cell.colspan ? cell.colspan : 1;
-                                 return (
-                                   <td 
-                                     class={`px-4 py-3 border align-middle ${colSpan > 1 ? 'text-center font-medium opacity-90' : (j > 0 && !isObj && !block.table?.alignLeft) ? 'text-center' : 'text-left'}`} 
-                                     style="border-color:var(--card-border); color:var(--text-body);"
-                                     rowspan={rowSpan > 1 ? rowSpan : undefined}
-                                     colspan={colSpan > 1 ? colSpan : undefined}
-                                   >
-                                     <span set:html={text}></span>
-                                   </td>
-                                 );
-                               })}
-                            </tr>
-                          ))}
-                        </tbody>
-                      </table>
-                    </div>
-                    {(block.table?.source || block.data?.source) && (
-                      <div class="text-right italic text-sm mt-3 font-medium opacity-80" style="color:var(--text-body);">
-                        {block.table?.source || block.data?.source}
-                      </div>
-                    )}
-                    {(block.table?.description || block.data?.description) && (
-                      <p class="text-lg leading-relaxed mt-6 text-justify" style="color:var(--text-body);">
-                        {block.table?.description || block.data?.description}
-                      </p>
-                    )}
-                  </div>
-                )}
-
-                {/* Chart in block */}
-                {(block.type === "chart" || block.chart || block.chartType) && (
-                  <div class="my-12 p-8 rounded-3xl bg-white/5 border border-white/10 shadow-2xl backdrop-blur-sm relative overflow-hidden group">
-                    <div class="absolute inset-0 bg-gradient-to-br from-primary-500/5 to-transparent opacity-50"></div>
-                    { (block.chart?.title || block.chart?.config?.title || block.data?.title) && (
-                      <h3 class="text-xl font-bold mb-8 text-center" style="color:var(--text-heading);">{ block.chart?.title || block.chart?.config?.title || block.data?.title }</h3>
-                    )}
-                    { (block.chartType || block.chart?.chartType) ? (
-                       <InteractiveChart 
-                         type={block.chartType || block.chart?.chartType} 
-                         data={block.chart?.data || block.data} 
-                         config={block.chart?.config || block.config} 
-                         id={`${id}-${idx}`} 
-                       />
-                    ) : (
-                      <div class="d3-chart-wrapper" data-chart={JSON.stringify(block.chart || block.data)}>
-                        <div class="d3-container min-h-[400px]"></div>
-                      </div>
-                    )}
-                    {block.caption && (
-                      <p class="text-center text-sm font-bold italic mt-4" style="color:var(--text-muted);">{block.caption}</p>
-                    )}
-                  </div>
-                )}
-
-                {/* Subsections in block */}
-                {(block.type === "subsections" || block.subsections) && (
-                  <div class="space-y-8 my-10">
-                    {(block.subsections || block.content).map((sub: any) => (
-                      <div class="p-8 rounded-2xl" style="background:var(--card-bg);border:1px solid var(--card-border);">
-                        <h3 class="text-xl font-bold mb-4" style="color:var(--text-heading);">{sub.title}</h3>
-                        <div class="space-y-4">
-                          {Array.isArray(sub.content) ? (
-                            sub.content.map((p: string) => <p class="text-lg leading-relaxed text-justify m-0" style="color:var(--text-body);">{p}</p>)
-                          ) : (
-                            <p class="text-lg leading-relaxed text-justify m-0" style="color:var(--text-body);">{sub.content}</p>
-                          )}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                )}
-
-                {/* List in block */}
-                {(block.type === "list" || block.list) && (
-                  <div class="space-y-4 my-8">
-                    {(block.list || block.content).map((item: string) => (
-                      <div class="flex gap-4 p-5 rounded-xl" style="background:var(--card-bg);border:1px solid var(--card-border);">
-                        <span class="mt-2 w-2 h-2 rounded-full shrink-0" style="background:var(--primary-400);"></span>
-                        <p class="text-lg leading-relaxed m-0 text-justify" style="color:var(--text-body);">{item}</p>
-                      </div>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-        )}
-
-        {/* STANDALONE TABLE (not in block) */}
-        {(content.type === "table" || content.table) && !content.blocks && (
-          <div class="my-8">
-            { content.table?.title && (
-              <div class="text-center font-bold text-lg mb-4" style="color:var(--primary-500);">
-                {content.table.title}
-              </div>
-            )}
-            <div class="overflow-x-auto rounded-xl shadow-sm border" style="border-color:var(--card-border);">
-              <table class="w-full text-left border-collapse min-w-[600px]">
-                { (content.table?.headers || content.data?.headers) && (
-                  <thead class="bg-blue-500 text-white" style="background-color: #4A88D0;">
-                    {(() => {
-                      const rawHeaders = content.table?.headers || content.data?.headers;
-                      const normalizedHeaders = Array.isArray(rawHeaders[0]) ? rawHeaders : [rawHeaders];
-                      return normalizedHeaders.map((headerRow: any[]) => (
-                        <tr>
-                          {headerRow.map((h: any) => (
-                            <th 
-                              rowspan={h.rowspan > 1 ? Number(h.rowspan) : undefined} 
-                              colspan={h.colspan > 1 ? Number(h.colspan) : undefined} 
-                              class="px-4 py-3 font-semibold border border-white/30 text-center align-middle"
-                            >
-                              {typeof h === 'string' ? h : h.text}
-                            </th>
+      <!-- MULTI-BLOCK type (New: Allows mixing text, tables, and images) -->
+      {content.type === "multi-block" && content.blocks && (
+        <div class="space-y-10">
+          {content.blocks.map((block: any) => (
+            <>
+              {block.type === "paragraph" && (
+                <p class="text-lg leading-relaxed text-justify m-0" style="color:var(--text-body);">{block.content}</p>
+              )}
+              
+              {block.type === "table" && (
+                <div class="overflow-x-auto my-4 p-1 rounded-xl" style="background:var(--card-bg);border:1px solid var(--card-border);">
+                  <table class="w-full text-sm text-left">
+                    <thead class="text-xs uppercase" style="background:rgba(29,78,216,0.1); color:var(--text-heading);">
+                      <tr>
+                        {block.data.headers.map((header: string) => (
+                          <th class="px-6 py-4 font-bold border-b" style="border-color:var(--border);">{header}</th>
+                        ))}
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {block.data.rows.map((row: string[], idx: number) => (
+                        <tr class={idx % 2 === 0 ? "" : "bg-white/5"} style="color:var(--text-body);">
+                          {row.map((cell: string) => (
+                            <td class="px-6 py-4 border-b" style="border-color:var(--border);">{cell}</td>
                           ))}
                         </tr>
-                      ));
-                    })()}
-                  </thead>
-                )}
-                <tbody style="background:var(--card-bg);">
-                  {(content.table?.rows || content.data?.rows || []).map((row: any[], i: number) => (
-                    <tr class={i % 2 === 0 ? "" : "bg-blue-50/10 dark:bg-white/5"}>
-                       {row.map((cell: any, j: number) => {
-                         const isObj = typeof cell === 'object' && cell !== null;
-                         const text = isObj ? cell.text : cell;
-                         const rowSpan = isObj && cell.rowspan ? cell.rowspan : 1;
-                         const colSpan = isObj && cell.colspan ? cell.colspan : 1;
-                         return (
-                           <td 
-                             class={`px-4 py-3 border align-middle ${colSpan > 1 ? 'text-center font-medium opacity-90' : (j > 0 && !isObj && !content.table?.alignLeft) ? 'text-center' : 'text-left font-medium'}`} 
-                             style="border-color:var(--card-border); color:var(--text-body);"
-                             rowspan={rowSpan > 1 ? rowSpan : undefined}
-                             colspan={colSpan > 1 ? colSpan : undefined}
-                           >
-                             <span set:html={text}></span>
-                           </td>
-                         );
-                       })}
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-            {(content.table?.source || content.data?.source) && (
-              <div class="text-right italic text-sm mt-3 font-medium opacity-80" style="color:var(--text-body);">
-                {content.table?.source || content.data?.source}
-              </div>
-            )}
-          </div>
-        )}
-
-        {/* BULLET STAGES */}
-        {content.type === "bullet-stages" && (
-          <div class="space-y-8">
-            {content.stages.map((stage: any) => (
-              <div class="p-8 rounded-2xl" style="background:var(--card-bg);border:1px solid var(--card-border);">
-                <h3 class="text-xl font-bold mb-4" style="color:var(--text-heading);">
-                  {stage.sectionNumber && <span class="mr-2 opacity-50 font-mono text-base">{stage.sectionNumber}</span>}
-                  {stage.title}
-                </h3>
-                <p class="text-lg leading-relaxed text-justify" style="color:var(--text-body);">{stage.content}</p>
-              </div>
-            ))}
-          </div>
-        )}
-
-        {/* DESCRIPTION LIST / LIST fallback */}
-        {(content.type === "description-list" || content.list) && (
-          <div class="space-y-6">
-            {content.description && <p class="text-lg leading-relaxed text-justify" style="color:var(--text-body);">{content.description}</p>}
-            {content.list && (
-              <div class="space-y-4">
-                {content.list.map((item: string) => (
-                  <div class="flex gap-4 p-5 rounded-xl" style="background:var(--card-bg);border:1px solid var(--card-border);">
-                     <span class="mt-2 w-2 h-2 rounded-full shrink-0" style="background:var(--primary-400);"></span>
-                    <p class="text-lg leading-relaxed m-0 text-justify" style="color:var(--text-body);">{item}</p>
-                  </div>
-                ))}
-              </div>
-            )}
-          </div>
-        )}
-
-        {/* SUBSECTIONS standalone */}
-        {(content.type === "subsections" || content.subsections) && !content.blocks && (
-          <div class="space-y-8">
-            {(content.subsections || []).map((sub: any) => (
-              <div class="p-8 rounded-2xl" style="background:var(--card-bg);border:1px solid var(--card-border);">
-                <h3 class="text-xl font-bold mb-4" style="color:var(--text-heading);">{sub.title}</h3>
-                <div class="space-y-4">
-                  {Array.isArray(sub.content) ? (
-                    sub.content.map((p: string) => <p class="text-lg leading-relaxed text-justify m-0" style="color:var(--text-body);">{p}</p>)
-                  ) : (
-                    <p class="text-lg leading-relaxed text-justify" style="color:var(--text-body);">{sub.content}</p>
+                      ))}
+                    </tbody>
+                  </table>
+                  {block.data.footer && (
+                    <div class="px-6 py-3 font-bold text-right" style="color:var(--text-heading); background:rgba(29,78,216,0.05);">
+                      {block.data.footer}
+                    </div>
                   )}
                 </div>
-              </div>
-            ))}
-          </div>
-        )}
-      </div>
+              )}
+
+              {block.type === "image" && (
+                <div class="my-10 space-y-4">
+                  <div class="aspect-video w-full rounded-2xl flex items-center justify-center relative overflow-hidden group" style="background:var(--card-bg); border:2px dashed var(--border);">
+                     <div class="absolute inset-0 bg-gradient-to-br from-primary-500/5 to-transparent opacity-50"></div>
+                     <div class="z-10 flex flex-col items-center gap-3 opacity-40 group-hover:opacity-60 transition-opacity">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                        <p class="text-sm font-medium tracking-wider uppercase">Image Placeholder</p>
+                     </div>
+                  </div>
+                  {block.caption && (
+                    <p class="text-center text-sm font-bold italic" style="color:var(--text-muted);">{block.caption}</p>
+                  )}
+                </div>
+              )}
+              {block.type === "subsections" && (
+                <div class="space-y-8 my-10">
+                  {block.content.map((sub: any) => (
+                    <div class="p-8 rounded-2xl" style="background:var(--card-bg);border:1px solid var(--card-border);">
+                      <h3 class="text-xl font-bold mb-4" style="color:var(--text-heading);">{sub.title}</h3>
+                      <div class="space-y-4">
+                        {Array.isArray(sub.content) ? (
+                          sub.content.map((p: string) => <p class="text-lg leading-relaxed text-justify m-0" style="color:var(--text-body);">{p}</p>)
+                        ) : (
+                          <p class="text-lg leading-relaxed text-justify m-0" style="color:var(--text-body);">{sub.content}</p>
+                        )}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+              {block.type === "list" && (
+                <div class="space-y-4 my-8">
+                  {block.content.map((item: string) => (
+                    <div class="flex gap-4 p-5 rounded-xl" style="background:var(--card-bg);border:1px solid var(--card-border);">
+                      <span class="mt-2 w-2 h-2 rounded-full shrink-0" style="background:var(--primary-400);"></span>
+                      <p class="text-lg leading-relaxed m-0 text-justify" style="color:var(--text-body);">{item}</p>
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              {block.type === "component" && (
+                <div class="my-10">
+                  {(() => {
+                    const Component = loadedComponents[`${block.chapter}-${block.name}`];
+                    if (Component) {
+                      return <Component content={block.data || content} />;
+                    }
+                    return (
+                      <div class="p-4 rounded-xl border border-dashed border-primary-500/30 bg-primary-500/5">
+                        <p class="text-sm italic opacity-50">Component not found: {block.name} (Chapter {block.chapter})</p>
+                      </div>
+                    );
+                  })()}
+                </div>
+              )}
+            </>
+          ))}
+        </div>
+      )}
+
+      <!-- DESCRIPTION + LIST type -->
+      {content.type === "description-list" && (
+        <div>
+          {content.description && (
+            <p class="text-lg leading-relaxed mb-8 text-justify" style="color:var(--text-body);">{content.description}</p>
+          )}
+          {content.list && (
+            <div class="space-y-4">
+              {content.list.map((item: string) => (
+                <div class="flex gap-4 p-5 rounded-xl" style="background:var(--card-bg);border:1px solid var(--card-border);">
+                  <p class="text-lg leading-relaxed m-0" style="color:var(--text-body);">{item}</p>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+      )}
+
+      <!-- SUBSECTIONS type -->
+      {content.type === "subsections" && (
+        <div>
+          {content.description && (
+            <p class="text-lg leading-relaxed mb-10 text-justify" style="color:var(--text-body);">{content.description}</p>
+          )}
+          {content.subsections && (
+            <div class="space-y-8">
+              {content.subsections.map((sub: any) => (
+                <div class="p-8 rounded-2xl" style="background:var(--card-bg);border:1px solid var(--card-border);">
+                  <h3 class="text-xl font-bold mb-4" style="color:var(--text-heading);">{sub.title}</h3>
+                  <div class="space-y-4">
+                    {Array.isArray(sub.content) ? (
+                      sub.content.map((p: string) => <p class="text-lg leading-relaxed text-justify m-0" style="color:var(--text-body);">{p}</p>)
+                    ) : (
+                      <p class="text-lg leading-relaxed text-justify" style="color:var(--text-body);">{sub.content}</p>
+                    )}
+                  </div>
+                  {sub.extra && (
+                    <p class="text-lg leading-relaxed mt-6 pt-6 border-t text-justify" style="color:var(--text-body);border-color:var(--border);">{sub.extra}</p>
+                  )}
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+      )}
+
+      <!-- BULLET-STAGES type -->
+      {content.type === "bullet-stages" && (
+        <div>
+          {content.description && (
+            <p class="text-lg leading-relaxed mb-8 text-justify" style="color:var(--text-body);">{content.description}</p>
+          )}
+          {content.bullets && (
+            <div class="space-y-4 mb-12">
+              {content.bullets.map((b: string) => (
+                <div class="flex gap-3 p-5 rounded-xl" style="background:var(--card-bg);border:1px solid var(--card-border);">
+                  <span class="mt-2 w-2 h-2 rounded-full shrink-0" style="background:var(--primary-400);"></span>
+                  <p class="text-lg leading-relaxed m-0 text-justify" style="color:var(--text-body);">{b}</p>
+                </div>
+              ))}
+            </div>
+          )}
+          {content.stages && (
+            <div class="space-y-8">
+              {content.stages.map((stage: any) => (
+                <div class="p-8 rounded-2xl" style="background:var(--card-bg);border:1px solid var(--card-border);">
+                  <h3 class="text-xl font-bold mb-4" style="color:var(--text-heading);">
+                    {stage.sectionNumber && <span class="mr-2 opacity-50 font-mono text-base">{stage.sectionNumber}</span>}
+                    {stage.title}
+                  </h3>
+                  <p class="text-lg leading-relaxed text-justify" style="color:var(--text-body);">{stage.content}</p>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+      )}
     </div>
   ) : null}
 </div>

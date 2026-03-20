@@ -1,5 +1,238 @@
 {
-  "title": "Economically Active Population",
-  "sectionNumber": "3.9",
-  "content": ""
+    "sectionNumber": "3.9",
+    "title": "Economically Active Population Distribution",
+    "type": "multi-block",
+    "blocks": [
+        {
+            "type": "paragraph",
+            "content": "The detailed distribution of the population aged 10 and above according to the duration (months) of economic work performed in the 12 months prior to the census is presented in the table below."
+        },
+        {
+            "type": "table",
+            "data": {
+                "headers": [
+                    "Gender",
+                    "Less than 3 months",
+                    "3 months or more",
+                    "6 months or more",
+                    "Did not work",
+                    "Total"
+                ],
+                "rows": [
+                    [
+                        "Male",
+                        "3900",
+                        "3791",
+                        "35046",
+                        "23712",
+                        "66449"
+                    ],
+                    [
+                        "Female",
+                        "7859",
+                        "7115",
+                        "11053",
+                        "41193",
+                        "67220"
+                    ],
+                    [
+                        "Total",
+                        "11759",
+                        "10914",
+                        "46099",
+                        "64905",
+                        "133677"
+                    ],
+                    [
+                        "Percentage",
+                        "8.8",
+                        "8.2",
+                        "34.5",
+                        "48.6",
+                        "100"
+                    ]
+                ],
+                "footer": "Source: National Census, 2021"
+            }
+        },
+        {
+            "type": "component",
+            "name": "EconomicallyActive",
+            "chapter": 3,
+            "data": {
+                "caption": "Population Distribution by Economic Work Duration (12 months)",
+                "pieChartData": [
+                    {
+                        "category": "Less than 3 months",
+                        "value": 8.8,
+                        "population": 11759
+                    },
+                    {
+                        "category": "3 months or more",
+                        "value": 8.2,
+                        "population": 10914
+                    },
+                    {
+                        "category": "6 months or more",
+                        "value": 34.5,
+                        "population": 46099
+                    },
+                    {
+                        "category": "Did not work",
+                        "value": 48.6,
+                        "population": 64905
+                    }
+                ]
+            }
+        },
+        {
+            "type": "table",
+            "data": {
+                "headers": [
+                    "Gender",
+                    "Economically Active",
+                    "Economically Inactive",
+                    "Total"
+                ],
+                "rows": [
+                    [
+                        "Male",
+                        "37820",
+                        "7310",
+                        "45130"
+                    ],
+                    [
+                        "Female",
+                        "14122",
+                        "15047",
+                        "29169"
+                    ],
+                    [
+                        "Total",
+                        "51942",
+                        "22357",
+                        "74299"
+                    ],
+                    [
+                        "Percentage",
+                        "69.91",
+                        "30.09",
+                        "100"
+                    ]
+                ],
+                "footer": "Source: National Census, 2021"
+            }
+        },
+        {
+            "type": "component",
+            "name": "EconomicallyActiveStatus",
+            "chapter": 3,
+            "data": {
+                "caption": "Status of Economically Active and Inactive Population",
+                "barChartData": [
+                    {
+                        "category": "Economically Active",
+                        "Male": 37820,
+                        "Female": 14122
+                    },
+                    {
+                        "category": "Economically Inactive",
+                        "Male": 7310,
+                        "Female": 15047
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "The distribution of children in the 10-17 age group based on their economic activity and employment status is presented in the table below."
+        },
+        {
+            "type": "table",
+            "data": {
+                "headers": [
+                    "Age Group",
+                    "Employment",
+                    "Self-employed",
+                    "Contributing Family Member",
+                    "Not Stated",
+                    "Total"
+                ],
+                "rows": [
+                    [
+                        "10-12 years",
+                        "347",
+                        "534",
+                        "1212",
+                        "6",
+                        "2099"
+                    ],
+                    [
+                        "13-15 years",
+                        "557",
+                        "680",
+                        "1204",
+                        "3",
+                        "2444"
+                    ],
+                    [
+                        "16-17 years",
+                        "684",
+                        "502",
+                        "757",
+                        "2",
+                        "1945"
+                    ],
+                    [
+                        "Total",
+                        "1588",
+                        "1716",
+                        "3173",
+                        "11",
+                        "6488"
+                    ],
+                    [
+                        "Percentage",
+                        "24.48",
+                        "26.45",
+                        "48.91",
+                        "0.17",
+                        "100"
+                    ]
+                ],
+                "footer": "Source: National Census, 2021"
+            }
+        },
+        {
+            "type": "component",
+            "name": "EconomicallyActiveChildren",
+            "chapter": 3,
+            "data": {
+                "caption": "Children's Economic Activity and Employment Status",
+                "barChartData": [
+                    {
+                        "category": "10-12 years",
+                        "Employment": 347,
+                        "Self-employed": 534,
+                        "Contributing Family Member": 1212,
+                        "Not Stated": 6
+                    },
+                    {
+                        "category": "13-15 years",
+                        "Employment": 557,
+                        "Self-employed": 680,
+                        "Contributing Family Member": 1204,
+                        "Not Stated": 3
+                    },
+                    {
+                        "category": "16-17 years",
+                        "Employment": 684,
+                        "Self-employed": 502,
+                        "Contributing Family Member": 757,
+                        "Not Stated": 2
+                    }
+                ]
+            }
+        }
+    ]
 }

@@ -1,5 +1,137 @@
 {
-  "title": "Population by Religion",
-  "sectionNumber": "3.5",
-  "content": ""
+    "sectionNumber": "3.5",
+    "title": "Population Distribution by Religion",
+    "type": "multi-block",
+    "blocks": [
+        {
+            "type": "paragraph",
+            "content": "Religious freedom and diversity exist in Nepal. Formally, the Interim Constitution of Nepal, 2063, through the historical declaration of the reinstated Parliament on Jestha 4, 2063, declared Nepal a secular state. Similarly, the preamble of the Constitution of Nepal, 2072, expresses the resolve to preserve and promote unity in diversity, social and cultural solidarity, tolerance, and harmony by internalising multi-ethnic, multi-lingual, multi-religious, multi-cultural, and geographically diverse characteristics. It aims to end class, ethnic, regional, linguistic, religious, and gender discrimination, as well as all forms of untouchability, and to build an equitable society based on proportional inclusion and participatory principles to ensure economic equality, prosperity, and social justice. As a result, religious freedom and harmony prevail in Nepal."
+        },
+        {
+            "type": "paragraph",
+            "content": "As people from various communities reside in the sub-metropolitan city, they have their own festivals. For example: Dashain, Tihar, Ram Navami, Maha Shivaratri, Haritalika, Shree Panchami, Krishna Janmashtami, Holi, Chaite Dashain, Saune-Maghe Sankranti, Matatirtha Aunsi, Akshaya Tritiya, Harishayani-Haribodhini Ekadashi, Nag Panchami, Raksha Bandhan (Janai Purnima), Kushe Aunsi, Balachaturdashi, Kojagrat Purnima, Shree Swasthani Purnima, New Year, Sohra Shradha, Kul-Thani Puja, Buddha Jayanti, Chhath Parva, Eid, Lhosar, etc."
+        },
+        {
+            "type": "paragraph",
+            "content": "Of the total population of 164,444 in the sub-metropolitan city, 113,028 or 68.73% follow Hinduism, while the second largest group is those following Islam, numbering 48,251 or 29.34%. Similarly, 0.70% are Buddhists, 0.87% are Christians, and 0.30% follow Sikhism. Although religious diversity exists, data shows a predominance of Hindu followers. The religious tolerance that has existed for centuries in Nepal continues to be maintained in this sub-metropolitan city as well. Detailed information on various religious followers is presented in the table."
+        },
+        {
+            "type": "component",
+            "name": "PopulationReligion",
+            "chapter": 3,
+            "data": {
+                "caption": "Religious Structure (Population Distribution by Religion)",
+                "pieChartData": [
+                    {
+                        "religion": "Hindu",
+                        "value": 68.73,
+                        "population": 113028
+                    },
+                    {
+                        "religion": "Islamic",
+                        "value": 29.34,
+                        "population": 48251
+                    },
+                    {
+                        "religion": "Christian",
+                        "value": 0.87,
+                        "population": 1432
+                    },
+                    {
+                        "religion": "Buddhist",
+                        "value": 0.70,
+                        "population": 1154
+                    },
+                    {
+                        "religion": "Sikh",
+                        "value": 0.30,
+                        "population": 493
+                    },
+                    {
+                        "religion": "Others",
+                        "value": 0.06,
+                        "population": 86
+                    }
+                ]
+            }
+        },
+        {
+            "type": "table",
+            "data": {
+                "headers": [
+                    "Gender",
+                    "Hindu",
+                    "Buddhist",
+                    "Islam",
+                    "Kirant",
+                    "Christian",
+                    "Prakriti",
+                    "Bon",
+                    "Jain",
+                    "Wahai",
+                    "Sikh",
+                    "Total"
+                ],
+                "rows": [
+                    [
+                        "Male",
+                        "56603",
+                        "552",
+                        "24643",
+                        "25",
+                        "664",
+                        "4",
+                        "5",
+                        "9",
+                        "1",
+                        "249",
+                        "82755"
+                    ],
+                    [
+                        "Female",
+                        "56425",
+                        "602",
+                        "23608",
+                        "24",
+                        "768",
+                        "4",
+                        "4",
+                        "10",
+                        "0",
+                        "244",
+                        "81689"
+                    ],
+                    [
+                        "Total",
+                        "113028",
+                        "1154",
+                        "48251",
+                        "49",
+                        "1432",
+                        "8",
+                        "9",
+                        "19",
+                        "1",
+                        "493",
+                        "164444"
+                    ],
+                    [
+                        "Percent",
+                        "68.73",
+                        "0.70",
+                        "29.34",
+                        "0.03",
+                        "0.87",
+                        "0.00",
+                        "0.01",
+                        "0.01",
+                        "0.00",
+                        "0.30",
+                        "100"
+                    ]
+                ],
+                "footer": "Source: National Census, 2021"
+            }
+        }
+    ]
 }

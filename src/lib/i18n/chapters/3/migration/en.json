@@ -1,5 +1,337 @@
 {
-  "title": "Migration Related Description",
-  "sectionNumber": "3.12",
-  "content": ""
+    "sectionNumber": "3.12",
+    "title": "Migration Details",
+    "type": "multi-block",
+    "blocks": [
+        {
+            "type": "paragraph",
+            "content": "Out of the total population of 164,444 in Nepalgunj Sub-metropolitan City, 153,577 people were born in Nepal. Among those born in Nepal, 117,480 were born within this sub-metropolitan city, 6,289 in other local levels of Banke district, 30,808 in other districts, 9,835 were born abroad and currently reside in this city, and for 32 people, the birthplace was not disclosed."
+        },
+        {
+            "type": "table",
+            "data": {
+                "headers": [
+                    "Age Group",
+                    "Born in Nepal",
+                    "Within City",
+                    "Other Mun.",
+                    "Hill",
+                    "Mountain",
+                    "Terai",
+                    "Not Stated",
+                    "Born Abroad",
+                    "Not Disclosed",
+                    "Total Pop."
+                ],
+                "rows": [
+                    [
+                        "0-4 years",
+                        "13918",
+                        "13556",
+                        "66",
+                        "36",
+                        "139",
+                        "121",
+                        "0",
+                        "75",
+                        "1",
+                        "13994"
+                    ],
+                    [
+                        "5-9 years",
+                        "16445",
+                        "15308",
+                        "161",
+                        "205",
+                        "412",
+                        "379",
+                        "0",
+                        "146",
+                        "2",
+                        "16593"
+                    ],
+                    [
+                        "10-14 years",
+                        "16627",
+                        "14591",
+                        "217",
+                        "371",
+                        "824",
+                        "544",
+                        "0",
+                        "185",
+                        "1",
+                        "16813"
+                    ],
+                    [
+                        "15-19 years",
+                        "17398",
+                        "13863",
+                        "542",
+                        "500",
+                        "1314",
+                        "1179",
+                        "0",
+                        "344",
+                        "5",
+                        "17747"
+                    ],
+                    [
+                        "20-24 years",
+                        "16233",
+                        "11522",
+                        "909",
+                        "504",
+                        "1576",
+                        "1722",
+                        "0",
+                        "959",
+                        "2",
+                        "17194"
+                    ],
+                    [
+                        "25-29 years",
+                        "13677",
+                        "9530",
+                        "835",
+                        "390",
+                        "1398",
+                        "1524",
+                        "0",
+                        "1338",
+                        "2",
+                        "15017"
+                    ],
+                    [
+                        "30-34 years",
+                        "11892",
+                        "7811",
+                        "793",
+                        "401",
+                        "1464",
+                        "1422",
+                        "1",
+                        "1276",
+                        "0",
+                        "13168"
+                    ],
+                    [
+                        "35-39 years",
+                        "11211",
+                        "7336",
+                        "734",
+                        "310",
+                        "1448",
+                        "1383",
+                        "0",
+                        "1306",
+                        "3",
+                        "12520"
+                    ],
+                    [
+                        "40-44 years",
+                        "9353",
+                        "6017",
+                        "553",
+                        "245",
+                        "1353",
+                        "1184",
+                        "1",
+                        "998",
+                        "4",
+                        "10355"
+                    ],
+                    [
+                        "45-49 years",
+                        "7031",
+                        "4543",
+                        "428",
+                        "189",
+                        "1040",
+                        "830",
+                        "1",
+                        "818",
+                        "4",
+                        "7853"
+                    ],
+                    [
+                        "50-54 years",
+                        "5986",
+                        "3754",
+                        "331",
+                        "158",
+                        "1108",
+                        "634",
+                        "1",
+                        "615",
+                        "3",
+                        "6604"
+                    ],
+                    [
+                        "55-59 years",
+                        "4211",
+                        "2768",
+                        "195",
+                        "108",
+                        "807",
+                        "333",
+                        "0",
+                        "525",
+                        "3",
+                        "4739"
+                    ],
+                    [
+                        "60-64 years",
+                        "3550",
+                        "2316",
+                        "143",
+                        "112",
+                        "742",
+                        "236",
+                        "1",
+                        "419",
+                        "2",
+                        "3971"
+                    ],
+                    [
+                        "64-69 years",
+                        "2712",
+                        "1789",
+                        "141",
+                        "75",
+                        "551",
+                        "155",
+                        "1",
+                        "342",
+                        "0",
+                        "3054"
+                    ],
+                    [
+                        "70-74 years",
+                        "2434",
+                        "1663",
+                        "87",
+                        "87",
+                        "465",
+                        "132",
+                        "0",
+                        "282",
+                        "0",
+                        "2716"
+                    ],
+                    [
+                        "75+ years",
+                        "1799",
+                        "1113",
+                        "74",
+                        "57",
+                        "476",
+                        "79",
+                        "0",
+                        "207",
+                        "0",
+                        "2006"
+                    ],
+                    [
+                        "Total",
+                        "153577",
+                        "117480",
+                        "6289",
+                        "3748",
+                        "15197",
+                        "11857",
+                        "6",
+                        "9835",
+                        "32",
+                        "164444"
+                    ]
+                ],
+                "footer": "Source: National Census, 2021"
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "Based on the previous place of residence in the last 12 months, out of the total population of 164,444 in the sub-metropolitan city, the highest number, 116,726 (71.0%), are residing in this very municipality, while 8,499 (5.2%) have migrated from other local levels within the same district. Similarly, the number of persons migrating from other districts is 29,429 (17.9%), and those migrating from abroad stands at 9,790 (6.0%)."
+        },
+        {
+            "type": "table",
+            "data": {
+                "headers": [
+                    "Migration Type",
+                    "Male",
+                    "Female",
+                    "Total",
+                    "Percentage"
+                ],
+                "rows": [
+                    [
+                        "Within this Sub-metropolitan",
+                        "65069",
+                        "51657",
+                        "116726",
+                        "71.0"
+                    ],
+                    [
+                        "Other Local Level in this District",
+                        "2695",
+                        "5804",
+                        "8499",
+                        "5.2"
+                    ],
+                    [
+                        "Other District",
+                        "13536",
+                        "15893",
+                        "29429",
+                        "17.9"
+                    ],
+                    [
+                        "Foreign Country",
+                        "1455",
+                        "8335",
+                        "9790",
+                        "6.0"
+                    ],
+                    [
+                        "Total",
+                        "82755",
+                        "81689",
+                        "164444",
+                        "100"
+                    ]
+                ],
+                "footer": "Source: National Census, 2021"
+            }
+        },
+        {
+            "type": "component",
+            "name": "MigrationBarChart",
+            "chapter": 3,
+            "data": {
+                "caption": "Population Distribution of Migrants by Previous Place of Residence",
+                "barChartData": [
+                    {
+                        "category": "Within this Sub-metropolitan",
+                        "Male": 65069,
+                        "Female": 51657
+                    },
+                    {
+                        "category": "Other Munic. in this District",
+                        "Male": 2695,
+                        "Female": 5804
+                    },
+                    {
+                        "category": "Other District",
+                        "Male": 13536,
+                        "Female": 15893
+                    },
+                    {
+                        "category": "Foreign Country",
+                        "Male": 1455,
+                        "Female": 8335
+                    }
+                ]
+            }
+        }
+    ]
 }

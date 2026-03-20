@@ -1,0 +1,27 @@
+---
+interface Props {
+    content: {
+        sectionNumber: string;
+        title: string;
+        description: string;
+    };
+}
+
+const { content } = Astro.props;
+---
+
+<div class="w-full">
+    <h2
+        class="font-serif text-3xl md:text-4xl font-medium mb-6"
+        style="color:var(--text-heading);"
+    >
+        {content.sectionNumber}
+        {content.title}
+    </h2>
+    <div
+        class="font-serif text-lg md:text-xl font-light leading-relaxed mb-8"
+        style="color:var(--text-body);"
+    >
+        {content.description ?? ""}
+    </div>
+</div>

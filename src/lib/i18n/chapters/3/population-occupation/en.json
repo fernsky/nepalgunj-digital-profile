@@ -1,5 +1,290 @@
 {
-  "title": "Population by Occupation",
-  "sectionNumber": "3.8",
-  "content": ""
+    "sectionNumber": "3.8",
+    "title": "Population Distribution by Occupation",
+    "type": "multi-block",
+    "blocks": [
+        {
+            "type": "paragraph",
+            "content": "Out of the total population in the age group of 10 to 65+ years in the sub-metropolitan city, workers in elementary occupations are the highest at 27,635 or 40.18%. Skilled agricultural workers are the second highest at 10,257 or 14.91%. The detailed breakdown by age group is presented in the table below."
+        },
+        {
+            "type": "table",
+            "data": {
+                "headers": [
+                    "Occupation",
+                    "10-14",
+                    "15-19",
+                    "20-24",
+                    "25-29",
+                    "30-34",
+                    "35-39",
+                    "40-44",
+                    "45-49",
+                    "50-54",
+                    "55-59",
+                    "60-64",
+                    "65+",
+                    "Total",
+                    "Percentage"
+                ],
+                "rows": [
+                    [
+                        "Armed Forces Officers",
+                        "0",
+                        "2",
+                        "16",
+                        "40",
+                        "57",
+                        "105",
+                        "58",
+                        "29",
+                        "17",
+                        "4",
+                        "0",
+                        "0",
+                        "328",
+                        "0.48"
+                    ],
+                    [
+                        "Managers",
+                        "0",
+                        "13",
+                        "362",
+                        "721",
+                        "1057",
+                        "1209",
+                        "1156",
+                        "865",
+                        "722",
+                        "401",
+                        "246",
+                        "225",
+                        "7065",
+                        "10.27"
+                    ],
+                    [
+                        "Professionals",
+                        "2",
+                        "40",
+                        "304",
+                        "547",
+                        "615",
+                        "587",
+                        "491",
+                        "371",
+                        "309",
+                        "187",
+                        "71",
+                        "83",
+                        "3607",
+                        "5.24"
+                    ],
+                    [
+                        "Technicians/Associate Professionals",
+                        "4",
+                        "41",
+                        "295",
+                        "491",
+                        "390",
+                        "290",
+                        "212",
+                        "116",
+                        "173",
+                        "86",
+                        "26",
+                        "40",
+                        "2332",
+                        "3.39"
+                    ],
+                    [
+                        "Clerical Support Workers",
+                        "2",
+                        "44",
+                        "262",
+                        "341",
+                        "318",
+                        "281",
+                        "201",
+                        "143",
+                        "114",
+                        "60",
+                        "22",
+                        "28",
+                        "1816",
+                        "2.64"
+                    ],
+                    [
+                        "Service and Sales Workers",
+                        "13",
+                        "248",
+                        "787",
+                        "1017",
+                        "1014",
+                        "1146",
+                        "982",
+                        "667",
+                        "487",
+                        "323",
+                        "114",
+                        "230",
+                        "7246",
+                        "10.53"
+                    ],
+                    [
+                        "Skilled Agricultural Workers",
+                        "511",
+                        "774",
+                        "1138",
+                        "1048",
+                        "1072",
+                        "1146",
+                        "1029",
+                        "868",
+                        "836",
+                        "655",
+                        "510",
+                        "670",
+                        "10257",
+                        "14.91"
+                    ],
+                    [
+                        "Craft and Related Trades Workers",
+                        "0",
+                        "440",
+                        "940",
+                        "995",
+                        "859",
+                        "836",
+                        "646",
+                        "430",
+                        "348",
+                        "198",
+                        "110",
+                        "101",
+                        "5903",
+                        "8.58"
+                    ],
+                    [
+                        "Plant & Machine Operators",
+                        "2",
+                        "93",
+                        "283",
+                        "402",
+                        "419",
+                        "337",
+                        "339",
+                        "233",
+                        "156",
+                        "73",
+                        "44",
+                        "31",
+                        "2452",
+                        "3.57"
+                    ],
+                    [
+                        "Elementary Occupations",
+                        "3120",
+                        "3661",
+                        "3764",
+                        "3375",
+                        "2894",
+                        "2747",
+                        "2231",
+                        "1674",
+                        "1286",
+                        "866",
+                        "748",
+                        "1269",
+                        "27635",
+                        "40.18"
+                    ],
+                    [
+                        "Economically Inactive",
+                        "18",
+                        "12",
+                        "14",
+                        "12",
+                        "17",
+                        "8",
+                        "14",
+                        "6",
+                        "1",
+                        "3",
+                        "1",
+                        "3",
+                        "109",
+                        "0.16"
+                    ],
+                    [
+                        "Total",
+                        "3672",
+                        "5456",
+                        "8165",
+                        "9077",
+                        "8712",
+                        "8712",
+                        "7419",
+                        "5422",
+                        "4441",
+                        "2856",
+                        "1972",
+                        "2680",
+                        "68772",
+                        "100"
+                    ]
+                ],
+                "footer": "Source: National Census, 2021"
+            }
+        },
+        {
+            "type": "component",
+            "name": "PopulationOccupation",
+            "chapter": 3,
+            "data": {
+                "caption": "Population Distribution by Occupation (Total)",
+                "barChartData": [
+                    {
+                        "category": "Armed Forces",
+                        "population": 328
+                    },
+                    {
+                        "category": "Managers",
+                        "population": 7065
+                    },
+                    {
+                        "category": "Professionals",
+                        "population": 3607
+                    },
+                    {
+                        "category": "Technicians",
+                        "population": 2332
+                    },
+                    {
+                        "category": "Clerical",
+                        "population": 1816
+                    },
+                    {
+                        "category": "Service/Sales",
+                        "population": 7246
+                    },
+                    {
+                        "category": "Agriculture",
+                        "population": 10257
+                    },
+                    {
+                        "category": "Crafts",
+                        "population": 5903
+                    },
+                    {
+                        "category": "Machine Ops",
+                        "population": 2452
+                    },
+                    {
+                        "category": "Elementary",
+                        "population": 27635
+                    }
+                ]
+            }
+        }
+    ]
 }
