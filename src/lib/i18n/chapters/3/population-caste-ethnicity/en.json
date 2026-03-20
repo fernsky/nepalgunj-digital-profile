@@ -1,5 +1,118 @@
 {
-  "title": "Population by Caste/Ethnicity",
-  "sectionNumber": "3.6",
-  "content": ""
+    "sectionNumber": "3.6",
+    "title": "Population Distribution by Caste and Ethnicity",
+    "type": "multi-block",
+    "blocks": [
+        {
+            "type": "paragraph",
+            "content": "Looking at the population distribution by caste and ethnicity in the sub-metropolitan city, the highest number is 47,244 or 28.73% Muslims, second is 19,846 or 12.07% Chhetri, and third is 10,237 or 6.23% Brahmin-Hill. Similarly, Magar, Thakuri, Tharu, Kurmi, Yadav, Baniya, Brahmin-Terai, and other castes and ethnicities also reside in the sub-metropolitan city."
+        },
+        {
+            "type": "paragraph",
+            "content": "In such an ethnically diverse society, locals are found to live with social harmony. It is necessary to formulate programs to preserve the original culture, tradition, language, and lifestyle of various castes and ethnicities, including the marginalized castes of Nepal who have their own distinct language, culture, and lifestyle, and to maintain their identity. Detailed information is presented in the table below."
+        },
+        {
+            "type": "table",
+            "data": {
+                "headers": [
+                    "Caste/Ethnicity",
+                    "Male",
+                    "Female",
+                    "Total",
+                    "Percentage"
+                ],
+                "rows": [
+                    [
+                        "Muslim",
+                        "24240",
+                        "23004",
+                        "47244",
+                        "28.73"
+                    ],
+                    [
+                        "Chhetri",
+                        "9765",
+                        "10081",
+                        "19846",
+                        "12.07"
+                    ],
+                    [
+                        "Brahmin-Hill",
+                        "5099",
+                        "5138",
+                        "10237",
+                        "6.23"
+                    ],
+                    [
+                        "Thakuri",
+                        "3390",
+                        "3664",
+                        "7054",
+                        "4.29"
+                    ],
+                    [
+                        "Magar",
+                        "2761",
+                        "3307",
+                        "6068",
+                        "3.69"
+                    ],
+                    [
+                        "Tharu",
+                        "2774",
+                        "2831",
+                        "5605",
+                        "3.41"
+                    ],
+                    [
+                        "Kurmi",
+                        "2803",
+                        "2580",
+                        "5383",
+                        "3.27"
+                    ],
+                    [
+                        "Yadav",
+                        "2403",
+                        "2181",
+                        "4584",
+                        "2.79"
+                    ],
+                    [
+                        "Baniya",
+                        "2319",
+                        "2089",
+                        "4408",
+                        "2.68"
+                    ],
+                    [
+                        "Brahmin-Terai",
+                        "2316",
+                        "2072",
+                        "4388",
+                        "2.67"
+                    ],
+                    [
+                        "Others",
+                        "24885",
+                        "24742",
+                        "49627",
+                        "30.18"
+                    ],
+                    [
+                        "Total",
+                        "82755",
+                        "81689",
+                        "164444",
+                        "100"
+                    ]
+                ],
+                "footer": "Source: National Census, 2021"
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "Note: Others include Tamang, Newar, Vishwakarma, Rai, Gurung, Pariyar, Yakthung/Limbu, Mijar, Teli, Chamar/Harijan/Ram, Koiri, Mushar, Sanyasi, Dhanuka, Paswan, Mallah, Kewat, Kathwaniya, Kalwar, Kanu, Kumal, Gharti/Bhujel, Hajam/Thakur, Sherpa, Dhobi, Tatma, Lohar, Halwai, Majhi, Barai, Nunia, Chepang, Sonar, Komar, Sunuwar, Kahar, Santhel, Marwari, Kayastha, Rajput, Badi, Kunduk, Lodh, Badhai, Bengali, Dhimal, Mali, Dhunia, Bhote, Dom, Thakali, Kori, Punjabi/Sikh, Meche, Raji, Kuswadia, Dev, Chidimar, Ranatharu, Gond, Kattik, and other castes and ethnicities."
+        }
+    ]
 }

@@ -1,5 +1,63 @@
 {
-  "title": "Population Distribution Status",
-  "sectionNumber": "3.2",
-  "content": ""
+    "sectionNumber": "3.2",
+    "title": "Population Distribution Status",
+    "type": "multi-block",
+    "blocks": [
+        {
+            "type": "paragraph",
+            "content": "The population of any place exists as both a means and an end of development. Since the mobilization of other economic and physical resources required for development occurs through human resources, it is necessary to study and analyze various aspects of its composition when formulating development plans. In Nepal, data on various aspects of the population is obtained through the National Census held every 10 years, as well as through household surveys at the sub-metropolitan level. Here, various aspects of the population are analyzed based on the data obtained from the National Census, 2021."
+        },
+        {
+            "type": "table",
+            "data": {
+                "headers": [
+                    "Description",
+                    "B.S. 2078 (2021)"
+                ],
+                "rows": [
+                    [
+                        "Total Population",
+                        "164444"
+                    ],
+                    [
+                        "Total Male",
+                        "82755"
+                    ],
+                    [
+                        "Total Female",
+                        "81689"
+                    ],
+                    [
+                        "Sex Ratio (per 100 females)",
+                        "101.30"
+                    ],
+                    [
+                        "Total Households",
+                        "34565"
+                    ],
+                    [
+                        "Average Family Size",
+                        "4.8"
+                    ],
+                    [
+                        "Population Density (per sq. km.)",
+                        "1913.5"
+                    ],
+                    [
+                        "Population Growth Rate (%)",
+                        "1.83"
+                    ],
+                    [
+                        "Literacy Rate (5 years and above)",
+                        "76.2"
+                    ]
+                ],
+                "footer": "Source: National Census, 2021"
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "The population details of Nepalgunj Sub-metropolitan City are presented in the table above. According to the 2021 National Census data, the total population of the sub-metropolitan city is 164,444, of which 50.32% (82,755 people) are male and 49.68% (81,689 people) are female. Accordingly, the sex ratio (the number of males per 100 females) is 101.30. The population density is 1,913.5 people per square kilometer. Among the total population of this sub-metropolitan city, 2,612 people, or 1.6%, are persons with disabilities. In this sub-metropolitan city with a total of 34,565 households, the average family size is observed to be 4.8 members per family."
+        }
+    ]
 }

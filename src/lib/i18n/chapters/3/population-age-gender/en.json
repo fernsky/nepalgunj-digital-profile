@@ -1,5 +1,540 @@
 {
-  "title": "Population by Age Group and Gender",
-  "sectionNumber": "3.3",
-  "content": ""
+    "sectionNumber": "3.3",
+    "title": "Population by Age Group and Gender",
+    "type": "multi-block",
+    "blocks": [
+        {
+            "type": "paragraph",
+            "content": "Of the total population of 164,444 in the sub-metropolitan city, there are 82,755 males and 81,689 females. Males are predominant in the age groups of 0 to 19 years and 40 to 64 years, while females are predominant in the remaining age groups. Looking at the age groups in this way, it is necessary to formulate plans that address the physical, mental, social, and economic issues of adolescent girls and women in the age group of 15 to 39 years and elderly women. Issues such as reproductive health, sexual health, menstruation-related problems, female-friendly toilets, counseling centers, violence against women, trafficking of girls, domestic gender-based violence, uterine prolapse, dowry system, child marriage, women's empowerment, and rights are major and sensitive issues for women. The overall statistics indicate that the sub-metropolitan city should formulate and implement effective plans for these subjects. Detailed ward-wise information is presented in the table."
+        },
+        {
+            "type": "component",
+            "name": "PopulationAgeGender",
+            "chapter": 3,
+            "data": {
+                "pyramidData": [
+                    {
+                        "age": "0-4",
+                        "male": 7344,
+                        "female": 6650
+                    },
+                    {
+                        "age": "5-9",
+                        "male": 8874,
+                        "female": 7819
+                    },
+                    {
+                        "age": "10-14",
+                        "male": 8760,
+                        "female": 8053
+                    },
+                    {
+                        "age": "15-19",
+                        "male": 9233,
+                        "female": 8514
+                    },
+                    {
+                        "age": "20-24",
+                        "male": 8138,
+                        "female": 9056
+                    },
+                    {
+                        "age": "25-29",
+                        "male": 6994,
+                        "female": 8023
+                    },
+                    {
+                        "age": "30-34",
+                        "male": 6225,
+                        "female": 6943
+                    },
+                    {
+                        "age": "35-39",
+                        "male": 6040,
+                        "female": 6480
+                    },
+                    {
+                        "age": "40-44",
+                        "male": 5338,
+                        "female": 5017
+                    },
+                    {
+                        "age": "45-49",
+                        "male": 3989,
+                        "female": 3864
+                    },
+                    {
+                        "age": "50-54",
+                        "male": 3481,
+                        "female": 3123
+                    },
+                    {
+                        "age": "55-59",
+                        "male": 2475,
+                        "female": 2264
+                    },
+                    {
+                        "age": "60-64",
+                        "male": 2044,
+                        "female": 1927
+                    },
+                    {
+                        "age": "65-69",
+                        "male": 1523,
+                        "female": 1531
+                    },
+                    {
+                        "age": "70-74",
+                        "male": 1346,
+                        "female": 1370
+                    },
+                    {
+                        "age": "75-79",
+                        "male": 601,
+                        "female": 607
+                    },
+                    {
+                        "age": "80-84",
+                        "male": 206,
+                        "female": 241
+                    },
+                    {
+                        "age": "85-89",
+                        "male": 90,
+                        "female": 111
+                    },
+                    {
+                        "age": "90-94",
+                        "male": 32,
+                        "female": 64
+                    },
+                    {
+                        "age": "95+",
+                        "male": 22,
+                        "female": 32
+                    }
+                ]
+            }
+        },
+        {
+            "type": "table",
+            "data": {
+                "headers": [
+                    "Age Group",
+                    "Male",
+                    "Female",
+                    "Total"
+                ],
+                "rows": [
+                    [
+                        "00-04 Years",
+                        "7344",
+                        "6650",
+                        "13994"
+                    ],
+                    [
+                        "05-09 Years",
+                        "8874",
+                        "7819",
+                        "16693"
+                    ],
+                    [
+                        "10-14 Years",
+                        "8760",
+                        "8053",
+                        "16813"
+                    ],
+                    [
+                        "15-19 Years",
+                        "9233",
+                        "8514",
+                        "17747"
+                    ],
+                    [
+                        "20-24 Years",
+                        "8138",
+                        "9056",
+                        "17194"
+                    ],
+                    [
+                        "25-29 Years",
+                        "6994",
+                        "8023",
+                        "15017"
+                    ],
+                    [
+                        "30-34 Years",
+                        "6225",
+                        "6943",
+                        "13168"
+                    ],
+                    [
+                        "35-39 Years",
+                        "6040",
+                        "6480",
+                        "12520"
+                    ],
+                    [
+                        "40-44 Years",
+                        "5338",
+                        "5017",
+                        "10355"
+                    ],
+                    [
+                        "45-49 Years",
+                        "3989",
+                        "3864",
+                        "7853"
+                    ],
+                    [
+                        "50-54 Years",
+                        "3481",
+                        "3123",
+                        "6604"
+                    ],
+                    [
+                        "55-59 Years",
+                        "2475",
+                        "2264",
+                        "4739"
+                    ],
+                    [
+                        "60-64 Years",
+                        "2044",
+                        "1927",
+                        "3971"
+                    ],
+                    [
+                        "65-69 Years",
+                        "1523",
+                        "1531",
+                        "3054"
+                    ],
+                    [
+                        "70-74 Years",
+                        "1346",
+                        "1370",
+                        "2716"
+                    ],
+                    [
+                        "75-79 Years",
+                        "601",
+                        "607",
+                        "1208"
+                    ],
+                    [
+                        "80-84 Years",
+                        "206",
+                        "241",
+                        "447"
+                    ],
+                    [
+                        "85-89 Years",
+                        "90",
+                        "111",
+                        "201"
+                    ],
+                    [
+                        "90-94 Years",
+                        "32",
+                        "64",
+                        "96"
+                    ],
+                    [
+                        "95+ Years",
+                        "22",
+                        "32",
+                        "54"
+                    ],
+                    [
+                        "Total",
+                        "82755",
+                        "81689",
+                        "164444"
+                    ]
+                ],
+                "footer": "Source: National Census, 2021"
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "Although it is good that the population of youth (15 to 39 years) is high (75,646), the state must make massive investments in their education, health, and human resource development. Having a large youth age group is called a demographic dividend. On the other hand, it is the responsibility of society and the state to guide the youth in the right direction and involve them in nation-building by creating employment opportunities. The low number of children and infants indicates a gradually decreasing fertility rate, while the low number of elderly and middle-aged people suggests that average life expectancy is lower compared to other countries and that the mortality rate of the older population is high due to diseases occurring in middle age. However, a decreasing number with increasing age is natural. When analyzing the population by age, it is challenging to address the needs of each age group and manage them properly. Providing nutrition, care, and education for children, appropriate employment for youth, and necessary social security, health services, and care for the elderly are among the responsibilities to be fulfilled by the state."
+        },
+        {
+            "type": "paragraph",
+            "content": "Population data by various age groups is necessary for policy making and plan formulation. The number of infants under one year of age can be useful for vaccination management, comparison of birth registration records, etc. The population of children under five years of age is required to estimate potential numbers for pre-primary and primary levels and for required vaccinations within that age. Similarly, information about the population going to school or outside school and the dependent population in the family is available from the population aged 14 and under. The total child population is known from the population under eighteen years of age. The population of males and females above 68 years of age is important for the budget management required for social security allowances."
+        },
+        {
+            "type": "table",
+            "data": {
+                "headers": [
+                    "Age Group",
+                    "Lumbini (Total)",
+                    "Lumbini (M)",
+                    "Lumbini (F)",
+                    "Banke (Total)",
+                    "Banke (M)",
+                    "Banke (F)",
+                    "Nepalgunj (Total)",
+                    "Nepalgunj (M)",
+                    "Nepalgunj (F)"
+                ],
+                "rows": [
+                    [
+                        "Total",
+                        "5122078",
+                        "2454408",
+                        "2667670",
+                        "603194",
+                        "296745",
+                        "306449",
+                        "164444",
+                        "82755",
+                        "81689"
+                    ],
+                    [
+                        "00-04 Years",
+                        "439841",
+                        "230778",
+                        "209063",
+                        "54373",
+                        "28798",
+                        "25575",
+                        "13994",
+                        "7344",
+                        "6650"
+                    ],
+                    [
+                        "05-09 Years",
+                        "497938",
+                        "259850",
+                        "238088",
+                        "63349",
+                        "33360",
+                        "29989",
+                        "16693",
+                        "8874",
+                        "7819"
+                    ],
+                    [
+                        "10-14 Years",
+                        "523078",
+                        "268902",
+                        "254176",
+                        "63298",
+                        "32805",
+                        "30493",
+                        "16813",
+                        "8760",
+                        "8053"
+                    ],
+                    [
+                        "15-19 Years",
+                        "540900",
+                        "266043",
+                        "274857",
+                        "64332",
+                        "32374",
+                        "31958",
+                        "17747",
+                        "9233",
+                        "8514"
+                    ],
+                    [
+                        "20-24 Years",
+                        "496646",
+                        "222524",
+                        "274122",
+                        "61196",
+                        "28076",
+                        "33120",
+                        "17194",
+                        "8138",
+                        "9056"
+                    ],
+                    [
+                        "25-29 Years",
+                        "440485",
+                        "191156",
+                        "249329",
+                        "54122",
+                        "24246",
+                        "29876",
+                        "15017",
+                        "6994",
+                        "8023"
+                    ],
+                    [
+                        "30-34 Years",
+                        "381940",
+                        "166688",
+                        "215252",
+                        "46520",
+                        "20137",
+                        "25583",
+                        "13168",
+                        "6225",
+                        "6943"
+                    ],
+                    [
+                        "35-39 Years",
+                        "357093",
+                        "159440",
+                        "197653",
+                        "43574",
+                        "20538",
+                        "23036",
+                        "12520",
+                        "6040",
+                        "6480"
+                    ],
+                    [
+                        "40-44 Years",
+                        "298968",
+                        "137684",
+                        "161284",
+                        "35601",
+                        "17573",
+                        "18028",
+                        "10355",
+                        "5338",
+                        "5017"
+                    ],
+                    [
+                        "45-49 Years",
+                        "239702",
+                        "112979",
+                        "126723",
+                        "26768",
+                        "13196",
+                        "13572",
+                        "7853",
+                        "3989",
+                        "3864"
+                    ],
+                    [
+                        "50-54 Years",
+                        "226368",
+                        "111759",
+                        "124609",
+                        "24824",
+                        "12338",
+                        "12486",
+                        "6604",
+                        "3481",
+                        "3123"
+                    ],
+                    [
+                        "55-59 Years",
+                        "179360",
+                        "88491",
+                        "90869",
+                        "18269",
+                        "9304",
+                        "8965",
+                        "4739",
+                        "2475",
+                        "2264"
+                    ],
+                    [
+                        "60-64 Years",
+                        "158359",
+                        "76171",
+                        "82188",
+                        "14839",
+                        "7381",
+                        "7458",
+                        "3971",
+                        "2044",
+                        "1927"
+                    ],
+                    [
+                        "65-69 Years",
+                        "130920",
+                        "63584",
+                        "67336",
+                        "12340",
+                        "6088",
+                        "6252",
+                        "3054",
+                        "1523",
+                        "1531"
+                    ],
+                    [
+                        "70-74 Years",
+                        "102466",
+                        "49796",
+                        "52670",
+                        "10801",
+                        "5266",
+                        "5535",
+                        "2716",
+                        "1346",
+                        "1370"
+                    ],
+                    [
+                        "75-79 Years",
+                        "56426",
+                        "28123",
+                        "28303",
+                        "5429",
+                        "2777",
+                        "2652",
+                        "1208",
+                        "601",
+                        "607"
+                    ],
+                    [
+                        "80-84 Years",
+                        "24157",
+                        "12144",
+                        "12013",
+                        "1984",
+                        "978",
+                        "1006",
+                        "447",
+                        "206",
+                        "241"
+                    ],
+                    [
+                        "85-89 Years",
+                        "10467",
+                        "5256",
+                        "5211",
+                        "914",
+                        "454",
+                        "460",
+                        "201",
+                        "90",
+                        "111"
+                    ],
+                    [
+                        "90-94 Years",
+                        "4294",
+                        "1967",
+                        "2327",
+                        "380",
+                        "151",
+                        "229",
+                        "96",
+                        "32",
+                        "64"
+                    ],
+                    [
+                        "95+ Years",
+                        "2670",
+                        "1100",
+                        "1570",
+                        "281",
+                        "105",
+                        "176",
+                        "54",
+                        "22",
+                        "32"
+                    ]
+                ],
+                "footer": "Source: National Census, 2021"
+            }
+        }
+    ]
 }

@@ -1,5 +1,457 @@
 {
-  "title": "Population by Mother Tongue",
-  "sectionNumber": "3.4",
-  "content": ""
+    "sectionNumber": "3.4",
+    "title": "Population by Mother Tongue",
+    "type": "multi-block",
+    "blocks": [
+        {
+            "type": "paragraph",
+            "content": "Nepal is a nation with multi-ethnic, multi-lingual, and multi-cultural characteristics. Linguistic diversity is also seen in this sub-metropolitan city. Out of the total population of 164,444 in the sub-metropolitan city, the highest 80,738 i.e. 49.10 percent were found to speak Awadhi language while 54,680 i.e. 33.25 percent spoke Nepali and 9,957 i.e. 6.05 percent spoke Urdu language. Article 32 of the Constitution has established the right to language and culture as a fundamental right and according to clause 5 of the right to education in Article 31, \"every Nepali community residing in Nepal shall have the right to receive education in their mother tongue and to open and operate schools and educational institutions for that purpose as provided for by law.\" There is a provision that the sub-metropolitan city can make special arrangements for students who want to study in their mother tongue. Detailed details according to mother tongue are mentioned in the table."
+        },
+        {
+            "type": "table",
+            "data": {
+                "headers": [
+                    "Mother Tongue",
+                    "Male",
+                    "Female",
+                    "Total",
+                    "Percentage (%)"
+                ],
+                "rows": [
+                    [
+                        "Awadhi",
+                        "41392",
+                        "39346",
+                        "80738",
+                        "49.10"
+                    ],
+                    [
+                        "Nepali",
+                        "26572",
+                        "28108",
+                        "54680",
+                        "33.25"
+                    ],
+                    [
+                        "Urdu",
+                        "5162",
+                        "4795",
+                        "9957",
+                        "6.05"
+                    ],
+                    [
+                        "Hindi",
+                        "4707",
+                        "4357",
+                        "9064",
+                        "5.51"
+                    ],
+                    [
+                        "Tharu",
+                        "2470",
+                        "2521",
+                        "4991",
+                        "3.04"
+                    ],
+                    [
+                        "Magar Dhut",
+                        "601",
+                        "689",
+                        "1290",
+                        "0.78"
+                    ],
+                    [
+                        "Newari",
+                        "610",
+                        "647",
+                        "1257",
+                        "0.76"
+                    ],
+                    [
+                        "Maithili",
+                        "312",
+                        "263",
+                        "575",
+                        "0.35"
+                    ],
+                    [
+                        "Khas",
+                        "167",
+                        "197",
+                        "364",
+                        "0.22"
+                    ],
+                    [
+                        "Others",
+                        "762",
+                        "766",
+                        "1528",
+                        "0.93"
+                    ],
+                    [
+                        "Total",
+                        "82755",
+                        "81689",
+                        "164444",
+                        "100"
+                    ]
+                ],
+                "footer": "Source: National Census, 2078"
+            }
+        },
+        {
+            "type": "component",
+            "name": "GroupedBarChart",
+            "chapter": 3,
+            "data": {
+                "caption": "Population Distribution of Male and Female by Mother Tongue",
+                "barChartData": [
+                    {
+                        "category": "Awadhi",
+                        "Male": 41392,
+                        "Female": 39346
+                    },
+                    {
+                        "category": "Nepali",
+                        "Male": 26572,
+                        "Female": 28108
+                    },
+                    {
+                        "category": "Urdu",
+                        "Male": 5162,
+                        "Female": 4795
+                    },
+                    {
+                        "category": "Hindi",
+                        "Male": 4707,
+                        "Female": 4357
+                    }
+                ],
+                "colors": [
+                    "#3b82f6",
+                    "#f43f5e"
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "The details regarding Second Language are presented in the following table."
+        },
+        {
+            "type": "table",
+            "data": {
+                "headers": [
+                    "Second Language",
+                    "Male",
+                    "Female",
+                    "Total",
+                    "Percentage (%)"
+                ],
+                "rows": [
+                    [
+                        "No Second Language",
+                        "29007",
+                        "31274",
+                        "60281",
+                        "36.66"
+                    ],
+                    [
+                        "Nepali",
+                        "46047",
+                        "42791",
+                        "88838",
+                        "53.97"
+                    ],
+                    [
+                        "Maithili",
+                        "50",
+                        "36",
+                        "86",
+                        "0.05"
+                    ],
+                    [
+                        "Bhojpuri",
+                        "56",
+                        "37",
+                        "93",
+                        "0.06"
+                    ],
+                    [
+                        "Tharu",
+                        "85",
+                        "64",
+                        "149",
+                        "0.09"
+                    ],
+                    [
+                        "Newari",
+                        "17",
+                        "21",
+                        "38",
+                        "0.02"
+                    ],
+                    [
+                        "Magar Dhut",
+                        "76",
+                        "100",
+                        "176",
+                        "0.11"
+                    ],
+                    [
+                        "Urdu",
+                        "103",
+                        "113",
+                        "216",
+                        "0.13"
+                    ],
+                    [
+                        "Awadhi",
+                        "4255",
+                        "4149",
+                        "8404",
+                        "5.11"
+                    ],
+                    [
+                        "Hindi",
+                        "2707",
+                        "2816",
+                        "5525",
+                        "3.36"
+                    ],
+                    [
+                        "Total",
+                        "82755",
+                        "81689",
+                        "164444",
+                        "100"
+                    ]
+                ],
+                "footer": "Source: National Census, 2078"
+            }
+        },
+        {
+            "type": "component",
+            "name": "GroupedBarChart",
+            "chapter": 3,
+            "data": {
+                "caption": "Population Distribution of Male and Female by Second Language",
+                "barChartData": [
+                    {
+                        "category": "No Second Language",
+                        "Male": 29007,
+                        "Female": 31274
+                    },
+                    {
+                        "category": "Nepali",
+                        "Male": 46047,
+                        "Female": 42791
+                    },
+                    {
+                        "category": "Maithili",
+                        "Male": 50,
+                        "Female": 36
+                    },
+                    {
+                        "category": "Bhojpuri",
+                        "Male": 56,
+                        "Female": 37
+                    },
+                    {
+                        "category": "Tharu",
+                        "Male": 85,
+                        "Female": 64
+                    },
+                    {
+                        "category": "Newari",
+                        "Male": 17,
+                        "Female": 21
+                    },
+                    {
+                        "category": "Magar Dhut",
+                        "Male": 76,
+                        "Female": 100
+                    },
+                    {
+                        "category": "Urdu",
+                        "Male": 103,
+                        "Female": 113
+                    },
+                    {
+                        "category": "Awadhi",
+                        "Male": 4255,
+                        "Female": 4149
+                    },
+                    {
+                        "category": "Hindi",
+                        "Male": 2707,
+                        "Female": 2816
+                    }
+                ],
+                "colors": [
+                    "#3b82f6",
+                    "#f43f5e"
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "The details regarding Ancestral Language are clarified in the following table."
+        },
+        {
+            "type": "table",
+            "data": {
+                "headers": [
+                    "Ancestral Language",
+                    "Male",
+                    "Female",
+                    "Total",
+                    "Percentage (%)"
+                ],
+                "rows": [
+                    [
+                        "Nepali",
+                        "22376",
+                        "23568",
+                        "45944",
+                        "27.94"
+                    ],
+                    [
+                        "Maithili",
+                        "341",
+                        "290",
+                        "631",
+                        "0.38"
+                    ],
+                    [
+                        "Bhojpuri",
+                        "132",
+                        "119",
+                        "251",
+                        "0.15"
+                    ],
+                    [
+                        "Tharu",
+                        "2679",
+                        "2727",
+                        "5406",
+                        "3.29"
+                    ],
+                    [
+                        "Newari",
+                        "1281",
+                        "1370",
+                        "2651",
+                        "1.61"
+                    ],
+                    [
+                        "Magar Dhut",
+                        "1514",
+                        "1844",
+                        "3358",
+                        "2.04"
+                    ],
+                    [
+                        "Urdu",
+                        "8546",
+                        "8134",
+                        "16680",
+                        "10.14"
+                    ],
+                    [
+                        "Awadhi",
+                        "39483",
+                        "37494",
+                        "76977",
+                        "46.81"
+                    ],
+                    [
+                        "Hindi",
+                        "4526",
+                        "4110",
+                        "8636",
+                        "5.30"
+                    ],
+                    [
+                        "Total",
+                        "82755",
+                        "81689",
+                        "164444",
+                        "100"
+                    ]
+                ],
+                "footer": "Source: National Census, 2078"
+            }
+        },
+        {
+            "type": "component",
+            "name": "GroupedBarChart",
+            "chapter": 3,
+            "data": {
+                "caption": "Population Distribution of Male and Female by Ancestral Language",
+                "barChartData": [
+                    {
+                        "category": "Awadhi",
+                        "Male": 39483,
+                        "Female": 37494
+                    },
+                    {
+                        "category": "Nepali",
+                        "Male": 22376,
+                        "Female": 23568
+                    },
+                    {
+                        "category": "Urdu",
+                        "Male": 8546,
+                        "Female": 8134
+                    },
+                    {
+                        "category": "Hindi",
+                        "Male": 4526,
+                        "Female": 4110
+                    },
+                    {
+                        "category": "Tharu",
+                        "Male": 2679,
+                        "Female": 2727
+                    },
+                    {
+                        "category": "Magar Dhut",
+                        "Male": 1514,
+                        "Female": 1844
+                    },
+                    {
+                        "category": "Newari",
+                        "Male": 1281,
+                        "Female": 1370
+                    },
+                    {
+                        "category": "Maithili",
+                        "Male": 341,
+                        "Female": 290
+                    },
+                    {
+                        "category": "Bhojpuri",
+                        "Male": 132,
+                        "Female": 119
+                    }
+                ],
+                "colors": [
+                    "#3b82f6",
+                    "#f43f5e"
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "Out of the total population of 164,444 in the sub-metropolitan city, the highest 76,977 i.e. 46.81 percent spoke Awadhi as their ancestral language, while 45,944 i.e. 27.94 percent spoke Nepali. Similarly, 16,680 i.e. 10.14 spoke Urdu, 8,636 i.e. 5.30 percent spoke Hindi, 3,358 i.e. 2.04 percent spoke Magar Dhut and 2,651 i.e. 1.61 percent spoke Nepal Bhasha (Newari)."
+        },
+        {
+            "type": "paragraph",
+            "content": "(a) Indigenous: According to the National Foundation for Development of Indigenous Nationalities Act, 2058, indigenous nationalities mean 61 castes or communities having their mother tongue and traditional customs, separate cultural identity, separate social structure and written or unwritten history. Out of the total population of 164,444 of this sub-metropolitan city, 28.73 percent (47,244 people) are of the Awadhi community. Similarly, 3.7 percent Magar, 3.4 percent Tharu, 3.27 percent Kurmi, 2.79 percent Yadav, 2.68 percent Bania and 2.67 percent Brahmin-Terai communities reside in the sub-metropolitan city."
+        },
+        {
+            "type": "paragraph",
+            "content": "(b) Oppressed and Marginalized Communities: In Article 306 (d) under Part 34 of the Constitution of Nepal, marginalized communities mean communities that have been left behind politically, economically and socially due to discrimination and oppression and geographical remoteness and have not been able to enjoy services and facilities or are deprived of them and are in a lower position than the level of human development according to federal law. This community, which is suffering from inhumane discrimination like untouchability in the form of social discrimination, has to experience neglect in political, economic and social fields as well. Most of the people of this community are found to be living as unskilled and semi-skilled manpower by working as daily wage laborers."
+        }
+    ]
 }

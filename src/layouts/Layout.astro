@@ -5,12 +5,15 @@ import Footer from "@/components/Footer.astro";
 import { type Lang } from "../i18n/translations";
 import { t } from "../i18n/utils";
 
-interface Props { lang: Lang; title?: string; }
+interface Props {
+  lang: Lang;
+  title?: string;
+}
 const { lang, title } = Astro.props;
 const pageTitle = title || t(lang, "site.title");
 ---
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang={lang}>
   <head>
     <meta charset="UTF-8" />
@@ -22,12 +25,15 @@ const pageTitle = title || t(lang, "site.title");
     <script is:inline src="https://d3js.org/d3.v7.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+Devanagari:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Lora:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <title>{pageTitle}</title>
     <script is:inline>
-      (function(){
-        var theme = localStorage.getItem('theme') || 'dark';
-        if (theme === 'light') document.documentElement.classList.add('light');
+      (function () {
+        var theme = localStorage.getItem("theme") || "dark";
+        if (theme === "light") document.documentElement.classList.add("light");
       })();
     </script>
   </head>

@@ -1,0 +1,154 @@
+---
+interface Props {
+    content: {
+        caption?: string;
+        pieChartData?: any[];
+    };
+}
+
+const { content } = Astro.props;
+const pieChartData = content?.pieChartData ?? [];
+const caption = content?.caption ?? "Population Distribution by Religion";
+---
+
+<div class="w-full">
+    <!-- Pie/Donut Chart -->
+    <div
+        class="my-10 p-6 rounded-xl overflow-hidden"
+        style="background:var(--card-bg); border:1px solid var(--card-border);"
+    >
+        <h3
+            class="text-xl font-bold mb-6 text-center"
+            style="color:var(--text-heading);"
+        >
+            {caption}
+        </h3>
+        <div
+            id="religion-pie-chart"
+            class="w-full h-[400px] flex justify-center items-center"
+            data-chart={JSON.stringify(pieChartData)}
+        >
+        </div>
+    </div>
+</div>
+
+<script>
+    import * as d3 from "d3";
+
+    function renderChart() {
+        const container = document.getElementById("religion-pie-chart");
+        if (!container) return;
+
+        container.innerHTML = "";
+        const dataString = container.getAttribute("data-chart");
+        if (!dataString) return;
+
+        const data = JSON.parse(dataString);
+        const width = container.clientWidth || 800;
+        const height = 400;
+        const margin = 40;
+        const radius = Math.min(width, height) / 2 - margin;
+
+        d3.selectAll(".rel-tooltip").remove();
+        const tooltip = d3
+            .select("body")
+            .append("div")
+            .attr(
+                "class",
+                "rel-tooltip absolute hidden bg-gray-900 border border-gray-700 text-white p-3 rounded-lg shadow-xl shadow-black/50 z-50 text-sm pointer-events-none transform -translate-x-1/2 -translate-y-full mt-[-10px]"
+            )
+            .style("opacity", 0);
+
+        const svg = d3
+            .select(container)
+            .append("svg")
+            .attr("width", width)
+            .attr("height", height)
+            .append("g")
+            .attr("transform", `translate(${width / 2},${height / 2})`);
+
+        const color = d3
+            .scaleOrdinal()
+            .domain(data.map((d: any) => d.religion))
+            .range(["#1e3a8a", "#3b82f6", "#60a5fa", "#93c5fd", "#bfdbfe"]);
+
+        const pie = d3
+            .pie()
+            .value((d: any) => d.value)
+            .sort(null);
+
+        const data_ready = pie(data);
+
+        const arcGenerator = d3
+            .arc()
+            .innerRadius(radius * 0.5)
+            .outerRadius(radius);
+
+        svg.selectAll("path")
+            .data(data_ready)
+            .join("path")
+            .attr("d", arcGenerator as any)
+            .attr("fill", (d: any) => color(d.data.religion) as string)
+            .attr("stroke", "var(--card-bg)")
+            .style("stroke-width", "2px")
+            .on("mouseover", function (event, d: any) {
+                d3.select(this).attr("opacity", 0.8);
+                tooltip.html(
+                    `<div class="font-bold text-gray-300 mb-1">${
+                        d.data.religion
+                    }</div><div class="flex flex-col gap-1"><div class="flex justify-between gap-4"><span class="text-blue-300">Population:</span><span class="font-medium">${d.data.population.toLocaleString()}</span></div><div class="flex justify-between gap-4"><span class="text-blue-300">Share:</span><span class="font-medium">${
+                        d.data.value
+                    }%</span></div></div>`
+                );
+                tooltip.style("display", "block").style("opacity", 1);
+            })
+            .on("mousemove", function (event) {
+                tooltip
+                    .style("left", event.pageX + "px")
+                    .style("top", event.pageY - 10 + "px");
+            })
+            .on("mouseout", function () {
+                d3.select(this).attr("opacity", 1);
+                tooltip.style("display", "none").style("opacity", 0);
+            });
+
+        // Labels
+        const arcLabel = d3
+            .arc()
+            .innerRadius(radius * 1.1)
+            .outerRadius(radius * 1.1);
+        const isLight = document.documentElement.classList.contains("light");
+        const tickColor = isLight ? "#555555" : "#a1a1aa";
+
+        svg.selectAll("text")
+            .data(data_ready)
+            .join("text")
+            .text((d: any) => (d.data.value > 5 ? d.data.religion : ""))
+            .attr(
+                "transform",
+                (d: any) => `translate(${arcLabel.centroid(d as any)})`
+            )
+            .style("text-anchor", "middle")
+            .style("font-size", "12px")
+            .style("fill", tickColor)
+            .style("font-weight", "600");
+    }
+
+    let observerInitialized = false;
+    function init() {
+        renderChart();
+        if (!observerInitialized) {
+            window.addEventListener("resize", renderChart);
+            const observer = new MutationObserver(() => renderChart());
+            observer.observe(document.documentElement, {
+                attributes: true,
+                attributeFilter: ["class"],
+            });
+            observerInitialized = true;
+        }
+    }
+
+    document.addEventListener("astro:page-load", init);
+    if (document.readyState === "complete") init();
+    else document.addEventListener("DOMContentLoaded", init);
+</script>

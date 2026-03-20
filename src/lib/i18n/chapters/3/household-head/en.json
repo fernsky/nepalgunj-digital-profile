@@ -1,5 +1,170 @@
 {
-  "title": "Household Head Description",
-  "sectionNumber": "3.7",
-  "content": ""
+    "sectionNumber": "3.7",
+    "title": "Household Head Details",
+    "type": "multi-block",
+    "blocks": [
+        {
+            "type": "paragraph",
+            "content": "The classification of household heads, who serve as the main person of the household in this sub-metropolitan city, is shown in the table and chart below."
+        },
+        {
+            "type": "table",
+            "data": {
+                "headers": [
+                    "Description",
+                    "Male",
+                    "Female",
+                    "Total",
+                    "Percentage"
+                ],
+                "rows": [
+                    [
+                        "Number of Household Heads",
+                        "23974",
+                        "10831",
+                        "34805",
+                        "100"
+                    ],
+                    [
+                        "Percentage",
+                        "68.88",
+                        "31.12",
+                        "100",
+                        "-"
+                    ]
+                ],
+                "footer": "Source: National Census, 2021"
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "Out of the 34,805 households in the sub-metropolitan city, 23,974 households have male heads, which accounts for 68.88% of the total households, while 10,831 households have female heads, which accounts for 31.12% of the total households. Therefore, it appears that the number of male household heads is higher in this sub-metropolitan city."
+        },
+        {
+            "type": "paragraph",
+            "content": "The distribution of household heads by age and gender is as follows:"
+        },
+        {
+            "type": "table",
+            "data": {
+                "headers": [
+                    "Age Group",
+                    "Male Household Head",
+                    "Female Household Head",
+                    "Total Households"
+                ],
+                "rows": [
+                    [
+                        "10-14",
+                        "23",
+                        "14",
+                        "37"
+                    ],
+                    [
+                        "15-19",
+                        "342",
+                        "267",
+                        "609"
+                    ],
+                    [
+                        "20-29",
+                        "2998",
+                        "1765",
+                        "4763"
+                    ],
+                    [
+                        "30-39",
+                        "6228",
+                        "2385",
+                        "8613"
+                    ],
+                    [
+                        "40-49",
+                        "6771",
+                        "1794",
+                        "8565"
+                    ],
+                    [
+                        "50-59",
+                        "4911",
+                        "1150",
+                        "6061"
+                    ],
+                    [
+                        "60-69",
+                        "2922",
+                        "857",
+                        "3779"
+                    ],
+                    [
+                        "70 Above",
+                        "1538",
+                        "560",
+                        "2098"
+                    ],
+                    [
+                        "Total",
+                        "25773",
+                        "8792",
+                        "34565"
+                    ]
+                ],
+                "footer": "Source: National Census, 2021"
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "Out of the total 34,565 households in the sub-metropolitan city, 25,773 or 74.56% have male household heads, while 8,792 or 25.44% have female household heads."
+        },
+        {
+            "type": "component",
+            "name": "HouseholdHead",
+            "chapter": 3,
+            "data": {
+                "caption": "Household Head Distribution by Age and Gender",
+                "barChartData": [
+                    {
+                        "ageGroup": "10-14",
+                        "male": 23,
+                        "female": 14
+                    },
+                    {
+                        "ageGroup": "15-19",
+                        "male": 342,
+                        "female": 267
+                    },
+                    {
+                        "ageGroup": "20-29",
+                        "male": 2998,
+                        "female": 1765
+                    },
+                    {
+                        "ageGroup": "30-39",
+                        "male": 6228,
+                        "female": 2385
+                    },
+                    {
+                        "ageGroup": "40-49",
+                        "male": 6771,
+                        "female": 1794
+                    },
+                    {
+                        "ageGroup": "50-59",
+                        "male": 4911,
+                        "female": 1150
+                    },
+                    {
+                        "ageGroup": "60-69",
+                        "male": 2922,
+                        "female": 857
+                    },
+                    {
+                        "ageGroup": "70+",
+                        "male": 1538,
+                        "female": 560
+                    }
+                ]
+            }
+        }
+    ]
 }

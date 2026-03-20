@@ -1,5 +1,450 @@
 {
-  "title": "Household Description",
-  "sectionNumber": "3.1.2",
-  "content": ""
+    "sectionNumber": "3.1.2",
+    "title": "Household Details",
+    "type": "multi-block",
+    "blocks": [
+        {
+            "type": "paragraph",
+            "content": "The details of households in Nepalgunj Sub-Metropolitan City are as follows:"
+        },
+        {
+            "type": "table",
+            "data": {
+                "headers": [
+                    "Ward",
+                    "Households",
+                    "2068 Pop",
+                    "2078 Male",
+                    "2078 Female",
+                    "2078 Total",
+                    "Growth Rate",
+                    "Area (km²)",
+                    "Density",
+                    "Avg Family",
+                    "Ratio"
+                ],
+                "rows": [
+                    [
+                        "1",
+                        "2167",
+                        "8255",
+                        "4436",
+                        "4554",
+                        "8990",
+                        "0.89",
+                        "0.96",
+                        "9364.6",
+                        "4.1",
+                        "97.41"
+                    ],
+                    [
+                        "2",
+                        "1363",
+                        "5862",
+                        "3171",
+                        "3073",
+                        "6244",
+                        "0.65",
+                        "0.72",
+                        "8672.2",
+                        "4.6",
+                        "103.19"
+                    ],
+                    [
+                        "3",
+                        "556",
+                        "3933",
+                        "1700",
+                        "1613",
+                        "3313",
+                        "-1.58",
+                        "0.16",
+                        "20706",
+                        "6.0",
+                        "105.39"
+                    ],
+                    [
+                        "4",
+                        "2918",
+                        "9950",
+                        "6320",
+                        "6418",
+                        "12738",
+                        "2.80",
+                        "0.78",
+                        "16331.8",
+                        "4.4",
+                        "98.47"
+                    ],
+                    [
+                        "5",
+                        "1137",
+                        "4922",
+                        "2996",
+                        "2876",
+                        "5872",
+                        "1.93",
+                        "1.27",
+                        "4623.6",
+                        "5.2",
+                        "104.17"
+                    ],
+                    [
+                        "6",
+                        "1411",
+                        "4285",
+                        "3226",
+                        "3140",
+                        "6366",
+                        "4.86",
+                        "1.11",
+                        "5735.1",
+                        "4.5",
+                        "102.74"
+                    ],
+                    [
+                        "7",
+                        "682",
+                        "3393",
+                        "1750",
+                        "1695",
+                        "3445",
+                        "0.06",
+                        "0.16",
+                        "21344",
+                        "5.0",
+                        "105.11"
+                    ],
+                    [
+                        "8",
+                        "852",
+                        "4223",
+                        "2376",
+                        "2241",
+                        "4617",
+                        "0.93",
+                        "0.25",
+                        "18468",
+                        "5.4",
+                        "106.02"
+                    ],
+                    [
+                        "9",
+                        "1425",
+                        "4420",
+                        "2776",
+                        "2758",
+                        "5534",
+                        "2.52",
+                        "1.01",
+                        "5479.2",
+                        "3.9",
+                        "100.65"
+                    ],
+                    [
+                        "10",
+                        "2663",
+                        "7959",
+                        "4684",
+                        "4771",
+                        "9455",
+                        "1.88",
+                        "3.25",
+                        "2909.2",
+                        "3.6",
+                        "98.18"
+                    ],
+                    [
+                        "11",
+                        "1001",
+                        "5871",
+                        "2844",
+                        "2678",
+                        "5522",
+                        "-0.59",
+                        "0.23",
+                        "24009",
+                        "5.5",
+                        "106.20"
+                    ],
+                    [
+                        "12",
+                        "1738",
+                        "6773",
+                        "3590",
+                        "3654",
+                        "7244",
+                        "0.70",
+                        "1.25",
+                        "5795.2",
+                        "4.2",
+                        "98.25"
+                    ],
+                    [
+                        "13",
+                        "1466",
+                        "6324",
+                        "3597",
+                        "3402",
+                        "6999",
+                        "1.07",
+                        "0.76",
+                        "925.79",
+                        "4.8",
+                        "105.73"
+                    ],
+                    [
+                        "14",
+                        "1056",
+                        "4326",
+                        "3296",
+                        "3056",
+                        "6352",
+                        "4.68",
+                        "6.36",
+                        "998.74",
+                        "6.0",
+                        "107.85"
+                    ],
+                    [
+                        "15",
+                        "1145",
+                        "5455",
+                        "3313",
+                        "3176",
+                        "6489",
+                        "1.90",
+                        "3.92",
+                        "1655.4",
+                        "5.7",
+                        "104.31"
+                    ],
+                    [
+                        "16",
+                        "1100",
+                        "6567",
+                        "3999",
+                        "3673",
+                        "7672",
+                        "1.68",
+                        "3.61",
+                        "2125.2",
+                        "7.0",
+                        "108.88"
+                    ],
+                    [
+                        "17",
+                        "1220",
+                        "5983",
+                        "3177",
+                        "3103",
+                        "6274",
+                        "0.49",
+                        "5.74",
+                        "1093",
+                        "5.1",
+                        "102.19"
+                    ],
+                    [
+                        "18",
+                        "2702",
+                        "8910",
+                        "6034",
+                        "6013",
+                        "12047",
+                        "3.52",
+                        "5.48",
+                        "2198.4",
+                        "4.5",
+                        "100.35"
+                    ],
+                    [
+                        "19",
+                        "1711",
+                        "6830",
+                        "4171",
+                        "4366",
+                        "8537",
+                        "2.50",
+                        "8.78",
+                        "972.32",
+                        "5.0",
+                        "95.53"
+                    ],
+                    [
+                        "20",
+                        "3298",
+                        "12233",
+                        "7282",
+                        "7485",
+                        "14767",
+                        "2.07",
+                        "16.35",
+                        "903.18",
+                        "4.5",
+                        "97.29"
+                    ],
+                    [
+                        "21",
+                        "1553",
+                        "6264",
+                        "4118",
+                        "4099",
+                        "8217",
+                        "3.12",
+                        "7.46",
+                        "1101.5",
+                        "5.3",
+                        "100.46"
+                    ],
+                    [
+                        "22",
+                        "1066",
+                        "4724",
+                        "2991",
+                        "2943",
+                        "5934",
+                        "2.56",
+                        "5.61",
+                        "1057.8",
+                        "5.6",
+                        "101.63"
+                    ],
+                    [
+                        "23",
+                        "335",
+                        "1489",
+                        "914",
+                        "932",
+                        "1846",
+                        "2.40",
+                        "3.92",
+                        "470.92",
+                        "5.5",
+                        "98.07"
+                    ],
+                    [
+                        "Total",
+                        "34565",
+                        "138521",
+                        "82755",
+                        "81689",
+                        "164444",
+                        "1.83",
+                        "85.94",
+                        "1913.5",
+                        "4.8",
+                        "101.30"
+                    ]
+                ],
+                "footer": "Source: National Census, 2078"
+            }
+        },
+        {
+            "type": "component",
+            "name": "PopulationMotherTongue",
+            "chapter": 3,
+            "data": {
+                "caption": "Ward-wise Total Population Distribution",
+                "barChartData": [
+                    {
+                        "language": "W1",
+                        "population": 8990
+                    },
+                    {
+                        "language": "W2",
+                        "population": 6244
+                    },
+                    {
+                        "language": "W3",
+                        "population": 3313
+                    },
+                    {
+                        "language": "W4",
+                        "population": 12738
+                    },
+                    {
+                        "language": "W5",
+                        "population": 5872
+                    },
+                    {
+                        "language": "W6",
+                        "population": 6366
+                    },
+                    {
+                        "language": "W7",
+                        "population": 3445
+                    },
+                    {
+                        "language": "W8",
+                        "population": 4617
+                    },
+                    {
+                        "language": "W9",
+                        "population": 5534
+                    },
+                    {
+                        "language": "W10",
+                        "population": 9455
+                    },
+                    {
+                        "language": "W11",
+                        "population": 5522
+                    },
+                    {
+                        "language": "W12",
+                        "population": 7244
+                    },
+                    {
+                        "language": "W13",
+                        "population": 6999
+                    },
+                    {
+                        "language": "W14",
+                        "population": 6352
+                    },
+                    {
+                        "language": "W15",
+                        "population": 6489
+                    },
+                    {
+                        "language": "W16",
+                        "population": 7672
+                    },
+                    {
+                        "language": "W17",
+                        "population": 6274
+                    },
+                    {
+                        "language": "W18",
+                        "population": 12047
+                    },
+                    {
+                        "language": "W19",
+                        "population": 8537
+                    },
+                    {
+                        "language": "W20",
+                        "population": 14767
+                    },
+                    {
+                        "language": "W21",
+                        "population": 8217
+                    },
+                    {
+                        "language": "W22",
+                        "population": 5934
+                    },
+                    {
+                        "language": "W23",
+                        "population": 1846
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": "Analyzing the ward-wise population of the sub-metropolitan city, the highest population is in ward no. 20 with a total population of 14,767 (7,282 males and 7,485 females). The average family size of this ward is 4.5 and the number of households is 3,298. Similarly, the lowest population is in ward no. 3 with a population of 3,313 (1,700 males and 1,613 females) while the number of households is 556 and the average family size is 6.0. The lowest population density is in ward no. 23 with a population density of 470.91 persons per sq. km. while the highest population density is in ward no. 11. Detailed details are mentioned in the table above and the table is presented in the bar chart below."
+        }
+    ]
 }
