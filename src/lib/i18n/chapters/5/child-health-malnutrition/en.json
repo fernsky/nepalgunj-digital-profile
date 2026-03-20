@@ -1,0 +1,34 @@
+{
+  "sectionNumber": "5.2.3",
+  "title": "Child Health and Malnutrition",
+  "type": "multi-block",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "The state of nutrition of any place can be easily estimated by looking at the children of that place. Nourished children can be seen as an indicator of the social and economic development of any place. The government has prioritized nutrition and has been regularly monitoring the child growth of children under 5 years. The Convention on the Rights of the Child, 1989 also mentions that children should be protected from neglect, abandonment, negligence, abuse, and violence, and their right to food and nutrition should be ensured. The Constitution of Nepal (2072) has also placed food sovereignty as a fundamental right. Since health and nutrition are the first important needs of human life and without healthy citizens, other development activities of the nation cannot be effective, public health study becomes an important part of the planning process. In this Sub-Metropolitan City, while effectively monitoring the child nutrition allowance provided by the Government of Nepal based on national policy and programs to bring improvement in nutrition, arrangements have been made to improve the nutrition of children, along with running programs like the Multi-Sectoral Nutrition Plan taking lessons from the past to bring effective improvements in nutrition. Apart from this, national and international organizations are also working to carry out health and nutrition-related works."
+    },
+    {
+      "type": "paragraph",
+      "content": "Table No. 71: State of Child Health and Malnutrition"
+    },
+    {
+      "type": "table",
+      "data": {
+        "headers": ["S.N.", "Indicators", "Unit", "Shrawan 2078 to Asar 79", "Shrawan 2079 to Asar 80", "Shrawan 2080 to Falgun End 81"],
+        "rows": [
+          ["1", "Low birth weight newborns", "Percent", "4.2", "3.7", "1.5"],
+          ["2", "Average times weight taken of children completing 23 months in percentage", "Percent", "70.8", "75.2", "67.5"],
+          ["3", "Babies breastfed for up to 6 months after birth", "Percent", "37.5", "41.2", "68.2"],
+          ["4", "Number of pregnant women taking 180 Iron", "Percent", "65", "66", "51.7"],
+          ["5", "Women receiving Vitamin A during postpartum stage", "Percent", "74", "75.2", "102.1"],
+          ["6", "Average visits of under 2 years infants for growth monitoring", "Percent", "3", "3.7", "4.1"],
+          ["7", "Number of severely malnourished children", "Number", "0", "121", "140"],
+          ["8", "Severely malnourished children cured", "Percent", "0", "14.1", "14.4"],
+          ["9", "% of children aged 6-23 months receiving 3 cycles (180 pieces) of Baalvita", "Percent", "0", "2.5", "9.1"],
+          ["", "Total", "", "250.3", "486.9", "537.1"]
+        ],
+        "footer": "Source: Municipal Executive Office"
+      }
+    }
+  ]
+}

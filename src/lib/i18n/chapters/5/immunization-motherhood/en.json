@@ -1,0 +1,110 @@
+{
+  "sectionNumber": "5.2.2",
+  "title": "Immunization and Safe Motherhood",
+  "type": "multi-block",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "A) Details of Immunization"
+    },
+    {
+      "type": "paragraph",
+      "content": "Children are the builders of the future. For this, it is necessary for them to be healthy and disease-free. In childhood, they must be given BCG once, DPT three times, Measles once, Polio, and Vitamins in prescribed doses. All five vaccines should be given to children regularly and in full doses. The Government of Nepal has placed the National Immunization Program as a high priority. The immunization program is an effective and economical effort in the health sector. The immunization program has significantly helped to reduce the child mortality rate and prevent various diseases. This has helped to achieve the Sustainable Development Goal's target of reducing child mortality (MDG-4)."
+    },
+    {
+      "type": "paragraph",
+      "content": "Table No. 69: Details regarding Immunization"
+    },
+    {
+      "type": "table",
+      "data": {
+        "headers": ["S.N.", "Indicators", "Shrawan 2079 / Asar 80", "Shrawan 2080 / Asar 81", "Shrawan 2081 / Asar 82"],
+        "rows": [
+          ["1", "Overall monthly reporting rate of Sub-Metropolitan City (%)", "100", "100", "100"],
+          ["2", "Overall monthly reporting rate on time of Sub-Metropolitan City (%)", "90.18", "91.95", "83.33"],
+          ["3", "% of children receiving full immunization as per national immunization schedule", "82.93", "101.32", "106.79"],
+          ["4", "% of children taking BCG vaccination under 1 year", "170.65", "166.93", "153.02"],
+          ["5", "% of children taking DPT first vaccination under 1 year", "123.42", "121.71", "112.71"],
+          ["6", "% of children taking DPT third vaccination under 1 year", "115.15", "116.03", "106.34"],
+          ["7", "% of children under 1 year receiving first dose of Measles-Rubella vaccine", "110.91", "110.89", "103.94"],
+          ["8", "% of children between 12 to 23 months receiving second dose of Measles-Rubella vaccine", "109.22", "104.5", "111.85"],
+          ["9", "% of pregnant women receiving TD2 & TD2+ vaccination", "99.8", "99.47", "91.07"],
+          ["10", "% of children taking PCV first vaccination under 1 year", "124.48", "121.71", "112.4"],
+          ["11", "% of children taking PCV third vaccination under 1 year", "112.89", "110.86", "104.13"],
+          ["12", "Penta 1 Vs Measles 2 Drop out rate", "11.19", "15.62", "4.9"],
+          ["13", "Penta 1 Vs Penta 3 Drop out rate", "6.7", "4.67", "5.65"],
+          ["14", "PCV Drop out rate", "9.31", "8.92", "7.36"],
+          ["15", "Measles vaccine Drop out rate", "15.07", "17.17", "16.96"],
+          ["16", "Measles vaccine wastage rate", "38.1", "41.19", "37.05"],
+          ["17", "TD vaccine wastage rate", "23.74", "25.08", "27.36"],
+          ["18", "% of low weight children among those whose growth was monitored (0-23 months)", "75.22", "67.54", "58.84"],
+          ["19", "% of infants with low birth weight (2.5kg) in health institutions", "14.41", "14.13", "15.07"],
+          ["20", "Average growth monitoring times for children 0-23 months", "4.46", "5.89", "5.62"],
+          ["21", "% of PSBI among registered sick patients under 2 months", "7.25", "5.03", "0.54"],
+          ["22", "% of children with PSBI receiving first dose of Gentamicin", "80", "100", "100"],
+          ["23", "% of children with PSBI receiving full dose of Gentamicin", "40", "100", "50"],
+          ["24", "Incidence rate of diarrhea among children under five years (per thousand)", "399.89", "736.14", "554.26"],
+          ["25", "Incidence rate of acute respiratory infection (ARI) among children under five years (per thousand)", "506.52", "773.11", "736.75"],
+          ["26", "Incidence rate of pneumonia among children under five years (per thousand)", "84.62", "99.39", "68.93"],
+          ["27", "Incidence rate of pneumonia among children under five years suffering from ARI (per thousand)", "100.87", "100", "100"],
+          ["28", "Percentage of infants aged 2 to 59 months with pneumonia treated with Antibiotics (Amoxicillin)", "375", "117.32", "233.33"],
+          ["29", "% of women undergoing pregnancy check-up at least once in health institutions", "156.82", "152.18", "132.16"],
+          ["30", "% of women undergoing first pregnancy check-up as per protocol in health institutions", "59.1", "53.66", "53.44"],
+          ["31", "% of women undergoing pregnancy check-up four times as per protocol in health institutions", "66.17", "51.15", "65.48"],
+          ["32", "% of women receiving 180 Iron tablets during pregnancy", "66.03", "51.73", "59.41"],
+          ["33", "% of women receiving Calcium tablets during pregnancy", "4.73", "11.3", "19.08"],
+          ["34", "% of women undergoing pregnancy check-up eight times as per protocol in health institutions", "13.36", "26.93", "29.57"],
+          ["35", "Institutional delivery %", "333.57", "321.99", "282.46"],
+          ["36", "Delivery % under 20 years", "6.13", "5.92", "5.82"],
+          ["37", "% of postpartum women receiving Iron tablets for 45 days", "16.51", "102.27", "101.87"],
+          ["38", "Number of postpartum women receiving Iron tablets for 45 days", "1528", "9628", "8813"],
+          ["39", "Number of postpartum women receiving Vitamin A", "6956", "9616", "8704"],
+          ["40", "Total Malaria positive cases", "10", "12", "40"],
+          ["41", "Leprosy prevalence rate per 10,000 population", "6.74", "12.03", "11.88"],
+          ["42", "Leprosy new case detection rate (per 10,000)", "0.7", "1.17", "0.82"],
+          ["43", "Number of new leprosy patients", "12", "20", "14"],
+          ["44", "Case notification rate (CNR) for all types of TB cases", "189.33", "183.64", "174.07"],
+          ["45", "Tuberculosis treatment success rate", "91.84", "88.81", "88.63"],
+          ["46", "Number of newly registered tuberculosis patients", "303", "287", "281"],
+          ["47", "Number of registered relapse tuberculosis patients", "23", "26", "18"]
+        ],
+        "footer": "Source: Sub-Metropolitan City Health Division"
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "Vaccines against deadly diseases that can be contracted in childhood and later in life such as Tuberculosis, Diphtheria, Whooping Cough, Tetanus, Hepatitis B, Influenza type B, Polio, Pneumonia, Measles, Rubella and Japanese Encephalitis must be compulsorily administered in a phased manner on time. These vaccines are BCG, DPT, OPV, PCV, IPV, MR, JE / ID respectively. Thus, if vaccines are administered on time, it becomes an effective measure to control child mortality by being free from the risk of major diseases with limited investment."
+    },
+    {
+      "type": "paragraph",
+      "content": "B) Safe Motherhood Status Details"
+    },
+    {
+      "type": "paragraph",
+      "content": "If children are not cared for and looked after from the time they are in the womb and after birth, they are at risk of being infected with various diseases. While in the womb, the child's health basically depends on the mother's age, nutrition, rest, intake of intoxicating and tobacco substances, etc. For a child to be born healthy, a pregnant woman must have regular health check-ups at least four times and must take the necessary vaccines (T.T.) and iron, vitamin tablets regularly. Since getting pregnant at a young age harms the health of both the mother and the baby, the government has legally set the minimum age for marriage at 20 years. However, 17 percent of teenage girls get pregnant or become mothers between the ages of 15 to 19 (Nepal Demographic and Health Survey, 2011). The government has been consistently conducting community-based programs for safe motherhood and newborn health through the Department of Health Services."
+    },
+    {
+      "type": "paragraph",
+      "content": "Table No. 70: Details of Safe Motherhood Status"
+    },
+    {
+      "type": "table",
+      "data": {
+        "headers": ["S.N.", "Indicators", "Shrawan 2078 to Asar 79", "Shrawan 2079 to Asar 80", "Shrawan 2080 to Chaitra End 81"],
+        "rows": [
+          ["1", "Number of women getting pregnancy check-ups 4 times as per protocol", "63", "66", "59"],
+          ["2", "Number of women getting pregnancy check-ups 8 times as per protocol", "0", "13", "27"],
+          ["3", "Total number of live birth newborns at home", "111", "16", "41"],
+          ["4", "Number of institutional deliveries", "320", "334", "322"],
+          ["5", "Delivery rate by Skilled Birth Attendant (SBA)", "315", "77", "69"],
+          ["6", "Delivery rate by Skilled Health Personnel (SHP)", "5", "257", "253"],
+          ["7", "Number of women getting pregnancy check-ups 3 times as per protocol", "88", "44", "40"],
+          ["8", "Total number of maternal deaths", "16", "13", "9"],
+          ["9", "Number of newborn deaths", "157", "94", "89"],
+          ["", "Total", "1075", "914", "909"]
+        ],
+        "footer": "Source: Municipal Executive Office"
+      }
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "sectionNumber": "5.2.5",
+  "title": "Safe Motherhood",
+  "type": "multi-block",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "A) Family Planning"
+    },
+    {
+      "type": "paragraph",
+      "content": "From studies done by various organizations indicating benefits of family planning, it has been proven that it plays a significant role in improving the health of mothers, children, and newborns. In addition, it helps to promote gender equality, women's education, and growth development. Therefore, with the aim of providing quality family planning services, the reproductive health program and family planning program have been expanded since 1991 to hospitals, health posts, primary health centers, and urban clinics, providing services through female health volunteers. Currently, the details of users of family planning devices within the Sub-Metropolitan City are included in the table below."
+    },
+    {
+      "type": "paragraph",
+      "content": "Table No. 73: Details of Family Planning Users"
+    },
+    {
+      "type": "table",
+      "data": {
+        "headers": ["S.N.", "Indicators", "Shrawan 2079 / Asar 80", "Shrawan 2080 / Asar 81", "Shrawan 2081 / Asar 82"],
+        "rows": [
+          ["1", "Number of continuous users of Pills", "1465", "1526", "771"],
+          ["2", "Number of continuous users of Depo", "1972", "2001", "1944"],
+          ["3", "Number of continuous users of IUCD", "997", "1070", "1102"],
+          ["4", "Number of continuous users of Implant", "1888", "2077", "2229"],
+          ["", "Total", "6322", "6674", "6046"]
+        ],
+        "footer": "Source: Municipal Executive Office"
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "B) Details of born, living and died children based on sex of child and mother's age group"
+    },
+    {
+      "type": "paragraph",
+      "content": "Table No. 74: Details of born, living and died children based on sex of child and mother's age group"
+    },
+    {
+      "type": "table",
+      "data": {
+        "headers": ["Sex/Status", "15-19 years", "20-24 years", "25-29 years", "30-34 years", "35-39 years", "40-44 years", "45-49 years", "Total"],
+        "rows": [
+          ["Total born children number", "", "", "", "", "", "", "", ""],
+          ["Boys", "203", "2565", "5832", "7459", "8810", "7496", "6168", "38533"],
+          ["Girls", "174", "2263", "5261", "6999", "7833", "6389", "5185", "34104"],
+          ["Total", "377", "4828", "11093", "14458", "16643", "13885", "11353", "72637"],
+          ["Children currently alive", "", "", "", "", "", "", "", ""],
+          ["Boys", "199", "2497", "5702", "7292", "8587", "7282", "5952", "37511"],
+          ["Girls", "171", "2207", "5166", "6845", "7621", "6223", "4986", "33219"],
+          ["Total", "370", "4704", "10868", "14137", "16208", "13505", "10938", "70730"],
+          ["Deceased children", "", "", "", "", "", "", "", ""],
+          ["Boys", "4", "68", "130", "167", "223", "214", "216", "1022"],
+          ["Girls", "3", "56", "95", "154", "212", "166", "199", "885"],
+          ["Total", "7", "124", "225", "321", "435", "380", "415", "1907"]
+        ],
+        "footer": "Source: National Census 2078"
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "Out of the total 72,637 children born alive in the last 12 months by women in the 15 to 49 age group in the Sub-Metropolitan City, 70,730 children are currently alive. Similarly, the number of children who died during the same period is 1,907, the detailed breakdown of which by sex is presented in the table."
+    },
+    {
+      "type": "paragraph",
+      "content": "C) Details of women's age at first childbirth"
+    },
+    {
+      "type": "paragraph",
+      "content": "From legal and reproductive health perspectives, becoming a mother at the age of 20 or under is considered illegal and risky for the health of both mother and child. On one hand, physical, mental, and financially immature conception and childbirth carry a high risk of giving birth to an immature, low birth weight, physically and intellectually handicapped child, while on the hand, without adequate knowledge about antenatal care, maternal and child care, nutrition, and hygiene, there is a possibility that mother and child may fall victim to various types of infections. Nepal has achieved significant progress in the field of maternal and child health between the Millennium Development Goals 2000-2015. Taking 1990 as the base year, 108 out of every 1000 live births died in Nepal, and this number has substantially declined to 33 by 2015, while the under-5 child mortality rate (per thousand) has dropped to 38. Similarly, considering 1990 as the base year, maternal mortality (per hundred thousand) was 850, which appears to have dropped to 258 by 2015, while data shows the proportion of women receiving deliveries from trained health workers reached 55.6 percent. Overall, signs of positive impact in the area of maternal and child health are appearing in the municipality."
+    },
+    {
+      "type": "paragraph",
+      "content": "Table No. 75: Female population according to the number of children currently born alive by married women in the 15-49 age group"
+    },
+    {
+      "type": "table",
+      "data": {
+        "headers": ["Currently alive children", "15-19 years", "20-24 years", "25-29 years", "30-34 years", "35-39 years", "40-44 years", "45-49 years", "Total married women"],
+        "rows": [
+          ["No child", "588", "1724", "1116", "520", "325", "286", "267", "4806"],
+          ["1 child", "215", "1968", "2036", "1361", "834", "488", "375", "7277"],
+          ["2 children", "60", "919", "2103", "2337", "2199", "1643", "1041", "10302"],
+          ["3 children", "10", "257", "984", "1342", "1466", "1130", "883", "6072"],
+          ["4 children", "3", "52", "335", "628", "826", "692", "548", "3084"],
+          ["5 children", "0", "5", "87", "212", "389", "393", "341", "1427"],
+          ["6 children", "0", "3", "16", "90", "174", "185", "185", "652"],
+          ["7 children", "0", "0", "4", "36", "57", "69", "98", "264"],
+          ["8 children", "0", "0", "0", "3", "35", "34", "46", "118"],
+          ["More than 9 children", "0", "0", "0", "1", "4", "14", "19", "38"],
+          ["Total", "876", "4928", "6681", "6530", "6309", "4913", "3803", "34040"],
+          ["Percentage", "2.57", "14.48", "19.63", "19.18", "18.53", "14.43", "11.17", "100"]
+        ],
+        "footer": "Source: National Census 2078"
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "Out of a total of 34,040 in the Sub-Metropolitan City, 876 women, i.e., 2.57 percent, appeared to have given birth to their first child between the ages of 15-19. Similarly, 4,928 or 14.48 percent of women became mothers at 20-24 years of age, 6,681 or 19.63 percent at 25-29 years, and 6,530 or 19.18 percent at 30-34 years of age, while the number of women becoming mothers for the first time above 35-39 years is 6,309, which is 18.53 percent. In the exact same way, there are 4,913 women or 14.43 percent for 40-44 years, and 3,803 or 11.17 percent of women aged 45-49 have given birth to their first child."
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "sectionNumber": "5.5",
+  "title": "Details of Peace and Security",
+  "type": "multi-block",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "As mentioned in the constitution, the state should be able to make the citizens feel secure. It is the responsibility of the state to provide civil security to the citizens of every nation. A citizen should be able to feel secure in their state. To make this efficient, civil society also plays an equally important role."
+    },
+    {
+      "type": "paragraph",
+      "content": "Criminal and socially unacceptable activities such as theft and robbery occurring in the sub-metropolitan city are found to be resolved through these security agencies. According to the locals, incidents of minor quarrels, beatings, boundary disputes, theft, robbery, fraud, and domestic violence occur occasionally in the Sub-Metropolitan City. Security agencies have been established in 6 places within this sub-metropolitan city, the detailed description of which is presented in the table."
+    },
+    {
+      "type": "paragraph",
+      "content": "Table No. 81: Details of major security agencies in the Sub-Metropolitan City"
+    },
+    {
+      "type": "table",
+      "data": {
+        "headers": ["S.N.", "Name of Security Agencies", "Location"],
+        "rows": [
+          ["1.", "Shree No. 4 Brigade Headquarters Imamnagar Barracks", "Nepalgunj Sub-Metropolitan City Ward No. 20 Ranjha"],
+          ["2.", "Karnali Province Police Training Center Surkhet, (Currently Nepalgunj)", "Nepalgunj Sub-Metropolitan City Ward No. 18 Karkando"],
+          ["3.", "Nepal Police Special Security Battalion Kohalpur, Banke (Currently Nepalgunj)", "Nepalgunj Sub-Metropolitan City Ward No. 01 Nepalgunj"],
+          ["4.", "Nepal Police Province Office Karnali Province (Currently Nepalgunj)", "Nepalgunj Sub-Metropolitan City Ward No. 18 Karkando"],
+          ["5.", "District Police Office, Banke.", "Nepalgunj Sub-Metropolitan City Ward No. 01 Nepalgunj"],
+          ["6.", "Ward Police Office Nepalgunj, Banke", "Nepalgunj Sub-Metropolitan City Ward No. 5 Banke."],
+          ["7.", "Temporary Traffic Police Post", "Nepalgunj Sub-Metropolitan City Ward No. 10 Banke."],
+          ["8.", "Shree No. 4 Brigade Headquarters Imamnagar Barracks", "Nepalgunj Sub-Metropolitan City Ward No. 20 Ranjha"]
+        ],
+        "footer": "Source: Municipal Executive Office"
+      }
+    },
+    {
+      "type": "image",
+      "url": "image-placeholder",
+      "caption": "Map No. 9: Peace Area Map of Sub-Metropolitan City"
+    }
+  ]
+}

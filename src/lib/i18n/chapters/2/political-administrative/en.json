@@ -5,38 +5,28 @@
   "blocks": [
     {
       "type": "paragraph",
-      "content": "Nepalgunj Sub-Metropolitan City was declared with 27 wards. By the decision dated 2072/06/1, Puraini VDC was merged, and 28 wards were maintained. According to the decision dated 2073/11/27, the former 28 wards were modified, and currently, 23 wards are maintained. The detailed description is presented in the table below."
+      "content": "Nepalgunj Municipality was established in 2017 B.S. according to historical records. Following the declaration of the sub-metropolis on 2071/08/16 B.S., 28 former wards were consolidated into the current 13 wards. This administrative restructuring reflects the city's expansion and its central role in the federal governance system of Nepal."
     },
     {
       "type": "table",
       "data": {
-        "headers": ["Ward No.", "Included VDC/Municipality", "Population", "Area (sq. km.)"],
+        "headers": ["Ward No.", "Included Former Wards/VDCs", "Area (sq. km.)", "Center"],
         "rows": [
-          ["1", "Nepalgunj (1)", "8990", "0.96"],
-          ["2", "Nepalgunj (2,3)", "6244", "0.32"],
-          ["3", "Nepalgunj (4,9)", "3313", "0.16"],
-          ["4", "Nepalgunj (5)", "12738", "0.78"],
-          ["5", "Nepalgunj (6)", "5872", "1.27"],
-          ["6", "Nepalgunj (7)", "6366", "1.11"],
-          ["7", "Nepalgunj (8)", "3415", "0.16"],
-          ["8", "Nepalgunj (10,11)", "4617", "0.25"],
-          ["9", "Nepalgunj (12)", "5534", "1.01"],
-          ["10", "Nepalgunj (13)", "9455", "3.25"],
-          ["11", "Nepalgunj (14,15)", "5522", "0.23"],
-          ["12", "Nepalgunj (16)", "7244", "1.25"],
-          ["13", "Nepalgunj (17,18)", "6999", "7.56"],
-          ["14", "Nepalgunj (19)", "6352", "6.36"],
-          ["15", "Nepalgunj (20)", "6489", "3.92"],
-          ["16", "Nepalgunj (21)", "7672", "3.61"],
-          ["17", "Nepalgunj (22)", "6274", "5.74"],
-          ["18", "Nepalgunj (24)", "12047", "5.48"],
-          ["19", "Nepalgunj (25)", "8537", "8.78"],
-          ["20", "Nepalgunj (26)", "14767", "16.35"],
-          ["21", "Nepalgunj (27)", "8217", "7.46"],
-          ["22", "Nepalgunj (28)", "5934", "5.61"],
-          ["23", "Hirminia (7)", "1846", "3.92"]
+          ["1", "Nepalgunj Mun. former 7, 8", "1.05", "Dhamboji"],
+          ["2", "Nepalgunj Mun. former 9, 10", "0.64", "Gharbari Tole"],
+          ["3", "Nepalgunj Mun. former 11, 12, 25", "1.11", "Eklaini"],
+          ["4", "Nepalgunj Mun. former 13, 14, 15, 16, 22", "1.35", "Ganeshpur"],
+          ["5", "Nepalgunj Mun. former 1, 2, 3, 4, 5, 6", "0.75", "New Road"],
+          ["6", "Nepalgunj Mun. former 17, 18, 19", "0.98", "Phultekra"],
+          ["7", "Nepalgunj Mun. former 20, 21", "0.94", "Gaganpur"],
+          ["8", "Nepalgunj Mun. former 23, 24, 26", "1.12", "Mahendra Park"],
+          ["9", "Nepalgunj Mun. former 27, 28", "1.15", "Eye Hospital"],
+          ["10", "Nepalgunj Mun. former 3, 5", "3.44", "Brikuti Nagar"],
+          ["11", "Nepalgunj Mun. former 10, 11", "3.95", "Karkando"],
+          ["12", "Nepalgunj Mun. former 13", "5.21", "Belaspur"],
+          ["13", "Nepalgunj Mun. former 14, 15", "6.82", "Udayapur"]
         ],
-        "footer": "Total: 164,444 | 85.94"
+        "footer": "Note: Wards 10-13 were formed by integrating VDCs such as Jayaspur, Belaspur, Manikapur, and Udayapur."
       }
     },
     {
@@ -45,11 +35,7 @@
     },
     {
       "type": "image",
-      "caption": "Map No. 2: Ward Division Map of Sub-Metropolitan City"
-    },
-    {
-      "type": "paragraph",
-      "content": "By the decision of the Council of Ministers of the Government of Nepal dated 2071 Mangsir 16, the sub-metropolis was declared by merging 10 former VDCs, including Udaipur, Bhawaniapur, Piprahawa, Jaispur, Paraspur, Khaskarkando, Basudevpur, Manikapur, and Puraina."
+      "caption": "Map No. 2: Ward Division Map"
     }
   ]
 }

@@ -1,0 +1,34 @@
+{
+  "sectionNumber": "5.2.4",
+  "title": "Major Diseases and Treatment Details",
+  "type": "multi-block",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "According to the number of patients registered in the OPD of health institutions under this Sub-Metropolitan City, the details of the top 10 health problems seen recently are mentioned in the table below."
+    },
+    {
+      "type": "paragraph",
+      "content": "Table No. 72: Details of top 10 health problems"
+    },
+    {
+      "type": "table",
+      "data": {
+        "headers": ["S.N.", "Indicators", "Shrawan 2079 / Asar 80", "Shrawan 2080 / Asar 81", "Shrawan 2081 / Asar 82"],
+        "rows": [
+          ["1", "Eye problem (Cataract patients)", "18898", "19914", "19535"],
+          ["2", "Eye problem (Refractive patients)", "15819", "17891", "36319"],
+          ["3", "Eye problem (Conjunctivitis patients)", "14891", "37654", "12161"],
+          ["4", "Outpatient disease - ENT Infection - Chronic Suppurative Otitis Media patients", "10138", "12088", "12874"],
+          ["5", "Outpatient disease - Other infectious diseases - Upper Respiratory Tract Infection (URTI) patients", "9217", "7813", "7937"],
+          ["6", "OPD disease - Orthopedic - Fracture", "8749", "8301", "304"],
+          ["7", "Outpatient disease - Skin disease - Fungal infection (Lichen planus) patients", "8150", "5622", "4224"],
+          ["8", "OPD Morbidity - Other diseases and injuries - Headache", "6054", "4414", "4157"],
+          ["9", "Outpatient disease - Other Infectious diseases - ARI / Lower Respiratory Tract Infection (LRTI) patients", "5157", "3318", "3290"],
+          ["10", "OPD disease - General symptoms - Fever", "4618", "5749", "4146"]
+        ],
+        "footer": "Source: Municipal Executive Office"
+      }
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "sectionNumber": "5.3.3",
+  "title": "Public Toilet Details",
+  "type": "multi-block",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "Private houses and public places must have a toilet along with handwashing water. In case poor community families cannot construct a toilet themselves, the local government should provide a subsidy for toilet construction. To make the house courtyards, roads, markets and public areas of this Sub-Metropolitan City clean, public toilets have been constructed in various places. To keep public toilets clean, the Tole Health Committee and the Sub-Metropolitan City must play an important role. By charging some fee for using the public toilet, the expenses for cleanliness and management of the toilets can be covered, and along with this, house courtyards, markets, and roads remain clean, which can also provide some contribution to the revenue of the Sub-Metropolitan City. The details of an adequate number of public toilets in this Sub-Metropolitan City are mentioned in the table."
+    },
+    {
+      "type": "paragraph",
+      "content": "Table No. 79: Public Toilet Details"
+    },
+    {
+      "type": "table",
+      "data": {
+        "headers": ["S.N.", "Location of toilet", "Ward No."],
+        "rows": [
+          ["1.", "Inside Bageshwari Temple", "2"],
+          ["2.", "North of Drinking Water Corporation Office", "2"],
+          ["3.", "In front of Bheri Hospital", "10"],
+          ["4.", "Near Meat Market", "13"],
+          ["5.", "Near Vegetable Market", "8"],
+          ["6.", "In front of Agricultural Development Bank", "12"],
+          ["7.", "In front of Mini Zoo-Park", "8"],
+          ["8.", "Salyani Bungalow", "4"],
+          ["9.", "North of Municipality Office", "12"],
+          ["10.", "Babugaun", "14"],
+          ["11.", "Near Customs", "15"],
+          ["12.", "Jayaspur (Near Highway)", "16"],
+          ["13.", "100 meters west from Chaulika Chowk", "17"],
+          ["14.", "North of Hanuman Temple", "18"],
+          ["15.", "Near Ward Office", "19"],
+          ["16.", "Ranjha Chowk", "20"],
+          ["17.", "Near Ward Office", "21"],
+          ["18.", "Near Kanti Lake", "22"],
+          ["19.", "Bhajjupuruwa", "23"]
+        ],
+        "footer": "Source: Municipal Executive Office"
+      }
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "sectionNumber": "5.1.4",
+  "title": "Schools with ICT Lab",
+  "type": "multi-block",
+  "blocks": [
+    {
+      "type": "table",
+      "data": {
+        "headers": ["S.N.", "School Name", "Address"],
+        "rows": [
+          ["1.", "Shree Phulteka Ma.Vi.", "Nepalgunj-6"],
+          ["2.", "Shree Anathalaya Ma.Vi.", "Nepalgunj-4"],
+          ["3.", "Shree Jaya Janata Ma.Vi.", "Nepalgunj-20, Dhapuwa"]
+        ],
+        "footer": "Source: Municipal Education Unit"
+      }
+    }
+  ]
+}

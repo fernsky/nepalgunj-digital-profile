@@ -1,0 +1,34 @@
+{
+  "sectionNumber": "5.4.1",
+  "title": "Details of Local Festivals, Jatras and Fairs",
+  "type": "multi-block",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "People of different castes, religions, sects, and customs live in this sub-metropolitan city. While the majority of the people living here follow the Hindu religion, some people following Hindu, Christian, Islam, and Jain religions also reside here. All castes and sects have their own kind of religious culture and customs. Among them, festivals like Bada Dashain, Tihar, Ram Navami, Maha Shivaratri, Haritalika, Shree Panchami, Shree Krishna Janmashtami, Bibaha Panchami, Holi, Chaite Dashain, Saune-Maghe Sankranti, Matatirtha Aunsi, Akshaya Tritiya, Harishayani-Haribodhini Ekadashi, Nag Panchami, Rakshabandhan (Janai Purnima), Kushe Aunsi, Bala Chaturdashi, Kojagrat Purnima, Shree Swasthani Purnima, Chhath, Eid, Buddha Jayanti, Christmas Day, Bakra Eid, Asare 15, etc. are celebrated. The details regarding local festivals, jatras, and fairs celebrated in this sub-metropolitan city are mentioned in the table."
+    },
+    {
+      "type": "paragraph",
+      "content": "Table No. 80: Details of Local Festivals, Jatras and Fairs"
+    },
+    {
+      "type": "table",
+      "data": {
+        "headers": ["S.N.", "Festival/Jatra/Fair", "When it is celebrated", "Celebrating Caste/Community"],
+        "rows": [
+          ["1.", "Dashain, Tihar, Teej, Maghi, Holi Purnima, Krishnashtami, and other festivals", "", "Hindu"],
+          ["2.", "Shivaratri, Saune Sankranti, Chaite Dashain", "", "Falgun, Saun, Chait"],
+          ["3.", "Maghe Sankranti, Teej, Krishna Janmashtami", "", "Hindu"],
+          ["4.", "Krishna Janmashtami", "Bhadra", "Hindu"],
+          ["5.", "Shivaratri Festival", "Shivaratri", "Hindu"],
+          ["6.", "Holi (Fagu Purnima)", "Falgun", "Hindu"],
+          ["7.", "Ghume (Bhumya) Festival", "", "Hindu"],
+          ["8.", "Christmas", "Poush", "Christian"],
+          ["9.", "Eid", "", "Muslim"],
+          ["10.", "Chhath", "Kartik", "Maithili"]
+        ],
+        "footer": "Source: Municipal Executive Office"
+      }
+    }
+  ]
+}

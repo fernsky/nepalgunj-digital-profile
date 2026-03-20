@@ -1,0 +1,18 @@
+{
+  "sectionNumber": "5.1.5",
+  "title": "Schools with Library Facilities",
+  "type": "multi-block",
+  "blocks": [
+    {
+      "type": "table",
+      "data": {
+        "headers": ["School Name", "Address", "Number"],
+        "rows": [
+          ["Shree Mangalprasad Ma.Vi. (Model School)", "Nepalgunj-8", "1"],
+          ["Shree Pateshwari Aa.Vi. (Library)", "Nepalgunj-18 Bhujingaun", "1"]
+        ],
+        "footer": "Source: Municipal Education Unit"
+      }
+    }
+  ]
+}

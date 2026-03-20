@@ -1,4 +1,6 @@
 ---
+import InteractiveChart from "./InteractiveChart.astro";
+
 interface Props {
   content: any;
   lang: string;
@@ -22,29 +24,38 @@ const { content, lang, id } = Astro.props;
         </div>
       )}
 
-      <!-- MULTI-BLOCK type (Allows mixing text, tables, graphs, and images) -->
-      {(content.type === "multi-block" || (!content.type && content.blocks)) && content.blocks && (
+      <!-- MULTI-BLOCK type (New: Allows mixing text, tables, and images) -->
+      {content.type === "multi-block" && content.blocks && (
         <div class="space-y-10">
-          {content.blocks.map((block: any) => (
+          {content.blocks.map((block: any, idx: number) => (
             <>
-              {(block.type === "paragraph" || block.content) && (
+              {block.type === "paragraph" && (
                 <p class="text-lg leading-relaxed text-justify m-0" style="color:var(--text-body);">{block.content}</p>
               )}
               
-              {block.paragraphs && (
-                <div class="space-y-4">
-                  {block.paragraphs.map((p: string) => (
-                    <p class="text-lg leading-relaxed text-justify m-0" style="color:var(--text-body);" set:html={p}></p>
-                  ))}
-                </div>
-              )}
-              
-              <!-- Table inside block -->
-              {(block.type === "table" || block.table) && (
-                <div class="my-8">
-                  { (block.table?.title || block.data?.title) && (
-                    <div class="text-center font-bold text-lg mb-4" style="color:var(--primary-500);">
-                      {block.table?.title || block.data?.title}
+              {block.type === "table" && (
+                <div class="overflow-x-auto my-4 p-1 rounded-xl" style="background:var(--card-bg);border:1px solid var(--card-border);">
+                  <table class="w-full text-sm text-left">
+                    <thead class="text-xs uppercase" style="background:rgba(29,78,216,0.1); color:var(--text-heading);">
+                      <tr>
+                        {block.data.headers.map((header: string) => (
+                          <th class="px-6 py-4 font-bold border-b" style="border-color:var(--border);">{header}</th>
+                        ))}
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {block.data.rows.map((row: string[], rIdx: number) => (
+                        <tr class={rIdx % 2 === 0 ? "" : "bg-white/5"} style="color:var(--text-body);">
+                          {row.map((cell: string) => (
+                            <td class="px-6 py-4 border-b" style="border-color:var(--border);">{cell}</td>
+                          ))}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                  {block.data.footer && (
+                    <div class="px-6 py-3 font-bold text-right" style="color:var(--text-heading); background:rgba(29,78,216,0.05);">
+                      {block.data.footer}
                     </div>
                   )}
                   <div class="overflow-x-auto rounded-xl shadow-sm border" style="border-color:var(--card-border);">
@@ -105,31 +116,11 @@ const { content, lang, id } = Astro.props;
                   <div class="d3-chart-wrapper" data-chart={JSON.stringify(block.chart || block.data)}>
                     <div class="d3-container min-h-[400px]"></div>
                   </div>
+                  {block.caption && (
+                    <p class="text-center text-sm font-bold italic" style="color:var(--text-muted);">{block.caption}</p>
+                  )}
                 </div>
               )}
-
-              <!-- Image inside block -->
-              {(block.type === "image" || block.image) && (
-                 <div class="my-10 space-y-4">
-                    <div class="rounded-2xl overflow-hidden border p-4 bg-white/5 shadow-2xl backdrop-blur-sm" style="border-color:var(--card-border);">
-                      { (block.image?.src) ? (
-                        <img src={block.image.src} alt={block.image.alt || ""} class="w-full h-auto rounded-xl" />
-                      ) : (
-                        <div class="aspect-video w-full rounded-2xl flex items-center justify-center relative overflow-hidden group" style="background:var(--card-bg); border:2px dashed var(--border);">
-                           <div class="absolute inset-0 bg-gradient-to-br from-primary-500/5 to-transparent opacity-50"></div>
-                           <div class="z-10 flex flex-col items-center gap-3 opacity-40 group-hover:opacity-60 transition-opacity">
-                              <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
-                              <p class="text-sm font-medium tracking-wider uppercase">Image Placeholder</p>
-                           </div>
-                        </div>
-                      )}
-                    </div>
-                    {(block.image?.caption || block.caption) && (
-                      <p class="text-center text-sm font-bold italic" style="color:var(--text-muted);">{block.image?.caption || block.caption}</p>
-                    )}
-                 </div>
-              )}
-
               {block.type === "subsections" && (
                 <div class="space-y-8 my-10">
                   {block.content.map((sub: any) => (
@@ -156,6 +147,9 @@ const { content, lang, id } = Astro.props;
                   ))}
                 </div>
               )}
+              {block.type === "chart" && (
+                <InteractiveChart type={block.chartType} data={block.data} config={block.config} id={`${id}-${idx}`} />
+              )}
             </>
           ))}
         </div>
@@ -167,19 +161,8 @@ const { content, lang, id } = Astro.props;
           {content.description && (
             <p class="text-lg leading-relaxed mb-8 text-justify" style="color:var(--text-body);">{content.description}</p>
           )}
-
-          <!-- PARAGRAPHS if present -->
-          {content.paragraphs && (
-            <div class="space-y-6 mb-8">
-              {content.paragraphs.map((p: string) => (
-                <p class="text-lg leading-relaxed text-justify" style="color:var(--text-body);" set:html={p}></p>
-              ))}
-            </div>
-          )}
-
-          <!-- LIST if present -->
           {content.list && (
-            <div class="space-y-4 mb-8">
+            <div class="space-y-4">
               {content.list.map((item: string) => (
                 <div class="flex gap-4 p-5 rounded-xl" style="background:var(--card-bg);border:1px solid var(--card-border);">
                   <p class="text-lg leading-relaxed m-0" style="color:var(--text-body);">{item}</p>
@@ -201,7 +184,13 @@ const { content, lang, id } = Astro.props;
               {(content.subsections || (Array.isArray(content.content) ? content.content : [])).map((sub: any) => (
                 <div class="p-8 rounded-2xl" style="background:var(--card-bg);border:1px solid var(--card-border);">
                   <h3 class="text-xl font-bold mb-4" style="color:var(--text-heading);">{sub.title}</h3>
-                  <p class="text-lg leading-relaxed text-justify" style="color:var(--text-body);">{sub.content}</p>
+                  <div class="space-y-4">
+                    {Array.isArray(sub.content) ? (
+                      sub.content.map((p: string) => <p class="text-lg leading-relaxed text-justify m-0" style="color:var(--text-body);">{p}</p>)
+                    ) : (
+                      <p class="text-lg leading-relaxed text-justify" style="color:var(--text-body);">{sub.content}</p>
+                    )}
+                  </div>
                   {sub.extra && (
                     <p class="text-lg leading-relaxed mt-6 pt-6 border-t text-justify" style="color:var(--text-body);border-color:var(--border);">{sub.extra}</p>
                   )}
@@ -316,243 +305,21 @@ const { content, lang, id } = Astro.props;
               ))}
             </div>
           )}
-
-      <!-- CHART in any type -->
-      {content.chart && (
-        <div class="my-12 p-8 rounded-3xl bg-white/5 border border-white/10 shadow-2xl backdrop-blur-sm relative overflow-hidden group">
-          <div class="absolute inset-0 bg-gradient-to-br from-primary-500/5 to-transparent opacity-50"></div>
-          <h3 class="text-xl font-bold mb-8 text-center" style="color:var(--text-heading);">{content.chart.title}</h3>
-          <div class="d3-chart-wrapper" data-chart={JSON.stringify(content.chart)}>
-            <div class="d3-container min-h-[400px]"></div>
-          </div>
-        </div>
-      )}
-
-      <!-- IMAGE in any type -->
-      {content.image && (
-        <div class="my-12">
-          <div class="rounded-2xl overflow-hidden border p-4 bg-white/5 shadow-2xl backdrop-blur-sm" style="border-color:var(--card-border);">
-            {content.image.src ? (
-              <img src={content.image.src} alt={content.image.alt || ""} class="w-full h-auto rounded-xl" />
-            ) : (
-              <div class="w-full aspect-[4/3] bg-gray-100/5 flex items-center justify-center rounded-xl border-2 border-dashed border-gray-400/30">
-                 <div class="text-center px-6">
-                    <div class="text-4xl mb-4 opacity-50">🖼️</div>
-                    <span class="text-gray-400 font-medium italic block">{content.image.alt || 'Image Placeholder'}</span>
-                    <p class="text-xs text-gray-500 mt-2 italic opacity-60">Container ready for upload</p>
-                 </div>
-              </div>
-            )}
-          </div>
-          {content.image.caption && (
-            <p class="text-center italic mt-6 font-bold text-xl" style="color:var(--primary-600);">
-               {content.image.caption}
-            </p>
+          {content.stages && (
+            <div class="space-y-8">
+              {content.stages.map((stage: any) => (
+                <div class="p-8 rounded-2xl" style="background:var(--card-bg);border:1px solid var(--card-border);">
+                  <h3 class="text-xl font-bold mb-4" style="color:var(--text-heading);">
+                    {stage.sectionNumber && <span class="mr-2 opacity-50 font-mono text-base">{stage.sectionNumber}</span>}
+                    {stage.title}
+                  </h3>
+                  <p class="text-lg leading-relaxed text-justify" style="color:var(--text-body);">{stage.content}</p>
+                </div>
+              ))}
+            </div>
           )}
-        </div>
-      )}
         </div>
       )}
     </div>
   ) : null}
 </div>
-
-<script>
-  import * as d3 from 'd3';
-
-  function renderCharts() {
-    const wrappers = document.querySelectorAll('.d3-chart-wrapper');
-    wrappers.forEach(wrapper => {
-      const chartDataAttr = wrapper.getAttribute('data-chart');
-      if (!chartDataAttr) return;
-      const chartData = JSON.parse(chartDataAttr);
-      const container = wrapper.querySelector('.d3-container');
-      if (!container) return;
-      
-      container.innerHTML = '';
-      
-      const width = 800;
-      const height = 450;
-      const margin = {top: 60, right: 30, bottom: 50, left: 80};
-      
-      const svg = d3.select(container)
-        .append("svg")
-        .attr("viewBox", `0 0 ${width} ${height}`)
-        .attr("preserveAspectRatio", "xMidYMid meet")
-        .style("width", "100%")
-        .style("height", "auto")
-        .style("font-family", "sans-serif, Arial");
-
-      // Title
-      svg.append("text")
-         .attr("x", width / 2)
-         .attr("y", margin.top / 2)
-         .attr("text-anchor", "middle")
-         .style("font-size", "18px")
-         .style("font-weight", "bold")
-         .style("fill", "#4b5563")
-         .text(chartData.title);
-
-      const toNepaliDigits = (num: number|string) => String(num).replace(/\d/g, d => '०१२३४५६७८९'[parseInt(d)]);
-      const isNe = chartData.data[0].displayValue && chartData.data[0].displayValue.match(/[०-९]/);
-
-      if (chartData.type === 'donut' || chartData.type === 'pie') {
-        const radius = Math.min(width, height) / 2 - 60;
-        const g = svg.append("g").attr("transform", `translate(${width/2},${height/2 + margin.top/3})`);
-        
-        const colors = ["#5b9bd5", "#ed7d31", "#a5a5a5", "#ffc000", "#4472c4", "#70ad47", "#255e91", "#9e480e", "#636363"];
-        const color = d3.scaleOrdinal().range(colors);
-        
-        const pie = d3.pie()
-          .value((d: any) => d.value)
-          .sort(null);
-          
-        const isPie = chartData.type === 'pie';
-        const innerR = isPie ? 0 : radius * 0.55;
-        const arc = d3.arc().innerRadius(innerR).outerRadius(radius * 0.85);
-        const outerArc = d3.arc().innerRadius(radius * 0.95).outerRadius(radius * 0.95);
-        
-        const arcs = g.selectAll(".arc")
-          .data(pie(chartData.data))
-          .enter().append("g")
-          .attr("class", "arc");
-          
-        arcs.append("path")
-          .attr("d", arc as any)
-          .attr("fill", (d: any, i: number) => color(i.toString()) as string)
-          .attr("stroke", "white")
-          .style("stroke-width", "2px");
-          
-        function midAngle(d: any) {
-          return d.startAngle + (d.endAngle - d.startAngle) / 2;
-        }
-
-        // Add labels
-        arcs.append("text")
-          .attr("transform", (d: any) => {
-            const pos = outerArc.centroid(d);
-            pos[0] = radius * (midAngle(d) < Math.PI ? 1.05 : -1.05);
-            return `translate(${pos})`;
-          })
-          .attr("dy", ".35em")
-          .style("text-anchor", (d: any) => midAngle(d) < Math.PI ? "start" : "end")
-          .style("font-size", "14px")
-          .style("fill", "#4b5563")
-          .text((d: any) => d.data.displayValue || d.data.value);
-
-        // Add polylines
-        arcs.append("polyline")
-          .attr("points", (d: any) => {
-            if (d.data.value <= 0) return "";
-            const pos = outerArc.centroid(d);
-            pos[0] = radius * 1 * (midAngle(d) < Math.PI ? 1 : -1);
-             return [arc.centroid(d), outerArc.centroid(d), pos] as any;
-          })
-          .style("fill", "none")
-          .style("stroke", "#9ca3af")
-          .style("stroke-width", "1px");
-
-        // Legend at the bottom
-        const legend = svg.append("g")
-          .attr("transform", `translate(30, ${height - 25})`);
-          
-        let currentX = 0;
-        chartData.data.forEach((d: any, i: number) => {
-           legend.append("rect")
-             .attr("x", currentX)
-             .attr("y", -8)
-             .attr("width", 10)
-             .attr("height", 10)
-             .attr("fill", colors[i % colors.length]);
-             
-           legend.append("text")
-             .attr("x", currentX + 15)
-             .attr("y", 1)
-             .style("font-size", "14px")
-             .style("fill", "#4b5563")
-             .text(d.label);
-             
-           currentX += 30 + d.label.length * 8; 
-        });
-
-      } else {
-
-        const x = d3.scaleBand()
-          .domain(chartData.data.map((d: any) => d.label))
-          .range([margin.left, width - margin.right])
-          .padding(0.6);
-
-        const maxVal = chartData.yAxisMax || d3.max(chartData.data, (d:any) => d.value);
-        const y = d3.scaleLinear()
-          .domain([0, maxVal])
-          .nice()
-          .range([height - margin.bottom, margin.top]);
-
-        // Grid lines
-        svg.append("g")
-          .attr("class", "grid")
-          .attr("transform", `translate(${margin.left},0)`)
-          .call(d3.axisLeft(y)
-            .tickSize(-(width - margin.left - margin.right))
-            .tickFormat(() => "")
-          )
-          .call((g: any) => g.selectAll(".tick line")
-            .attr("stroke", "#e5e7eb")
-          )
-          .call((g: any) => g.select(".domain").remove());
-
-        // Y Axis
-        svg.append("g")
-          .attr("transform", `translate(${margin.left},0)`)
-          .call(d3.axisLeft(y)
-            .tickFormat((d: any) => isNe ? toNepaliDigits(d) : d)
-            .tickSize(0)
-          )
-          .call((g: any) => g.select(".domain").remove())
-          .call((g: any) => g.selectAll(".tick text")
-            .attr("x", -10)
-            .style("font-size", "15px")
-            .style("fill", "#6b7280")
-          );
-
-        // X Axis
-        svg.append("g")
-          .attr("transform", `translate(0,${height - margin.bottom})`)
-          .call(d3.axisBottom(x).tickSize(0))
-          .call((g: any) => g.select(".domain").attr("stroke", "#d1d5db"))
-          .call((g: any) => g.selectAll(".tick text")
-            .attr("y", 15)
-            .style("font-size", "15px")
-            .style("fill", "#4b5563")
-          );
-
-        // Bars
-        svg.selectAll(".bar")
-          .data(chartData.data)
-          .join("rect")
-          .attr("class", "bar")
-          .attr("x", (d: any) => x(d.label)!)
-          .attr("y", (d: any) => y(d.value))
-          .attr("width", x.bandwidth())
-          .attr("height", (d: any) => height - margin.bottom - y(d.value))
-          .attr("fill", "#5b9bd5");
-
-        // Labels on top of bars
-        svg.selectAll(".label")
-          .data(chartData.data)
-          .join("text")
-          .attr("class", "label")
-          .attr("x", (d: any) => x(d.label)! + x.bandwidth() / 2)
-          .attr("y", (d: any) => y(d.value) - 10)
-          .attr("text-anchor", "middle")
-          .style("font-size", "15px")
-          .style("fill", "#4b5563")
-          .text((d: any) => d.displayValue || d.value);
-      }
-    });
-  }
-
-  // Support both standard DOM load and Astro View Transitions
-  document.addEventListener("DOMContentLoaded", renderCharts);
-  document.addEventListener("astro:page-load", renderCharts);
-</script>

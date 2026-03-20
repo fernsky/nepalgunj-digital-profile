@@ -5,16 +5,16 @@
   "blocks": [
     {
       "type": "paragraph",
-      "content": "According to the 2025 report of the United Nations Development Programme (UNDP), Nepal's Human Development Index (HDI) is 0.622, ranking Nepal 145th among 193 countries. Last year, Nepal was at the 146th position, showing a slight improvement this year. In 1990, this index was 0.398. During that period, the average life expectancy of Nepalis was 70.4 years. Similarly, according to the second periodic plan of Lumbini Province for 80/81, the HDI for the province is 0.563, and the average life expectancy is 69.5 years. Detailed poverty indicators are included in the table below."
+      "content": "According to the United Nations Development Programme (UNDP) 2025 report, Nepal's human development index is 0.622, ranking Nepal 145th among 193 countries in the world. Among these countries, Nepal last year was in 146th position, but this year it rose one place. In 1990, the human development index of Nepal was 0.398. During that period, the average life expectancy of Nepalis was 70.4 years. Similarly, according to the second periodic plan 80/81 of Lumbini Province, the human development index is 0.563, and the average life expectancy is 69.5 years. Poverty distribution details are included in the table below."
     },
     {
       "type": "table",
       "data": {
-        "headers": ["Province", "Multidimensional Poverty Rate (%)", "Poverty Headcount Rate (%)", "Poverty Inequality (%)", "Poverty Intensity (%)", "Number of Poor", "Human Development Index (HDI)"],
+        "headers": ["Province", "Multidimensional Poverty Rate (%)", "Poverty (%)", "Headcount (%)", "Poverty Intensity (%)", "Number of Poor", "Human Development Index"],
         "rows": [
           ["Lumbini Province", "29.9", "24.8", "6.5", "2.3", "1,053,379", "0.468"]
         ],
-        "footer": "Source: Nepal Rastra Bank 2025"
+        "footer": "Source: Nepal Rastra Bank 2082"
       }
     }
   ]

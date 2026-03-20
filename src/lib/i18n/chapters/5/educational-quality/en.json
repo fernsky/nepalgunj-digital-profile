@@ -1,0 +1,17 @@
+{
+  "sectionNumber": "5.1.6",
+  "title": "Educational Quality Details",
+  "type": "multi-block",
+  "blocks": [
+    {
+      "type": "list",
+      "content": [
+        "School Support Mechanism",
+        "Exam Management",
+        "Teachers Capacity Development Training",
+        "Regular Monitoring and Supervision",
+        "Act, Regulation and Procedure Formulation"
+      ]
+    }
+  ]
+}

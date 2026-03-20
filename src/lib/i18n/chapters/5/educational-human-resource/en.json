@@ -1,0 +1,49 @@
+{
+  "sectionNumber": "5.1",
+  "title": "Educational and Human Resource Development",
+  "type": "multi-block",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "Education plays a giant role in the social and economic development of any country. It is taken as an indicator of human development. In this regard, the educational status of the sub-metropolitan city is being showcased here. Education is the primary cornerstone of development; it's a universally accepted theory that developing the inherent talents of individuals through education brings positive change to society and the nation. The paramount role of the education sector is essential for creating an aware, disciplined, and productive workforce. In planning, education has been adopted as a policy-level medium for poverty alleviation and all-round human resource development. State policy also aims to develop education as a primary infrastructure of development, making it accessible and effective for all."
+    },
+    {
+      "type": "image",
+      "caption": "Mahendra Multiple Campus"
+    },
+    {
+      "type": "paragraph",
+      "content": "According to the Constitution of Nepal 2072, Part 3, Article 31, Fundamental Rights regarding education provide the following arrangements:"
+    },
+    {
+      "type": "list",
+      "content": [
+        "Every citizen shall have the right to access basic education.",
+        "Every citizen shall have the right to compulsory and free basic education and free secondary education from the state.",
+        "Citizens with disabilities and economically disadvantaged citizens shall have the right to free higher education in accordance with the law.",
+        "Visually-impaired citizens shall have the right to free education through Braille script, and citizens with hearing or speaking impairments shall have the right to free education through sign language.",
+        "Every Nepali community residing in Nepal shall have the right to receive education in their mother tongue and for that purpose, establish and operate schools and educational institutions as per the law."
+      ]
+    },
+    {
+      "type": "image",
+      "caption": "Adarsh Higher Secondary School"
+    },
+    {
+      "type": "paragraph",
+      "content": "Despite grand debates on the constitution and plans, our education sector hasn't seen remarkable development when compared globally. Education must realize the vision of bringing practical changes in knowledge and skills, supporting the marginalized and disadvantaged, and empowering the voiceless to enrich the country. The characteristic of quality education is to help develop leadership capacity, a tireless spirit of teaching and learning, social and human values, and self-confidence. Such education should have an abundance of analytical and original thinking. Quality is more than just prescribed learning. Today, quality education is needed for practical change, faith in labor, life-oriented research, relevance, love for country and culture, moral responsibility, and the use of science in its original form. Through high-quality development in education, people's living standards can be raised through employment opportunities, industrial development, access to facilities, technological expansion, production-oriented agriculture, income-oriented business, and abundant utilization of local resources, which in turn strengthens the sub-metropolitan economy and supports social development."
+    },
+    {
+      "type": "image",
+      "caption": "Adarsh Secondary School (Building-2)"
+    },
+    {
+      "type": "image",
+      "caption": "Alpine Management College"
+    },
+    {
+      "type": "image",
+      "caption": "Map No. 7: Education Sector Map of the Sub-Metropolitan City"
+    }
+  ]
+}
