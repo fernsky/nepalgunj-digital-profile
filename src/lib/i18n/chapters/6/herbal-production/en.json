@@ -1,5 +1,61 @@
 {
-  "title": "Herbal Production and Export",
   "sectionNumber": "6.1.3",
-  "content": ""
+  "title": "Details of Herbal Production, Collection, and Export",
+  "type": "multi-block",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "Various types of medicinal herbs are found in the Nepalgunj sub-metropolitan city area. The details of important local medicinal herbs found here are presented in the table below."
+    },
+    {
+      "type": "table",
+      "data": {
+        "title": "Table No. 83: Important Local Medicinal Herbs found in Nepalgunj Sub-Metropolitan City",
+        "headers": ["S.N.", "Nepali Name", "English Name", "Scientific Name"],
+        "rows": [
+          ["1", "Asuro", "Malabar nut", "<i>Adhatoda vasica</i> Nees"],
+          ["2", "Aduwa", "Ginger", "<i>Zingibar officinale</i> Rose"],
+          ["3", "Aank", "Madar", "<i>Calotropis procera</i>"],
+          ["4", "Karela", "Bitter Gourd", "<i>Memordia charantia</i> Linn."],
+          ["5", "Kagati", "Lemon", "<i>Citrus aurantifolia</i> (Christm) Swingle"],
+          ["6", "Kans", "Thatch grass", "<i>Saccharum spontareum</i> Linn."],
+          ["7", "Kurilo", "Asparagus", "<i>Asparagus racemosus</i> Willd."],
+          ["8", "Kush", "Kus-grass", "<i>Desmostachya bipinnata</i> Staff"],
+          ["9", "Kera", "Banana", "<i>Musa parasiciaca</i> Linn."],
+          ["10", "Gurjo", "", "<i>Tinosphora cordifolia</i> Willd Miers"],
+          ["11", "Gulaf", "Rose", "<i>Rosa sp.</i>"],
+          ["12", "Ghanti phul (Barhamas)", "China rose", "<i>Hibiscus rosa-sinensis</i> Linn."],
+          ["13", "Ghodatabre", "Water pennywort", "<i>Centella asistica</i> (Linn.) Vrbm"],
+          ["14", "Ghyukumari", "Aloe", "<i>Aloe barbadensis</i> Mill"],
+          ["15", "Chari amilo", "India sorrel", "<i>Oxalis carniculata</i> Linn."],
+          ["16", "Titepati", "Mug-wort", "<i>Artemisia vulgaris</i> Linn."],
+          ["17", "Tulasi", "Holy basil", "<i>Ocimum sanctum</i> Linn."],
+          ["18", "Dudhesar", "", "<i>Euphorbia thymifolia</i> L"],
+          ["19", "Dubo", "Conch grass", "<i>Cynodon dactylon</i> Pers"],
+          ["20", "Dhaturo", "Datura", "<i>Datura metel</i> Linn."],
+          ["21", "Dhaniya", "Coriander", "<i>Corienfrum sativum</i> Linn."],
+          ["22", "Dhageri", "Fire flame bush", "<i>Woodforbia fruiticosa</i> Kutz."],
+          ["23", "Simall (Nirgundi)", "Fire-leaved chaste", "<i>Vitex negundo</i> Linn."],
+          ["24", "Neem", "Neem tree", "<i>Azadhiracta indica</i> A.Juss"],
+          ["25", "Parijat", "Night Jusmine", "<i>Nyctantanthes arbor-tristis</i> Linn"],
+          ["26", "Palungo", "Spinas", "<i>Spicia oleracea</i> Linn."],
+          ["27", "Pipla", "Long pepper", "<i>Piper longum</i> Linn."],
+          ["28", "Pudina", "Garden mint", "<i>Mentha spicata</i> Linn."],
+          ["29", "Bihi", "", "<i>Solanum indicum</i> Linn."],
+          ["30", "Bethe", "Lambs quarters", "<i>Chenopoidium album</i> L"],
+          ["31", "Bojho", "Sweet flag", "<i>Acorus calamus</i> Linn."],
+          ["32", "Mula", "Radish", "<i>Raphanus sativus</i> Linn."],
+          ["33", "Mothe", "Nut Grass", "<i>Cyperus rotundus</i> Linn."],
+          ["34", "Lajjawati", "Sensitive plant", "<i>Mimosa pudica</i> Linn."],
+          ["35", "Lasun", "Garlic", "<i>Allium sativum</i> Linn."],
+          ["36", "Lunde", "Pickly amaranth", "<i>Amaranthus spinosus</i> L."],
+          ["37", "Sarpagandha", "Serpentina", "<i>Rauwolfia serpentine</i> Bethex Kurz"],
+          ["38", "Sayapatri", "Marigold", "<i>Tagetus erecta</i> Linn."],
+          ["39", "Sidhure", "Kamala", "<i>Mallotus Phillipinensis</i> Muell.Arg."],
+          ["40", "Sup", "Dill", "<i>Anethum sowa</i> Kurz"],
+          ["41", "Haledo", "Turmeric", "<i>Curcuma longa</i> Linn."]
+        ]
+      }
+    }
+  ]
 }

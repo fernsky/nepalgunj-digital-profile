@@ -1,5 +1,69 @@
 {
-  "title": "Forest Management Description",
   "sectionNumber": "6.1.1",
-  "content": ""
+  "title": "Forest Management Description (Government-managed, Community, Leasehold, Religious, and Private Forest)",
+  "type": "multi-block",
+  "blocks": [
+    {
+      "type": "subsections",
+      "content": [
+        {
+          "title": "a. Community Forest",
+          "content": [
+            "A community forest refers to a national forest handed over to a user group for the development, conservation, and utilization for collective benefit. According to the Nepal Government's policy of involving local residents in forest conservation and utilization, the District Forest Office has been forming Community Forest User Groups and handing over forests in this sub-metropolitan city as well.",
+            "When this program was initially implemented, the objective was to increase greenery on bare hills and slopes and to fulfill basic needs for timber, fuel-wood, and fodder for the general public. However, the program now includes new issues like poverty alleviation, livelihoods, and biodiversity conservation. Over the past few years, there has been a new awakening among the public living around forest areas. As a result of the concern for their own community forests, areas that were bare, facing desertification, or affected by streams and torrents are now naturally conserved.",
+            "To make forest management effective, it is essential to ensure community forests have access to sources, resources, and technically skilled manpower. In addition to traditional forest conservation methods among users, it is necessary to develop new methods and work styles. The details of community forests registered in this sub-metropolitan city are mentioned below."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "data": {
+        "title": "Table No. 82: Details of Community Forests within the Sub-Metropolitan City",
+        "headers": ["S.N.", "Name of Community Forest", "Current Address", "Area (Ha)"],
+        "rows": [
+          ["1", "Pashupati Community Forest User Committee", "Nepalgunj 20 and 19", ""],
+          ["2", "Jhora Community Forest User Committee", "Nepalgunj 21", ""],
+          ["3", "Hazrat Community Forest User Committee", "Nepalgunj 23", ""]
+        ],
+        "source": "Source: Municipal Executive Office"
+      }
+    },
+    {
+      "type": "subsections",
+      "content": [
+        {
+          "title": "b. National Forest",
+          "content": "National forest refers to a forest-related work plan prepared to develop, conserve, and utilize or sell forest products while maintaining environmental balance. National forests include all forests within Nepal, whether they have marked boundaries or not, excluding private forests."
+        },
+        {
+          "title": "c. Block Forest (Chakala Wan)",
+          "content": "Block forest refers to any part of a government-managed forest with an area of at least five hundred hectares."
+        },
+        {
+          "title": "d. Collaborative Forest (Sajhedari Wan)",
+          "content": "Collaborative forest refers to any part of a national forest managed in partnership with the Division Forest Office, local level, and users."
+        },
+        {
+          "title": "e. Religious Forest",
+          "content": "Religious forest refers to a national forest handed over to any religious institution, group, or community for the development, conservation, and utilization of the forest."
+        },
+        {
+          "title": "f. Private Forest",
+          "content": "Private forest refers to a forest raised or conserved on private land owned by an individual according to current laws."
+        },
+        {
+          "title": "g. Leasehold Forest (Kabuliyati Wan)",
+          "content": [
+            "Leasehold forest refers to a national forest leased out according to current laws to any established institution, any industry based on forest products, or any community to achieve various objectives. Leasehold forests are separated to achieve objectives as follows:",
+            "(a) To produce raw materials required for forest product-based industries,",
+            "(b) To increase forest product production through plantation for sale or utilization,",
+            "(c) To conduct tourism businesses,",
+            "(d) To conduct agro-forestry operations,",
+            "(e) To conduct insect and wildlife farming."
+          ]
+        }
+      ]
+    }
+  ]
 }
