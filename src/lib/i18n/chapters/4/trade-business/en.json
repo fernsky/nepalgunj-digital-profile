@@ -1,0 +1,43 @@
+{
+  "sectionNumber": "4.8.2",
+  "title": "Trade/Business Description",
+  "blocks": [
+    {
+      "paragraphs": [
+        "Trade is a sector that is inextricably linked with the development of the agriculture and industry sectors. Since trade is the medium to bring goods produced through agriculture and industry to national and international markets, the development of trade and commerce is extremely important. In order to be economically strong, local levels must become strong in local production and reach a state where they can export. The economy cannot rise by trading goods produced outside of one's own area. For this, in one way or another, it is necessary to focus on local production and be able to export such products. The details of trade/businesses in this sub-metropolitan city are mentioned in the table."
+      ],
+      "table": {
+        "alignLeft": true,
+        "title": "Table No. 59: Details of Trade/Businesses in the City",
+        "headers": [
+          [
+            { "text": "S.N." },
+            { "text": "Business Group" },
+            { "text": "Number" }
+          ]
+        ],
+        "rows": [
+          ["1", "Other Businesses", "84"],
+          ["2", "Other Services", "176"],
+          ["3", "Productive Industry", "121"],
+          ["4", "Cottage Industry and Other Industries", "411"],
+          ["5", "Construction Business", "221"],
+          ["6", "Wholesale and retail trade of items such as construction materials, computers, electrical goods, cameras, televisions, radios, carpets, petroleum products", "300"],
+          ["7", "Tourism Industry", "786"],
+          ["8", "Commercial Goods", "3701"],
+          ["9", "Maintenance Service", "379"],
+          ["10", "Financial Services and Non-Governmental Organizations", "230"],
+          ["11", "Expert Consulting and Other Professional Services", "118"],
+          ["12", "Education side", "259"],
+          ["13", "Vehicle Sellers", "163"],
+          ["14", "Service Industry", "323"],
+          ["15", "Communication Service", "11"],
+          ["16", "Health Service", "244"],
+          ["17", "Real Estate towards Housing Company and Real Estate Purchase/Sale", "15"],
+          ["", "<b>Total</b>", "<b>7482</b>"]
+        ],
+        "source": "Source: Office of the Municipal Executive"
+      }
+    }
+  ]
+}

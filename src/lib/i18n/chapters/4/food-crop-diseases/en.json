@@ -1,0 +1,26 @@
+{
+  "sectionNumber": "4.6.1",
+  "title": "Diseases and Pests Affecting Food Crops",
+  "paragraphs": [
+    "In order to obtain the expected production from agricultural crops, proper care and maintenance of crops is necessary. Especially since crops are attacked by diseases and pests, it is essential to take high vigilance in a timely manner to avoid diseases and pests and to gain knowledge about prevention. On the other hand, it is also necessary to correctly identify the diseases and pests that can attack crops. If the diseases and pests can be correctly identified, their prevention can be done in time and production can be secured and increased."
+  ],
+  "table": {
+    "title": "Table No. 55: Details of Diseases and Pests Affecting Food Crops",
+    "headers": [
+      [
+        { "text": "S.N." },
+        { "text": "Crop" },
+        { "text": "Major Pests" },
+        { "text": "Major Diseases" }
+      ]
+    ],
+    "rows": [
+      ["1", "Paddy", "BPH, Grasshopper, Stem Borer, Hispa", "Blast, Blight, Khaira Disease"],
+      ["2", "Wheat", "Aphids, Termites, Lahi", "Loose Smut, Yellow Rust, Brown Rust, Blight, Smelling Loose Smut, etc."],
+      ["3", "Maize", "American Fall Armyworm, White Grub, Stem Borer, Cutworm, etc.", "Grey Leaf Spot, Northern Leaf Blight, Southern Leaf Blight, Stalk Rot, etc."],
+      ["4", "Mustard", "Sawfly, Lahi", "Sawfly, Lahi, etc."],
+      ["5", "Potato", "Cutworm, Potato Tuber Moth, Red Ant, Lahi, etc.", "Cutworm, Potato Tuber Moth, Red Ant, Lahi, etc."]
+    ],
+    "source": "Source: Office of the Municipal Executive"
+  }
+}

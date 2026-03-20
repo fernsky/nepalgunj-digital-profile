@@ -1,0 +1,49 @@
+{
+  "sectionNumber": "4.6.5",
+  "title": "Details of Agriculture and Animal Husbandry Related Groups and Community Organizations",
+  "blocks": [
+    {
+      "sectionNumber": "a)",
+      "title": "Details of Farmer Groups",
+      "paragraphs": [
+        "Various agriculture groups are currently operating to commercialize and modernize traditional farming. These groups facilitate agricultural business while providing energy to entrepreneurs by offering certain services and facilities. Details of farmer groups help understand the involvement of farmers in the agricultural sector and the status of agricultural activities in the sub-metropolitan city, while also helping to identify what programs need to be brought in the coming days. The details of farmer groups are included in the table below."
+      ],
+      "table": {
+        "title": "Table No. 57: Details of Commercial Agriculture and Animal Husbandry Groups",
+        "headers": [
+          [
+            { "text": "S.N." },
+            { "text": "Group Name" },
+            { "text": "Ward No." },
+            { "text": "Contact Person" }
+          ]
+        ],
+        "rows": [
+          ["1", "Makbul Ahmad Kuraisi", "14", "Jaispur Smart Agriculture Village Implementation Committee"],
+          ["2", "Pashu Bikas Krishak Samuh", "19", "Balram Pun Magar"],
+          ["3", "Yaduwanshi Pashu Palan Krishak Samuh", "20", "Ram Kumar Yadav"],
+          ["4", "Gopalwanshi Pashupalan Farm", "20", "Binod Kumar Yadav"],
+          ["5", "Jamuna Machha Tatha Bakhapalan Krishak Samuh", "21", "Rijwan Khan"],
+          ["6", "Shri Ujjawal Machha Tatha Pashupalan Krishak Samuh", "21", "Dhakendra Sunar"],
+          ["7", "Kalika Bakhapalan Krishak Samuh", "20", "Dal Bahadur Rawat"],
+          ["8", "Shri Lumbini Krishi Pashupankhshi Tatha Machha Palan Krishak Samuh", "14", "Aftab Ansari"],
+          ["9", "Shivshakti Mahila Krishak Samuh", "19", "Nandakala Khadka"],
+          ["10", "Shri Jai Bageshwari Krishak Samuh", "20", "Ramkumar Yadav"],
+          ["11", "Shri Malati Krishak Samuh", "01", "Hemraj Pokharel"],
+          ["12", "Bali Bikas Krishak Samuh", "16", "Jambar Kapadiya"],
+          ["13", "Shri Islam Krishak Samuh", "21", "Atiullah Bagwan"],
+          ["14", "Radhakrishna Krishak Samuh", "22", "Gopi Pr. Yadav"],
+          ["15", "Jai Bageshwari Krishak Samuh", "15", "Prahlad Barma"],
+          ["16", "Mausami Krishak Samuh", "22", "Ibrahim Khan"],
+          ["17", "Bhrikuti Organic Shahri Krishak Samuh", "10", "Narayan Sigdel"],
+          ["18", "Milijuli Organic Shahri Krishak Samuh", "18", "Renu Gharti"],
+          ["19", "Shanti Organic Shahri Krishak Samuh", "01", "Amuta Giri"],
+          ["20", "Belasapur Karmohana Smart Samiti", "13", "Pramatma Barma"],
+          ["21", "Krishna Pranggarik Nal Utpadan Krishak Samuh", "20", "Dhaneshwar Gautam"],
+          ["22", "Samaweshi Tol Bikas Krishak Samuh", "06", "Ganesh Kumar G.C."]
+        ],
+        "source": "Source: Office of the Municipal Executive"
+      }
+    }
+  ]
+}

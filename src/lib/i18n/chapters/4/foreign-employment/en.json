@@ -1,0 +1,65 @@
+{
+  "title": "4.1.5 Foreign Employment Description",
+  "blocks": [
+    {
+      "paragraphs": [
+        "From this municipality, the number of people going for foreign employment to various countries is 3,804. Analyzing by age group, the highest number, 1,642 people, from the 15-24 age group have gone for foreign employment, whereas the lowest number, 10 people, from the above 65 years age group have gone. Among those who have gone for foreign employment, the highest number is of those going to Middle Eastern countries."
+      ],
+      "table": {
+        "title": "Table No. 34: Details of Population Gone for Foreign Employment from the Sub-Metropolitan City",
+        "headers": [
+          [
+            { "text": "Age Group", "rowspan": 2 },
+            { "text": "Gender", "rowspan": 2 },
+            { "text": "Name of Country", "colspan": 12 },
+            { "text": "Total", "rowspan": 2 }
+          ],
+          [
+            { "text": "India" },
+            { "text": "SAARC" },
+            { "text": "Middle East Asia" },
+            { "text": "Other Asian" },
+            { "text": "Europe" },
+            { "text": "Other Europe" },
+            { "text": "North America" },
+            { "text": "South America" },
+            { "text": "Africa" },
+            { "text": "Pacific" },
+            { "text": "Other" },
+            { "text": "Unspecified" }
+          ]
+        ],
+        "rows": [
+          [ { "text": "0-14 Years", "rowspan": 3 }, "Male", "63", "0", "1", "13", "4", "4", "3", "20", "0", "0", "10", "0", "0", "118" ],
+          [ "Female", "23", "0", "3", "0", "3", "1", "8", "9", "0", "0", "2", "0", "4", "53" ],
+          [ "Total", "86", "0", "4", "13", "7", "5", "11", "29", "0", "0", "12", "0", "4", "171" ],
+          [ { "text": "15-24 Years", "rowspan": 3 }, "Male", "435", "5", "202", "451", "42", "27", "24", "76", "0", "4", "73", "5", "3", "1,347" ],
+          [ "Female", "96", "2", "5", "25", "21", "22", "15", "52", "1", "4", "49", "1", "2", "295" ],
+          [ "Total", "531", "7", "207", "476", "63", "49", "39", "128", "1", "8", "122", "6", "5", "1,642" ],
+          [ { "text": "25-34 Years", "rowspan": 3 }, "Male", "157", "4", "126", "533", "51", "53", "11", "67", "0", "12", "56", "3", "5", "1,078" ],
+          [ "Female", "55", "0", "4", "36", "17", "12", "7", "31", "0", "1", "39", "0", "1", "203" ],
+          [ "Total", "212", "4", "130", "569", "68", "65", "18", "98", "0", "13", "95", "3", "6", "1,281" ],
+          [ { "text": "35-44 Years", "rowspan": 3 }, "Male", "101", "2", "76", "235", "16", "9", "2", "13", "0", "7", "4", "0", "5", "470" ],
+          [ "Female", "18", "0", "2", "16", "1", "0", "0", "5", "0", "0", "0", "0", "0", "42" ],
+          [ "Total", "119", "2", "78", "251", "17", "9", "2", "18", "0", "7", "4", "0", "5", "512" ],
+          [ { "text": "45-54 Years", "rowspan": 3 }, "Male", "35", "0", "4", "33", "1", "0", "0", "3", "0", "2", "0", "0", "0", "78" ],
+          [ "Female", "4", "0", "0", "6", "1", "0", "0", "2", "0", "0", "0", "0", "0", "13" ],
+          [ "Total", "39", "0", "4", "39", "2", "0", "0", "5", "0", "2", "0", "0", "0", "91" ],
+          [ { "text": "55-64 Years", "rowspan": 3 }, "Male", "10", "0", "2", "4", "0", "0", "0", "2", "0", "0", "2", "0", "0", "20" ],
+          [ "Female", "2", "0", "0", "0", "0", "1", "0", "1", "0", "0", "0", "0", "0", "4" ],
+          [ "Total", "12", "0", "2", "4", "0", "1", "0", "3", "0", "0", "2", "0", "0", "24" ],
+          [ { "text": "Above 65 Years", "rowspan": 3 }, "Male", "3", "0", "0", "1", "2", "0", "0", "0", "0", "0", "0", "0", "0", "6" ],
+          [ "Female", "1", "0", "0", "0", "1", "0", "0", "2", "0", "0", "0", "0", "0", "4" ],
+          [ "Total", "4", "0", "0", "1", "3", "0", "0", "2", "0", "0", "0", "0", "0", "10" ],
+          [ { "text": "Unspecified", "rowspan": 3 }, "Male", "12", "0", "4", "13", "5", "4", "1", "8", "0", "1", "4", "0", "5", "57" ],
+          [ "Female", "5", "0", "2", "1", "0", "1", "1", "2", "0", "0", "4", "0", "0", "16" ],
+          [ "Total", "17", "0", "6", "14", "5", "5", "2", "10", "0", "1", "8", "0", "5", "73" ],
+          [ { "text": "Total", "rowspan": 3 }, "Male", "816", "11", "415", "1,283", "121", "97", "41", "189", "0", "26", "149", "8", "18", "3,174" ],
+          [ "Female", "204", "2", "16", "84", "44", "37", "31", "104", "1", "5", "94", "1", "7", "630" ],
+          [ "Total", "1,020", "13", "431", "1,367", "165", "134", "72", "293", "1", "31", "243", "9", "25", "3,804" ]
+        ],
+        "source": "Source: National Census 2078"
+      }
+    }
+  ]
+}

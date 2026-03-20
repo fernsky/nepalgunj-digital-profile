@@ -1,0 +1,70 @@
+{
+  "sectionNumber": "४.८.४",
+  "title": "बैंक तथा वित्तीय संस्था सम्बन्धि विवरण",
+  "hideTitle": true,
+  "blocks": [
+    {
+      "image": {
+        "src": "/market2.jpg",
+        "alt": "सदर लाईन रोड बजार",
+        "caption": "सदर लाईन रोड बजार"
+      }
+    },
+    {
+      "paragraphs": [
+        "<span style='color:black; font-weight:bold;'>४.८.४ बैङ्क तथा वित्तीय संस्था सम्बन्धी विवरण</span>"
+      ]
+    },
+    {
+      "paragraphs": [
+        "आधुनिक अर्थव्योवस्थामा आर्थिक कारोबार बैड्डबाट हुँदा त्यो व्यवस्थित र सहज हुन जान्छ। बैड्डिङ प्रणालीहरूमा व्यापक विकास भइरहँदा उनीहरूले प्रदान गर्ने सेवाहरू समेत विस्तार हुँदै गइरहेका छन्। हाल विभिन्न बैङ्कहरूले ए.टी.एम. सेवा, भिसा कार्ड सेवा महशुल भुक्तानी सेवा लगायत बीमाहरूको समेत व्यवस्था गरेका छन्। यसर्थ आधुनिक आर्थिक प्रणालीमा ग्रामिण जनताहरूको समेत बैङ्किङ सेवामा पहुँच पुर्‍याउन अपरिहार्य जस्तै भइसकेको छ। यस उप-महानगरपालिकामा ३० वटा बैङ्क तथा वित्तीय संस्थाहरुमार्फत बैङ्किङ कारोबार हुने गरेको छ भने यहाँ १११ वटा सहकारी संस्थाहरु सकृय रुपमा संचालनमा रहेका छन्। यसका अलवा विभिन्न बचत समूहहरु मार्फत पनि आर्थिक कारोबार हुने गरेको छ। यहाँ रहेका बैंक तथा वित्तिय संस्थाहरु सम्बन्धी विवरण तलको तालिकामा समावेश गरिएको छ।"
+      ]
+    },
+    {
+      "table": {
+        "alignLeft": true,
+        "title": "तालिका नं. ६१: उपमहानगरपालिका भित्र रहेका बैंक तथा वित्तिय संस्था सम्बन्धि विवरण",
+        "headers": [
+          [
+            { "text": "क्र स" },
+            { "text": "बैंक तथा वित्तिय संस्थाको नाम" },
+            { "text": "वर्ग" }
+          ]
+        ],
+        "rows": [
+          ["१", "Nepal Bank Limited", "वाणिज्य बैंक (क)"],
+          ["२", "Rastriya Banijya Bank", "वाणिज्य बैंक (क)"],
+          ["३", "Nabil Bank", "वाणिज्य बैंक (क)"],
+          ["४", "Global IME Bank", "वाणिज्य बैंक (क)"],
+          ["५", "NIC Asia Bank", "वाणिज्य बैंक (क)"],
+          ["६", "Nepal Investment Mega Bank", "वाणिज्य बैंक (क)"],
+          ["७", "Himalayan Bank", "वाणिज्य बैंक (क)"],
+          ["८", "Everest Bank", "वाणिज्य बैंक (क)"],
+          ["९", "Prabhu Bank", "वाणिज्य बैंक (क)"],
+          ["१०", "Kumari Bank", "वाणिज्य बैंक (क)"],
+          ["११", "Citizens Bank International", "वाणिज्य बैंक (क)"],
+          ["१२", "Prime Commercial Bank", "वाणिज्य बैंक (क)"],
+          ["१३", "Sanima Bank", "वाणिज्य बैंक (क)"],
+          ["१४", "Machhapuchchhre Bank", "वाणिज्य बैंक (क)"],
+          ["१५", "Standard Chartered Bank Nepal", "वाणिज्य बैंक (क)"],
+          ["१६", "Karnali Development Bank", "विकास बैंक (ख)"],
+          ["१७", "Muktinath Bikas Bank", "विकास बैंक (ख)"],
+          ["१८", "Shine Resunga Development Bank", "विकास बैंक (ख)"],
+          ["१९", "Garima Bikas Bank", "विकास बैंक (ख)"],
+          ["२०", "Sangrila Development Bank", "विकास बैंक (ख)"],
+          ["२१", "ICFC Finance", "Finance Company (C)"],
+          ["२२", "Manjushree Finance", "Finance Company (C)"],
+          ["२३", "Best Finance Company", "Finance Company (C)"],
+          ["२४", "Nirdhan Utthan Laghubitta", "Microfinance (D)"],
+          ["२५", "Chhimek Laghubitta", "Microfinance (D)"],
+          ["२६", "Deprosc Laghubitta", "Microfinance (D)"],
+          ["२७", "Forward Microfinance", "Microfinance (D)"],
+          ["२८", "Civil Laghubitta", "Microfinance (D)"],
+          ["२९", "Sana Kisan Laghubitta", "Microfinance (D)"],
+          ["३०", "Nerude Laghubitta", "Microfinance (D)"]
+        ],
+        "source": "स्रोत: नगरकार्यपालिकाको कार्यालय"
+      }
+    }
+  ]
+}

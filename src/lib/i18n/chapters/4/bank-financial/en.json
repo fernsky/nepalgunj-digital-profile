@@ -1,0 +1,70 @@
+{
+  "sectionNumber": "4.8.4",
+  "title": "Bank and Financial Institution",
+  "hideTitle": true,
+  "blocks": [
+    {
+      "image": {
+        "src": "/market2.jpg",
+        "alt": "Sadar Line Road Bazar",
+        "caption": "Sadar Line Road Bazar"
+      }
+    },
+    {
+      "paragraphs": [
+        "<span style='color:black; font-weight:bold;'>4.8.4 Bank and Financial Institution Details</span>"
+      ]
+    },
+    {
+      "paragraphs": [
+        "In a modern economy, when financial transactions take place through banks, it becomes systematic and easy. With the extensive development in banking systems, the services provided by them are also expanding. Currently, various banks have made arrangements for ATM services, Visa card services, bill payment services, and even insurance. In this sense, it has become essential to provide access to banking services to rural people in a modern economic system. In this sub-metropolitan city, banking transactions are conducted through 30 banks and financial institutions, while 111 cooperative societies are actively operating here. In addition to this, financial transactions are also conducted through various savings groups. The details of banks and financial institutions here are included in the table below."
+      ]
+    },
+    {
+      "table": {
+        "alignLeft": true,
+        "title": "Table No. 61: Details of Banks and Financial Institutions within the Sub-Metropolitan City",
+        "headers": [
+          [
+            { "text": "S.N." },
+            { "text": "Name of Bank and Financial Institution" },
+            { "text": "Category" }
+          ]
+        ],
+        "rows": [
+          ["1", "Nepal Bank Limited", "Commercial Bank (A)"],
+          ["2", "Rastriya Banijya Bank", "Commercial Bank (A)"],
+          ["3", "Nabil Bank", "Commercial Bank (A)"],
+          ["4", "Global IME Bank", "Commercial Bank (A)"],
+          ["5", "NIC Asia Bank", "Commercial Bank (A)"],
+          ["6", "Nepal Investment Mega Bank", "Commercial Bank (A)"],
+          ["7", "Himalayan Bank", "Commercial Bank (A)"],
+          ["8", "Everest Bank", "Commercial Bank (A)"],
+          ["9", "Prabhu Bank", "Commercial Bank (A)"],
+          ["10", "Kumari Bank", "Commercial Bank (A)"],
+          ["11", "Citizens Bank International", "Commercial Bank (A)"],
+          ["12", "Prime Commercial Bank", "Commercial Bank (A)"],
+          ["13", "Sanima Bank", "Commercial Bank (A)"],
+          ["14", "Machhapuchchhre Bank", "Commercial Bank (A)"],
+          ["15", "Standard Chartered Bank Nepal", "Commercial Bank (A)"],
+          ["16", "Karnali Development Bank", "Development Bank (B)"],
+          ["17", "Muktinath Bikas Bank", "Development Bank (B)"],
+          ["18", "Shine Resunga Development Bank", "Development Bank (B)"],
+          ["19", "Garima Bikas Bank", "Development Bank (B)"],
+          ["20", "Sangrila Development Bank", "Development Bank (B)"],
+          ["21", "ICFC Finance", "Finance Company (C)"],
+          ["22", "Manjushree Finance", "Finance Company (C)"],
+          ["23", "Best Finance Company", "Finance Company (C)"],
+          ["24", "Nirdhan Utthan Laghubitta", "Microfinance (D)"],
+          ["25", "Chhimek Laghubitta", "Microfinance (D)"],
+          ["26", "Deprosc Laghubitta", "Microfinance (D)"],
+          ["27", "Forward Microfinance", "Microfinance (D)"],
+          ["28", "Civil Laghubitta", "Microfinance (D)"],
+          ["29", "Sana Kisan Laghubitta", "Microfinance (D)"],
+          ["30", "Nerude Laghubitta", "Microfinance (D)"]
+        ],
+        "source": "Source: Office of the Municipal Executive"
+      }
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+---
+import SectionRenderer from "../../SectionRenderer.astro";
+import MajorEconomic from "./MajorEconomic.astro";
+import LandConsumption from "./LandConsumption.astro";
+import AgriculturalLandUse from "./AgriculturalLandUse.astro";
+
+interface Props {
+  content: any;
+  lang: string;
+  id: string; // Slug
+  chapterNum: number;
+}
+
+const { content, lang, id, chapterNum } = Astro.props;
+
+const components: Record<string, any> = {
+  "major-economic": MajorEconomic,
+  "industrial-sector-population": SectionRenderer,
+  "housing-structure": SectionRenderer,
+  "import-export": SectionRenderer,
+  "raw-material-production": SectionRenderer,
+  "foreign-employment": SectionRenderer,
+  "sukumbasi": SectionRenderer,
+  "land-use-distribution": SectionRenderer,
+  "cultivable-land": SectionRenderer,
+  "barren-land": SectionRenderer,
+  "agriculture-animal-development": SectionRenderer,
+  "agricultural-family": SectionRenderer,
+  "land-consumption": LandConsumption,
+  "agricultural-land-use": AgriculturalLandUse,
+  "commercial-agriculture": SectionRenderer,
+  "agriculture-groups": SectionRenderer,
+  "collection-chilling-center": SectionRenderer,
+  "tourism-development": SectionRenderer,
+}
+
+const Component = components[id] || SectionRenderer;
+---
+
+<Component content={content} lang={lang} id={id} />
