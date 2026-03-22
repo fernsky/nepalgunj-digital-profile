@@ -1,5 +1,47 @@
 {
-  "title": "Government Buildings",
   "sectionNumber": "7.4.2",
-  "content": ""
+  "title": "Details regarding Government Buildings",
+  "type": "multi-block",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "Local levels need to construct municipality office buildings, ward office buildings, and other essential government buildings on their own land or land received from the Government of Nepal. This makes performance efficient and effective, giving the people a sense of the government's presence. Once such permanent structures are built, federalism takes institutional form."
+    },
+    {
+      "type": "paragraph",
+      "content": "According to the belief that local government programs should be operated by constructing necessary physical structures in local levels formed under the federal governance system, it is necessary for rural municipalities/municipalities to have their own community buildings and assembly halls. Currently, the details of community buildings and assembly halls in the Sub-Metropolitan City are included in the table below."
+    },
+    {
+      "type": "table",
+      "table": {
+        "title": "Table No. 94: Details of Community Buildings and Assembly Halls in the Sub-Metropolitan City",
+        "headers": [
+          "S.N.",
+          "Name of Government and Community Building",
+          "Ward No.",
+          "Current Status",
+          "Remarks"
+        ],
+        "rows": [
+          ["1", "Dharamshala", "1", "", ""],
+          ["2", "Community Building", "2", "", ""],
+          ["3", "Musafir Khana", "3 Eklaini", "", ""],
+          ["4", "Dharamshala", "3 Triveni Mod", "", ""],
+          ["5", "Kaunilal Dharamshala", "8", "", ""],
+          ["6", "Community Building", "Bhrikutinagar 10", "", ""],
+          ["7", "Senior Citizen Meeting Center", "12", "", ""],
+          ["8", "Lolenpur Dharamshala", "13", "", ""],
+          ["9", "Mahaparwa Dharamshala", "13", "", ""],
+          ["10", "City Hall (Nagar Bhawan)", "14", "", ""],
+          ["11", "Durga Dharamshala", "20, Manikapur", "", ""],
+          ["12", "Yadav Dharamshala", "20, Rameshpur", "", ""],
+          ["13", "Pashupati Temple Dharamshala", "20, Samjhanachowk", "", ""],
+          ["14", "Gaushala", "21", "", ""],
+          ["15", "Yoga Hall", "22", "", ""],
+          ["16", "Ward Office", "23", "", ""]
+        ],
+        "source": "Source: Office of the Municipal Executive"
+      }
+    }
+  ]
 }

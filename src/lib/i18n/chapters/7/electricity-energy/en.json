@@ -1,5 +1,31 @@
 {
-  "title": "Electricity and Alternative Energy",
   "sectionNumber": "7.2",
-  "content": ""
+  "title": "Electricity and Alternative Energy",
+  "type": "multi-block",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "Although all wards of the sub-metropolitan city have access to electrification, the electricity capacity remains low due to the increasing population and needs to be enhanced. To improve peace and security, solar streetlights and CCTV cameras need to be installed on the roads. However, extensive work is required for the strengthening of transmission lines. In terms of improving electricity transmission lines, wooden poles must first be replaced with concrete or iron poles, and transformers need to be installed in areas with low voltage."
+    },
+    {
+      "type": "paragraph",
+      "content": "Apart from electricity services, solid programs should be run to promote alternative and renewable energy. Encouraging and providing subsidies for the construction of biogas in animal husbandry areas, and installing solar energy in both remote and accessible areas, can ensure a regular supply of energy and boost further development activities through efficient energy utilization. Solar energy can also be used for lift irrigation and drinking water projects, and surplus energy generated for domestic consumption can even be sold to the national grid."
+    },
+    {
+      "type": "paragraph",
+      "content": "Generally, an average family consumes 2 kilowatts of electricity daily. Even this consumption rate is lower in rural areas. A solar panel of 17.6 square feet produces 250 watts of electricity. Approximately 6.8 hours of sunlight per day (250 watts x 6.8 hours) yields 1.7 kilowatts of electricity. Producing 1.7 kilowatts x 30 days can generate 51 kilowatts of electricity per month."
+    },
+    {
+      "type": "paragraph",
+      "content": "This means from a house occupying 600 square feet:<br/><br/>51 kW x 600 / 17.6 = 1738 kW"
+    },
+    {
+      "type": "paragraph",
+      "content": "This implies that by installing solar energy in a house covering 600 square feet, the required energy for that house can be produced. However, rural houses need to be made solar energy-friendly. On the other hand, small hydropower projects can be operated by studying the potential of perennial water sources and reservoir-based electricity. Surplus electricity generated this way can be sold to the national grid."
+    },
+    {
+      "type": "paragraph",
+      "content": "Until now, many households still use wood/firewood as their primary cooking fuel. Electricity and solar energy can help replace wood/firewood. This also contributes to environmental conservation. Therefore, it is necessary to conduct programs for the maintenance and improvement of electricity transmission lines, installation of transformers, and promotion of alternative and renewable energy in various wards of the sub-metropolitan city."
+    }
+  ]
 }

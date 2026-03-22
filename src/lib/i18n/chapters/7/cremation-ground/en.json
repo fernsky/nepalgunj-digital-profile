@@ -1,5 +1,37 @@
 {
-  "title": "Cremation Ground",
   "sectionNumber": "7.4.4",
-  "content": ""
+  "title": "Details of Cremation Ground",
+  "type": "multi-block",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "In Nepal, the tradition of performing death rituals according to religious traditions has been going on since ancient times. The management of cremation grounds and burial sites (samadhisthals) according to the religion and culture of each community and municipality is an important and sensitive issue and necessity. This topic, which also carries emotional significance, should be addressed in a timely manner by any plan. Otherwise, unmanaged cremations would add a challenge to the city's environmental, social, and cultural system. Cremation grounds and burial sites that have been traditionally operated must be made convenient and systematic in the future. Currently, the details of cremation grounds and burial sites in operation within the Sub-Metropolitan City are included in the table below."
+    },
+    {
+      "type": "table",
+      "table": {
+        "title": "Table No. 95: Details of Cremation Grounds and Burial Sites in Operation within the Sub-Metropolitan City",
+        "headers": [
+          "S.N.",
+          "Name of Cremation Ground / Burial Site / Cemetery",
+          "Address",
+          "Caste/Community"
+        ],
+        "rows": [
+          ["1", "Masanghat", "Ward No. 8", "Hindu (Cremation)"],
+          ["2", "Lodhai Village, Bulbulia Cremation Ground", "Ward No. 13", "Hindu (Cremation)"],
+          ["3", "Matanpurwa, Balegaon, Babugaon, Kairatipurwa, Gasarhipurwa (Cremation Ground)", "Ward No. 14", "Hindu (Cremation)"],
+          ["4", "Baikunthadham Masanghat", "Ward No. 15", "Hindu (Cremation)"],
+          ["5", "Dihiwa Cremation Ground", "Ward No. 16", "Hindu"],
+          ["6", "Cemeteries in various locations", "Ward No. 17", "Muslim"],
+          ["7", "Khaskadhoko Cemetery", "Ward No. 18", "Muslim"],
+          ["8", "Gayatri Nagar, Nayabasti, Duduwa Cremation Ground, Manikapur Cemetery", "Ward No. 20", "Hindu/Muslim"],
+          ["9", "Pitti Baldev Nagar", "Ward No. 21", ""],
+          ["10", "Cemetery near Maharaja Religious School, East of Birta, and Cemetery near Maharaja School", "Ward No. 22", "Muslim"],
+          ["11", "Bhajjapurwa, Jangalipurwa Cemetery", "Ward No. 23", "Muslim"]
+        ],
+        "source": "Source: Office of the Municipal Executive"
+      }
+    }
+  ]
 }

@@ -1,5 +1,77 @@
 {
-  "title": "Households by Roof Type",
   "sectionNumber": "7.4.1",
-  "content": ""
+  "title": "Households Based on Type of Roof",
+  "type": "multi-block",
+  "blocks": [
+    {
+      "type": "table",
+      "table": {
+        "title": "Table No. 93: Details of Households Based on Type of Roof",
+        "headers": [
+          "Ward",
+          "Zinc/Tin",
+          "Cement/Concrete",
+          "Thatch/Straw",
+          "Tiles",
+          "Stone/Slate",
+          "Wood/Plank",
+          "Others",
+          "Total"
+        ],
+        "rows": [
+          ["1", "157", "1940", "9", "10", "48", "3", "0", "2167"],
+          ["2", "119", "1208", "4", "10", "17", "3", "2", "1363"],
+          ["3", "71", "475", "2", "3", "4", "1", "0", "556"],
+          ["4", "232", "2624", "5", "4", "14", "17", "22", "2918"],
+          ["5", "170", "954", "2", "8", "2", "1", "0", "1137"],
+          ["6", "218", "1126", "14", "44", "5", "1", "3", "1411"],
+          ["7", "59", "602", "3", "9", "2", "7", "0", "682"],
+          ["8", "84", "746", "10", "1", "8", "2", "1", "852"],
+          ["9", "92", "1253", "11", "65", "2", "2", "0", "1425"],
+          ["10", "127", "2496", "14", "11", "5", "6", "5", "2663"],
+          ["11", "121", "851", "9", "0", "9", "11", "0", "1001"],
+          ["12", "174", "1532", "6", "19", "6", "0", "1", "1738"],
+          ["13", "460", "885", "32", "83", "3", "3", "0", "1466"],
+          ["14", "396", "475", "62", "120", "2", "0", "1", "1056"],
+          ["15", "349", "527", "85", "175", "4", "2", "3", "1145"],
+          ["16", "324", "712", "16", "31", "4", "13", "0", "1100"],
+          ["17", "322", "809", "12", "75", "1", "1", "0", "1220"],
+          ["18", "326", "2319", "14", "33", "8", "2", "0", "2702"],
+          ["19", "551", "1091", "21", "39", "3", "0", "6", "1711"],
+          ["20", "1154", "1966", "49", "110", "16", "1", "2", "3298"],
+          ["21", "622", "768", "38", "118", "6", "0", "1", "1553"],
+          ["22", "393", "559", "59", "43", "7", "1", "4", "1066"],
+          ["23", "155", "98", "55", "26", "0", "0", "1", "335"],
+          ["Total", "6676", "26016", "532", "1037", "176", "77", "51", "34565"],
+          ["Percentage", "19.31", "75.27", "1.54", "3.00", "0.51", "0.22", "0.15", "100"]
+        ],
+        "source": "Source: National Census, 2021 (BS 2078)"
+      }
+    },
+    {
+      "type": "chart",
+      "chart": {
+        "chartType": "pie",
+        "data": [
+          { "label": "Zinc/Tin", "value": 6676 },
+          { "label": "Cement/Concrete", "value": 26016 },
+          { "label": "Thatch/Straw", "value": 532 },
+          { "label": "Tiles", "value": 1037 },
+          { "label": "Stone/Slate", "value": 176 },
+          { "label": "Wood/Plank", "value": 77 },
+          { "label": "Others", "value": 51 }
+        ],
+        "config": {
+          "xKey": "label",
+          "labels": ["Zinc/Tin", "Cement/Concrete", "Thatch/Straw", "Tiles", "Stone/Slate", "Wood/Plank", "Others"],
+          "colors": ["#0ea5e9", "#d97706", "#10b981", "#facc15", "#a855f7", "#ef4444", "#64748b"],
+          "title": "Households Based on Type of Roof"
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "Out of the total 34,565 households in this city, the highest number of families live in houses with cement/concrete roofs, totaling 26,016 (75.27%). Similarly, 6,676 (19.31%) households have zinc/tin roofs, 1,037 (3%) have tiled roofs, 532 (1.54%) have thatch/straw roofs, and 176 (0.51%) have stone/slate roofs. Additionally, 77 (0.22%) households are found to have wood/plank roofs, while 51 (0.15%) have other types of roofing."
+    }
+  ]
 }

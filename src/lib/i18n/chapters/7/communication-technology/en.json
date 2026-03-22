@@ -1,5 +1,11 @@
 {
-  "title": "Communication and Technology",
   "sectionNumber": "7.3",
-  "content": ""
+  "title": "Communication and Technology",
+  "type": "multi-block",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "The globalized society of the 21st century is in the era of information and communication. While urban areas in Nepal have largely embraced the revolution in information and communication, rural areas still lack full expansion of television, newspapers, internet, telephone, mobile, and courier services. Developing these media of communication and technology to bring rural populations into the world of information and communication remains a challenge. The Constitution of Nepal defines the people's right to information as a fundamental right. The details of communication and technology available in Nepalgunj Sub-Metropolitan City are as follows. Communication media operate via NCELL and NTC, and internet services have expanded through various internet companies. Currently, the Sub-Metropolitan City has introduced policies and programs to make service delivery information and technology-friendly, integrate all currently used software into a single organized web portal, install CCTV cameras in high-traffic areas, and conduct activities like capacity development training, workshops, orientations, and writing improvement for local media and journalists. Radio, FM, and communication media in the Sub-Metropolitan City are presented in the table below."
+    }
+  ]
 }

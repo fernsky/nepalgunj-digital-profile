@@ -1,5 +1,11 @@
 {
-  "title": "Slaughterhouse",
   "sectionNumber": "7.4.3",
-  "content": ""
+  "title": "Details of Slaughterhouse",
+  "type": "multi-block",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "If the local government works by placing public health at a high priority, healthy and positive-thinking citizens can be produced who can contribute to development, construction, and services. Therefore, it is desirable to construct clean slaughterhouses equipped with modern technology, ensuring people's right to food security, and developing and implementing policies that require specific standards to be met before slaughtering meat animals and birds. Systematic slaughterhouses are not in operation within Nepalgunj Sub-Metropolitan City. Animals are slaughtered in fresh houses and open spaces."
+    }
+  ]
 }
