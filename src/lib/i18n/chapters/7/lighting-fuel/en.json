@@ -1,5 +1,77 @@
 {
-  "title": "Lighting Fuel by Household",
   "sectionNumber": "7.2.2",
-  "content": ""
+  "title": "Households by Main Source of Lighting Fuel",
+  "type": "multi-block",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "The Nepal Electricity Authority (NEA) has been implementing plans for electricity maintenance, revenue collection, and electrification in all wards of this Sub-Metropolitan City. According to the National Census, 2021 (BS 2078), electricity appears to be the primary source of fuel used for lighting daily."
+    },
+    {
+      "type": "table",
+      "table": {
+        "title": "Table No. 91: Details of Fuel Used for Daily Lighting",
+        "headers": [
+          "Ward",
+          "Electricity",
+          "Solar",
+          "Kerosene",
+          "Bio Gas",
+          "Others",
+          "Total"
+        ],
+        "rows": [
+          ["1", "2108", "54", "3", "0", "2", "2167"],
+          ["2", "1356", "6", "0", "0", "1", "1363"],
+          ["3", "537", "18", "0", "0", "1", "556"],
+          ["4", "2874", "27", "1", "0", "16", "2918"],
+          ["5", "1112", "20", "5", "0", "0", "1137"],
+          ["6", "1382", "14", "11", "1", "3", "1411"],
+          ["7", "671", "8", "3", "0", "0", "682"],
+          ["8", "848", "2", "2", "0", "0", "852"],
+          ["9", "1418", "5", "1", "0", "1", "1425"],
+          ["10", "2644", "13", "1", "0", "5", "2663"],
+          ["11", "996", "3", "0", "0", "2", "1001"],
+          ["12", "1718", "17", "2", "0", "1", "1738"],
+          ["13", "1410", "21", "8", "1", "26", "1466"],
+          ["14", "1001", "16", "36", "1", "2", "1056"],
+          ["15", "980", "8", "146", "5", "6", "1145"],
+          ["16", "1064", "10", "24", "1", "1", "1100"],
+          ["17", "1182", "21", "16", "0", "1", "1220"],
+          ["18", "2681", "16", "2", "0", "3", "2702"],
+          ["19", "1651", "11", "37", "3", "9", "1711"],
+          ["20", "3214", "31", "46", "3", "4", "3298"],
+          ["21", "1484", "8", "49", "3", "9", "1553"],
+          ["22", "951", "6", "5", "2", "102", "1066"],
+          ["23", "302", "2", "19", "0", "12", "335"],
+          ["Total", "33584", "345", "417", "20", "199", "34565"],
+          ["Percentage", "97.16", "1.00", "1.21", "0.06", "0.58", "100"]
+        ],
+        "source": "Source: National Census, 2021 (BS 2078)"
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "Analyzing the source of fuel used by households for daily lighting in the Sub-Metropolitan City, it was found that out of a total of 34,565 households, 33,584 (97.16%) use electricity, 345 (1.00%) use solar, 417 (1.21%) use kerosene, 20 (0.06%) use bio gas, and 199 (0.58%) use other fuel sources. Detailed ward-wise information is presented in the table."
+    },
+    {
+      "type": "chart",
+      "chart": {
+        "chartType": "bar",
+        "data": [
+          { "category": "Electricity", "value": 33584 },
+          { "category": "Solar", "value": 345 },
+          { "category": "Kerosene", "value": 417 },
+          { "category": "Bio Gas", "value": 20 },
+          { "category": "Others", "value": 199 }
+        ],
+        "config": {
+          "xKey": "category",
+          "labels": ["value"],
+          "colors": ["#f97316", "#991b1b", "#854d0e", "#3b82f6", "#1e3a8a"],
+          "title": "Details of Fuel Used for Daily Lighting"
+        }
+      }
+    }
+  ]
 }

@@ -1,5 +1,101 @@
 {
-  "title": "Cooking Fuel Usage",
   "sectionNumber": "7.2.1",
-  "content": ""
+  "title": "Fuel Usage Details (Households Based on Cooking Fuel)",
+  "type": "multi-block",
+  "blocks": [
+    {
+      "type": "table",
+      "table": {
+        "title": "Table No. 90: Details of Households Based on Main Cooking Fuel",
+        "headers": [
+          "Ward",
+          "Wood, Firewood, Coal",
+          "LP Gas",
+          "Electricity",
+          "Cow Dung (Guitha)",
+          "Bio Gas",
+          "Kerosene",
+          "Others",
+          "Total"
+        ],
+        "rows": [
+          ["1", "99", "1843", "9", "0", "206", "10", "0", "2167"],
+          ["2", "55", "1305", "2", "1", "0", "0", "0", "1363"],
+          ["3", "28", "525", "1", "1", "1", "0", "0", "556"],
+          ["4", "108", "2782", "14", "0", "1", "0", "13", "2918"],
+          ["5", "63", "1047", "25", "2", "0", "0", "0", "1137"],
+          ["6", "102", "1304", "4", "0", "1", "0", "0", "1411"],
+          ["7", "6", "671", "0", "0", "3", "0", "2", "682"],
+          ["8", "36", "811", "5", "0", "0", "0", "0", "852"],
+          ["9", "115", "1296", "13", "0", "1", "0", "0", "1425"],
+          ["10", "106", "2538", "11", "1", "4", "0", "3", "2663"],
+          ["11", "52", "946", "0", "1", "2", "0", "0", "1001"],
+          ["12", "114", "1616", "5", "2", "1", "0", "0", "1738"],
+          ["13", "382", "1082", "0", "0", "1", "1", "0", "1466"],
+          ["14", "557", "498", "0", "0", "1", "0", "0", "1056"],
+          ["15", "579", "552", "4", "7", "0", "3", "0", "1145"],
+          ["16", "336", "757", "3", "0", "3", "1", "0", "1100"],
+          ["17", "436", "778", "3", "1", "2", "0", "0", "1220"],
+          ["18", "299", "2386", "15", "1", "1", "0", "0", "2702"],
+          ["19", "709", "988", "11", "0", "3", "0", "0", "1711"],
+          ["20", "1188", "2073", "16", "1", "17", "1", "2", "3298"],
+          ["21", "910", "629", "12", "0", "2", "0", "0", "1553"],
+          ["22", "620", "440", "4", "1", "1", "0", "0", "1066"],
+          ["23", "300", "32", "0", "1", "0", "0", "2", "335"],
+          ["Total", "7200", "26899", "157", "20", "251", "16", "22", "34565"],
+          ["Percentage", "20.83", "77.82", "0.45", "0.06", "0.73", "0.05", "0.06", "100"]
+        ],
+        "source": "Source: National Census, 2021 (BS 2078)"
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "Despite being a country rich in water resources, Nepal faces an energy crisis in both urban and rural areas due to the inability to utilize these resources effectively. In the hilly and mountainous regions of Nepal, a large number of people still use wood/firewood/coal as cooking fuel, while the use of guitha (dried cow dung) is widespread in the Terai region."
+    },
+    {
+      "type": "paragraph",
+      "content": "Among the total households in this Nepalgunj Sub-Metropolitan City, 7,200 (20.83%) use wood/firewood/coal for cooking, while the majority, 26,899 (77.82%), use LP gas. Similarly, the number of families using electricity is 157 (0.45%), kerosene is 16 (0.05%), and bio gas is 251 (0.73%). Additionally, 20 households (0.06%) use guitha, and 22 households (0.06%) use other fuel sources. Detailed information is presented in the table."
+    },
+    {
+      "type": "chart",
+      "chart": {
+        "chartType": "pie",
+        "data": [
+          { "label": "Wood, Firewood, Coal", "value": 7200 },
+          { "label": "LP Gas", "value": 26899 },
+          { "label": "Electricity", "value": 157 },
+          { "label": "Cow Dung (Guitha)", "value": 20 },
+          { "label": "Bio Gas", "value": 251 },
+          { "label": "Kerosene", "value": 16 },
+          { "label": "Others", "value": 22 }
+        ],
+        "config": {
+          "xKey": "label",
+          "labels": [
+            "Wood, Firewood, Coal",
+            "LP Gas",
+            "Electricity",
+            "Cow Dung (Guitha)",
+            "Bio Gas",
+            "Kerosene",
+            "Others"
+          ],
+          "colors": [
+            "#f59e0b",
+            "#0ea5e9",
+            "#7c2d12",
+            "#ef4444",
+            "#10b981",
+            "#451a03",
+            "#64748b"
+          ],
+          "title": "Main Cooking Fuel Usage Distribution"
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "According to the concept of sustainable development, it is essential to change human consumption patterns to maintain environmental balance. For example, Nepal aims to reduce the population using wood, firewood, cow dung, etc., as the primary source of fuel from 74.7% in the base year 2015 to 30% by 2030 (SDG-7), and increase the use of LP gas for cooking from 18% (2015) to 33%. Embracing this national goal, it is necessary to orient the policies and programs of this Sub-Metropolitan City towards it."
+    }
+  ]
 }

@@ -1,5 +1,11 @@
 {
-  "title": "Alternative Energy Usage",
   "sectionNumber": "7.2.3",
-  "content": ""
+  "title": "Households Using Alternative Energy",
+  "type": "multi-block",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "Increasing the use of renewable alternative energy while reducing dependence on petroleum products helps maintain environmental balance. Since products like diesel, petrol, and kerosene are not produced in Nepal, billions of rupees are spent annually on importing them. For a landlocked developing third-world country like Nepal, this is a major cause of trade deficit. In the context of our inability to effectively implement import substitution and export management policies, we can become self-reliant in energy sources through the development of wind energy, solar energy, hydro energy, and bio gas. Therefore, in Nepal's case, local, provincial, and federal governments must formulate necessary policies and work on the development of renewable alternative energy."
+    }
+  ]
 }

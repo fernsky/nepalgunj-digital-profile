@@ -1,5 +1,11 @@
 {
-  "title": "Housing and Buildings",
   "sectionNumber": "7.4",
-  "content": ""
+  "title": "Housing and Buildings",
+  "type": "multi-block",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "The Sub-Metropolitan City has settlements with mixed population density. In terms of establishing settlements, there is a tradition of living scattered in potential market areas, water-available zones, cultivable areas, and locations suitable for animal husbandry and food production. Consequently, settlements are thick in some wards and thin in others. Most houses here are permanent (pakki) or semi-permanent (ardha-pakki), making the houses in this Sub-Metropolitan City relatively safe and risk-free from earthquakes and other disasters from a security perspective."
+    }
+  ]
 }

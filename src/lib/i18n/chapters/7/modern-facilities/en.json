@@ -1,5 +1,97 @@
 {
-  "title": "Access to Modern Facilities",
   "sectionNumber": "7.3.2",
-  "content": ""
+  "title": "Details on Access to Modern Facilities",
+  "type": "multi-block",
+  "blocks": [
+    {
+      "type": "table",
+      "table": {
+        "title": "Table No. 92: Details of Resources and Facilities in the Family (Based on Multiple Answers)",
+        "headers": [
+          "Ward No.",
+          "No Facility",
+          "At Least One Facility",
+          "Radio",
+          "Television",
+          "Landline",
+          "Mobile (Basic)",
+          "Smart Mobile",
+          "Computer/Laptop",
+          "Internet",
+          "Car/Jeep/Van",
+          "Motorcycle",
+          "Bicycle",
+          "Electric Fan",
+          "Refrigerator",
+          "Washing Machine",
+          "AC"
+        ],
+        "rows": [
+          ["1", "42", "2125", "866", "1377", "110", "1500", "1886", "544", "1368", "82", "911", "1045", "1884", "1099", "172", "132"],
+          ["2", "34", "1329", "536", "1045", "213", "1017", "1201", "410", "1043", "100", "735", "559", "1223", "778", "170", "123"],
+          ["3", "11", "545", "192", "377", "67", "341", "420", "100", "258", "8", "272", "271", "451", "300", "130", "73"],
+          ["4", "39", "2879", "1204", "1823", "235", "2023", "2552", "833", "2031", "161", "1283", "974", "2402", "1764", "266", "222"],
+          ["5", "31", "1106", "164", "744", "59", "798", "929", "144", "333", "27", "430", "696", "945", "423", "85", "72"],
+          ["6", "29", "1382", "357", "866", "70", "927", "1136", "222", "775", "36", "610", "778", "1270", "640", "48", "42"],
+          ["7", "3", "679", "227", "509", "42", "284", "518", "67", "303", "7", "279", "385", "637", "356", "67", "48"],
+          ["8", "28", "824", "65", "631", "11", "543", "718", "96", "365", "11", "426", "606", "792", "503", "102", "44"],
+          ["9", "24", "1401", "784", "831", "149", "831", "1169", "334", "900", "28", "539", "751", "1314", "651", "37", "32"],
+          ["10", "19", "2644", "1733", "1619", "439", "1485", "2429", "1013", "2052", "183", "1232", "958", "2412", "1392", "317", "208"],
+          ["11", "5", "996", "629", "825", "234", "727", "865", "189", "716", "37", "433", "591", "917", "603", "160", "87"],
+          ["12", "35", "1703", "556", "1152", "172", "982", "1462", "484", "1144", "71", "759", "776", "1545", "1011", "140", "112"],
+          ["13", "105", "1361", "369", "648", "162", "796", "911", "234", "372", "48", "472", "913", "1025", "359", "62", "42"],
+          ["14", "43", "1013", "17", "275", "3", "556", "457", "21", "88", "4", "175", "911", "876", "121", "6", "2"],
+          ["15", "78", "1067", "13", "378", "3", "570", "627", "20", "69", "4", "245", "677", "831", "134", "30", "10"],
+          ["16", "30", "1070", "361", "471", "7", "807", "725", "37", "103", "11", "292", "911", "974", "261", "74", "14"],
+          ["17", "53", "1167", "587", "701", "54", "860", "825", "152", "522", "40", "396", "922", "996", "265", "40", "19"],
+          ["18", "153", "2549", "760", "1797", "236", "1516", "2142", "872", "1641", "154", "1382", "1245", "2234", "1491", "150", "124"],
+          ["19", "65", "1646", "82", "911", "29", "1053", "1166", "138", "531", "32", "596", "1269", "1494", "594", "38", "13"],
+          ["20", "165", "3133", "322", "1649", "90", "2350", "2047", "316", "1163", "55", "908", "1667", "2612", "852", "39", "32"],
+          ["21", "84", "1469", "99", "388", "15", "882", "680", "56", "269", "9", "298", "1337", "1249", "166", "8", "9"],
+          ["22", "80", "986", "50", "414", "16", "716", "518", "51", "216", "10", "211", "888", "813", "221", "11", "9"],
+          ["23", "14", "321", "5", "68", "0", "198", "144", "6", "73", "3", "84", "282", "259", "55", "7", "1"],
+          ["Total", "1170", "33395", "9978", "19539", "2576", "21842", "25535", "6347", "16335", "1129", "13049", "19412", "29155", "14247", "2181", "1470"]
+        ],
+        "source": "Source: National Census, 2021 (BS 2078)"
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "Based on resources and service facilities, it appears that the number of households with at least one facility in the Sub-Metropolitan City is 33,395. Among the total households, 29,155 households have electric fans, and 25,535 households have smart mobile phones. Similarly, the number of families with basic mobile phones is 21,842. The number of families with radio facilities is 9,978, while 19,539 families have televisions."
+    },
+    {
+      "type": "paragraph",
+      "content": "Overall, the data shows an increase in mobile services in the communication sector, while internet services are also in the process of expansion. Since mobile users can easily perform many tasks such as audio, video, information, music, and news exchange, the number of television and radio users is decreasing compared to mobile users. Due to the geographical condition, being entirely in the Terai region and flat land, the number of people using high-facility items like cars/jeeps, air conditioners, heaters, or gas geysers is increasing. Detailed ward-wise information is presented in the table."
+    },
+    {
+      "type": "chart",
+      "chart": {
+        "chartType": "bar",
+        "data": [
+          { "label": "No facility", "value": 1170 },
+          { "label": "At least one", "value": 33395 },
+          { "label": "Radio", "value": 9978 },
+          { "label": "Television", "value": 19539 },
+          { "label": "Landline", "value": 2576 },
+          { "label": "Basic Mobile", "value": 21842 },
+          { "label": "Smart Mobile", "value": 25535 },
+          { "label": "Computer/Laptop", "value": 6347 },
+          { "label": "Internet", "value": 16335 },
+          { "label": "Car/Jeep/Van", "value": 1129 },
+          { "label": "Motorcycle", "value": 13049 },
+          { "label": "Bicycle", "value": 19412 },
+          { "label": "Electric Fan", "value": 29155 },
+          { "label": "Refrigerator", "value": 14247 },
+          { "label": "Washing Machine", "value": 2181 },
+          { "label": "AC", "value": 1470 }
+        ],
+        "config": {
+          "xKey": "label",
+          "labels": ["value"],
+          "colors": ["#ef4444", "#22c55e", "#f59e0b", "#3b82f6", "#6366f1", "#8b5cf6", "#d946ef", "#ec4899", "#14b8a6", "#f43f5e", "#fbbf24", "#4ade80", "#60a5fa", "#a78bfa", "#f472b6", "#2dd4bf"],
+          "title": "Details of Resources and Facilities in the Family"
+        }
+      }
+    }
+  ]
 }

@@ -1,5 +1,44 @@
 {
-  "title": "Radio, FM and Media",
   "sectionNumber": "7.3.1",
-  "content": ""
+  "title": "Details of Radio, FM and Communication Media in the Sub-Metropolitan City",
+  "type": "multi-block",
+  "blocks": [
+    {
+      "type": "table",
+      "table": {
+        "title": "",
+        "headers": [
+          "S.N.",
+          "Entity",
+          "Station Manager",
+          "Contact Number"
+        ],
+        "rows": [
+          ["1", "Bageshwari FM", "Shukrarishi Chaulagai", "9858024709"],
+          ["2", "Krishnasar FM", "Tula Adhikari", "9851074280"],
+          ["3", "Rubaru FM", "Shakil Ahmed Qadri", "9858066768"],
+          ["4", "Radio Sadbhav FM", "Navin Giri", "9848082228"],
+          ["5", "Radio Morning Star FM", "Datta Dhital", "9858020842"],
+          ["6", "Radio Hatemalo FM", "Dilli B.C.", "9858021099"],
+          ["7", "Bheri FM", "Arif Ansari", "9858023997"],
+          ["8", "Nepal Television Correspondent", "Rudra Subedi", "9858021181"],
+          ["9", "Kantipur Television Correspondent", "J. Pandey, Sabita G.C.", "9858020565"],
+          ["10", "Kantipur Daily Correspondent", "Rupa Gahatraj", "9848027792"],
+          ["11", "Image Television Correspondent", "Narendra Thapa", "9848023663"],
+          ["12", "Himalaya Television Correspondent", "Krishna Adhikari", "9858023161"],
+          ["13", "News 24 Television Correspondent", "Krishna Khanal", "9851021088"],
+          ["14", "Avenues Television Correspondent", "Durga Rokaya", "9858023665"],
+          ["15", "Bageshwari Television Correspondent", "Priyasmriti Dhakal", "9848152324"],
+          ["16", "Kohalpur Television Correspondent", "Rudra Subedi", "9858021181"],
+          ["17", "Rastriya Samachar Samiti", "Yuv Raj Pandey", "9857025057"],
+          ["18", "Gorkhapatra/Kalprishtha Daily Editor", "Kamal Khatri", "9851148361"],
+          ["19", "Dainik Nepalgunj Correspondent", "Jhalak Gaire", "9858020711"],
+          ["20", "Mission Today", "Binod Paudel", "9858023069"],
+          ["21", "Naya Patrika Daily Correspondent", "Bishwaraj Pachhaldawa", "9848032299"],
+          ["22", "AP1 Television Correspondent", "Laxman Dhungana", "9858024565"],
+          ["23", "BBC Nepali Service", "Bimala Chaudhary", "9848002213"]
+        ]
+      }
+    }
+  ]
 }

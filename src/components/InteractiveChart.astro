@@ -83,9 +83,9 @@ const { type, data, config, id } = Astro.props;
         });
       }
 
-    const margin = { top: 40, right: 40, bottom: 150, left: 80 };
-    const width = 800 - margin.left - margin.right;
-    const height = 450 - margin.top - margin.bottom;
+    const margin = { top: 40, right: 40, bottom: 200, left: 100 };
+    const width = 850 - margin.left - margin.right;
+    const height = 500 - margin.top - margin.bottom;
 
     const svg = d3
       .select(containerId)
@@ -172,9 +172,9 @@ const { type, data, config, id } = Astro.props;
       xAxis.selectAll("text")
         .style("fill", "var(--text-body)")
         .style("text-anchor", data.length > 3 ? "end" : "middle")
-        .attr("transform", data.length > 3 ? "rotate(-35)" : "")
-        .attr("dx", data.length > 3 ? "-.8em" : "0")
-        .attr("dy", data.length > 3 ? ".15em" : ".5em");
+        .attr("transform", data.length > 3 ? "rotate(-45)" : "")
+        .attr("dx", data.length > 3 ? "-1em" : "0")
+        .attr("dy", data.length > 3 ? "1em" : ".5em");
 
       svg
         .append("g")
