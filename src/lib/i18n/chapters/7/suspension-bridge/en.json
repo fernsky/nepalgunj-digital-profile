@@ -1,5 +1,24 @@
 {
-  "title": "Suspension Bridge and Culverts",
   "sectionNumber": "7.1.4",
-  "content": ""
+  "title": "Suspension Bridge and Culverts",
+  "type": "multi-block",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "According to data, this metropolitan city has 1 motorable bridge and 2 suspension bridges. The detailed description is presented in the table below."
+    },
+    {
+      "type": "table",
+      "data": {
+        "title": "Table No. 89: Description of Motorable and Suspension Bridges in the Metropolitan City",
+        "headers": ["S.N.", "Name of Motor/Suspension Bridge", "Ward No.", "Remarks"],
+        "rows": [
+          ["1", "Nayabasti Ganapur Suspension Bridge", "20", ""],
+          ["2", "Sano Nepal Alanagar Suspension Bridge", "20", ""],
+          ["3", "Dhudhuwa Khola Permanent Bridge", "20", ""]
+        ],
+        "footer": "Source: Municipal Executive Office"
+      }
+    }
+  ]
 }
