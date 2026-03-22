@@ -1,5 +1,19 @@
 {
-  "title": "Vehicles in Sub-Metropolitan City",
   "sectionNumber": "7.1.2",
-  "content": ""
+  "title": "Vehicles in Sub-Metropolitan City Area",
+  "type": "multi-block",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "Currently in Nepal's urban areas and market centers, long-distance buses, minibuses, Hiace vans, and micro buses are found in operation under road transportation, while for short distances, microbuses, motorcycles, rickshaws, bicycles, tempos, Tata vehicles and similar modes of transport are available. Among these vehicles, some are private and some are public."
+    },
+    {
+      "type": "image",
+      "caption": "Vehicles operating in the Sub-Metropolitan City"
+    },
+    {
+      "type": "paragraph",
+      "content": "Transportation serves as an important infrastructure for making the economic and social development of any area dynamic, simplifying the flow of public goods and services, and developing the agricultural and non-agricultural sectors. In this sub-metropolitan city, trucks, tractors, jeeps, buses, motorcycles, rickshaws, tangas, bicycles, and DV vehicles are mainly used. All roads of the sub-metropolitan city need to be upgraded to be operational throughout the twelve months of the year. Additionally, various infrastructure required for road transportation such as vehicle parking areas, bus stops, passenger waiting areas, street lights, road signs, and bus terminal facilities need to be systematically developed."
+    }
+  ]
 }

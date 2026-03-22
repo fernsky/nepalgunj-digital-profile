@@ -1,5 +1,39 @@
 {
-  "title": "Current Road Network",
   "sectionNumber": "7.1.1",
-  "content": ""
+  "title": "Current Road Network Status",
+  "type": "multi-block",
+  "blocks": [
+    {
+      "type": "image",
+      "caption": "Map No. 2: Road Network Map of Sub-Metropolitan City"
+    },
+    {
+      "type": "image",
+      "caption": "Rupanihiya Road"
+    },
+    {
+      "type": "image",
+      "caption": "New Road"
+    },
+    {
+      "type": "paragraph",
+      "content": "Road network is the primary prerequisite for physical development of any place. The door of overall development opens with the development of fully equipped road transportation. At the local level, it is necessary to connect ward centers with the city center and the city center to the national highway system through district roads. In urban settlements, agricultural products can be marketed through the development and upgrading of agricultural roads, thereby strengthening the economic condition of the people. Economic revolution is possible through the development of industries and tourism sector via well-equipped road networks. In addition, internal and external tourists can be attracted by providing access to religious areas through road networks."
+    },
+    {
+      "type": "paragraph",
+      "content": "Until the mapping work of 2050 BS, the road condition in hilly areas of Nepal was quite weak. However, after the political change of 2046, as per the practice of allocating funds from the national treasury to local bodies, road expansion work gained momentum in rural areas as well. Subsequently, rural areas have also made significant progress in road network expansion. However, due to difficult hilly terrain, mapping of some such local structures could not be done and in the absence of factual information, it is not possible to confirm how much road network expansion has taken place in those areas. In this context, the concept of Municipality Transport Master Plan (MTMP) was established to systematically manage transportation networks based on maps and data of each municipality/area's transportation network. Accordingly, the road transportation master plan has been formulated and implemented in this sub-metropolitan city as well."
+    },
+    {
+      "type": "paragraph",
+      "content": "For air transportation in this sub-metropolitan city, daily domestic flights operate from Nepalgunj Airport. In addition, national highways such as Surkhet Road (Ratna Highway), Khajura Road (Nepalgunj-Guleria Road), Airport Road (Sanpha-Airport), Bus Park Road, and Postal Highway (Nepalgunj-Baghauda Road) are the main road transportation routes. According to the data obtained from the transportation master plan of the sub-metropolitan city, there are 41 Class A roads, 96 Class B roads, and 139 Class C roads in operation. Similarly, there are 26 bridges and 62 culverts of various sizes in operation within the municipality. Road and transportation development helps increase productivity, provide access to health and education services, create employment, reduce poverty, and support economic and social development. The sub-metropolitan city needs to take necessary steps to improve road and transportation conditions."
+    },
+    {
+      "type": "image",
+      "caption": "Nepalgunj Airport"
+    },
+    {
+      "type": "paragraph",
+      "content": "Development of routes is essential to make public transportation easy, effective, affordable, and regular for establishing mutual contact between people living in different places and geographical areas. When transportation services come into operation on different routes, it connects different communities and areas together, establishing a sense of unity among the people."
+    }
+  ]
 }

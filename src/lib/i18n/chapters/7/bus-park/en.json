@@ -1,5 +1,15 @@
 {
-  "title": "Bus Park and Bus Stop",
   "sectionNumber": "7.1.3",
-  "content": ""
+  "title": "Bus Park and Bus Stop Description",
+  "type": "multi-block",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "content": "Bus parks equipped with facilities such as electricity, water, passenger waiting areas, toilets, and public mobile charging stations can be constructed to make public movement convenient. Looking at the practices of developed countries, bus parks are found to have proper arrangements for help desks and peace and security. When well-equipped and secure bus parks are constructed, the quality of transportation service increases. Structures built in bus parks must be disability-friendly. In this sub-metropolitan city, although bus parks and bus stops exist, they have not been properly organized. Similarly, the main market areas of the sub-metropolitan city serve as bus stops. There is a lack of passenger waiting areas and toilets here."
+    },
+    {
+      "type": "image",
+      "caption": "Nepalgunj Bus Park"
+    }
+  ]
 }
