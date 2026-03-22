@@ -4,7 +4,7 @@
   "blocks": [
     {
       "image": {
-        "src": "/market.jpg",
+        "src": "/4/market.jpg",
         "alt": "बजार क्षेत्र",
         "caption": "बजार क्षेत्र"
       }
@@ -16,7 +16,7 @@
     },
     {
       "image": {
-        "src": "/market1.jpg",
+        "src": "/4/market1.jpg",
         "alt": "घरबारी टोल बजार क्षेत्र",
         "caption": "घरबारी टोल बजार क्षेत्र"
       }
