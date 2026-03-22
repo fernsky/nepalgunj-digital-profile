@@ -5,19 +5,25 @@
   "blocks": [
     {
       "type": "image",
+      "src": "/7/Map.jpg",
+      "alt": "Map No. 2: Road Network Map of Sub-Metropolitan City",
       "caption": "Map No. 2: Road Network Map of Sub-Metropolitan City"
     },
     {
       "type": "image",
+      "src": "/7/Rupanihiya-Road.jpg",
+      "alt": "Rupanihiya Road",
       "caption": "Rupanihiya Road"
-    },
-    {
-      "type": "image",
-      "caption": "New Road"
     },
     {
       "type": "paragraph",
       "content": "Road network is the primary prerequisite for physical development of any place. The door of overall development opens with the development of fully equipped road transportation. At the local level, it is necessary to connect ward centers with the city center and the city center to the national highway system through district roads. In urban settlements, agricultural products can be marketed through the development and upgrading of agricultural roads, thereby strengthening the economic condition of the people. Economic revolution is possible through the development of industries and tourism sector via well-equipped road networks. In addition, internal and external tourists can be attracted by providing access to religious areas through road networks."
+    },
+    {
+      "type": "image",
+      "src": "/7/New-Road.jpg",
+      "alt": "New Road",
+      "caption": "New Road"
     },
     {
       "type": "paragraph",
@@ -29,6 +35,8 @@
     },
     {
       "type": "image",
+      "src": "/7/Nepalgunj-Airport.jpg",
+      "alt": "Nepalgunj Airport",
       "caption": "Nepalgunj Airport"
     },
     {

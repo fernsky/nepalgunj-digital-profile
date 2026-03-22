@@ -4,7 +4,7 @@
   "blocks": [
     {
       "image": {
-        "src": "/market.jpg",
+        "src": "/4/market.jpg",
         "alt": "Market Area",
         "caption": "Market Area"
       }
@@ -16,7 +16,7 @@
     },
     {
       "image": {
-        "src": "/market1.jpg",
+        "src": "/4/market1.jpg",
         "alt": "Gharbari Tole Market Area",
         "caption": "Gharbari Tole Market Area"
       }
