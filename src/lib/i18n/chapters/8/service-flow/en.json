@@ -1,5 +1,103 @@
 {
-  "title": "Service Flow and Feedback",
   "sectionNumber": "8.2.2",
-  "content": ""
+  "title": "Service Flow Process and Feedback",
+  "type": "subsections",
+  "subsections": [
+    {
+      "title": "Distribution of Disability and Senior Citizen ID Cards",
+      "content": [
+        "Based on the application of the concerned person, recommendation of the ward, and in case of need, based on the recommendation of a specialist doctor, the Disability ID Card Distribution Committee distributes the ID card after investigation.",
+        "If an application is submitted along with a copy of the citizenship certificate for a senior citizen ID card, the ID card will be distributed after investigation."
+      ]
+    },
+    {
+      "title": "Club Registration",
+      "content": "If an application is submitted by attaching the constitution, meeting decisions, and other necessary documents of Child Clubs, Girl Clubs, Youth Clubs, and networks, registration will be done if found appropriate after necessary investigation, and renewal and cancellation will be carried out according to the rules."
+    },
+    {
+      "title": "Free Treatment Recommendation",
+      "content": "Based on the application of the concerned person, hospital referral slip, and ward recommendation, recommendations for free treatment will be made based on the Free Treatment Recommendation Committee."
+    },
+    {
+      "title": "Agricultural Group Registration",
+      "content": "After the application is submitted along with the decision copy of the proposed group and citizenship certificates, the Agriculture and Livestock Service Sub-section will perform the necessary investigation and register the agricultural group, and renewal and cancellation will be carried out according to the rules."
+    },
+    {
+      "title": "Distribution of Agricultural Machinery, Medicine, Veterinary Treatment, and Equipment",
+      "content": "Based on the annual program, demand of the target group, and application, agricultural machinery and livestock treatment equipment will be distributed. Treatment services from the service centers will be available free of charge."
+    },
+    {
+      "title": "Crop and Livestock Insurance",
+      "content": "The Sub-Metropolitan City will provide subsidized crop and livestock insurance for interested individuals."
+    },
+    {
+      "title": "Business Registration",
+      "content": "If an interested applicant submits the ward recommendation, copy of land ownership certificate, copy of Nepali citizenship certificate, and application, business registration and its renewal and cancellation will be carried out according to the rules."
+    },
+    {
+      "title": "Cooperative Registration",
+      "content": "If copies of meeting decisions with bylaws, copies of citizenship certificates, and other necessary documents are attached and submitted, registration of the cooperative society will be done if found appropriate after necessary investigation; merger, division, and cancellation of registration will be carried out according to the rules."
+    },
+    {
+      "title": "Local Organization Registration",
+      "content": "If an application is submitted by attaching the constitution, copies of meeting decisions, copies of citizenship certificates, and other necessary documents, registration of the organization will be done if found appropriate after necessary investigation, and renewal and cancellation will be carried out according to the rules."
+    },
+    {
+      "title": "Employment Counseling",
+      "content": "Counseling work will be carried out from the Employment Service Center for individuals wishing to go for foreign employment."
+    },
+    {
+      "title": "Labor Permit",
+      "content": [
+        "In order to obtain an individual labor permit, if documents such as the visa provided by the employer company, agreement documents, etc. are attached and submitted, the work of its approval will be advanced through online media and after the approval is received, the approval letter will be printed and provided.",
+        "When individuals returning from foreign employment on leave start going back to foreign employment, if documents such as the visa provided by the employer company, agreement documents, etc. are attached and submitted for re-labor permit, the work of its re-approval will be advanced through online media and after the approval is received, the approval letter will be printed and provided."
+      ]
+    },
+    {
+      "title": "Foreign Employment Assistance",
+      "content": "If an application is submitted by attaching ward recommendation and other necessary documents for tasks such as death and disability compensation provided through the Foreign Employment Board, family health treatment expenses, bringing the body home in case of death, rescue and search of those stranded abroad, service will be provided by advancing the necessary process."
+    },
+    {
+      "title": "Personal Incident Registration",
+      "content": "Based on the information form provided by the informant and other necessary documents, the local registrar will investigate and perform online personal incident registration and provide the registration certificate."
+    },
+    {
+      "title": "Registration and Renewal of New Beneficiaries of Social Security Allowance",
+      "content": [
+        "For senior citizens, senior citizen single women, disabled, widows, Dalit children's nutrition allowance, and endangered citizens, if an application is submitted by filling out the form along with necessary documents at the ward office to be registered as a new beneficiary for social security allowance, there is a provision for receiving the allowance from the next month after being registered as a new beneficiary if found eligible after investigation.",
+        "For individuals already registered in social security allowance, there is a provision for carrying out renewal and updating data if an application is submitted by filling out the form along with documents within the month of Bhadra every year."
+      ]
+    },
+    {
+      "title": "Distribution of Class 'D' Construction Entrepreneur License",
+      "content": "If an application is submitted by attaching details of necessary manpower and machinery equipment and copies of certificates, copies of citizenship certificates, the license will be provided as per the decision of the executive after necessary investigation, and renewal and cancellation will be carried out according to the rules."
+    },
+    {
+      "title": "House Construction Permission, House Map Approval, and Documentation",
+      "content": [
+        "If an application is submitted along with the copy of citizenship certificate for house map approval including the drawing design of the house to be built, house map approval will be done after completing the necessary investigation and process, and house construction permission will be granted on that basis.",
+        "In the case of old houses, if an application is submitted along with the map of the built house and copy of citizenship certificate, a documentation certificate will be provided after completing the necessary investigation and process."
+      ]
+    },
+    {
+      "title": "Dispute Resolution and Mediation",
+      "content": "The local Judicial Committee will carry out the work of adjudication and mediation on various issues within its jurisdiction."
+    },
+    {
+      "title": "Scholarship Recommendation",
+      "content": "If an application is submitted along with the ward recommendation for free study, a recommendation for scholarship will be made after necessary investigation."
+    },
+    {
+      "title": "School Operation and Additional Classroom Permission",
+      "content": "If an application is submitted by attaching other necessary documents after completing the necessary infrastructure for school operation or classroom addition, permission for school operation will be granted if found appropriate after necessary investigation."
+    },
+    {
+      "title": "Training Operation",
+      "content": "Various income-generating and skill-based trainings are conducted through the Sub-Metropolitan City's own annual plan/program, and such trainings are also being conducted in coordination and collaboration with various non-governmental organizations."
+    },
+    {
+      "title": "Various Recommendation and Certification Tasks from Sub-Metropolitan and Ward Offices",
+      "content": "If an application is submitted to the Sub-Metropolitan or ward along with necessary documents for tasks as prescribed by the Local Government Operation Act, 2074, which are within the jurisdiction of the local level, recommendation and certification tasks will be carried out according to the rules."
+    }
+  ]
 }

@@ -1,5 +1,1283 @@
 {
-  "title": "Municipal Executive Manpower",
   "sectionNumber": "8.3.2",
-  "content": ""
+  "title": "Details of Municipal Executive Manpower",
+  "type": "table",
+  "table": {
+    "title": "Table No. 96: Details of Manpower Proposed by the Executive",
+    "headers": [
+      "S.N.",
+      "Division/Section Name",
+      "Post",
+      "Level",
+      "Service/Group",
+      "Approved Position"
+    ],
+    "rows": [
+      [
+        "1.",
+        "",
+        "Chief Administrative Officer",
+        "Joint Secretary",
+        "Admin/ General Admin",
+        "1"
+      ],
+      [
+        "2.",
+        "City Mayor's Secretariat",
+        "Administrative Officer/ Sr. Admin Officer",
+        "7/8th",
+        "Admin/ General Admin",
+        "1"
+      ],
+      [
+        "3.",
+        "Deputy City Mayor's Secretariat",
+        "Senior Admin Assistant/ Assistant Admin Officer",
+        "5/6th",
+        "Admin/ General Admin",
+        "1"
+      ],
+      [
+        "4.",
+        "Chief Administrative Officer's Secretariat",
+        "Senior Admin Assistant/ Assistant Admin Officer",
+        "5/6th",
+        "Admin/ General Admin",
+        "1"
+      ],
+      [
+        "5.",
+        "Office Helper",
+        "",
+        "",
+        "",
+        "3"
+      ],
+      [
+        "6.",
+        "Driver",
+        "",
+        "",
+        "",
+        "3"
+      ],
+      [
+        "",
+        "Total",
+        "",
+        "",
+        "",
+        "10"
+      ],
+      [
+        "1.",
+        "Administration Division",
+        "Under Secretary/ Deputy Director/ Sr. Under Secretary/ Director",
+        "9/10th",
+        "Admin/ General Admin",
+        "1"
+      ],
+      [
+        "1.1",
+        "Administration and Human Resource Management Section",
+        "Administrative Officer/ Sr. Admin Officer",
+        "7/8th",
+        "Admin/ General Admin",
+        "1"
+      ],
+      [
+        "",
+        "",
+        "Senior Admin Assistant/ Assistant Admin Officer",
+        "5/6th",
+        "Admin/ General Admin",
+        "2"
+      ],
+      [
+        "",
+        "",
+        "Administration Assistant",
+        "4th",
+        "Admin/ General Admin",
+        "2"
+      ],
+      [
+        "",
+        "",
+        "Driver",
+        "",
+        "",
+        "1"
+      ],
+      [
+        "1.2",
+        "Internal Management and Procurement Section",
+        "Administrative Officer/ Sr. Admin Officer",
+        "7/8th",
+        "Admin/ General Admin",
+        "1"
+      ],
+      [
+        "",
+        "",
+        "Senior Admin Assistant/ Assistant Admin Officer",
+        "5/6th",
+        "Admin/ General Admin",
+        "1"
+      ],
+      [
+        "",
+        "",
+        "Administration Assistant",
+        "4th",
+        "Admin/ General Admin",
+        "1"
+      ],
+      [
+        "1.3",
+        "Financial Administration Section",
+        "Accounting Officer/ Sr. Accounting Officer",
+        "7/8th",
+        "Admin/ Accounting",
+        "1"
+      ],
+      [
+        "",
+        "",
+        "Accountant/ Assistant Accounting Officer",
+        "5/6th",
+        "Admin/ Accounting",
+        "2"
+      ],
+      [
+        "",
+        "",
+        "Computer Assistant/ Assistant Computer Officer",
+        "5/6th",
+        "Admin/ Miscellaneous",
+        "1"
+      ],
+      [
+        "",
+        "",
+        "Co-Accountant",
+        "4th",
+        "Admin/ Accounting",
+        "2"
+      ],
+      [
+        "1.4",
+        "Women, Children and Senior Citizen Section",
+        "Women Development Officer/ Sr. Women Dev Officer",
+        "7/8th",
+        "Admin/ Miscellaneous",
+        "2"
+      ],
+      [
+        "",
+        "",
+        "Women Development Inspector/ Assistant Women Dev Officer",
+        "5/6th",
+        "Admin/ Miscellaneous",
+        "2"
+      ],
+      [
+        "1.5",
+        "Law Section",
+        "Law Officer/ Sr. Law Officer",
+        "7/8th",
+        "Admin/ Law",
+        "1"
+      ],
+      [
+        "",
+        "",
+        "Assistant Assistant/ Assistant Law Officer",
+        "5/6th",
+        "Admin/ Law",
+        "2"
+      ],
+      [
+        "1.6",
+        "City Police Section",
+        "Police Inspector",
+        "7th",
+        "",
+        "1"
+      ],
+      [
+        "",
+        "",
+        "Deputy Police Inspector",
+        "5th",
+        "",
+        "1"
+      ],
+      [
+        "",
+        "",
+        "Assistant Police Inspector",
+        "4th",
+        "",
+        "1"
+      ],
+      [
+        "",
+        "",
+        "Police Havildar",
+        "3rd",
+        "",
+        "4"
+      ],
+      [
+        "",
+        "",
+        "Police Constable",
+        "",
+        "",
+        "25"
+      ],
+      [
+        "",
+        "",
+        "Driver/Heavy",
+        "",
+        "",
+        "2"
+      ],
+      [
+        "",
+        "",
+        "Office Helper (Total)",
+        "",
+        "",
+        "5"
+      ],
+      [
+        "",
+        "Total",
+        "",
+        "",
+        "",
+        "62"
+      ],
+      [
+        "2.",
+        "Planning and Budget Division",
+        "Under Secretary/ Deputy Director/ Sr. Under Secretary/ Director",
+        "9/10th",
+        "Admin/ General Admin",
+        "1"
+      ],
+      [
+        "2.1",
+        "Planning Budget Monitoring and Evaluation Section",
+        "Administrative Officer/ Sr. Admin Officer",
+        "7/8th",
+        "Admin/ General Admin",
+        "1"
+      ],
+      [
+        "",
+        "",
+        "Senior Admin Assistant/ Assistant Admin Officer",
+        "5/6th",
+        "Admin/ General Admin",
+        "2"
+      ],
+      [
+        "",
+        "",
+        "Administration Assistant",
+        "4th",
+        "Admin/ General Admin",
+        "1"
+      ],
+      [
+        "2.2",
+        "Revenue Management Section",
+        "Administrative Officer/ Sr. Admin Officer",
+        "7/8th",
+        "Admin/ General Admin",
+        "1"
+      ],
+      [
+        "",
+        "",
+        "Senior Admin Assistant/ Assistant Admin Officer",
+        "5/6th",
+        "Admin/ General Admin",
+        "2"
+      ],
+      [
+        "",
+        "",
+        "Computer Assistant/ Assistant Computer Officer",
+        "5/6th",
+        "Admin/ Miscellaneous",
+        "1"
+      ],
+      [
+        "",
+        "",
+        "Administration Assistant",
+        "4th",
+        "Admin/ General Admin",
+        "2"
+      ],
+      [
+        "2.3",
+        "Sanitation and Environment Promotion Section",
+        "Environment Engineer/ Sr. Env Engineer",
+        "7/8th",
+        "Admin/ Miscellaneous",
+        "1"
+      ],
+      [
+        "",
+        "",
+        "Senior Admin Assistant/ Assistant Admin Officer",
+        "5/6th",
+        "Admin/ General Admin",
+        "1"
+      ],
+      [
+        "",
+        "",
+        "Sanitation and Other Supervisor",
+        "4th",
+        "",
+        "35"
+      ],
+      [
+        "",
+        "",
+        "Sanitation Worker",
+        "",
+        "",
+        "200"
+      ],
+      [
+        "",
+        "",
+        "Driver/Heavy/Tractor/ Tipper/JCB/Compactor etc",
+        "",
+        "",
+        "18"
+      ],
+      [
+        "2.4",
+        "Disaster Management Section",
+        "Administrative Officer/ Sr. Admin Officer",
+        "7/8th",
+        "Admin/ General Admin",
+        "1"
+      ],
+      [
+        "",
+        "",
+        "Senior Admin Assistant/ Assistant Admin Officer",
+        "5/6th",
+        "Admin/ General Admin",
+        "1"
+      ],
+      [
+        "",
+        "",
+        "Fire Engine In-charge",
+        "7th",
+        "",
+        "1"
+      ],
+      [
+        "",
+        "",
+        "Fire Engine Assistant",
+        "4th",
+        "",
+        "1"
+      ],
+      [
+        "",
+        "",
+        "Heavy Fire Engine Driver",
+        "",
+        "",
+        "3"
+      ],
+      [
+        "",
+        "",
+        "Fireman and Helper",
+        "",
+        "",
+        "12"
+      ],
+      [
+        "2.5",
+        "Information and Technology Section",
+        "Information Technology Officer/ Sr. IT Officer",
+        "7/8th",
+        "Information Technology",
+        "1"
+      ],
+      [
+        "",
+        "",
+        "Assistant Computer Operator",
+        "4th",
+        "Admin/ Miscellaneous",
+        "1"
+      ],
+      [
+        "2.6",
+        "Statistics Section",
+        "Statistics Officer/ Sr. Stat Officer",
+        "7/8th",
+        "Admin/ Statistics",
+        "1"
+      ],
+      [
+        "",
+        "",
+        "Statistics Assistant/ Assistant Stat Officer",
+        "5/6th",
+        "Admin/ Statistics",
+        "1"
+      ],
+      [
+        "",
+        "",
+        "Office Helper",
+        "",
+        "",
+        "5"
+      ],
+      [
+        "",
+        "Total",
+        "",
+        "",
+        "",
+        "294"
+      ],
+      [
+        "3.",
+        "Economic Development Division",
+        "Under Secretary/ Deputy Director/ Sr. Under Secretary/ Director",
+        "9/10th",
+        "Admin/ General Admin",
+        "1"
+      ],
+      [
+        "3.1",
+        "Cooperative and Consumer Interest Protection Section",
+        "Administrative Officer/ Sr. Admin Officer",
+        "7/8th",
+        "Admin/ General Admin",
+        "1"
+      ],
+      [
+        "",
+        "",
+        "Senior Admin Assistant/ Assistant Admin Officer",
+        "5/6th",
+        "Admin/ General Admin",
+        "1"
+      ],
+      [
+        "",
+        "",
+        "Food Technician/ Food Tech Officer",
+        "5/6th",
+        "Agriculture/ Food Nutri Controller",
+        "1"
+      ],
+      [
+        "",
+        "",
+        "Administration Assistant",
+        "4th",
+        "Admin/ General Admin",
+        "1"
+      ],
+      [
+        "3.2",
+        "Land Management and Survey Section",
+        "Survey Officer/ Sr. Survey Officer",
+        "7/8th",
+        "Engi./Survey",
+        "1"
+      ],
+      [
+        "",
+        "",
+        "Surveyor/Technical Officer",
+        "5/6th",
+        "Engi./Survey",
+        "2"
+      ],
+      [
+        "",
+        "",
+        "Administration Assistant",
+        "4th",
+        "Admin/ General Admin",
+        "1"
+      ],
+      [
+        "",
+        "",
+        "Amin",
+        "4th",
+        "Engi./Survey",
+        "5"
+      ],
+      [
+        "3.3",
+        "Social Security and Registration Section",
+        "Administrative Officer/ Sr. Admin Officer",
+        "7/8th",
+        "Admin/ General Admin",
+        "1"
+      ],
+      [
+        "",
+        "",
+        "Senior Admin Assistant/ Assistant Admin Officer",
+        "5/6th",
+        "Admin/ General Admin",
+        "1"
+      ],
+      [
+        "3.4",
+        "Agriculture Development Section",
+        "Agriculture Extension Officer/ Sr. Agri Extension Officer",
+        "7/8th",
+        "Agriculture/Agri Extension",
+        "1"
+      ],
+      [
+        "",
+        "",
+        "Agriculture Technician/ Assistant Agri Extension Officer",
+        "5/6th",
+        "Agriculture/Agri Extension",
+        "1"
+      ],
+      [
+        "",
+        "",
+        "Assistant Agriculture Technician",
+        "4th",
+        "Agriculture/Agri Extension",
+        "4"
+      ],
+      [
+        "",
+        "",
+        "Assistant Fishery Technician",
+        "4th",
+        "Agriculture/Fishery",
+        "1"
+      ],
+      [
+        "3.5",
+        "Livestock Development Section",
+        "Veterinary Doctor/ Sr. Vet Doctor",
+        "7/8th",
+        "Agriculture/ Veterinary",
+        "1"
+      ],
+      [
+        "",
+        "",
+        "Livestock Health Technician/ Officer",
+        "5/6th",
+        "Agriculture/ Veterinary",
+        "2"
+      ],
+      [
+        "",
+        "",
+        "Assistant Livestock Health Technician",
+        "4th",
+        "Agriculture/ Veterinary",
+        "2"
+      ],
+      [
+        "",
+        "",
+        "Kanji House Assistant",
+        "",
+        "",
+        "4"
+      ],
+      [
+        "3.6",
+        "Social Development and NGO Coordination Section",
+        "Administrative Officer/ Sr. Admin Officer",
+        "7/8th",
+        "Admin/ General Admin",
+        "1"
+      ],
+      [
+        "",
+        "",
+        "Senior Admin Assistant/ Assistant Admin Officer",
+        "5/6th",
+        "Admin/ General Admin",
+        "1"
+      ],
+      [
+        "3.7",
+        "Employment Promotion and Safe Migration Unit",
+        "Senior Admin Assistant/ Assistant Admin Officer",
+        "5/6th",
+        "Admin/ General Admin",
+        "2"
+      ],
+      [
+        "",
+        "",
+        "Administration Assistant",
+        "4th",
+        "Admin/ General Admin",
+        "2"
+      ],
+      [
+        "",
+        "",
+        "Office Helper",
+        "",
+        "",
+        "4"
+      ],
+      [
+        "",
+        "Total",
+        "",
+        "",
+        "",
+        "42"
+      ],
+      [
+        "4",
+        "Education and Sports Division",
+        "Senior/ Education Director",
+        "9/10th",
+        "Education/ Edu Admin, Testing & Eval",
+        "1"
+      ],
+      [
+        "4.1",
+        "Education Planning and Program Section",
+        "Education Officer/ Sr. Edu Officer",
+        "7/8th",
+        "Education/ Edu Admin, Testing & Eval",
+        "1"
+      ],
+      [
+        "",
+        "",
+        "Education Assistant/ Assistant Edu Officer",
+        "5/6th",
+        "Education/ Edu Admin, Testing & Eval",
+        "1"
+      ],
+      [
+        "4.2",
+        "School Administration Section",
+        "Education Officer/ Sr. Edu Officer",
+        "7/8th",
+        "Education/ Edu Admin, Testing & Eval",
+        "1"
+      ],
+      [
+        "",
+        "",
+        "Education Assistant/ Assistant Edu Officer",
+        "5/6th",
+        "Education/ Edu Admin, Testing & Eval",
+        "1"
+      ],
+      [
+        "4.3",
+        "Examination, Youth and Sports Section",
+        "Education Officer/ Sr. Edu Officer",
+        "7/8th",
+        "Education/ Edu Admin, Testing & Eval",
+        "1"
+      ],
+      [
+        "",
+        "",
+        "Education Assistant/ Assistant Edu Officer",
+        "5/6th",
+        "Education/ Edu Admin, Testing & Eval",
+        "1"
+      ],
+      [
+        "",
+        "",
+        "Office Helper",
+        "",
+        "",
+        "1"
+      ],
+      [
+        "",
+        "Total",
+        "",
+        "",
+        "",
+        "8"
+      ],
+      [
+        "5",
+        "Urban Development and Infrastructure Division",
+        "Divisional Engineer",
+        "9/10th",
+        "Engineering Service",
+        "1"
+      ],
+      [
+        "5.1",
+        "Infrastructure Development Section",
+        "Engineer/ Senior Engineer",
+        "7/8th",
+        "Engi./ Civil",
+        "4"
+      ],
+      [
+        "",
+        "",
+        "Sub-Engineer/ Assistant Admin",
+        "5/6th",
+        "Engi./ Civil",
+        "4"
+      ],
+      [
+        "",
+        "",
+        "Drinking Water Lab Technician",
+        "4/5th",
+        "Engi./ Civil",
+        "1"
+      ],
+      [
+        "5.2",
+        "House Map Section",
+        "Engineer/ Senior Engineer",
+        "7/8th",
+        "Engi./ Civil",
+        "1"
+      ],
+      [
+        "",
+        "",
+        "Engineer/ Senior Engineer",
+        "7/8th",
+        "Engi./ Architect",
+        "1"
+      ],
+      [
+        "",
+        "",
+        "Senior Admin Assistant/ Assistant Admin Officer",
+        "5/6th",
+        "Admin/ General Admin",
+        "2"
+      ],
+      [
+        "",
+        "",
+        "Sub-Engineer/ Assistant Admin Officer",
+        "5/6th",
+        "Engi./ Civil",
+        "2"
+      ],
+      [
+        "",
+        "",
+        "Amin",
+        "4th",
+        "Engi./ Survey",
+        "2"
+      ],
+      [
+        "5.3",
+        "Quality Testing Section",
+        "Engineer/ Senior Engineer",
+        "7/8th",
+        "Engi./ Civil",
+        "1"
+      ],
+      [
+        "",
+        "",
+        "Lab Technician/ Sr. Lab Tech",
+        "5/6th",
+        "Engi./ Civil",
+        "1"
+      ],
+      [
+        "5.4",
+        "Maintenance Unit",
+        "Sub-Engineer/ Assistant Admin Officer",
+        "5/6th",
+        "Engi./ Civil",
+        "1"
+      ],
+      [
+        "5.5",
+        "Electricity Management Unit",
+        "Sub-Engineer",
+        "5th",
+        "",
+        "1"
+      ],
+      [
+        "",
+        "",
+        "Electrician/ Supervisor",
+        "",
+        "",
+        "7"
+      ],
+      [
+        "",
+        "",
+        "Electricity Assistant, Ladder Carrier",
+        "",
+        "",
+        "10"
+      ],
+      [
+        "5.6",
+        "For Ward Office",
+        "Sub-Engineer/ Assistant Admin Officer",
+        "5/6th",
+        "Engi./ Civil",
+        "10"
+      ],
+      [
+        "",
+        "",
+        "Driver",
+        "",
+        "",
+        "1"
+      ],
+      [
+        "",
+        "",
+        "Office Helper",
+        "",
+        "",
+        "4"
+      ],
+      [
+        "",
+        "Total",
+        "",
+        "",
+        "",
+        "54"
+      ],
+      [
+        "6",
+        "Health Division",
+        "Public Health Administrator/ Sr. PH Admin",
+        "9/10th",
+        "Health/ H.E./ C.N.",
+        "1"
+      ],
+      [
+        "6.1",
+        "Public Health Promotion Section",
+        "Public Health Officer/ Sr. PH Officer",
+        "7/8th",
+        "Health/ H.E.",
+        "1"
+      ],
+      [
+        "",
+        "",
+        "H.A./ P.H.I./ Sr. A.H.W. Officer",
+        "5/6/7th",
+        "Health/ H.E.",
+        "2"
+      ],
+      [
+        "",
+        "",
+        "Pharmacy Assistant",
+        "5/6/7th",
+        "Health/ Pharmacy",
+        "1"
+      ],
+      [
+        "6.2",
+        "Family Welfare and Maternal Child Health Section",
+        "Nursing Officer/ Sr. Nursing Officer",
+        "7/8th",
+        "Health/ P.H.N.",
+        "1"
+      ],
+      [
+        "",
+        "",
+        "P.H.N./ Sr. A.N.M. Officer",
+        "5/6/7th",
+        "Health/ P.H.N.",
+        "1"
+      ],
+      [
+        "6.3",
+        "Ayurveda Section",
+        "Kaviraj/ Inspector/ Inspector Officer",
+        "5/6/7th",
+        "Health/ Ayurveda",
+        "1"
+      ],
+      [
+        "",
+        "",
+        "Baidya",
+        "4/5/6th",
+        "Health/ Ayurveda",
+        "1"
+      ],
+      [
+        "",
+        "",
+        "Office Helper",
+        "",
+        "",
+        "2"
+      ],
+      [
+        "",
+        "Total",
+        "",
+        "",
+        "",
+        "11"
+      ],
+      [
+        "7",
+        "Internal Audit Section",
+        "Internal Audit Officer/ Sr. IA Officer",
+        "7/8th",
+        "Admin/ Accounting",
+        "1"
+      ],
+      [
+        "",
+        "",
+        "Internal Audit Assistant/ Assistant IA Officer",
+        "5/6th",
+        "Admin/ Accounting",
+        "1"
+      ],
+      [
+        "",
+        "Total",
+        "",
+        "",
+        "",
+        "2"
+      ],
+      [
+        "8",
+        "Ward Offices",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "8.1",
+        "For Ward Office",
+        "Administrative Officer/ Sr. Admin Officer",
+        "7/8th",
+        "Admin/ General Admin",
+        "23"
+      ],
+      [
+        "",
+        "",
+        "Senior Admin Assistant/ Assistant Admin Officer",
+        "5/6th",
+        "Admin/ General Admin",
+        "23"
+      ],
+      [
+        "",
+        "",
+        "Administration Assistant",
+        "4th",
+        "Admin/ General Admin",
+        "8"
+      ],
+      [
+        "",
+        "",
+        "Accounting Assistant",
+        "4th",
+        "Admin/ General Admin",
+        "23"
+      ],
+      [
+        "",
+        "",
+        "Office Helper",
+        "",
+        "",
+        "23"
+      ],
+      [
+        "",
+        "Total",
+        "",
+        "",
+        "",
+        "100"
+      ],
+      [
+        "8.2",
+        "Health Post 11/ Details per Health Post",
+        "Officer",
+        "6th",
+        "Health/ H.E.",
+        "11"
+      ],
+      [
+        "",
+        "",
+        "Officer",
+        "6th",
+        "Health/ C.N.",
+        "11"
+      ],
+      [
+        "",
+        "",
+        "Assistant",
+        "5th",
+        "Health/ H.E.",
+        "22"
+      ],
+      [
+        "",
+        "",
+        "Assistant",
+        "4th",
+        "Health/ C.N.",
+        "11"
+      ],
+      [
+        "",
+        "",
+        "Assistant",
+        "4th",
+        "Health/ H.E.",
+        "11"
+      ],
+      [
+        "",
+        "",
+        "Office Helper",
+        "",
+        "",
+        "11"
+      ],
+      [
+        "",
+        "",
+        "Lab Assistant",
+        "4/5/6th",
+        "Health/ M.L.T.",
+        "3"
+      ],
+      [
+        "",
+        "Total",
+        "",
+        "",
+        "",
+        "80"
+      ],
+      [
+        "8.3",
+        "Urban Health Promotion Center",
+        "Medical Officer",
+        "8th",
+        "Health/ General H.S.",
+        "1"
+      ],
+      [
+        "",
+        "",
+        "Public Health Officer",
+        "7/8th",
+        "Health/ H.E.",
+        "1"
+      ],
+      [
+        "",
+        "",
+        "H.A.",
+        "5/6/7th",
+        "Health/ H.E.",
+        "1"
+      ],
+      [
+        "",
+        "",
+        "Staff Nurse",
+        "5/6/7th",
+        "Health/ C.N.",
+        "1"
+      ],
+      [
+        "",
+        "",
+        "A.H.W.",
+        "4/5/6th",
+        "Health/ H.E.",
+        "1"
+      ],
+      [
+        "",
+        "",
+        "A.N.M.",
+        "4/5/6th",
+        "Health/ C.N.",
+        "1"
+      ],
+      [
+        "",
+        "",
+        "Lab",
+        "4/5/6th",
+        "Health/ M.L.T.",
+        "1"
+      ],
+      [
+        "",
+        "",
+        "Kaviraj",
+        "5/6/7th",
+        "Health/ Ayurveda",
+        "1"
+      ],
+      [
+        "",
+        "",
+        "Therapist",
+        "",
+        "Health/ Physiotherapy",
+        "1"
+      ],
+      [
+        "",
+        "",
+        "Office Helper",
+        "",
+        "",
+        "1"
+      ],
+      [
+        "",
+        "",
+        "Abhyangakarta",
+        "",
+        "",
+        "1"
+      ],
+      [
+        "",
+        "Total",
+        "",
+        "",
+        "",
+        "11"
+      ],
+      [
+        "8.4",
+        "Urban Health Center 11",
+        "H.A./ H.A. Assistant/ Sr. H.A. Officer",
+        "4/5/6th",
+        "Health/ H.E.",
+        "12"
+      ],
+      [
+        "",
+        "",
+        "A.N.M.",
+        "4/5/6th",
+        "Health/ P.H.N.",
+        "12"
+      ],
+      [
+        "",
+        "",
+        "Office Helper",
+        "",
+        "",
+        "12"
+      ],
+      [
+        "",
+        "Total",
+        "",
+        "",
+        "",
+        "36"
+      ],
+      [
+        "8.5",
+        "Ayurveda Dispensary",
+        "Kaviraj/ Inspector/ Sr. Kaviraj Inspector",
+        "5/6/7th",
+        "Health/ Ayurveda",
+        "3"
+      ],
+      [
+        "",
+        "",
+        "Baidya",
+        "4/5/6th",
+        "Health/ Ayurveda",
+        "3"
+      ],
+      [
+        "",
+        "",
+        "Office Helper/ Medicine Crusher",
+        "",
+        "",
+        "6"
+      ],
+      [
+        "",
+        "Total",
+        "",
+        "",
+        "",
+        "12"
+      ],
+      [
+        "",
+        "Grand Total",
+        "",
+        "",
+        "",
+        "722"
+      ]
+    ],
+    "source": "Source: Municipal Executive Office"
+  }
 }

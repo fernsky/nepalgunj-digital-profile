@@ -1,5 +1,32 @@
 {
-  "title": "Types of Available Services",
   "sectionNumber": "8.2.1",
-  "content": ""
+  "title": "Types of Available Services",
+  "type": "multi-block",
+  "blocks": [
+    {
+      "type": "list",
+      "content": [
+        "Disability ID card distribution and update,",
+        "Free treatment recommendation,",
+        "Agriculture group registration, renewal, and cancellation,",
+        "Distribution of agricultural machinery, medicine, veterinary treatment, and equipment,",
+        "Crop and livestock insurance,",
+        "Private firm registration, renewal, and cancellation,",
+        "Business registration, renewal, and cancellation,",
+        "Cooperative registration and cancellation,",
+        "Organization registration and cancellation,",
+        "Employment counseling,",
+        "Personal incident registration,",
+        "Registration and renewal of new social security allowance beneficiaries,",
+        "Distribution and renewal of Class 'D' construction entrepreneur license,",
+        "House construction permit,",
+        "House map approval and documentation,",
+        "Dispute resolution and mediation,",
+        "Scholarship recommendation,",
+        "Permission for school operation and additional classrooms,",
+        "Training operation,",
+        "Various recommendation and certification tasks from sub-metropolitan and ward offices, etc."
+      ]
+    }
+  ]
 }
