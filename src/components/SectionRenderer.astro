@@ -1,5 +1,6 @@
 ---
 import InteractiveChart from "./InteractiveChart.astro";
+import { toNepaliDigits } from "../i18n/utils";
 
 interface Props {
   content: any;
@@ -31,7 +32,7 @@ if (content?.type === "multi-block" && content.blocks) {
   {content ? (
     <div class="prose prose-invert max-w-none">
       <h2 class="text-3xl font-extrabold mb-8" style="color:var(--text-heading);">
-        {content.sectionNumber && <span>{content.sectionNumber} </span>}
+        {content.sectionNumber && <span>{lang === "ne" ? toNepaliDigits(content.sectionNumber) : content.sectionNumber} </span>}
         {content.title}
       </h2>
 
@@ -309,7 +310,7 @@ if (content?.type === "multi-block" && content.blocks) {
             {content.stages.map((stage: any) => (
               <div class="p-8 rounded-2xl" style="background:var(--card-bg);border:1px solid var(--card-border);">
                 <h3 class="text-xl font-bold mb-4" style="color:var(--text-heading);">
-                  {stage.sectionNumber && <span class="mr-2 opacity-50 font-mono text-base">{stage.sectionNumber}</span>}
+                  {stage.sectionNumber && <span class="mr-2 opacity-50 font-mono text-base">{lang === "ne" ? toNepaliDigits(stage.sectionNumber) : stage.sectionNumber}</span>}
                   {stage.title}
                 </h3>
                 <p class="text-lg leading-relaxed text-justify" style="color:var(--text-body);">{stage.content}</p>

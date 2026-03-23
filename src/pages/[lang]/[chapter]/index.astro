@@ -1,7 +1,7 @@
 ---
 import Layout from "../../../layouts/Layout.astro";
 import { type Lang, chapters } from "../../../i18n/translations";
-import { t, formatSectionId } from "../../../i18n/utils";
+import { t, formatSectionId, toNepaliDigits } from "../../../i18n/utils";
 import SectionRenderer from "../../../components/SectionRenderer.astro";
 import Chapter4Renderer from "../../../components/chapters/4/Chapter4Renderer.astro";
 
@@ -40,7 +40,7 @@ function getSectionContent(slug: string) {
       <section class="relative py-12 mb-12 overflow-hidden rounded-3xl" style="background:linear-gradient(135deg, rgba(29,78,216,0.08) 0%, transparent 50%); border: 1px solid rgba(29,78,216,0.1);">
         <div class="relative z-10 px-8">
           <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full mb-4" style="background:rgba(29,78,216,0.15);border:1px solid rgba(29,78,216,0.3);">
-            <span class="text-primary-400 text-sm font-medium">{t(lang, "chapter.label")} {chapter.num}</span>
+            <span class="text-primary-400 text-sm font-medium">{t(lang, "chapter.label")} {lang === "ne" ? toNepaliDigits(chapter.num) : chapter.num}</span>
           </div>
           <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-4" style="color:var(--text-heading);">
             {chapter.title[lang]}
@@ -79,12 +79,12 @@ function getSectionContent(slug: string) {
       <div class="flex justify-between items-center pt-12 mt-20" style={`border-top:1px solid var(--border);`}>
         {prevChapter ? (
           <a href={`/${lang}/${prevChapter.slug}`} class="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-bold no-underline transition-all hover:-translate-x-1" style="color:var(--text-body);background:var(--card-bg);border:1px solid var(--card-border);">
-            ← {t(lang, "chapter.label")} {prevChapter.num}
+            ← {t(lang, "chapter.label")} {lang === "ne" ? toNepaliDigits(prevChapter.num) : prevChapter.num}
           </a>
         ) : <div></div>}
         {nextChapter ? (
           <a href={`/${lang}/${nextChapter.slug}`} class="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-bold no-underline transition-all hover:translate-x-1" style="color:var(--text-body);background:var(--card-bg);border:1px solid var(--card-border);">
-            {t(lang, "chapter.label")} {nextChapter.num} →
+            {t(lang, "chapter.label")} {lang === "ne" ? toNepaliDigits(nextChapter.num) : nextChapter.num} →
           </a>
         ) : (
           <a href={`/${lang}/annexes`} class="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-bold no-underline transition-all hover:translate-x-1" style="color:var(--text-body);background:var(--card-bg);border:1px solid var(--card-border);">
