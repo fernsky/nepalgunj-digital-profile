@@ -9,6 +9,8 @@
     },
     {
       "type": "image",
+      "src": "/5/maharjan bahumukhi.png",
+      "alt": "Mahendra Multiple Campus",
       "caption": "Mahendra Multiple Campus"
     },
     {
@@ -27,6 +29,8 @@
     },
     {
       "type": "image",
+      "src": "/5/aadarsha_secondary_school.png",
+      "alt": "Adarsh Higher Secondary School",
       "caption": "Adarsh Higher Secondary School"
     },
     {
@@ -35,14 +39,20 @@
     },
     {
       "type": "image",
+      "src": "/5/maharjan_bahumukhi2.png",
+      "alt": "Adarsh Secondary School (Building-2)",
       "caption": "Adarsh Secondary School (Building-2)"
     },
     {
       "type": "image",
+      "src": "/5/alphyen_management_college.png",
+      "alt": "Alpine Management College",
       "caption": "Alpine Management College"
     },
     {
       "type": "image",
+      "src": "/5/map1.png",
+      "alt": "Map No. 7: Education Sector Map of the Sub-Metropolitan City",
       "caption": "Map No. 7: Education Sector Map of the Sub-Metropolitan City"
     }
   ]

@@ -53,7 +53,7 @@ if (content?.type === "multi-block" && content.blocks) {
             {content.blocks.map((block: any, idx: number) => (
               <div class="space-y-6">
                 {/* Paragraphs in block (supports both string and array) */}
-                {(block.type === "paragraph" || block.content) && (
+                {(block.type === "paragraph" || (!block.type && typeof block.content === 'string')) && block.content && (
                    <p class="text-lg leading-relaxed text-justify m-0" style="color:var(--text-body);" set:html={block.content}></p>
                 )}
                 {block.paragraphs && (
