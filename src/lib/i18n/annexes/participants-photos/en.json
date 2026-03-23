@@ -1,0 +1,38 @@
+{
+  "annexNumber": "8",
+  "type": "multi-block",
+  "blocks": [
+    {
+      "type": "image",
+      "image": {
+        "src": "/annexes/img1.png",
+        "alt": "Participants in the discussion",
+        "caption": "Participants in the Discussion - 1"
+      }
+    },
+    {
+      "type": "image",
+      "image": {
+        "src": "/annexes/img2.png",
+        "alt": "Participants in the discussion",
+        "caption": "Participants in the Discussion - 2"
+      }
+    },
+    {
+      "type": "image",
+      "image": {
+        "src": "/annexes/img3.png",
+        "alt": "Participants in the discussion",
+        "caption": "Participants in the Discussion - 3"
+      }
+    },
+    {
+      "type": "image",
+      "image": {
+        "src": "/annexes/img4.png",
+        "alt": "Participants in the discussion",
+        "caption": "Participants in the Discussion - 4"
+      }
+    }
+  ]
+}
