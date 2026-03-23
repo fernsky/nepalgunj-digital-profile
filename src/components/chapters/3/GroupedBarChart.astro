@@ -1,5 +1,5 @@
 ---
-import InteractiveChart from "../InteractiveChart.astro";
+import InteractiveChart from "../../InteractiveChart.astro";
 interface Props {
     content: {
         caption?: string;
@@ -25,4 +25,5 @@ const chartId = content?.id ?? "grouped-bar-chart-" + Math.random().toString(36)
     colors: colors,
     title: caption
   }}
+  id={chartId}
 />

@@ -33,33 +33,66 @@ const { type, data, config, id } = Astro.props;
     )
   }
 
-  <div id={`chart-${id}`} class="w-full aspect-[16/9] min-h-[400px]"></div>
+  <div id={`chart-${id}`} class="w-full h-auto min-h-[300px]"></div>
 
-  <!-- Legend -->
-  <div class="mt-8 flex flex-wrap justify-center gap-6">
-    {
-      (config.labels.length > 1 || (config.labels.length === 1 && config.labels[0] !== "value")) &&
-      config.labels.map((label, idx) => (
-        <div class="flex items-center gap-2">
-          <div
-            class="w-4 h-4 rounded-full shadow-inner"
-            style={`background: ${config.colors?.[idx] || "#ccc"}`}
-          />
-          <span class="text-sm font-medium" style="color: var(--text-body);">
-            {label}
-          </span>
-        </div>
-      ))
-    }
+  <div class="mt-4 flex flex-col items-center">
+    <!-- Interaction Hint for Mobile -->
+    <p class="text-[10px] uppercase tracking-widest font-bold opacity-30 mb-4 block sm:hidden">
+      Tap bars or slices to view details
+    </p>
+
+    <!-- Legend -->
+    <div class="flex flex-wrap justify-center gap-6">
+      {
+        (() => {
+          const isPie = type === "pie" || type === "donut";
+          // For pie charts, if labels is just ["value"], we show categories as legends
+          const useCategoriesAsLegend = isPie;
+          
+          const legendLabels = useCategoriesAsLegend 
+              ? data.map(d => (config.xKey ? d[config.xKey] : null) || d.label || d.category || d.type || d.status || "Unknown")
+              : config.labels;
+              
+          const legendColors = (useCategoriesAsLegend
+              ? (config.colors || ["#34d399", "#f87171", "#60a5fa", "#fbbf24", "#a78bfa", "#f472b6", "#fb7185", "#2dd4bf"])
+              : config.colors) || ["#3b82f6", "#ef4444", "#10b981", "#f59e0b", "#8b5cf6", "#ec4899"];
+          
+          const showLegend = useCategoriesAsLegend ? true : (config.labels.length > 1 || (config.labels.length === 1 && config.labels[0] !== "value"));
+          
+          if (!showLegend) return null;
+          
+          return legendLabels.map((label, idx) => (
+            <div class="flex items-center gap-2 transition-transform hover:scale-105 duration-300">
+              <div
+                class="w-3.5 h-3.5 rounded-full shadow-sm ring-2 ring-white/10"
+                style={`background: ${legendColors[idx % legendColors.length]}`}
+              />
+              <span class="text-xs font-semibold tracking-tight" style="color: var(--text-body);">
+                {label}
+              </span>
+            </div>
+          ));
+        })()
+      }
+    </div>
   </div>
 </div>
 
 <script is:inline define:vars={{ type, data, config, id }}>
   (async () => {
+    const container = document.getElementById(`chart-${id}`);
+    if (!container) return;
+
     // Load D3 from CDN if not bundled
     const containerId = `#chart-${id}`;
-    const container = document.querySelector(containerId);
-    if (!container) return;
+    if (typeof d3 === "undefined") {
+        await new Promise((resolve) => {
+          const script = document.createElement("script");
+          script.src = "https://cdn.jsdelivr.net/npm/d3@7";
+          script.onload = resolve;
+          document.head.appendChild(script);
+        });
+    }
 
     // Use Intersection Observer to trigger rendering when visible
     const observer = new IntersectionObserver((entries) => {
@@ -85,19 +118,19 @@ const { type, data, config, id } = Astro.props;
 
     const containerWidth = container.clientWidth || 800;
     const isMobile = window.innerWidth < 768;
-    const isHorizontal = type === "bar" && (data.length > 12 || (isMobile && data.length > 8));
+    const isHorizontal = type === "bar" && isMobile && data.length > 24;
 
     const margin = { 
         top: 40, 
         right: isHorizontal ? 40 : (isMobile ? 30 : 40), 
         bottom: isHorizontal ? 100 : (isMobile ? 120 : 160), 
-        left: isHorizontal ? (isMobile ? 80 : 140) : (isMobile ? 60 : 100) 
+        left: isHorizontal ? (isMobile ? 100 : 140) : (isMobile ? 60 : 100) 
     };
 
     const width = containerWidth - margin.left - margin.right;
     const height = isHorizontal 
         ? Math.max(300, data.length * 40) 
-        : (isMobile ? 300 : 400);
+        : (isMobile ? (data.length > 10 ? 400 : 300) : 450);
 
     const totalHeight = height + margin.top + margin.bottom;
 
@@ -140,18 +173,20 @@ const { type, data, config, id } = Astro.props;
       .append("div")
       .attr("class", "chart-tooltip")
       .style("position", "absolute")
-      .style("background", "rgba(15, 23, 42, 0.9)")
+      .style("background", "rgba(15, 23, 42, 0.95)")
       .style("color", "white")
-      .style("padding", "8px 12px")
-      .style("border-radius", "8px")
-      .style("font-size", "12px")
+      .style("padding", "10px 14px")
+      .style("border-radius", "10px")
+      .style("font-size", "13px")
       .style("pointer-events", "none")
       .style("opacity", 0)
       .style("z-index", 100)
-      .style("backdrop-filter", "blur(4px)")
-      .style("border", "1px solid rgba(255,255,255,0.1)");
+      .style("backdrop-filter", "blur(8px)")
+      .style("border", "1px solid rgba(255,255,255,0.15)")
+      .style("box-shadow", "0 10px 25px -5px rgba(0, 0, 0, 0.4)");
 
     function wrapText(text, width) {
+      const isRTL = document.dir === 'rtl' || (typeof lang !== 'undefined' && lang === 'ne');
       text.each(function() {
         var text = d3.select(this),
             words = text.text().split(/\s+/).reverse(),
@@ -176,108 +211,251 @@ const { type, data, config, id } = Astro.props;
     }
 
     if (type === "bar") {
-      const x0 = d3
-        .scaleBand()
-        .domain(data.map((d) => d[config.xKey]))
-        .rangeRound([0, width])
-        .paddingInner(0.2);
+      if (isHorizontal) {
+        const y0 = d3
+          .scaleBand()
+          .domain(data.map((d) => d[config.xKey]))
+          .rangeRound([0, height])
+          .paddingInner(0.2);
 
-      const x1 = d3
-        .scaleBand()
-        .domain(config.labels)
-        .rangeRound([0, x0.bandwidth()])
-        .padding(0.1);
+        const y1 = d3
+          .scaleBand()
+          .domain(config.labels)
+          .rangeRound([0, y0.bandwidth()])
+          .padding(0.1);
 
-      const y = d3
-        .scaleLinear()
-        .domain([
-          0,
-          d3.max(data, (d) => d3.max(config.labels, (label) => d[label])),
-        ])
-        .nice()
-        .rangeRound([height, 0]);
+        const x = d3
+          .scaleLinear()
+          .domain([
+            0,
+            d3.max(data, (d) => d3.max(config.labels, (label) => d[label])),
+          ])
+          .nice()
+          .rangeRound([0, width]);
 
-      // Axes
-      const xAxis = svg
-        .append("g")
-        .attr("transform", `translate(0,${height})`)
-        .call(d3.axisBottom(x0))
-        .attr("font-size", "14px")
-        .attr("font-weight", "600");
+        // Axes
+        svg
+          .append("g")
+          .attr("transform", `translate(0,${height})`)
+          .call(d3.axisBottom(x).ticks(5, "s"))
+          .attr("font-size", "14px")
+          .selectAll("text")
+          .style("fill", "var(--text-body)");
 
-      xAxis.selectAll("text")
-        .style("fill", "var(--text-body)")
-        .call(wrapText, x0.bandwidth()) // Apply wrapText to x-axis labels
-        .style("text-anchor", "middle") // Center the wrapped text
-        .attr("dy", "0.5em"); // Adjust vertical position
+        const yAxis = svg
+          .append("g")
+          .call(d3.axisLeft(y0))
+          .attr("font-size", isMobile ? "12px" : "14px")
+          .attr("font-weight", "600");
 
-      svg
-        .append("g")
-        .call(d3.axisLeft(y).ticks(null, "s"))
-        .attr("font-size", "14px")
-        .selectAll("text")
-        .style("fill", "var(--text-body)");
+        yAxis.selectAll("text")
+          .style("fill", "var(--text-body)")
+          .call(wrapText, margin.left - 20)
+          .style("text-anchor", "end");
 
-      // Grid lines
-      svg
-        .append("g")
-        .attr("class", "grid")
-        .call(d3.axisLeft(y).tickSize(-width).tickFormat(""))
-        .style("stroke-opacity", 0.1)
-        .style("stroke-dasharray", "3,3");
+        // Grid lines
+        svg
+          .append("g")
+          .attr("class", "grid")
+          .attr("transform", `translate(0,${height})`)
+          .call(d3.axisBottom(x).tickSize(-height).tickFormat(""))
+          .style("stroke-opacity", 0.1)
+          .style("stroke-dasharray", "3,3");
 
-      // Bars
-      const groups = svg
-        .selectAll(".group")
-        .data(data)
-        .enter()
-        .append("g")
-        .attr("transform", (d) => `translate(${x0(d[config.xKey])},0)`);
+        // Bars
+        const groups = svg
+          .selectAll(".group")
+          .data(data)
+          .enter()
+          .append("g")
+          .attr("transform", (d) => `translate(0,${y0(d[config.xKey])})`);
 
-      groups
-        .selectAll("rect")
-        .data((d, i) =>
-          config.labels.map((label) => ({
-            key: label,
-            value: d[label],
-            groupIndex: i,
-          })),
-        )
-        .enter()
-        .append("rect")
-        .attr("x", (d) => x1(d.key))
-        .attr("y", height)
-        .attr("width", x1.bandwidth())
-        .attr("height", 0)
-        .attr("rx", 4)
-        .attr("fill", (d, i) => {
-          // If only one label, use the group index for colors to get different colors per bar
-          const colorIdx = config.labels.length === 1 ? d.groupIndex : i;
-          return `url(#grad-${id}-${colorIdx % (config.colors?.length || 10)})`;
-        })
-        .transition()
-        .duration(1000)
-        .delay((d, i) => i * 100)
-        .attr("y", (d) => {
-          const barH = Math.max(5, height - y(d.value));
-          return height - barH;
-        })
-        .attr("height", (d) => Math.max(5, height - y(d.value))); // Ensuring visible minimum height
+        groups
+          .selectAll("rect")
+          .data((d, i) =>
+            config.labels.map((label) => ({
+              key: label,
+              value: d[label],
+              groupIndex: i,
+            })),
+          )
+          .enter()
+          .append("rect")
+          .attr("y", (d) => y1(d.key))
+          .attr("x", 0)
+          .attr("height", y1.bandwidth())
+          .attr("width", 0)
+          .attr("rx", 4)
+          .attr("fill", (d, i) => {
+            const colorIdx = config.labels.length === 1 ? d.groupIndex : i;
+            return `url(#grad-${id}-${colorIdx % (config.colors?.length || 10)})`;
+          })
+          .transition()
+          .duration(1000)
+          .delay((d, i) => i * 100)
+          .attr("width", (d) => Math.max(2, x(d.value)));
 
-      groups
-        .selectAll("rect")
-        .on("mouseover", function (event, d) {
-          d3.select(this).attr("filter", "brightness(1.2)");
-          tooltip.transition().duration(200).style("opacity", 1);
-          const label = config.labels.length === 1 ? data[d.groupIndex][config.xKey] : d.key;
-          tooltip.html(`<strong>${label}</strong>: ${d.value.toLocaleString()}`)
-            .style("left", event.pageX + 10 + "px")
-            .style("top", event.pageY - 28 + "px");
-        })
-        .on("mouseout", function () {
-          d3.select(this).attr("filter", null);
-          tooltip.transition().duration(500).style("opacity", 0);
-        });
+        groups
+          .selectAll("rect")
+          .on("mouseover", function (event, d) {
+            d3.select(this).attr("filter", "brightness(1.2)");
+            tooltip.transition().duration(200).style("opacity", 1);
+            const label = config.labels.length === 1 ? data[d.groupIndex][config.xKey] : d.key;
+            tooltip.html(`<strong>${label}</strong>: ${d.value.toLocaleString()}`)
+              .style("left", event.pageX + 10 + "px")
+              .style("top", event.pageY - 28 + "px");
+          })
+          .on("click", function(event, d) {
+            if (isMobile) {
+               d3.select(this).attr("filter", "brightness(1.2)");
+               tooltip.transition().duration(200).style("opacity", 1);
+               const label = config.labels.length === 1 ? data[d.groupIndex][config.xKey] : d.key;
+               tooltip.html(`<strong>${label}</strong>: ${d.value.toLocaleString()}`)
+                 .style("left", event.pageX + 10 + "px")
+                 .style("top", event.pageY - 28 + "px");
+               
+               // Auto-hide after 3 seconds on mobile
+               setTimeout(() => {
+                 tooltip.transition().duration(500).style("opacity", 0);
+                 d3.select(this).attr("filter", null);
+               }, 3000);
+            }
+          })
+          .on("mouseout", function () {
+            if (!isMobile) {
+              d3.select(this).attr("filter", null);
+              tooltip.transition().duration(500).style("opacity", 0);
+            }
+          });
+
+      } else {
+        const x0 = d3
+          .scaleBand()
+          .domain(data.map((d) => d[config.xKey]))
+          .rangeRound([0, width])
+          .paddingInner(0.2);
+
+        const x1 = d3
+          .scaleBand()
+          .domain(config.labels)
+          .rangeRound([0, x0.bandwidth()])
+          .padding(0.1);
+
+        const y = d3
+          .scaleLinear()
+          .domain([
+            0,
+            d3.max(data, (d) => d3.max(config.labels, (label) => d[label])),
+          ])
+          .nice()
+          .rangeRound([height, 0]);
+
+        // Axes
+        const xAxis = svg
+          .append("g")
+          .attr("transform", `translate(0,${height})`)
+          .call(d3.axisBottom(x0))
+          .attr("font-size", isMobile ? "12px" : "14px")
+          .attr("font-weight", "600");
+
+        const needsRotation = x0.bandwidth() < 60 || data.length > 6;
+        
+        xAxis.selectAll("text")
+          .style("fill", "var(--text-body)")
+          .style("text-anchor", needsRotation ? "end" : "middle")
+          .attr("transform", needsRotation ? "rotate(-45)" : "")
+          .attr("dx", needsRotation ? "-.8em" : "0")
+          .attr("dy", needsRotation ? ".15em" : ".5em");
+
+        if (!needsRotation) {
+           xAxis.selectAll("text").call(wrapText, x0.bandwidth());
+        }
+
+        svg
+          .append("g")
+          .call(d3.axisLeft(y).ticks(null, "s"))
+          .attr("font-size", "14px")
+          .selectAll("text")
+          .style("fill", "var(--text-body)");
+
+        // Grid lines
+        svg
+          .append("g")
+          .attr("class", "grid")
+          .call(d3.axisLeft(y).tickSize(-width).tickFormat(""))
+          .style("stroke-opacity", 0.1)
+          .style("stroke-dasharray", "3,3");
+
+        // Bars
+        const groups = svg
+          .selectAll(".group")
+          .data(data)
+          .enter()
+          .append("g")
+          .attr("transform", (d) => `translate(${x0(d[config.xKey])},0)`);
+
+        groups
+          .selectAll("rect")
+          .data((d, i) =>
+            config.labels.map((label) => ({
+              key: label,
+              value: d[label],
+              groupIndex: i,
+            })),
+          )
+          .enter()
+          .append("rect")
+          .attr("x", (d) => x1(d.key))
+          .attr("y", height)
+          .attr("width", x1.bandwidth())
+          .attr("height", 0)
+          .attr("rx", 4)
+          .attr("fill", (d, i) => {
+            const colorIdx = config.labels.length === 1 ? d.groupIndex : i;
+            return `url(#grad-${id}-${colorIdx % (config.colors?.length || 10)})`;
+          })
+          .transition()
+          .duration(1000)
+          .delay((d, i) => i * 100)
+          .attr("y", (d) => {
+            const barH = Math.max(2, height - y(d.value));
+            return height - barH;
+          })
+          .attr("height", (d) => Math.max(2, height - y(d.value)));
+
+        groups
+          .selectAll("rect")
+          .on("mouseover", function (event, d) {
+            d3.select(this).attr("filter", "brightness(1.2)");
+            tooltip.transition().duration(200).style("opacity", 1);
+            const label = config.labels.length === 1 ? data[d.groupIndex][config.xKey] : d.key;
+            tooltip.html(`<strong>${label}</strong>: ${d.value.toLocaleString()}`)
+              .style("left", event.pageX + 10 + "px")
+              .style("top", event.pageY - 28 + "px");
+          })
+          .on("click", function(event, d) {
+            if (isMobile) {
+               d3.select(this).attr("filter", "brightness(1.2)");
+               tooltip.transition().duration(200).style("opacity", 1);
+               const label = config.labels.length === 1 ? data[d.groupIndex][config.xKey] : d.key;
+               tooltip.html(`<strong>${label}</strong>: ${d.value.toLocaleString()}`)
+                 .style("left", event.pageX + 10 + "px")
+                 .style("top", event.pageY - 28 + "px");
+               
+               // Auto-hide after 3 seconds on mobile
+               setTimeout(() => {
+                 tooltip.transition().duration(500).style("opacity", 0);
+                 d3.select(this).attr("filter", null);
+               }, 3000);
+            }
+          })
+          .on("mouseout", function () {
+            if (!isMobile) {
+              d3.select(this).attr("filter", null);
+              tooltip.transition().duration(500).style("opacity", 0);
+            }
+          });
+      }
     } else if (type === "pie" || type === "donut") {
       const radius = Math.min(width, height) / 2;
       const total = d3.sum(data, (d) => d.value);
@@ -343,13 +521,42 @@ const { type, data, config, id } = Astro.props;
             .duration(200)
             .style("opacity", 1);
         })
+        .on("click", function(event, d) {
+          if (isMobile) {
+            d3.select(this)
+              .transition()
+              .duration(200)
+              .attr("transform", function (d) {
+                const dist = 12;
+                const angle = (d.startAngle + d.endAngle) / 2;
+                const x = Math.sin(angle) * dist;
+                const y = -Math.cos(angle) * dist;
+                return `translate(${x},${y})`;
+              })
+              .style("filter", "brightness(1.1) drop-shadow(0px 8px 12px rgba(0,0,0,0.2))");
+
+            const percentage = ((d.data.value / total) * 100).toFixed(1);
+            tooltip
+              .html(`<strong>${getLabel(d.data)}</strong><br/>Count: ${d.data.value.toLocaleString()}<br/>Percentage: ${percentage}%`)
+              .style("left", event.pageX + 10 + "px")
+              .style("top", event.pageY - 28 + "px")
+              .transition().duration(200).style("opacity", 1);
+
+            setTimeout(() => {
+              d3.select(this).transition().duration(300).attr("transform", "translate(0,0)").style("filter", "drop-shadow(0px 4px 6px rgba(0,0,0,0.1))");
+              tooltip.transition().duration(500).style("opacity", 0);
+            }, 3000);
+          }
+        })
         .on("mouseout", function () {
-          d3.select(this)
-            .transition()
-            .duration(300)
-            .attr("transform", "translate(0,0)")
-            .style("filter", "drop-shadow(0px 4px 6px rgba(0,0,0,0.1))");
-          tooltip.transition().duration(500).style("opacity", 0);
+          if (!isMobile) {
+            d3.select(this)
+              .transition()
+              .duration(300)
+              .attr("transform", "translate(0,0)")
+              .style("filter", "drop-shadow(0px 4px 6px rgba(0,0,0,0.1))");
+            tooltip.transition().duration(500).style("opacity", 0);
+          }
         })
         .transition()
         .duration(1500)
@@ -385,35 +592,6 @@ const { type, data, config, id } = Astro.props;
         .duration(500)
         .style("opacity", 1);
     }
-      // --- LEGEND ---
-      if (config.labels.length > 1) {
-        const legend = svg.append("g")
-          .attr("class", "chart-legend")
-          .attr("transform", `translate(0, ${height + (isHorizontal ? 40 : 80)})`);
-        
-        let lx = 0;
-        let ly = 0;
-        const spacing = 140;
-        
-        config.labels.forEach((label, i) => {
-          if (lx + spacing > width) {
-            lx = 0;
-            ly += 25;
-          }
-          
-          const g = legend.append("g").attr("transform", `translate(${lx}, ${ly})`);
-          g.append("rect").attr("width", 12).attr("height", 12).attr("rx", 2)
-            .attr("fill", config.colors?.[i] || "#3b82f6");
-          g.append("text").attr("x", 20).attr("y", 10).text(label)
-            .style("font-size", "12px").style("fill", "var(--text-body)");
-            
-          lx += spacing;
-        });
-
-        // Center the legend
-        const actualWidth = Math.min(width, config.labels.length * spacing);
-        legend.attr("transform", `translate(${(width - Math.min(width, lx || spacing))/2}, ${height + (isHorizontal ? 40 : 80)})`);
-      }
     }
   })();
 </script>

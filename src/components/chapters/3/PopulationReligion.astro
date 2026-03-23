@@ -17,8 +17,9 @@ const caption = content?.caption ?? "Population by Religion";
   data={barChartData}
   config={{
     xKey: "religion",
-    labels: ["population"],
+    labels: Object.keys(barChartData[0] || {}).filter(k => k !== 'religion'),
     title: caption,
-    colors: ["#f59e0b"]
+    colors: ["#3b82f6", "#f43f5e"]
   }}
+  id="population-religion"
 />
