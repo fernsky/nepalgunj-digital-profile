@@ -118,19 +118,19 @@ const { type, data, config, id } = Astro.props;
 
     const containerWidth = container.clientWidth || 800;
     const isMobile = window.innerWidth < 768;
-    const isHorizontal = type === "bar" && isMobile && data.length > 24;
+    const isHorizontal = type === "bar" && isMobile && data.length > 12;
 
     const margin = { 
         top: 40, 
         right: isHorizontal ? 40 : (isMobile ? 30 : 40), 
-        bottom: isHorizontal ? 100 : (isMobile ? 120 : 160), 
+        bottom: isHorizontal ? 100 : (isMobile ? 120 : 180), 
         left: isHorizontal ? (isMobile ? 100 : 140) : (isMobile ? 60 : 100) 
     };
 
     const width = containerWidth - margin.left - margin.right;
     const height = isHorizontal 
         ? Math.max(300, data.length * 40) 
-        : (isMobile ? (data.length > 10 ? 400 : 300) : 450);
+        : (isMobile ? (data.length > 8 ? 400 : 300) : 450);
 
     const totalHeight = height + margin.top + margin.bottom;
 
