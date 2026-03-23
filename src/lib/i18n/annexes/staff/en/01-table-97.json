@@ -1,634 +1,95 @@
 {
   "type": "table",
   "data": {
-    "title": "तालिका नं. ९७: लोकसेवा आयोगबाट नियुक्त भएका स्थायी कर्मचारीहरूको विवरण",
+    "title": "Table No. 97: Details of Permanent Employees appointed through the Public Service Commission",
     "headers": [
-      "क्र.स.",
-      "नाम, थर",
-      "क.सं.नं.",
-      "पद",
-      "सेवा/समूह",
-      "श्रेणी/तह"
+      "S.N.",
+      "Name, Surname",
+      "Emp. ID No.",
+      "Position",
+      "Service/Group",
+      "Grade/Level"
     ],
     "rows": [
-      [
-        "१",
-        "श्री केदार प्रसाद अधिकारी",
-        "२३८५७५",
-        "प्रशासकीय अधिकृत",
-        "प्रशासन/सा.प्र.",
-        "अधिकृत सातौं"
-      ],
-      [
-        "२",
-        "श्री कमल चौधरी",
-        "२३८५५९",
-        "प्रशासकीय अधिकृत",
-        "प्रशासन/सा.प्र.",
-        "अधिकृत सातौं"
-      ],
-      [
-        "३",
-        "श्री नेवलाल घर्ति",
-        "२३८१४८",
-        "प्रशासकीय अधिकृत",
-        "प्रशासन/सा.प्र.",
-        "अधिकृत सातौं"
-      ],
-      [
-        "४",
-        "श्री सुविन्द्र प्रसाद कंडेल",
-        "२३८५६९",
-        "प्रशासकीय अधिकृत",
-        "प्रशासन/सा.प्र.",
-        "अधिकृत सातौं"
-      ],
-      [
-        "५",
-        "श्री रविणकुमार राना",
-        "२३८५६३",
-        "प्रशासकीय अधिकृत",
-        "प्रशासन/सा.प्र.",
-        "अधिकृत सातौं"
-      ],
-      [
-        "६",
-        "श्री तेजेन्द्र रोकाया",
-        "२३८५९६",
-        "प्रशासकीय अधिकृत",
-        "प्रशासन/सा.प्र.",
-        "अधिकृत सातौं"
-      ],
-      [
-        "७",
-        "श्री सूर्य नेपाली",
-        "२३८५७९",
-        "प्रशासकीय अधिकृत",
-        "प्रशासन/सा.प्र.",
-        "अधिकृत सातौं"
-      ],
-      [
-        "८",
-        "श्री तेजबहादुर सिंह",
-        "२३८०४३",
-        "प्रशासकीय अधिकृत",
-        "प्रशासन/सा.प्र.",
-        "अधिकृत सातौं"
-      ],
-      [
-        "९",
-        "श्री मदनबहादुर रावत",
-        "२३८०४८",
-        "प्रशासकीय अधिकृत",
-        "प्रशासन/सा.प्र.",
-        "अधिकृत सातौं"
-      ],
-      [
-        "१०",
-        "श्री सुभाष पौडेल",
-        "२३८०७१",
-        "प्रशासकीय अधिकृत",
-        "प्रशासन/सा.प्र.",
-        "अधिकृत सातौं"
-      ],
-      [
-        "११",
-        "श्री शान्ती के.सी.",
-        "२३८०४८",
-        "प्रशासकीय अधिकृत",
-        "प्रशासन/सा.प्र.",
-        "अधिकृत सातौं"
-      ],
-      [
-        "१२",
-        "श्री उपमन्यु त्रिपाठी",
-        "२३८०७०",
-        "प्रशासकीय अधिकृत",
-        "प्रशासन/सा.प्र.",
-        "अधिकृत सातौं"
-      ],
-      [
-        "१३",
-        "श्री इन्द्रबहादुर के.सी.",
-        "२३८०७१",
-        "प्रशासकीय अधिकृत",
-        "प्रशासन/सा.प्र.",
-        "अधिकृत सातौं"
-      ],
-      [
-        "१४",
-        "श्री सविता तिवारी",
-        "२३८०५४",
-        "प्रशासकीय अधिकृत",
-        "प्रशासन/सा.प्र.",
-        "अधिकृत सातौं"
-      ],
-      [
-        "१५",
-        "श्री महेशकुमार यादव",
-        "२३८०८८",
-        "प्रशासकीय अधिकृत",
-        "प्रशासन/सा.प्र.",
-        "अधिकृत सातौं"
-      ],
-      [
-        "१६",
-        "श्री विपेन्द्र श्रेष्ठ",
-        "२३८०८९",
-        "प्रशासकीय अधिकृत",
-        "प्रशासन/सा.प्र.",
-        "अधिकृत सातौं"
-      ],
-      [
-        "१७",
-        "श्री हिकमत थापा माफी",
-        "२३८०७२",
-        "प्रशासकीय अधिकृत",
-        "प्रशासन/सा.प्र.",
-        "अधिकृत सातौं"
-      ],
-      [
-        "१८",
-        "श्री गौरी कुमारी",
-        "२३८०२८",
-        "प्रशासकीय अधिकृत",
-        "प्रशासन/सा.प्र.",
-        "अधिकृत सातौं"
-      ],
-      [
-        "१९",
-        "श्री शान्ता घर्ति",
-        "२३८०७०",
-        "प्रशासकीय अधिकृत",
-        "प्रशासन/सा.प्र.",
-        "अधिकृत सातौं"
-      ],
-      [
-        "२०",
-        "श्री कुमराज जोशी",
-        "२३७०८९",
-        "प्रशासकीय अधिकृत",
-        "प्रशासन/सा.प्र.",
-        "अधिकृत सातौं"
-      ],
-      [
-        "२१",
-        "श्री डिली आचार्य",
-        "२३८२३८",
-        "शिक्षा अधिकृत",
-        "शिक्षा",
-        "अधिकृत सातौं"
-      ],
-      [
-        "२२",
-        "श्री चन्दनराज दास",
-        "२३८५२२",
-        "सिभिल इन्जिनियर",
-        "इन्जिनियरिङ/सिभिल",
-        "अधिकृत सातौं"
-      ],
-      [
-        "२३",
-        "श्री इश्वरी सापकोटा",
-        "२३८५६५",
-        "सिभिल इन्जिनियर",
-        "इन्जिनियरिङ/सिभिल",
-        "अधिकृत सातौं"
-      ],
-      [
-        "२४",
-        "श्री मधिनमान श्रेष्ठ",
-        "२३८२७१",
-        "सिभिल इन्जिनियर",
-        "इन्जिनियरिङ/सिभिल",
-        "अधिकृत सातौं"
-      ],
-      [
-        "२५",
-        "श्री प्रदिप कुमार हरिजन",
-        "२४०८७९",
-        "सिभिल इन्जिनियर",
-        "इन्जिनियरिङ/सिभिल",
-        "अधिकृत सातौं"
-      ],
-      [
-        "२६",
-        "श्री मनराज थापा",
-        "२३८६९२",
-        "नापी अधिकृत",
-        "इन्जिनियरिङ/सर्भे",
-        "अधिकृत सातौं"
-      ],
-      [
-        "२७",
-        "श्री निवेश कुमार शर्मा",
-        "२४३४७४",
-        "इन्जिनियर",
-        "इन्जिनियरिङ/आर्किटेक्ट",
-        "अधिकृत सातौं"
-      ],
-      [
-        "२८",
-        "श्री सुरेन्द्रप्रसाद पन्त",
-        "१९२५२०",
-        "तथ्याङ्क अधिकृत",
-        "प्रशासन/तथ्याङ्क",
-        "अधिकृत सातौं"
-      ],
-      [
-        "२९",
-        "श्री हेमन्त साउद",
-        "२३७३७१",
-        "सहायक प्रशासकीय अधिकृत",
-        "प्रशासन/सा.प्र.",
-        "अधिकृत छैठौं"
-      ],
-      [
-        "३०",
-        "श्री विनोद शर्मा",
-        "",
-        "प्रशासन सहायक",
-        "प्रशासन/सा.प्र.",
-        "अधिकृत छैठौं"
-      ],
-      [
-        "३१",
-        "श्री अर्यन गोडिया",
-        "२३८२८४",
-        "सहायक लेखा अधिकृत",
-        "प्रशासन/लेखा",
-        "अधिकृत छैठौं"
-      ],
-      [
-        "३२",
-        "श्री सञ्चय भण्डारी",
-        "२३८२७६",
-        "सहायक लेखा अधिकृत",
-        "प्रशासन/लेखा",
-        "अधिकृत छैठौं"
-      ],
-      [
-        "३३",
-        "श्री सोनी खड्का",
-        "२३८७९३",
-        "सहायक लेखा अधिकृत",
-        "प्रशासन/लेखा",
-        "अधिकृत छैठौं"
-      ],
-      [
-        "३४",
-        "श्री हिरा सिं डाँगी",
-        "२३८७०२",
-        "सहायक लेखा अधिकृत",
-        "प्रशासन/लेखा",
-        "अधिकृत छैठौं"
-      ],
-      [
-        "३५",
-        "श्री विजय सुवेदी",
-        "",
-        "लेखा सहायक",
-        "प्रशासन/लेखा",
-        "सहायक पाँचौं"
-      ],
-      [
-        "३६",
-        "श्री सपना सुनार",
-        "",
-        "लेखा सहायक",
-        "प्रशासन/लेखा",
-        "सहायक पाँचौं"
-      ],
-      [
-        "३७",
-        "श्री भिमराज पौडेल",
-        "२४३११२",
-        "लेखा सहायक",
-        "प्रशासन/लेखा",
-        "सहायक पाँचौं"
-      ],
-      [
-        "३८",
-        "श्री प्रेम बजगाई",
-        "२३८२८९",
-        "सहायक प्रशासकीय अधिकृत",
-        "प्रशासन/सा.प्र.",
-        "अधिकृत छैठौं"
-      ],
-      [
-        "३९",
-        "श्री वृषराज न्यौपाने",
-        "२३८७९७",
-        "सहायक प्रशासकीय अधिकृत",
-        "प्रशासन/सा.प्र.",
-        "अधिकृत छैठौं"
-      ],
-      [
-        "४०",
-        "श्री ज्योती घर्ति",
-        "२३८७९९",
-        "सहायक प्रशासकीय अधिकृत",
-        "प्रशासन/सा.प्र.",
-        "अधिकृत छैठौं"
-      ],
-      [
-        "४१",
-        "श्री हरि बहादुर शाही",
-        "२३७०३८",
-        "सहायक प्रशासकीय अधिकृत",
-        "प्रशासन/सा.प्र.",
-        "अधिकृत छैठौं"
-      ],
-      [
-        "४२",
-        "श्री बबिता ढकाल",
-        "२३७०४",
-        "सहायक प्रशासकीय अधिकृत",
-        "प्रशासन/सा.प्र.",
-        "अधिकृत छैठौं"
-      ],
-      [
-        "४३",
-        "श्री पुष्पा वैच",
-        "२३८४८८",
-        "सहायक प्रशासकीय अधिकृत",
-        "प्रशासन/सा.प्र.",
-        "अधिकृत छैठौं"
-      ],
-      [
-        "४४",
-        "श्री रञ्जु चौधरी",
-        "२३८०७१",
-        "वरिष्ठ प्रशासन सहायक",
-        "प्रशासन/सा.प्र.",
-        "सहायक पाँचौं"
-      ],
-      [
-        "४५",
-        "श्री कृष्णा बस्नेत",
-        "२६२२७७",
-        "सहायक अलेप अधिकृत",
-        "प्रशासन/आ.ले.प.",
-        "अधिकृत छैठौं"
-      ],
-      [
-        "४६",
-        "श्री पवन वुढा",
-        "२०९२७७",
-        "प्राविधिक अधिकृत",
-        "इन्जिनियरिङ/सिभिल",
-        "अधिकृत छैठौं"
-      ],
-      [
-        "४७",
-        "श्री लोकराज डाँगी",
-        "२४०३१२",
-        "प्राविधिक अधिकृत",
-        "इन्जिनियरिङ/सिभिल",
-        "अधिकृत छैठौं"
-      ],
-      [
-        "४८",
-        "श्री आया कुवर",
-        "२४३१७८",
-        "प्राविधिक अधिकृत",
-        "इन्जिनियरिङ/सिभिल",
-        "अधिकृत छैठौं"
-      ],
-      [
-        "४۹",
-        "श्री दिपक रोकाया",
-        "२४०१९९",
-        "प्राविधिक अधिकृत",
-        "इन्जिनियरिङ/सिभिल",
-        "अधिकृत छैठौं"
-      ],
-      [
-        "५०",
-        "श्री महेश वि.क.",
-        "२४०२०४",
-        "प्राविधिक अधिकृत",
-        "इन्जिनियरिङ/सिभिल",
-        "अधिकृत छैठौं"
-      ],
-      [
-        "५१",
-        "श्री सुजना बुढाथोकी",
-        "२४१४०७",
-        "प्राविधिक अधिकृत",
-        "इन्जिनियरिङ/सिभिल",
-        "अधिकृत छैठौं"
-      ],
-      [
-        "५२",
-        "श्री अनुपमा श्रेष्ठ",
-        "२४०७९",
-        "प्राविधिक अधिकृत",
-        "इन्जिनियरिङ/सिभिल",
-        "अधिकृत छैठौं"
-      ],
-      [
-        "५३",
-        "श्री निर्जना कुमारी शाही",
-        "२४०००२",
-        "प्राविधिक अधिकृत",
-        "इन्जिनियरिङ/सिभिल",
-        "अधिकृत छैठौं"
-      ],
-      [
-        "५४",
-        "श्री सुभास थापा",
-        "२११७९७",
-        "सहायक कम्प्युटर अधिकृत",
-        "प्रशासन/विविध",
-        "अधिकृत छैठौं"
-      ],
-      [
-        "५५",
-        "श्री धनसरा रेग्मी",
-        "२४०२०१",
-        "सहायक शिक्षा अधिकृत",
-        "शिक्षा सेवा",
-        "अधिकृत छैठौं"
-      ],
-      [
-        "५६",
-        "श्री तिलक खत्री",
-        "२४३११५",
-        "प्रशासन सहायक",
-        "प्रशासन/सा.प्र.",
-        "सहायक चौथो"
-      ],
-      [
-        "५७",
-        "श्री डम्मर साउद",
-        "२३८२७०",
-        "वरिष्ठ प्रशासन सहायक",
-        "प्रशासन/सा.प्र.",
-        "सहायक पाँचौं"
-      ],
-      [
-        "५८",
-        "श्री संगिता धामी",
-        "२४०४०१",
-        "सर्भेक्षक",
-        "इन्जिनियरिङ/सर्भे",
-        "सहायक पाँचौं"
-      ],
-      [
-        "५९",
-        "श्री राजु भट्टराई",
-        "२४०३११",
-        "सर्भेक्षक",
-        "इन्जिनियरिङ/सर्भे",
-        "सहायक पाँचौं"
-      ],
-      [
-        "६०",
-        "श्री सन्तोष वि.क.",
-        "२४०३७७",
-        "सर्भेक्षक",
-        "इन्जिनियरिङ/सर्भे",
-        "सहायक पाँचौं"
-      ],
-      [
-        "६१",
-        "श्री ज्योतिकुमारी भट्ट",
-        "२४०४०९",
-        "सर्भेक्षक",
-        "इन्जिनियरिङ/सर्भे",
-        "सहायक पाँचौं"
-      ],
-      [
-        "६२",
-        "श्री मिथिलेशकुमार वर्मा",
-        "२४०३०७",
-        "सर्भेक्षक",
-        "इन्जिनियरिङ/सर्भे",
-        "सहायक पाँचौं"
-      ],
-      [
-        "६३",
-        "श्री निरज कुमार खड्का",
-        "२४०२२१",
-        "सव-इन्जिनियर",
-        "इन्जिनियरिङ/सिभिल",
-        "सहायक पाँचौं"
-      ],
-      [
-        "६४",
-        "श्री उमा बुढामगर",
-        "२४०२१७",
-        "सव-इन्जिनियर",
-        "इन्जिनियरिङ/सिभिल",
-        "सहायक पाँचौं"
-      ],
-      [
-        "६५",
-        "श्री दिपेन्द्र हमाल",
-        "२४०२१४",
-        "सव-इन्जिनियर",
-        "इन्जिनियरिङ/सिभिल",
-        "सहायक पाँचौं"
-      ],
-      [
-        "६६",
-        "श्री सुमन चौधरी",
-        "२४०९९९",
-        "सव-इन्जिनियर",
-        "इन्जिनियरिङ/सिभिल",
-        "सहायक पाँचौं"
-      ],
-      [
-        "६७",
-        "श्री अमन थारु",
-        "२४०४०७",
-        "सव-इन्जिनियर",
-        "इन्जिनियरिङ/सिभिल",
-        "सहायक पाँचौं"
-      ],
-      [
-        "६८",
-        "श्री ओमकार बोहरा",
-        "२४०९४७",
-        "सव-इन्जिनियर",
-        "इन्जिनियरिङ/सिभिल",
-        "सहायक पाँचौं"
-      ],
-      [
-        "६९",
-        "श्री विनोद कुमार भा",
-        "२४०१८८",
-        "सव-इन्जिनियर",
-        "इन्जिनियरिङ/सिभिल",
-        "सहायक पाँचौं"
-      ],
-      [
-        "७०",
-        "श्री नवराज रोकाय",
-        "२४३४७३",
-        "सव-इन्जिनियर",
-        "इन्जिनियरिङ/सिभिल",
-        "सहायक पाँचौं"
-      ],
-      [
-        "७१",
-        "श्री नधुनीकुमार चौधरी",
-        "२४०३१७",
-        "सव-इन्जिनियर",
-        "इन्जिनियरिङ/सिभिल",
-        "सहायक पाँचौं"
-      ],
-      [
-        "७२",
-        "श्री मुन बहादुर कामी",
-        "२४०५४७",
-        "सव-इन्जिनियर",
-        "इन्जिनियरिङ/सिभिल",
-        "सहायक पाँचौं"
-      ],
-      [
-        "७३",
-        "श्री ओम प्रकाश थारु",
-        "२४०३१०",
-        "सव-इन्जिनियर",
-        "इन्जिनियरिङ/सिभिल",
-        "सहायक पाँचौं"
-      ],
-      [
-        "७४",
-        "श्री गजेन्द्रबहादुर शाही",
-        "२४०४११",
-        "सव-इन्जिनियर",
-        "इन्जिनियरिङ/सिभिल",
-        "सहायक पाँचौं"
-      ],
-      [
-        "७५",
-        "श्री भिमबहादुर सुनार",
-        "२४०४१३",
-        "सव-इन्जिनियर",
-        "इन्जिनियरिङ/सिभिल",
-        "सहायक पाँचौं"
-      ],
-      [
-        "७६",
-        "श्री दिपिका परियार",
-        "२५०२२४",
-        "सव-इन्जिनियर",
-        "इन्जिनियरिङ/सिभिल",
-        "सहायक पाँचौं"
-      ],
-      [
-        "७७",
-        "श्री अंशु कुमार गुप्ता",
-        "२४०३१५",
-        "सव-इन्जिनियर",
-        "इन्जिनियरिङ/सिभिल",
-        "सहायक पाँचौं"
-      ]
+      ["1", "Mr. Kedar Prasad Adhikari", "238575", "Administrative Officer", "Administration/General Admin", "Officer 7th"],
+      ["2", "Mr. Kamal Chaudhary", "238559", "Administrative Officer", "Administration/General Admin", "Officer 7th"],
+      ["3", "Mr. Neblal Gharti", "238148", "Administrative Officer", "Administration/General Admin", "Officer 7th"],
+      ["4", "Mr. Suvindra Prasad Kandel", "238569", "Administrative Officer", "Administration/General Admin", "Officer 7th"],
+      ["5", "Mr. Ravinkumar Rana", "238563", "Administrative Officer", "Administration/General Admin", "Officer 7th"],
+      ["6", "Mr. Tejendra Rokaya", "238596", "Administrative Officer", "Administration/General Admin", "Officer 7th"],
+      ["7", "Mr. Surya Nepali", "238579", "Administrative Officer", "Administration/General Admin", "Officer 7th"],
+      ["8", "Mr. Tejbahadur Singh", "238043", "Administrative Officer", "Administration/General Admin", "Officer 7th"],
+      ["9", "Mr. Madanbahadur Rawat", "238048", "Administrative Officer", "Administration/General Admin", "Officer 7th"],
+      ["10", "Mr. Subhash Paudel", "238071", "Administrative Officer", "Administration/General Admin", "Officer 7th"],
+      ["11", "Ms. Shanti K.C.", "238048", "Administrative Officer", "Administration/General Admin", "Officer 7th"],
+      ["12", "Mr. Upmanyu Tripathi", "238070", "Administrative Officer", "Administration/General Admin", "Officer 7th"],
+      ["13", "Mr. Indrabahadur K.C.", "238071", "Administrative Officer", "Administration/General Admin", "Officer 7th"],
+      ["14", "Ms. Savita Tiwari", "238054", "Administrative Officer", "Administration/General Admin", "Officer 7th"],
+      ["15", "Mr. Maheshkumar Yadav", "238088", "Administrative Officer", "Administration/General Admin", "Officer 7th"],
+      ["16", "Mr. Vipendra Shrestha", "238089", "Administrative Officer", "Administration/General Admin", "Officer 7th"],
+      ["17", "Mr. Hikmat Thapa Maphi", "238072", "Administrative Officer", "Administration/General Admin", "Officer 7th"],
+      ["18", "Ms. Gauri Kumari", "238028", "Administrative Officer", "Administration/General Admin", "Officer 7th"],
+      ["19", "Ms. Shanta Gharti", "238070", "Administrative Officer", "Administration/General Admin", "Officer 7th"],
+      ["20", "Mr. Kumraj Joshi", "237089", "Administrative Officer", "Administration/General Admin", "Officer 7th"],
+      ["21", "Mr. Dili Acharya", "238238", "Education Officer", "Education", "Officer 7th"],
+      ["22", "Mr. Chandanraj Das", "238522", "Civil Engineer", "Engineering/Civil", "Officer 7th"],
+      ["23", "Mr. Ishwari Sapkota", "238565", "Civil Engineer", "Engineering/Civil", "Officer 7th"],
+      ["24", "Mr. Madhinman Shrestha", "238271", "Civil Engineer", "Engineering/Civil", "Officer 7th"],
+      ["25", "Mr. Pradip Kumar Harijan", "240879", "Civil Engineer", "Engineering/Civil", "Officer 7th"],
+      ["26", "Mr. Manraj Thapa", "238692", "Survey Officer", "Engineering/Survey", "Officer 7th"],
+      ["27", "Mr. Nivesh Kumar Sharma", "243474", "Engineer", "Engineering/Architect", "Officer 7th"],
+      ["28", "Mr. Surendra Prasad Pant", "192520", "Statistics Officer", "Administration/Statistics", "Officer 7th"],
+      ["29", "Mr. Hemant Saud", "237371", "Assistant Administrative Officer", "Administration/General Admin", "Officer 6th"],
+      ["30", "Mr. Vinod Sharma", "", "Administration Assistant", "Administration/General Admin", "Officer 6th"],
+      ["31", "Mr. Aryan Godiya", "238284", "Assistant Account Officer", "Administration/Account", "Officer 6th"],
+      ["32", "Mr. Sanjaya Bhandari", "238276", "Assistant Account Officer", "Administration/Account", "Officer 6th"],
+      ["33", "Ms. Soni Khadka", "238793", "Assistant Account Officer", "Administration/Account", "Officer 6th"],
+      ["34", "Mr. Hira Singh Dangi", "238702", "Assistant Account Officer", "Administration/Account", "Officer 6th"],
+      ["35", "Mr. Vijay Subedi", "", "Account Assistant", "Administration/Account", "Assistant 5th"],
+      ["36", "Ms. Sapana Sunar", "", "Account Assistant", "Administration/Account", "Assistant 5th"],
+      ["37", "Mr. Bhimraj Paudel", "243112", "Account Assistant", "Administration/Account", "Assistant 5th"],
+      ["38", "Mr. Prem Bajgai", "238289", "Assistant Administrative Officer", "Administration/General Admin", "Officer 6th"],
+      ["39", "Mr. Brushraj Neupane", "238797", "Assistant Administrative Officer", "Administration/General Admin", "Officer 6th"],
+      ["40", "Ms. Jyoti Gharti", "238799", "Assistant Administrative Officer", "Administration/General Admin", "Officer 6th"],
+      ["41", "Mr. Hari Bahadur Shahi", "237038", "Assistant Administrative Officer", "Administration/General Admin", "Officer 6th"],
+      ["42", "Ms. Babita Dhakal", "23704", "Assistant Administrative Officer", "Administration/General Admin", "Officer 6th"],
+      ["43", "Ms. Pushpa Baich", "238488", "Assistant Administrative Officer", "Administration/General Admin", "Officer 6th"],
+      ["44", "Ms. Ranju Chaudhary", "238071", "Senior Administration Assistant", "Administration/General Admin", "Assistant 5th"],
+      ["45", "Ms. Krishna Basnet", "262277", "Assistant Internal Audit Officer", "Administration/Int. Audit", "Officer 6th"],
+      ["46", "Mr. Pawan Budha", "209277", "Technical Officer", "Engineering/Civil", "Officer 6th"],
+      ["47", "Mr. Lokraj Dangi", "240312", "Technical Officer", "Engineering/Civil", "Officer 6th"],
+      ["48", "Mr. Ayush Kunwar", "243178", "Technical Officer", "Engineering/Civil", "Officer 6th"],
+      ["49", "Mr. Deepak Rokaya", "240199", "Technical Officer", "Engineering/Civil", "Officer 6th"],
+      ["50", "Mr. Mahesh V.K.", "240204", "Technical Officer", "Engineering/Civil", "Officer 6th"],
+      ["51", "Ms. Sujana Budhathoki", "241407", "Technical Officer", "Engineering/Civil", "Officer 6th"],
+      ["52", "Ms. Anupama Shrestha", "24079", "Technical Officer", "Engineering/Civil", "Officer 6th"],
+      ["53", "Ms. Nirjana Kumari Shahi", "240002", "Technical Officer", "Engineering/Civil", "Officer 6th"],
+      ["54", "Mr. Subhash Thapa", "211797", "Assistant Computer Officer", "Administration/Miscellaneous", "Officer 6th"],
+      ["55", "Ms. Dhansara Regmi", "240201", "Assistant Education Officer", "Education Service", "Officer 6th"],
+      ["56", "Mr. Tilak Khatri", "243115", "Administration Assistant", "Administration/General Admin", "Assistant 4th"],
+      ["57", "Mr. Dammar Saud", "238270", "Senior Administration Assistant", "Administration/General Admin", "Assistant 5th"],
+      ["58", "Ms. Sangita Dhami", "240401", "Surveyor", "Engineering/Survey", "Assistant 5th"],
+      ["59", "Mr. Raju Bhattarai", "240311", "Surveyor", "Engineering/Survey", "Assistant 5th"],
+      ["60", "Mr. Santosh V.K.", "240377", "Surveyor", "Engineering/Survey", "Assistant 5th"],
+      ["61", "Ms. Jyotikumari Bhatta", "240409", "Surveyor", "Engineering/Survey", "Assistant 5th"],
+      ["62", "Mr. Mithileshkumar Verma", "240307", "Surveyor", "Engineering/Survey", "Assistant 5th"],
+      ["63", "Mr. Niraj Kumar Khadka", "240221", "Sub-Engineer", "Engineering/Civil", "Assistant 5th"],
+      ["64", "Ms. Uma Budhamagar", "240217", "Sub-Engineer", "Engineering/Civil", "Assistant 5th"],
+      ["65", "Mr. Dipendra Hamal", "240214", "Sub-Engineer", "Engineering/Civil", "Assistant 5th"],
+      ["66", "Mr. Suman Chaudhary", "240999", "Sub-Engineer", "Engineering/Civil", "Assistant 5th"],
+      ["67", "Mr. Aman Tharu", "240407", "Sub-Engineer", "Engineering/Civil", "Assistant 5th"],
+      ["68", "Mr. Omkar Bohara", "240947", "Sub-Engineer", "Engineering/Civil", "Assistant 5th"],
+      ["69", "Mr. Vinod Kumar Bhu", "240188", "Sub-Engineer", "Engineering/Civil", "Assistant 5th"],
+      ["70", "Mr. Navraj Rokaya", "243473", "Sub-Engineer", "Engineering/Civil", "Assistant 5th"],
+      ["71", "Mr. Nadhunikumar Chaudhary", "240317", "Sub-Engineer", "Engineering/Civil", "Assistant 5th"],
+      ["72", "Mr. Mun Bahadur Kami", "240547", "Sub-Engineer", "Engineering/Civil", "Assistant 5th"],
+      ["73", "Mr. Om Prakash Tharu", "240310", "Sub-Engineer", "Engineering/Civil", "Assistant 5th"],
+      ["74", "Mr. Gajendrabahadur Shahi", "240411", "Sub-Engineer", "Engineering/Civil", "Assistant 5th"],
+      ["75", "Mr. Bhimbahadur Sunar", "240413", "Sub-Engineer", "Engineering/Civil", "Assistant 5th"],
+      ["76", "Ms. Dipika Pariyar", "250224", "Sub-Engineer", "Engineering/Civil", "Assistant 5th"],
+      ["77", "Mr. Anshu Kumar Gupta", "240315", "Sub-Engineer", "Engineering/Civil", "Assistant 5th"]
     ],
-    "source": "स्रोत: नगर कार्यपालिकाको कार्यालय",
+    "source": "Source: Office of the Municipal Executive",
     "alignLeft": true
   }
 }

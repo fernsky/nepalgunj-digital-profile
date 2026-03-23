@@ -1,178 +1,38 @@
 {
   "type": "table",
   "data": {
-    "title": "तालिका नं. ९८: समायोजन भएका स्थायी कर्मचारीहरूको विवरण",
+    "title": "Table No. 98: Details of Permanent Employees Integrated (Adjusted)",
     "headers": [
-      "क्र.स.",
-      "नाम, थर",
-      "क.सं.नं.",
-      "पद",
-      "सेवा/समूह",
-      "श्रेणी/तह"
+      "S.N.",
+      "Name, Surname",
+      "Emp. ID No.",
+      "Position",
+      "Service/Group",
+      "Grade/Level"
     ],
     "rows": [
-      [
-        "१",
-        "श्री रामहरि शर्मा",
-        "",
-        "प्रमुख प्रशासकीय अधिकृत",
-        "प्रशासन/सा.प्र.",
-        "उप-सचिव"
-      ],
-      [
-        "२",
-        "श्री गोर्ख बहादुर थापा",
-        "१४८५४९",
-        "उप-सचिव",
-        "शिक्षा सेवा",
-        "अधिकृत दशौं"
-      ],
-      [
-        "३",
-        "श्री पवित्राकुमारी पुरी",
-        "२०५०३२",
-        "वरिष्ठ महिला विकास अधिकृत",
-        "प्रशासन/विविध",
-        "अधिकृत आठौं"
-      ],
-      [
-        "४",
-        "श्री लोकेन्द्रबहादुर शाही",
-        "२१८०४४",
-        "वरिष्ठ शिक्षा अधिकृत",
-        "शिक्षा सेवा",
-        "अधिकृत आठौं"
-      ],
-      [
-        "६",
-        "श्री भुपेन्द्र बोहरा",
-        "२१८१९८",
-        "वरिष्ठ इन्जिनियर",
-        "इन्जिनियरिङ/सिभिल",
-        "अधिकृत आठौं"
-      ],
-      [
-        "७",
-        "श्री वीर बहादुर धापामगर",
-        "१११७७७",
-        "अधिकृत",
-        "प्रशासन/सा.प्र.",
-        "अधिकृत छैठौं"
-      ],
-      [
-        "८",
-        "श्री आशा शाही",
-        "११३७७७",
-        "महिला विकास अधिकृत",
-        "विविध सेवा",
-        "अधिकृत सातौं"
-      ],
-      [
-        "९",
-        "श्री भक्तबहादुर खत्री",
-        "२३२४४७",
-        "सहायक प्रशासकीय अधिकृत",
-        "प्रशासन/सा.प्र.",
-        "अधिकृत छैठौं"
-      ],
-      [
-        "१०",
-        "श्री हिमा गिरी",
-        "१७०४४८",
-        "सहायक प्रशासकीय अधिकृत",
-        "प्रशासन/सा.प्र.",
-        "अधिकृत छैठौं"
-      ],
-      [
-        "११",
-        "श्री टिकराम वराल",
-        "घरेलु",
-        "सहायक लेखा अधिकृत",
-        "प्रशासन/लेखा",
-        "अधिकृत छैठौं"
-      ],
-      [
-        "१२",
-        "श्री पुजा बस्न्यात",
-        "२०१७७१",
-        "प्राविधिक अधिकृत",
-        "इन्जिनियरिङ/सर्भे",
-        "अधिकृत छैठौं"
-      ],
-      [
-        "१३",
-        "श्री अम्बिका रिजाल",
-        "२००७७५",
-        "स.कृषि प्रसार अधिकृत",
-        "कृषि/कृषि प्रसार",
-        "अधिकृत छैठौं"
-      ],
-      [
-        "१४",
-        "श्री लक्ष्मी शाही",
-        "१९५५०४",
-        "पशु विकास अधिकृत",
-        "कृषि/पशु",
-        "अधिकृत छैठौं"
-      ],
-      [
-        "१५",
-        "श्री अच्युत गौतम",
-        "२३२३१९",
-        "पशु विकास अधिकृत",
-        "कृषि/पशु",
-        "अधिकृत छैठौं"
-      ],
-      [
-        "१६",
-        "श्री अनुपमा द्विवेदी",
-        "२१७८२७",
-        "सहायक म.वि.नि.",
-        "विविध सेवा",
-        "सहायक पाँचौं"
-      ],
-      [
-        "१७",
-        "श्री गोरख बहादुर नेपाली",
-        "२१८८७",
-        "खरिदार",
-        "प्रशासन/सा.प्र.",
-        "सहायक चौथो"
-      ],
-      [
-        "१९",
-        "श्री सीताराम शर्मा",
-        "११७७३१",
-        "कार्यालय सहयोगी",
-        "प्रशासन/सा.प्र.",
-        "श्रेणी विहिन चौथो"
-      ],
-      [
-        "२०",
-        "श्री राम बहादुर थारु",
-        "१७४७३०७",
-        "कार्यालय सहयोगी",
-        "प्रशासन/सा.प्र.",
-        "श्रे.वि.पाँचौं"
-      ],
-      [
-        "२१",
-        "श्री राज कुमार गोडिया",
-        "१०९७०९",
-        "कार्यालय सहयोगी",
-        "प्रशासन/सा.प्र.",
-        "श्रे.वि.पाँचौं"
-      ],
-      [
-        "२२",
-        "श्री राम सुरेश लोनिया",
-        "१४१०४०",
-        "कार्यालय सहयोगी",
-        "प्रशासन/सा.प्र.",
-        "श्रे.वि.पाँचौं"
-      ]
+      ["1", "Mr. Ramhari Sharma", "", "Chief Administrative Officer", "Administration/General Admin", "Under-Secretary"],
+      ["2", "Mr. Gorkh Bahadur Thapa", "148549", "Under-Secretary", "Education Service", "Officer 10th"],
+      ["3", "Ms. Pavitrakumari Puri", "205032", "Senior Women Development Officer", "Administration/Miscellaneous", "Officer 8th"],
+      ["4", "Mr. Lokendrabahadur Shahi", "218044", "Senior Education Officer", "Education Service", "Officer 8th"],
+      ["6", "Mr. Bhupendra Bohara", "218198", "Senior Engineer", "Engineering/Civil", "Officer 8th"],
+      ["7", "Mr. Bir Bahadur Dhapamagar", "111777", "Officer", "Administration/General Admin", "Officer 6th"],
+      ["8", "Ms. Asha Shahi", "113777", "Women Development Officer", "Miscellaneous Service", "Officer 7th"],
+      ["9", "Mr. Bhaktabahadur Khatri", "232447", "Assistant Administrative Officer", "Administration/General Admin", "Officer 6th"],
+      ["10", "Ms. Hima Giri", "170448", "Assistant Administrative Officer", "Administration/General Admin", "Officer 6th"],
+      ["11", "Mr. Tikram Baral", "Gharelu", "Assistant Account Officer", "Administration/Account", "Officer 6th"],
+      ["12", "Ms. Puja Basnyat", "201771", "Technical Officer", "Engineering/Survey", "Officer 6th"],
+      ["13", "Ms. Ambika Rijal", "200775", "Asst. Agriculture Extension Officer", "Agriculture/Agri. Extension", "Officer 6th"],
+      ["14", "Ms. Lakshmi Shahi", "195504", "Livestock Development Officer", "Agriculture/Livestock", "Officer 6th"],
+      ["15", "Mr. Achyut Gautam", "232319", "Livestock Development Officer", "Agriculture/Livestock", "Officer 6th"],
+      ["16", "Ms. Anupama Dwivedi", "217827", "Asst. Women Dev. Inspector", "Miscellaneous Service", "Assistant 5th"],
+      ["17", "Mr. Gorakh Bahadur Nepali", "21887", "Kharidar", "Administration/General Admin", "Assistant 4th"],
+      ["19", "Mr. Sitaram Sharma", "117731", "Office Assistant", "Administration/General Admin", "Level-less 4th"],
+      ["20", "Mr. Ram Bahadur Tharu", "1747307", "Office Assistant", "Administration/General Admin", "Level-less 5th"],
+      ["21", "Mr. Raj Kumar Godiya", "109709", "Office Assistant", "Administration/General Admin", "Level-less 5th"],
+      ["22", "Mr. Ram Suresh Loniya", "141040", "Office Assistant", "Administration/General Admin", "Level-less 5th"]
     ],
-    "source": "स्रोत: नगर कार्यपालिकाको कार्यालय",
+    "source": "Source: Office of the Municipal Executive",
     "alignLeft": true
   }
 }
