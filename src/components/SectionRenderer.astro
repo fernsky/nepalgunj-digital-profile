@@ -83,14 +83,15 @@ if (content?.type === "multi-block" && content.blocks) {
                 {(block.type === "table" || block.table || block.data?.rows) && (
                   <div class="my-8">
                     { (block.table?.title || block.data?.title) && (
-                      <div class="text-center font-bold text-lg mb-4" style="color:var(--primary-500);">
+                      <div class="text-center font-bold text-lg mb-6" style="color:var(--text-heading);">
                         {block.table?.title || block.data?.title}
                       </div>
                     )}
-                    <div class="overflow-x-auto rounded-xl shadow-sm border" style="border-color:var(--card-border);">
+                    
+                    <div class="overflow-x-auto rounded-xl shadow-sm border" style="border-color:var(--card-border); background: var(--card-bg);">
                       <table class="w-full text-left border-collapse min-w-[600px]">
                         { (block.table?.headers || block.data?.headers) && (
-                          <thead class="bg-blue-500 text-white" style="background-color: #4A88D0;">
+                          <thead style="background: var(--hover-bg);">
                             {(() => {
                               const rawHeaders = block.table?.headers || block.data?.headers;
                               const normalizedHeaders = Array.isArray(rawHeaders[0]) ? rawHeaders : [rawHeaders];
@@ -100,7 +101,8 @@ if (content?.type === "multi-block" && content.blocks) {
                                     <th 
                                       rowspan={h.rowspan > 1 ? Number(h.rowspan) : undefined} 
                                       colspan={h.colspan > 1 ? Number(h.colspan) : undefined} 
-                                      class="px-4 py-3 font-semibold border border-white/30 text-center align-middle"
+                                      class="px-5 py-4 font-bold text-sm tracking-tight border text-center align-middle whitespace-nowrap"
+                                      style="border-color: var(--card-border); color: var(--text-heading);"
                                     >
                                       {typeof h === 'string' ? h : h.text}
                                     </th>
@@ -110,17 +112,19 @@ if (content?.type === "multi-block" && content.blocks) {
                             })()}
                           </thead>
                         )}
-                        <tbody style="background:var(--card-bg);">
+                        <tbody>
                           {(block.table?.rows || block.data?.rows || []).map((row: any[], i: number) => (
-                            <tr class={i % 2 === 0 ? "" : "bg-blue-50/10 dark:bg-white/5"}>
-                               {row.map((cell: any, j: number) => {
+                            <tr class={`transition-colors duration-150 ${i % 2 === 0 ? "bg-transparent" : "bg-white/[0.02]"}`}>
+                              {row.map((cell: any, j: number) => {
                                  const isObj = typeof cell === 'object' && cell !== null;
                                  const text = isObj ? cell.text : cell;
                                  const rowSpan = isObj && cell.rowspan ? cell.rowspan : 1;
                                  const colSpan = isObj && cell.colspan ? cell.colspan : 1;
+                                 const alignLeft = block.table?.alignLeft || (j === 0 && !isObj);
+                                 
                                  return (
                                    <td 
-                                     class={`px-4 py-3 border align-middle ${colSpan > 1 ? 'text-center font-medium opacity-90' : (j > 0 && !isObj && !block.table?.alignLeft) ? 'text-center' : 'text-left'}`} 
+                                     class={`px-5 py-4 border text-sm align-middle leading-relaxed ${colSpan > 1 ? 'text-center font-bold' : alignLeft ? 'text-left' : 'text-center'}`} 
                                      style="border-color:var(--card-border); color:var(--text-body);"
                                      rowspan={rowSpan > 1 ? rowSpan : undefined}
                                      colspan={colSpan > 1 ? colSpan : undefined}
@@ -134,22 +138,20 @@ if (content?.type === "multi-block" && content.blocks) {
                         </tbody>
                       </table>
                     </div>
+
+
                     {(block.table?.source || block.data?.source) && (
-                      <div class="text-right italic text-sm mt-3 font-medium opacity-80" style="color:var(--text-body);">
-                        {block.table?.source || block.data?.source}
+                      <div class="text-right italic text-xs mt-4 font-medium opacity-60" style="color:var(--text-muted);">
+                        Source: {block.table?.source || block.data?.source}
                       </div>
-                    )}
-                    {(block.table?.description || block.data?.description) && (
-                      <p class="text-lg leading-relaxed mt-6 text-justify" style="color:var(--text-body);">
-                        {block.table?.description || block.data?.description}
-                      </p>
                     )}
                   </div>
                 )}
 
+
                 {/* Chart in block */}
                 {(block.type === "chart" || block.chart || block.chartType) && (
-                  <div class="my-12 p-8 rounded-3xl bg-white/5 border border-white/10 shadow-2xl backdrop-blur-sm relative overflow-hidden group">
+                  <div class="my-12 p-4 sm:p-8 rounded-3xl bg-white/5 border border-white/10 shadow-2xl backdrop-blur-sm relative overflow-hidden group">
                     <div class="absolute inset-0 bg-gradient-to-br from-primary-500/5 to-transparent opacity-50"></div>
                     { (block.chart?.title || block.chart?.config?.title || block.data?.title) && (
                       <h3 class="text-xl font-bold mb-8 text-center" style="color:var(--text-heading);">{ block.chart?.title || block.chart?.config?.title || block.data?.title }</h3>

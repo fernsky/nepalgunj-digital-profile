@@ -45,9 +45,15 @@ const caption = content?.caption ?? "Migration Population Detail";
         const data = JSON.parse(dataString);
         if (data.length === 0) return;
 
+        const isMobile = window.innerWidth < 640;
         const width = container.clientWidth || 800;
-        const height = 400;
-        const margin = { top: 40, right: 30, bottom: 80, left: 70 };
+        const height = isMobile ? 350 : 400;
+        const margin = { 
+          top: 40, 
+          right: isMobile ? 15 : 30, 
+          bottom: isMobile ? 100 : 80, 
+          left: isMobile ? 50 : 70 
+        };
 
         const subgroups = Object.keys(data[0]).filter(k => k !== 'category');
         const groups = data.map((d: any) => d.category);
