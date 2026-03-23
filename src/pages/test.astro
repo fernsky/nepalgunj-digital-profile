@@ -1,0 +1,5 @@
+---
+const jsonFiles = import.meta.glob('../lib/i18n/annexes/**/*.json', { eager: true });
+const keys = Object.keys(jsonFiles);
+---
+<html><body><pre>{JSON.stringify(keys, null, 2)}</pre></body></html>
