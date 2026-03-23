@@ -160,20 +160,48 @@ const alternateUrl = getAlternateUrl(currentPath, alternateLang);
       </a>
     </div>
 
-    <!-- Chapters List -->
+    <!-- Chapters List with Accordions -->
     <div class="mb-4">
-      <h3 class="px-4 text-xs font-bold uppercase tracking-wider mb-3" style="color:var(--text-muted);">
+      <h3 class="px-4 text-xs font-bold uppercase tracking-wider mb-3 opacity-50" style="color:var(--text-muted);">
         {t(lang, "nav.chapters")}
       </h3>
-      <div class="space-y-0.5">
+      <div class="space-y-2">
         {chapters.map((chapter) => (
-          <a href={`/${lang}/${chapter.slug}`} class="mobile-chapter-link block px-4 py-3 rounded-xl no-underline transition-all" style="color:var(--text-body);">
-            <span class="text-xs font-medium block" style="color:var(--text-muted);">{t(lang, "chapter.label")} {chapter.num}</span>
-            <span class="font-medium text-sm">{chapter.title[lang]}</span>
-          </a>
+          <div class="mobile-accordion-item">
+            <button 
+              class="mobile-accordion-btn w-full flex items-center justify-between px-4 py-4 rounded-xl no-underline transition-all border-0 cursor-pointer" 
+              style="color:var(--text-body); background: var(--card-bg); border: 1px solid var(--card-border);"
+              data-chapter={chapter.num}
+            >
+              <div class="text-left">
+                <span class="text-[10px] font-bold block uppercase tracking-tight opacity-60" style="color:var(--text-muted);">{t(lang, "chapter.label")} {chapter.num}</span>
+                <span class="font-bold text-sm tracking-tight">{chapter.title[lang]}</span>
+              </div>
+              <svg class="w-5 h-5 transition-transform duration-300 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="mobile-accordion-content hidden px-2 py-2 space-y-1">
+              {chapter.sections.map((section) => (
+                <div>
+                   <a href={`/${lang}/${chapter.slug}#${section.slug}`} class="mobile-section-link block px-4 py-2 text-sm rounded-lg no-underline transition-colors" style="color:var(--text-body);">
+                    <span class="opacity-50 mr-2 font-mono text-xs">{formatSectionId(section.id)}</span>
+                    {section.title[lang]}
+                  </a>
+                  {section.children && section.children.map((child) => (
+                    <a href={`/${lang}/${chapter.slug}#${child.slug}`} class="mobile-section-link block px-4 py-1.5 pl-10 text-xs rounded-lg no-underline transition-colors" style="color:var(--text-muted);">
+                       <span class="opacity-40 mr-2 font-mono">{formatSectionId(child.id)}</span>
+                       {child.title[lang]}
+                    </a>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </div>
         ))}
       </div>
     </div>
+
 
     <!-- Annexes -->
     <div class="pt-4" style={`border-top:1px solid var(--border);`}>
@@ -206,7 +234,20 @@ const alternateUrl = getAlternateUrl(currentPath, alternateLang);
       panels.forEach((p) => { p.classList.toggle("hidden", p.dataset.chapterPanel !== key); });
     }
 
-    function open() { if (isOpen) return; isOpen = true; dropdown?.classList.remove("opacity-0", "invisible", "translate-y-2"); dropdown?.classList.add("opacity-100", "visible", "translate-y-0"); chevron?.classList.add("rotate-180"); activate("1"); }
+    function open() { 
+      if (isOpen) return; 
+      isOpen = true; 
+      dropdown?.classList.remove("opacity-0", "invisible", "translate-y-2"); 
+      dropdown?.classList.add("opacity-100", "visible", "translate-y-0"); 
+      chevron?.classList.add("rotate-180"); 
+
+      // On open, activate the tab corresponding to current path if possible
+      const pathParts = window.location.pathname.split('/');
+      const currentChapterSlug = pathParts[pathParts.length - 1];
+      const activeTab = Array.from(tabs).find(t => t.getAttribute('href')?.includes(currentChapterSlug));
+      const key = activeTab?.dataset.chapter || "1";
+      activate(key); 
+    }
     function close() { if (!isOpen) return; isOpen = false; dropdown?.classList.add("opacity-0", "invisible", "translate-y-2"); dropdown?.classList.remove("opacity-100", "visible", "translate-y-0"); chevron?.classList.remove("rotate-180"); }
 
     btn?.addEventListener("click", (e) => { e.preventDefault(); e.stopPropagation(); isOpen ? close() : open(); });
@@ -232,6 +273,16 @@ const alternateUrl = getAlternateUrl(currentPath, alternateLang);
       drawer?.classList.add("translate-x-0");
       hamburger?.classList.add("hidden");
       closeIcon?.classList.remove("hidden");
+
+      // Expand current chapter accordion
+      const currentChapterNumber = window.location.pathname.match(/\/\w{2}\/chapter-(\d+)/)?.[1];
+      if (currentChapterNumber) {
+        const activeBtn = Array.from(accordionBtns).find(b => b.dataset.chapter === currentChapterNumber) as HTMLElement;
+        if (activeBtn) {
+          const content = activeBtn.nextElementSibling as HTMLElement;
+          if (content.classList.contains('hidden')) activeBtn.click();
+        }
+      }
     }
 
     function closeMobile() {
@@ -249,15 +300,41 @@ const alternateUrl = getAlternateUrl(currentPath, alternateLang);
     mobileBtn?.addEventListener("click", () => { mobileOpen ? closeMobile() : openMobile(); });
     overlay?.addEventListener("click", closeMobile);
 
-    // Close mobile menu on link click
-    drawer?.querySelectorAll("a").forEach((link) => {
+    // Close mobile menu on clicking primary links
+    drawer?.querySelectorAll(":scope > div > div > a").forEach((link) => {
       link.addEventListener("click", closeMobile);
     });
 
-    // Hover effects for mobile chapter links
-    drawer?.querySelectorAll(".mobile-chapter-link").forEach((link) => {
+    // Mobile menu accordions
+    const accordionBtns = document.querySelectorAll<HTMLElement>(".mobile-accordion-btn");
+    
+    accordionBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const content = btn.nextElementSibling as HTMLElement;
+        const chevron = btn.querySelector(".chevron") as HTMLElement;
+        const isOpen = !content.classList.contains("hidden");
+
+        // Close all other accordions
+        accordionBtns.forEach((otherBtn) => {
+          if (otherBtn !== btn) {
+            otherBtn.nextElementSibling?.classList.add("hidden");
+            otherBtn.querySelector(".chevron")?.classList.remove("rotate-180");
+            (otherBtn as HTMLElement).style.background = "var(--card-bg)";
+          }
+        });
+
+        // Toggle current
+        content.classList.toggle("hidden");
+        chevron.classList.toggle("rotate-180");
+        btn.style.background = isOpen ? "var(--card-bg)" : "var(--hover-bg)";
+      });
+    });
+
+    // Hover and active effects for mobile sections
+    drawer?.querySelectorAll(".mobile-section-link").forEach((link) => {
       link.addEventListener("mouseenter", () => { (link as HTMLElement).style.background = "var(--hover-bg)"; });
       link.addEventListener("mouseleave", () => { (link as HTMLElement).style.background = "transparent"; });
+      link.addEventListener("click", closeMobile);
     });
 
     // Theme toggle

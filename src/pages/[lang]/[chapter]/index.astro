@@ -33,37 +33,10 @@ function getSectionContent(slug: string) {
 
 <Layout lang={lang} title={`${t(lang, "chapter.label")} ${chapter.num} - ${chapter.title[lang]}`}>
   <!-- Use standardized container max-width and horizontal padding -->
-  <div class="flex flex-col lg:flex-row max-w-7xl mx-auto px-4 sm:px-6 lg:px-14 py-8 sm:py-12 gap-6 sm:gap-10 relative">
-    
-    <!-- Sidebar / Navigation: Fixed on scroll -->
-    <aside class="w-full lg:w-1/4 shrink-0 mt-8 lg:mt-0 lg:sticky lg:top-24 h-max">
-      <div class="rounded-xl p-6" style="background:var(--card-bg);border:1px solid var(--card-border);">
-        <h2 class="text-xl font-bold mb-4" style="color:var(--text-heading);">
-          {lang === "ne" ? "विषयसूची" : "Table of Contents"}
-        </h2>
-        
-        <nav class="space-y-1">
-          {chapter.sections.map((section: any) => (
-            <div class="mb-4 last:mb-0">
-              <a href={`#${section.slug}`} class="block py-2 text-sm font-bold transition-colors no-underline hover:text-primary-400" style="color:var(--text-heading);">
-                <span style="color:var(--text-muted);" class="mr-2">{formatSectionId(section.id)}</span>
-                {section.title[lang]}
-              </a>
-              {section.children && section.children.map((child: any) => (
-                <a href={`#${child.slug}`} class="block py-1.5 pl-6 text-sm transition-colors no-underline hover:text-primary-400" style="color:var(--text-body);">
-                  <span class="mr-2" style="color:var(--text-muted);">{formatSectionId(child.id)}</span>
-                  {child.title[lang]}
-                </a>
-              ))}
-            </div>
-          ))}
-        </nav>
-      </div>
-    </aside>
-
-    <!-- Main Content Body -->
-    <main class="flex-1 min-w-0 min-h-[50vh]">
-      <!-- Chapter Hero - Pushed deep enough to align visually -->
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 relative">
+    <!-- Main Content Body: Full Width Centered -->
+    <main class="min-w-0 min-h-[50vh]">
+      <!-- Chapter Hero -->
       <section class="relative py-12 mb-12 overflow-hidden rounded-3xl" style="background:linear-gradient(135deg, rgba(29,78,216,0.08) 0%, transparent 50%); border: 1px solid rgba(29,78,216,0.1);">
         <div class="relative z-10 px-8">
           <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full mb-4" style="background:rgba(29,78,216,0.15);border:1px solid rgba(29,78,216,0.3);">
@@ -81,7 +54,7 @@ function getSectionContent(slug: string) {
         const content = getSectionContent(section.slug);
         
         return (
-          <>
+          <div class="mb-20">
             {/* Top level section */}
             {chapter.num === 4 ? (
               <Chapter4Renderer content={content} lang={lang} id={section.slug} chapterNum={chapter.num} />
@@ -98,7 +71,7 @@ function getSectionContent(slug: string) {
                  <SectionRenderer content={childContent} lang={lang} id={child.slug} />
               );
             })}
-          </>
+          </div>
         );
       })}
 
@@ -121,4 +94,5 @@ function getSectionContent(slug: string) {
       </div>
     </main>
   </div>
+
 </Layout>
