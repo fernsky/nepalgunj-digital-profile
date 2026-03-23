@@ -15,8 +15,17 @@ export function getAlternateUrl(currentPath: string, targetLang: Lang): string {
   return "/" + parts.join("/");
 }
 
-export function formatSectionId(id: string): string {
-  return id.replace(/-/g, ".");
+export function toNepaliDigits(num: string | number): string {
+  const nepaliDigits = ["०", "१", "२", "३", "४", "५", "६", "७", "८", "९"];
+  return num.toString().replace(/\d/g, (digit) => nepaliDigits[parseInt(digit)]);
+}
+
+export function formatSectionId(id: string, lang: Lang = "ne"): string {
+  const formatted = id.replace(/-/g, ".");
+  if (lang === "ne") {
+    return toNepaliDigits(formatted);
+  }
+  return formatted;
 }
 
 export interface FlatSection {

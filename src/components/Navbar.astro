@@ -1,6 +1,6 @@
 ---
 import { type Lang } from "../i18n/translations";
-import { t, getChapters, getAnnexes, getAlternateUrl, formatSectionId } from "../i18n/utils";
+import { t, getChapters, getAnnexes, getAlternateUrl, formatSectionId, toNepaliDigits } from "../i18n/utils";
 
 interface Props { lang: Lang; currentPath: string; }
 const { lang, currentPath } = Astro.props;
@@ -58,7 +58,7 @@ const alternateUrl = getAlternateUrl(currentPath, alternateLang);
               <div class="w-[260px] py-3 max-h-[480px] overflow-y-auto border-r" style={`background:var(--dropdown-sidebar);border-color:var(--border);`}>
                 {chapters.map((chapter) => (
                   <a href={`/${lang}/${chapter.slug}`} class="chapter-tab block w-full text-left px-5 py-3 text-sm transition-all duration-200 border-l-3 border-transparent no-underline cursor-pointer" data-chapter={chapter.num} style={`color:var(--text-body);`}>
-                    <span class="text-xs font-medium" style="color:var(--text-muted);">{t(lang, "chapter.label")} {chapter.num}:</span><br />
+                    <span class="text-xs font-medium" style="color:var(--text-muted);">{t(lang, "chapter.label")} {lang === "ne" ? toNepaliDigits(chapter.num) : chapter.num}:</span><br />
                     <span class="font-medium">{chapter.title[lang]}</span>
                   </a>
                 ))}
@@ -79,12 +79,12 @@ const alternateUrl = getAlternateUrl(currentPath, alternateLang);
                       {chapter.sections.map((section) => (
                         <div>
                           <a href={`/${lang}/${chapter.slug}#${section.slug}`} class="block py-1.5 text-sm transition-colors duration-200 no-underline hover:text-primary-400" style={`color:var(--text-body);`}>
-                            <span style="color:var(--text-muted);" class="mr-1.5">{formatSectionId(section.id)}</span>
+                            <span style="color:var(--text-muted);" class="mr-1.5">{formatSectionId(section.id, lang)}</span>
                             {section.title[lang]}
                           </a>
                           {section.children && section.children.map((child) => (
                             <a href={`/${lang}/${chapter.slug}#${child.slug}`} class="block py-1 pl-5 text-xs transition-colors duration-200 no-underline hover:text-primary-400" style={`color:var(--text-muted);`}>
-                              <span class="mr-1">{formatSectionId(child.id)}</span>
+                              <span class="mr-1">{formatSectionId(child.id, lang)}</span>
                               {child.title[lang]}
                             </a>
                           ))}
@@ -174,7 +174,7 @@ const alternateUrl = getAlternateUrl(currentPath, alternateLang);
               data-chapter={chapter.num}
             >
               <div class="text-left">
-                <span class="text-[10px] font-bold block uppercase tracking-tight opacity-60" style="color:var(--text-muted);">{t(lang, "chapter.label")} {chapter.num}</span>
+                <span class="text-[10px] font-bold block uppercase tracking-tight opacity-60" style="color:var(--text-muted);">{t(lang, "chapter.label")} {lang === "ne" ? toNepaliDigits(chapter.num) : chapter.num}</span>
                 <span class="font-bold text-sm tracking-tight">{chapter.title[lang]}</span>
               </div>
               <svg class="w-5 h-5 transition-transform duration-300 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -185,12 +185,12 @@ const alternateUrl = getAlternateUrl(currentPath, alternateLang);
               {chapter.sections.map((section) => (
                 <div>
                    <a href={`/${lang}/${chapter.slug}#${section.slug}`} class="mobile-section-link block px-4 py-2 text-sm rounded-lg no-underline transition-colors" style="color:var(--text-body);">
-                    <span class="opacity-50 mr-2 font-mono text-xs">{formatSectionId(section.id)}</span>
+                    <span class="opacity-50 mr-2 font-mono text-xs">{formatSectionId(section.id, lang)}</span>
                     {section.title[lang]}
                   </a>
                   {section.children && section.children.map((child) => (
                     <a href={`/${lang}/${chapter.slug}#${child.slug}`} class="mobile-section-link block px-4 py-1.5 pl-10 text-xs rounded-lg no-underline transition-colors" style="color:var(--text-muted);">
-                       <span class="opacity-40 mr-2 font-mono">{formatSectionId(child.id)}</span>
+                       <span class="opacity-40 mr-2 font-mono">{formatSectionId(child.id, lang)}</span>
                        {child.title[lang]}
                     </a>
                   ))}
