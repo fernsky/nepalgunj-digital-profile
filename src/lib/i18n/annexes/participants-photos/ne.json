@@ -1,0 +1,38 @@
+{
+  "annexNumber": "8",
+  "type": "multi-block",
+  "blocks": [
+    {
+      "type": "image",
+      "image": {
+        "src": "/annexes/img1.png",
+        "alt": "छलफलमा उपस्थित सहभागीहरू",
+        "caption": "छलफलमा उपस्थित सहभागीहरू - १"
+      }
+    },
+    {
+      "type": "image",
+      "image": {
+        "src": "/annexes/img2.png",
+        "alt": "छलफलमा उपस्थित सहभागीहरू",
+        "caption": "छलफलमा उपस्थित सहभागीहरू - २"
+      }
+    },
+    {
+      "type": "image",
+      "image": {
+        "src": "/annexes/img3.png",
+        "alt": "छलफलमा उपस्थित सहभागीहरू",
+        "caption": "छलफलमा उपस्थित सहभागीहरू - ३"
+      }
+    },
+    {
+      "type": "image",
+      "image": {
+        "src": "/annexes/img4.png",
+        "alt": "छलफलमा उपस्थित सहभागीहरू",
+        "caption": "छलफलमा उपस्थित सहभागीहरू - ४"
+      }
+    }
+  ]
+}

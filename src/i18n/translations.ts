@@ -270,7 +270,7 @@ export const annexes: AnnexItem[] = [
   { id: "annex-2", slug: "staff", title: { ne: "अनुसूची - २: उप-महानगरपालिका अन्तर्गतका कर्मचारीहरूको विवरण", en: "Annex 2: Staff Description" } },
   { id: "annex-3", slug: "ambulance-equipment", title: { ne: "अनुसूची - ३: एम्बुलेन्स तथा वारुणयन्त्र लगायतका साधनहरूको विवरण", en: "Annex 3: Ambulances and Equipment" } },
   { id: "annex-4", slug: "hotel-resort", title: { ne: "अनुसूची - ४: होटल, रिसोर्ट तथा रेष्ट्रुरेन्ट सम्बन्धी विवरण", en: "Annex 4: Hotels, Resorts and Restaurants" } },
-  { id: "annex-5", slug: "childcare-centers", title: { ne: "अनुसूची - ५: बालकलवहरूको सञ्चाल", en: "Annex 5: Childcare Centers" } },
+  { id: "annex-5", slug: "child-club-network", title: { ne: "अनुसूची - ५: बालक्लबहरूको सञ्जाल", en: "Annex 5: Child Club Networks" } },
   { id: "annex-6", slug: "agriculture-firms", title: { ne: "अनुसूची - ६: व्यवसायिक कृषि तथा पशुपालन फर्महरूको विवरण", en: "Annex 6: Agriculture and Animal Husbandry Firms" } },
   { id: "annex-7", slug: "resource-map", title: { ne: "अनुसूची - ७: स्रोत नक्सा", en: "Annex 7: Resource Map" } },
   { id: "annex-8", slug: "participants-photos", title: { ne: "अनुसूची - ८: छलफलमा उपस्थित सहभागीहरू तथा तस्वीरहरू", en: "Annex 8: Participants and Photos" } },
