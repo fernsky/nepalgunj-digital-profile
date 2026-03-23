@@ -72,7 +72,7 @@ function getAnnexContent(slug: string) {
         const content = getAnnexContent(annex.slug);
         
         return (
-          <div id={annex.slug}>
+          <div id={annex.slug} class="scroll-mt-24">
             <div class="mb-6 pb-2 border-b-2" style="border-color: rgba(192, 57, 43, 0.2);">
               <h2 class="text-2xl font-bold" style="color: #c0392b;">{annex.title[lang]}</h2>
             </div>
