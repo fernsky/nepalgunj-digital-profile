@@ -43,10 +43,17 @@ const pyramidData = content?.pyramidData ?? [];
         if (!dataString) return;
 
         const data = JSON.parse(dataString);
+        const isMobile = window.innerWidth < 640;
         const width = container.clientWidth || 800;
-        const height = 450;
-        const margin = { top: 30, right: 30, bottom: 40, left: 30 };
+        const height = isMobile ? 400 : 450;
+        const margin = { 
+          top: 30, 
+          right: isMobile ? 10 : 30, 
+          bottom: 40, 
+          left: isMobile ? 10 : 30 
+        };
         const center = width / 2;
+        const centerGap = isMobile ? 25 : 40;
 
         const maxVal =
             d3.max(data, (d: any) => Math.max(d.male, d.female)) || 1000;
@@ -67,12 +74,12 @@ const pyramidData = content?.pyramidData ?? [];
         const xScaleMale = d3
             .scaleLinear()
             .domain([0, xMax])
-            .range([center - 40, margin.left]);
+            .range([center - centerGap, margin.left]);
 
         const xScaleFemale = d3
             .scaleLinear()
             .domain([0, xMax])
-            .range([center + 40, width - margin.right]);
+            .range([center + centerGap, width - margin.right]);
 
         const yScale = d3
             .scaleBand()
@@ -211,42 +218,43 @@ const pyramidData = content?.pyramidData ?? [];
                 tooltip.style("display", "none").style("opacity", 0);
             });
 
+        const legendX = isMobile ? (width/2 - 80) : (center - 100);
         const legend = svg
             .append("g")
             .attr(
                 "transform",
-                `translate(${center - 100}, ${margin.top - 20})`
+                `translate(${legendX}, ${margin.top - 20})`
             );
         legend
             .append("rect")
             .attr("x", 0)
             .attr("y", 0)
-            .attr("width", 16)
-            .attr("height", 16)
+            .attr("width", isMobile ? 12 : 16)
+            .attr("height", isMobile ? 12 : 16)
             .attr("fill", colorMale)
             .attr("rx", 2);
         legend
             .append("text")
-            .attr("x", 24)
-            .attr("y", 12)
-            .text("Male / पुरुष")
+            .attr("x", isMobile ? 18 : 24)
+            .attr("y", isMobile ? 10 : 12)
+            .text(isMobile ? "Male" : "Male / पुरुष")
             .attr("fill", tickColor)
-            .attr("font-size", "12px");
+            .attr("font-size", isMobile ? "10px" : "12px");
         legend
             .append("rect")
-            .attr("x", 120)
+            .attr("x", isMobile ? 65 : 120)
             .attr("y", 0)
-            .attr("width", 16)
-            .attr("height", 16)
+            .attr("width", isMobile ? 12 : 16)
+            .attr("height", isMobile ? 12 : 16)
             .attr("fill", colorFemale)
             .attr("rx", 2);
         legend
             .append("text")
-            .attr("x", 144)
-            .attr("y", 12)
-            .text("Female / महिला")
+            .attr("x", isMobile ? 83 : 144)
+            .attr("y", isMobile ? 10 : 12)
+            .text(isMobile ? "Female" : "Female / महिला")
             .attr("fill", tickColor)
-            .attr("font-size", "12px");
+            .attr("font-size", isMobile ? "10px" : "12px");
     }
 
     let observerInitialized = false;

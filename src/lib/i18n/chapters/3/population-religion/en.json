@@ -21,36 +21,56 @@
             "chapter": 3,
             "data": {
                 "caption": "Religious Structure (Population Distribution by Religion)",
-                "pieChartData": [
+                "barChartData": [
                     {
                         "religion": "Hindu",
-                        "value": 68.73,
-                        "population": 113028
-                    },
-                    {
-                        "religion": "Islamic",
-                        "value": 29.34,
-                        "population": 48251
-                    },
-                    {
-                        "religion": "Christian",
-                        "value": 0.87,
-                        "population": 1432
+                        "Male": 56603,
+                        "Female": 56425
                     },
                     {
                         "religion": "Buddhist",
-                        "value": 0.70,
-                        "population": 1154
+                        "Male": 552,
+                        "Female": 602
+                    },
+                    {
+                        "religion": "Islam",
+                        "Male": 24643,
+                        "Female": 23608
+                    },
+                    {
+                        "religion": "Kirant",
+                        "Male": 25,
+                        "Female": 24
+                    },
+                    {
+                        "religion": "Christian",
+                        "Male": 664,
+                        "Female": 768
+                    },
+                    {
+                        "religion": "Prakriti",
+                        "Male": 4,
+                        "Female": 4
+                    },
+                    {
+                        "religion": "Bon",
+                        "Male": 5,
+                        "Female": 4
+                    },
+                    {
+                        "religion": "Jain",
+                        "Male": 9,
+                        "Female": 10
+                    },
+                    {
+                        "religion": "Wahai",
+                        "Male": 1,
+                        "Female": 0
                     },
                     {
                         "religion": "Sikh",
-                        "value": 0.30,
-                        "population": 493
-                    },
-                    {
-                        "religion": "Others",
-                        "value": 0.06,
-                        "population": 86
+                        "Male": 249,
+                        "Female": 244
                     }
                 ]
             }

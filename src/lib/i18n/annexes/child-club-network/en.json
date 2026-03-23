@@ -1,0 +1,392 @@
+{
+  "annexNumber": "5",
+  "title": "Annex 5: Child Club Networks",
+  "type": "multi-block",
+  "blocks": [
+    {
+      "type": "table",
+      "data": {
+        "title": "Details of Child Clubs within the Sub-Metropolitan City",
+        "headers": ["S.N.", "Name", "Post", "Address", "Phone Number"],
+        "rows": [
+          ["1", "Zara Khan", "Chairman", "Ward No. 5", "9825545092"],
+          ["2", "Nandini Singh", "Vice-chairman", "Ward No. 15", "9802553527"],
+          ["3", "Harshit Pandey", "Secretary", "Ward No. 10", "9824527772"],
+          ["4", "Om Sahani", "Co-secretary", "Ward No. 16", "9815521510"],
+          ["5", "Samir Rai", "Treasurer", "Ward No. 23", "9828122610"],
+          ["6", "Nirmala Thapa", "Member", "Ward No. 1", "9765855230"],
+          ["7", "Shreya Bhujel", "Member", "Ward No. 2", ""],
+          ["8", "Tirsana Thapa", "Member", "Ward No. 6", "9704740371"],
+          ["9", "Nency Banshakar", "Member", "Ward No. 8", ""],
+          ["10", "Nur Jaha Darji", "Member", "Ward No. 17", "9826502890"],
+          ["11", "Asmita Verma", "Member", "Ward No. 18", ""],
+          ["12", "Suman Harijan", "Member", "Ward No. 20", ""],
+          ["13", "Bhupendra Loniya", "Member", "Ward No. 22", "9819513391"],
+          ["14", "Mo Samim Darji", "Member", "Ward No. 23", "9814541958"]
+        ]
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "Details of Ward Level Child Clubs"
+    },
+    {
+      "type": "table",
+      "data": {
+        "title": "Ward Level Child Club Ward No. 1",
+        "headers": ["S.N.", "Name", "Post", "Address", "Phone Number"],
+        "rows": [
+          ["1", "Saphalta Acharya", "Chairman", "Ward No. 1", "9800562022"],
+          ["2", "Garima Khanal", "Vice-chairman", "Ward No. 1", "9843187061"],
+          ["3", "Rajansingh Thakuri", "Secretary", "Ward No. 1", "9768387019"],
+          ["4", "Yamuna Kumari Thapa", "Co-secretary", "Ward No. 1", "9816536533"],
+          ["5", "Kirtika Saud", "Treasurer", "Ward No. 1", "9800551122"],
+          ["6", "Nirbhik Kaila", "Member", "Ward No. 1", "9848077234"],
+          ["7", "Tufan Shahi", "Member", "Ward No. 1", "9861682188"],
+          ["8", "Eliza Kumari Thapa", "Member", "Ward No. 1", ""],
+          ["9", "Nikita Varnwal", "Member", "Ward No. 1", ""]
+        ]
+      }
+    },
+    {
+      "type": "table",
+      "data": {
+        "title": "Ward Level Child Club Ward No. 2",
+        "headers": ["S.N.", "Name", "Post", "Address", "Phone Number"],
+        "rows": [
+          ["1", "Shreya Bhujel", "Chairman", "Ward No. 2", "9818692419"],
+          ["2", "Mo Ashad", "Vice-chairman", "Ward No. 2", "9826599130"],
+          ["3", "Karuna Rai", "Secretary", "Ward No. 2", "9815558489"],
+          ["4", "Anjali Sahu", "Co-secretary", "Ward No. 2", "9706213067"],
+          ["5", "Sumitra Sahu", "Treasurer", "Ward No. 2", "9704436885"],
+          ["6", "Shrishti Sahu", "Member", "Ward No. 2", ""],
+          ["7", "Joysha Shrestha", "Member", "Ward No. 2", ""],
+          ["8", "Sushma Karki", "Member", "Ward No. 2", ""],
+          ["9", "Shashikant Sahu", "Member", "Ward No. 2", ""],
+          ["10", "Prachi Baishya", "Member", "Ward No. 2", ""],
+          ["11", "Mariyam Rai", "Member", "Ward No. 2", ""]
+        ]
+      }
+    },
+    {
+      "type": "table",
+      "data": {
+        "title": "Ward Level Child Club Ward No. 4",
+        "headers": ["S.N.", "Name", "Post", "Address", "Phone Number"],
+        "rows": [
+          ["1", "Kris Gurung", "Chairman", "Ward No. 4", "9822429158"],
+          ["2", "Prithvi Dangi", "Vice-chairman", "Ward No. 4", "9811665478"],
+          ["3", "Vishal Shahi", "Secretary", "Ward No. 4", "9748480068"],
+          ["4", "Manavi Sharma", "Co-secretary", "Ward No. 4", "9868386527"],
+          ["5", "Isha Pun", "Treasurer", "Ward No. 4", "9848011638"],
+          ["6", "Sabina Shahi", "Member", "Ward No. 4", "9869657357"],
+          ["7", "Vipana Yogi", "Member", "Ward No. 4", "9845957292"],
+          ["8", "Seema Rawal", "Member", "Ward No. 4", "9825564809"],
+          ["9", "Sujal Sugat", "Member", "Ward No. 4", "9702583517"],
+          ["10", "Purnima Thapa", "Member", "Ward No. 4", ""],
+          ["11", "Prenka Neupane", "Member", "Ward No. 4", ""]
+        ]
+      }
+    },
+    {
+      "type": "table",
+      "data": {
+        "title": "Ward Level Child Club Ward No. 6",
+        "headers": ["S.N.", "Name", "Post", "Address", "Phone Number"],
+        "rows": [
+          ["1", "Trishna Thapa", "Chairman", "Ward No. 6", "9704740371"],
+          ["2", "Sumit Thakur", "Vice-chairman", "Ward No. 6", ""],
+          ["3", "Sakshi Sahu", "Secretary", "Ward No. 6", ""],
+          ["4", "Saroj Verma", "Co-secretary", "Ward No. 6", ""],
+          ["5", "Raj Thakur", "Treasurer", "Ward No. 6", ""],
+          ["6", "Saiwa Rai", "Member", "Ward No. 6", ""],
+          ["7", "Khusnuma Behna", "Member", "Ward No. 6", ""],
+          ["8", "Anjali Sahu", "Member", "Ward No. 6", ""],
+          ["9", "Durgesh Thakur", "Member", "Ward No. 6", ""],
+          ["10", "Rishi Thakur", "Member", "Ward No. 6", ""],
+          ["11", "Gauri Sahu", "Member", "Ward No. 6", ""],
+          ["12", "Om Badai", "Member", "Ward No. 6", ""],
+          ["13", "Chhavi Sahu", "Member", "Ward No. 6", ""]
+        ]
+      }
+    },
+    {
+      "type": "table",
+      "data": {
+        "title": "Ward Level Child Club Ward No. 8",
+        "headers": ["S.N.", "Name", "Post", "Address", "Phone Number"],
+        "rows": [
+          ["1", "Nency Banshakar", "Chairman", "Ward No. 8", "9703115738"],
+          ["2", "Gungun Banshakar", "Vice-chairman", "Ward No. 8", "9820437602"],
+          ["3", "Pari Banshakar", "Treasurer", "Ward No. 8", "9848186860"],
+          ["4", "Neha Kanojiya", "Secretary", "Ward No. 8", "9800581953"],
+          ["5", "Mansi Joshi", "Co-secretary", "Ward No. 8", "9804560630"],
+          ["6", "Neha Gupta", "Member", "Ward No. 8", "9822547485"],
+          ["7", "Shivani Gupta", "Member", "Ward No. 8", "9825579394"],
+          ["8", "Nisha Banshakar", "Member", "Ward No. 8", "9703572551"],
+          ["9", "Aditya Banshakar", "Member", "Ward No. 8", "9829536466"],
+          ["10", "Kisan Gupta", "Member", "Ward No. 8", "9822547485"],
+          ["11", "Sanu Joshi", "Member", "Ward No. 8", "9804560630"]
+        ]
+      }
+    },
+    {
+      "type": "table",
+      "data": {
+        "title": "Ward Level Child Club Ward No. 9",
+        "headers": ["S.N.", "Name", "Post", "Address", "Phone Number"],
+        "rows": [
+          ["1", "Salia Haami", "Chairman", "Ward No. 9", ""],
+          ["2", "Sita Dhobi", "Vice-chairman", "Ward No. 9", ""],
+          ["3", "Om Sahani", "Secretary", "Ward No. 9", ""],
+          ["4", "Sadia Dhapali", "Co-secretary", "Ward No. 9", ""],
+          ["5", "Khusnuma Dhapali", "Treasurer", "Ward No. 9", ""],
+          ["6", "Laxmi Yadav", "Member", "Ward No. 9", ""],
+          ["7", "Seema Yadav", "Member", "Ward No. 9", ""],
+          ["8", "Jenisa Sahani", "Member", "Ward No. 9", ""],
+          ["9", "Janaki Kurmi", "Member", "Ward No. 9", ""]
+        ]
+      }
+    },
+    {
+      "type": "table",
+      "data": {
+        "title": "Ward Level Child Club Ward No. 10",
+        "headers": ["S.N.", "Name", "Post", "Address", "Phone Number"],
+        "rows": [
+          ["1", "Harshit Pandey", "Chairman", "Gosaigaun", "9848042910"],
+          ["2", "Samiksha Chaudhary", "Vice-chairman", "Adarsh Tol", "9703823838"],
+          ["3", "Purnika Pathak and Krishna Bhujuwa", "Secretary (11 yrs)", "Ward No. 10", "9849879532 / 9820200000"],
+          ["4", "Aakriti Pandey", "Co-secretary", "Siddhartha Tol", "9848033458"],
+          ["5", "Palak Megharani", "Treasurer", "Chaulika Tol", "9812408200"],
+          ["6", "Aarusi Shrestha", "Member", "Gosaigaun", "9848034710"],
+          ["7", "Sonali Gupta", "Member", "Gosaigaun", "9869117699"],
+          ["8", "Abjal Shesh", "Member", "Chaulika Tol", "9819551282"],
+          ["9", "Aryan Pandey", "Member", "Siddhartha Tol", "9848234918"]
+        ]
+      }
+    },
+    {
+      "type": "table",
+      "data": {
+        "title": "Ward Level Child Club Ward No. 11",
+        "headers": ["S.N.", "Name", "Post", "Address", "Phone Number"],
+        "rows": [
+          ["1", "Sakshi Jasgadh", "Chairman", "Ward No. 11", "9822418653"],
+          ["2", "Sonakshi Dabgar", "Vice-chairman", "Ward No. 11", "9803430622"],
+          ["3", "Bine Kashyap", "Secretary", "Ward No. 11", "9816506597"],
+          ["4", "Mayusi Shrivastava", "Treasurer", "Ward No. 11", "9863147767"],
+          ["5", "Deepika Kashyap", "Co-secretary", "Ward No. 11", ""],
+          ["6", "Sabini Kashyap", "Member", "Ward No. 11", "9816506597"],
+          ["7", "Nency Kashyap", "Member", "Ward No. 11", "9706080645"],
+          ["8", "Sejal Kashyap", "Member", "Ward No. 11", "9825503134"],
+          ["9", "Gauri Kashyap", "Member", "Ward No. 11", "9800507924"],
+          ["10", "Vesnavi Dabgar", "Member", "Ward No. 11", ""],
+          ["11", "Sital Kahar", "Member", "Ward No. 11", ""]
+        ]
+      }
+    },
+    {
+      "type": "table",
+      "data": {
+        "title": "Ward Level Child Club Ward No. 12",
+        "headers": ["S.N.", "Name", "Post", "Address", "Phone Number"],
+        "rows": [
+          ["1", "Saraswati Thapa Magar", "Chairman", "Ward No. 12", ""],
+          ["2", "Diksha Chalaune", "Vice-chairman", "Ward No. 12", ""],
+          ["3", "Prashansa Bisht", "Secretary", "Ward No. 12", ""],
+          ["4", "Dipendra Shahi", "Co-secretary", "Ward No. 12", ""],
+          ["5", "Vipul KC", "Treasurer", "Ward No. 12", ""],
+          ["6", "Sarmila Arya", "Member", "Ward No. 12", ""],
+          ["7", "Pushpa Thapa Magar", "Member", "Ward No. 12", ""],
+          ["8", "Pratistha Bisht", "Member", "Ward No. 12", ""],
+          ["9", "Preka Neupane", "Member", "Ward No. 12", ""],
+          ["10", "Samar Halwai", "Member", "Ward No. 12", ""],
+          ["11", "Saheba Shesh", "Member", "Ward No. 12", ""],
+          ["12", "Ashish Soni", "Member", "Ward No. 12", ""],
+          ["13", "Roshika KC", "Member", "Ward No. 12", ""],
+          ["14", "Sadiya Khan", "Member", "Ward No. 12", ""],
+          ["15", "Nischal Thapa Magar", "Member", "Ward No. 12", ""]
+        ]
+      }
+    },
+    {
+      "type": "table",
+      "data": {
+        "title": "Ward Level Child Club Ward No. 13",
+        "headers": ["S.N.", "Name", "Post", "Address", "Phone Number"],
+        "rows": [
+          ["1", "Iman Singh Chauhan", "Chairman", "Ward No. 13", ""],
+          ["2", "Kinjal Singh Thakur", "Vice-chairman", "Ward No. 13", ""],
+          ["3", "Dipendra Khatik", "Secretary", "Ward No. 13", ""],
+          ["4", "Janaki Singh", "Co-secretary", "Ward No. 13", ""],
+          ["5", "Abhishev Brijbasi", "Treasurer", "Ward No. 13", ""],
+          ["6", "Rosan Singh Chauhan", "Member", "Ward No. 13", ""],
+          ["7", "Durgesh Sonkar", "Member", "Ward No. 13", ""],
+          ["8", "Ramu Singh Chaudhary", "Member", "Ward No. 13", ""],
+          ["9", "Suman Kewat", "Member", "Ward No. 13", ""],
+          ["10", "Sonam Brijbasi", "Member", "Ward No. 13", ""],
+          ["11", "Laxmi Singh Thakur", "Member", "Ward No. 13", ""]
+        ]
+      }
+    },
+    {
+      "type": "table",
+      "data": {
+        "title": "Ward Level Child Club Ward No. 16",
+        "headers": ["S.N.", "Name", "Post", "Address", "Phone Number"],
+        "rows": [
+          ["1", "Samir Rai", "Chairman", "Ward No. 16 Jaispur", "9828122610"],
+          ["2", "Nagma Ansari", "Vice-chairman", "Ward No. 16 Jaispur", "9811912861"],
+          ["3", "Saminur Ansari", "Secretary", "Ward No. 16 Jaispur", "9808511393"],
+          ["4", "Rukaiya Shesh", "Co-secretary", "Ward No. 16 Jaispur", "9827263056"],
+          ["5", "Yasmin Jasgadh", "Treasurer", "Ward No. 16 Jaispur", "9846595195"],
+          ["6", "Salman Kuraisi", "Member", "Ward No. 16 Jaispur", "9804519455"],
+          ["7", "Tiku Kashyap", "Member", "Ward No. 16 Jaispur", "9705788147"],
+          ["8", "Rasid Ansari", "Member", "Ward No. 16 Jaispur", "9702024628"],
+          ["9", "Samir Bagwan", "Member", "Ward No. 16 Jaispur", "9811886662"],
+          ["10", "Sadav Idris", "Member", "Ward No. 16 Jaispur", "9814545486"],
+          ["11", "Alok Soni", "Member", "Ward No. 16 Jaispur", "9816540149"]
+        ]
+      }
+    },
+    {
+      "type": "table",
+      "data": {
+        "title": "Ward Level Child Club Ward No. 17",
+        "headers": ["S.N.", "Name", "Post", "Address", "Phone Number"],
+        "rows": [
+          ["1", "Salman Bagwan", "Chairman", "Dhordegaun", "9812570438"],
+          ["2", "Saima Pramin Bagwan", "Vice-chairman", "Paraspur", "9822510301"],
+          ["3", "Anuradha Yadav", "Secretary", "Nadaigaun", "9814538599"],
+          ["4", "Chandani Bagwan", "Co-secretary", "Dhordegaun", "9804527764"],
+          ["5", "Rajiya Bano Idris", "Treasurer", "Paraspur", "9812557128"],
+          ["6", "Salma Behna", "Member", "Paraspur", "9804588576"],
+          ["7", "Sabina Idris", "Member", "Ward No. 17", "9815583522"],
+          ["8", "Rukmini Verma", "Member", "Nadaigaun", "9812424185"],
+          ["9", "Irfan Bagwan", "Member", "Dhordegaun", "9848047853"]
+        ]
+      }
+    },
+    {
+      "type": "table",
+      "data": {
+        "title": "Ward Level Child Club Ward No. 18",
+        "headers": ["S.N.", "Name", "Post", "Address", "Phone Number"],
+        "rows": [
+          ["1", "Puja Verma", "Chairman", "Ward No. 18", "9825565895"],
+          ["2", "Amrita Khatik", "Vice-chairman", "Ward No. 18", "9812505470"],
+          ["3", "Roshani Raidas", "Secretary", "Ward No. 18", "9824593012"],
+          ["4", "Shanti Khatik", "Co-secretary", "Ward No. 18", "9828230086"],
+          ["5", "Ajay Rai", "Treasurer", "Ward No. 18", "9862724399"],
+          ["6", "Vishal Raidas", "Member", "Ward No. 18", "9804532780"],
+          ["7", "Kavita Khatik", "Member", "Ward No. 18", "9816536094"],
+          ["8", "Semraj Budha", "Member", "Ward No. 18", "9864343889"],
+          ["9", "Pradip Raidas", "Member", "Ward No. 18", "9816505126"],
+          ["10", "Vinita Khatik", "Member", "Ward No. 18", "9812515470"],
+          ["11", "Sonam Raidas", "Advisor", "Ward No. 18", "9804542117"]
+        ]
+      }
+    },
+    {
+      "type": "table",
+      "data": {
+        "title": "Ward Level Child Club Ward No. 19",
+        "headers": ["S.N.", "Name", "Post", "Address", "Phone Number"],
+        "rows": [
+          ["1", "Laxmi Bhujuwa", "Chairman", "Futaha", "9706956350"],
+          ["2", "Mousham Basnet", "Vice-chairman", "Aalanagar", "9818796366"],
+          ["3", "Asmita Verma", "Secretary", "Futaha", ""],
+          ["4", "Aaradhya Shahi", "Co-secretary", "Shantinagar", ""],
+          ["5", "Anmol Gupta", "Treasurer", "Surjigaun", "9815531125"],
+          ["6", "Hazari Bhiyal", "Member", "Aalanagar", "9868258063"],
+          ["7", "Isan KC", "Member", "Pharamtol", "9868096249"],
+          ["8", "Hema Verma", "Member", "Futaha", "9829651777"],
+          ["9", "Rinki Kumari Shukla", "Member", "Futaha", "9801953888"],
+          ["10", "Madhu Malla", "Advisor Member", "Shantinagar", "9804567043"]
+        ]
+      }
+    },
+    {
+      "type": "table",
+      "data": {
+        "title": "Ward Level Child Club Ward No. 20",
+        "headers": ["S.N.", "Name", "Post", "Address", "Phone Number"],
+        "rows": [
+          ["1", "Shrishti Rimal", "Chairman", "Ward No. 20", ""],
+          ["2", "Suman Harijan", "Vice-chairman", "Ward No. 20", ""],
+          ["3", "Purnima Budha Chhetri", "Secretary", "Ward No. 20", ""],
+          ["4", "Ram Saran Chaudhary", "Co-secretary", "Ward No. 20", ""],
+          ["5", "Shrisha Shahi", "Treasurer", "Ward No. 20", ""],
+          ["6", "Aaragya Rawat", "Member", "Ward No. 20", ""],
+          ["7", "Vipana Kumari Singh", "Member", "Ward No. 20", ""],
+          ["8", "Ritu Sharma", "Member", "Ward No. 20", ""],
+          ["9", "Surendra Yadav", "Advisor", "Ward No. 20", ""]
+        ]
+      }
+    },
+    {
+      "type": "table",
+      "data": {
+        "title": "Ward Level Child Club Ward No. 21",
+        "headers": ["S.N.", "Name", "Post", "Address", "Phone Number"],
+        "rows": [
+          ["1", "Ilima Siddiqui", "Chairman", "21", "9804596451"],
+          ["2", "Ankit Jaiswal", "Vice-chairman", "21", "9828088124"],
+          ["3", "Ashish Verma", "Secretary", "21", "9804537988"],
+          ["4", "Alim Siddiqui", "Co-secretary", "21", "9819579620"],
+          ["5", "Nisha Siddiqui", "Treasurer", "21", "9815520786"],
+          ["6", "Shraddha Soni", "Member", "21", "9703334202"],
+          ["7", "Gauri Soni", "Member", "21", "9814598812"],
+          ["8", "Mainaj Siddiqui", "Member", "21", ""],
+          ["9", "Kalam Siddiqui", "Member", "21", "9819579620"],
+          ["10", "Gulam Khan", "Member", "21", "9824542635"],
+          ["11", "Suraj Kurmi", "Member", "21", "9822484017"]
+        ]
+      }
+    },
+    {
+      "type": "table",
+      "data": {
+        "title": "Ward Level Child Club Ward No. 23",
+        "headers": ["S.N.", "Name", "Post", "Address", "Phone Number"],
+        "rows": [
+          ["1", "Mo Samim Darji", "Chairman", "Ward No. 23", "9814541958"],
+          ["2", "Meena Shesh", "Vice-chairman", "Ward No. 23", "9840485491"],
+          ["3", "Mustafizul Hasan Shesh", "Secretary", "Ward No. 23", "9840485488"],
+          ["4", "Lalli Jahan Teli", "Co-secretary", "Ward No. 23", "9744260786"],
+          ["5", "Samim Darji", "Treasurer", "Ward No. 23", ""],
+          ["6", "Mo Navin Shesh", "Member", "Ward No. 23", "9823154419"],
+          ["7", "Rina Kori", "Member", "Ward No. 23", "9860325289"],
+          ["8", "Hasibun Teli", "Member", "Ward No. 23", "9828387424"],
+          ["9", "Abdul Rahim Shesh", "Member", "Ward No. 23", "9802406418"]
+        ],
+        "source": "Source: Office of the Municipal Executive"
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "Attendance details in Child Club Formation and Re-formation"
+    },
+    {
+      "type": "table",
+      "data": {
+        "headers": ["Ward No.", "Boy", "Girl", "Representatives, Trainers, Formation Task Force, Manager, Reporter, Assistant", "Total"],
+        "rows": [
+          ["2", "10", "30", "8", "48"],
+          ["1", "11", "15", "11", "37"],
+          ["10", "15", "17", "9", "41"],
+          ["19", "9", "17", "9", "35"],
+          ["17", "13", "34", "8", "55"],
+          ["15", "16", "24", "8", "48"],
+          ["23", "17", "15", "8", "40"],
+          ["16", "14", "9", "9", "32"],
+          ["21", "10", "12", "7", "29"],
+          ["13", "20", "20", "7", "47"],
+          ["6", "", "", "", "0"]
+        ],
+        "source": "Source: Office of the Municipal Executive"
+      }
+    }
+  ]
+}
