@@ -19,12 +19,8 @@ const { type, data, config, id } = Astro.props;
 ---
 
 <div
-  id={id}
-  class="w-full min-h-[300px] sm:min-h-[400px] my-10 p-4 sm:p-8 rounded-3xl group relative overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-primary-500/10 transition-opacity duration-300"
+  class="my-12 p-8 rounded-3xl group relative overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-primary-500/10"
   style="background: var(--card-bg); border: 1px solid var(--card-border);"
-  data-chart={JSON.stringify(data)}
-  data-config={JSON.stringify(config)}
-  data-type={type}
 >
   {
     config.title && (
@@ -77,12 +73,6 @@ const { type, data, config, id } = Astro.props;
 
     observer.observe(container);
 
-    let resizeTimer;
-    window.addEventListener("resize", () => {
-      clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(renderChart, 200);
-    });
-
     async function renderChart() {
       if (typeof d3 === "undefined") {
         await new Promise((resolve) => {
@@ -93,32 +83,31 @@ const { type, data, config, id } = Astro.props;
         });
       }
 
-    container.innerHTML = "";
-    const containerWidth = container.clientWidth;
+    const containerWidth = container.clientWidth || 800;
     const isMobile = window.innerWidth < 768;
-    const isHorizontal = isMobile && (data.length > 8 || config.labels.length > 2);
-    
+    const isHorizontal = type === "bar" && (data.length > 12 || (isMobile && data.length > 8));
+
     const margin = { 
-      top: 40, 
-      right: isMobile ? 30 : 40, 
-      bottom: isHorizontal ? 60 : (isMobile ? 120 : 160), 
-      left: isHorizontal ? (isMobile ? 60 : 120) : (isMobile ? 60 : 100) 
+        top: 40, 
+        right: isHorizontal ? 40 : (isMobile ? 30 : 40), 
+        bottom: isHorizontal ? 100 : (isMobile ? 120 : 160), 
+        left: isHorizontal ? (isMobile ? 80 : 140) : (isMobile ? 60 : 100) 
     };
-    
+
     const width = containerWidth - margin.left - margin.right;
     const height = isHorizontal 
-      ? (data.length * (isMobile ? 40 : 50)) 
-      : (isMobile ? 300 : 400);
+        ? Math.max(300, data.length * 40) 
+        : (isMobile ? 300 : 400);
+
+    const totalHeight = height + margin.top + margin.bottom;
 
     const svg = d3
-      .select(containerId)
+      .select(container)
       .append("svg")
       .attr("width", "100%")
-      .attr("height", "100%")
-      .attr(
-        "viewBox",
-        `0 0 ${containerWidth} ${height + margin.top + margin.bottom}`,
-      )
+      .attr("height", "auto")
+      .attr("viewBox", `0 0 ${containerWidth} ${totalHeight}`)
+      .style("display", "block")
       .append("g")
       .attr("transform", `translate(${margin.left},${margin.top})`);
 
@@ -130,164 +119,301 @@ const { type, data, config, id } = Astro.props;
         .attr("id", `grad-${id}-${i}`)
         .attr("x1", "0%")
         .attr("y1", "0%")
-        .attr("x2", isHorizontal ? "100%" : "0%")
-        .attr("y2", isHorizontal ? "0%" : "100%");
+        .attr("x2", "0%")
+        .attr("y2", "100%");
 
-      gradient.append("stop").attr("offset", "0%").attr("stop-color", color).attr("stop-opacity", 1);
-      gradient.append("stop").attr("offset", "100%").attr("stop-color", color).attr("stop-opacity", 0.7);
+      gradient
+        .append("stop")
+        .attr("offset", "0%")
+        .attr("stop-color", color)
+        .attr("stop-opacity", 1);
+      gradient
+        .append("stop")
+        .attr("offset", "100%")
+        .attr("stop-color", color)
+        .attr("stop-opacity", 0.7);
     });
 
     // Tooltip
-    d3.selectAll(`.chart-tooltip-${id}`).remove();
     const tooltip = d3
       .select("body")
       .append("div")
-      .attr("class", `chart-tooltip chart-tooltip-${id}`)
+      .attr("class", "chart-tooltip")
       .style("position", "absolute")
-      .style("background", "rgba(15, 23, 42, 1)")
+      .style("background", "rgba(15, 23, 42, 0.9)")
       .style("color", "white")
-      .style("padding", "10px 14px")
-      .style("border-radius", "10px")
+      .style("padding", "8px 12px")
+      .style("border-radius", "8px")
       .style("font-size", "12px")
       .style("pointer-events", "none")
       .style("opacity", 0)
       .style("z-index", 100)
-      .style("box-shadow", "0 10px 15px -3px rgba(0,0,0,0.5)")
       .style("backdrop-filter", "blur(4px)")
       .style("border", "1px solid rgba(255,255,255,0.1)");
 
+    function wrapText(text, width) {
+      text.each(function() {
+        var text = d3.select(this),
+            words = text.text().split(/\s+/).reverse(),
+            word,
+            line = [],
+            lineNumber = 0,
+            lineHeight = 1.1, // ems
+            y = text.attr("y"),
+            dy = parseFloat(text.attr("dy")),
+            tspan = text.text(null).append("tspan").attr("x", 0).attr("y", y).attr("dy", dy + "em");
+        while (word = words.pop()) {
+          line.push(word);
+          tspan.text(line.join(" "));
+          if (tspan.node().getComputedTextLength() > width) {
+            line.pop();
+            tspan.text(line.join(" "));
+            line = [word];
+            tspan = text.append("tspan").attr("x", 0).attr("y", y).attr("dy", ++lineNumber * lineHeight + dy + "em").text(word);
+          }
+        }
+      });
+    }
+
     if (type === "bar") {
-      if (isHorizontal) {
-        // --- HORIZONTAL MODE ---
-        const y0 = d3.scaleBand().domain(data.map((d) => d[config.xKey])).rangeRound([0, height]).paddingInner(0.2);
-        const y1 = d3.scaleBand().domain(config.labels).rangeRound([0, y0.bandwidth()]).padding(0.05);
-        const x = d3.scaleLinear()
-          .domain([0, d3.max(data, (d) => d3.max(config.labels, (label) => d[label]))])
-          .nice().rangeRound([0, width]);
+      const x0 = d3
+        .scaleBand()
+        .domain(data.map((d) => d[config.xKey]))
+        .rangeRound([0, width])
+        .paddingInner(0.2);
 
-        svg.append("g")
-          .call(d3.axisLeft(y0))
-          .attr("font-size", "11px")
-          .selectAll("text")
-          .style("fill", "var(--text-body)")
-          .text(d => String(d).length > 12 ? String(d).substring(0, 10) + '...' : d);
+      const x1 = d3
+        .scaleBand()
+        .domain(config.labels)
+        .rangeRound([0, x0.bandwidth()])
+        .padding(0.1);
 
-        svg.append("g").attr("transform", `translate(0,${height})`).call(d3.axisBottom(x).ticks(5, "s"))
-          .selectAll("text").style("fill", "var(--text-body)");
+      const y = d3
+        .scaleLinear()
+        .domain([
+          0,
+          d3.max(data, (d) => d3.max(config.labels, (label) => d[label])),
+        ])
+        .nice()
+        .rangeRound([height, 0]);
 
-        const groups = svg.selectAll(".group").data(data).enter().append("g")
-          .attr("transform", (d) => `translate(0,${y0(d[config.xKey])})`);
+      // Axes
+      const xAxis = svg
+        .append("g")
+        .attr("transform", `translate(0,${height})`)
+        .call(d3.axisBottom(x0))
+        .attr("font-size", "14px")
+        .attr("font-weight", "600");
 
-        groups.selectAll("rect")
-          .data((d, i) => config.labels.map((label) => ({ key: label, value: d[label], groupIndex: i, category: d[config.xKey] })))
-          .enter().append("rect")
-          .attr("x", 0).attr("y", (d) => y1(d.key)).attr("width", 0).attr("height", y1.bandwidth()).attr("rx", 4)
-          .attr("fill", (d, i) => `url(#grad-${id}-${(config.labels.length === 1 ? d.groupIndex : i) % (config.colors?.length || 10)})`)
-          .transition().duration(1000).delay((d, i) => i * 50)
-          .attr("width", (d) => Math.max(2, x(d.value)));
+      xAxis.selectAll("text")
+        .style("fill", "var(--text-body)")
+        .call(wrapText, x0.bandwidth()) // Apply wrapText to x-axis labels
+        .style("text-anchor", "middle") // Center the wrapped text
+        .attr("dy", "0.5em"); // Adjust vertical position
 
-        groups.selectAll("rect").on("mouseover pointerdown", function (event, d) {
+      svg
+        .append("g")
+        .call(d3.axisLeft(y).ticks(null, "s"))
+        .attr("font-size", "14px")
+        .selectAll("text")
+        .style("fill", "var(--text-body)");
+
+      // Grid lines
+      svg
+        .append("g")
+        .attr("class", "grid")
+        .call(d3.axisLeft(y).tickSize(-width).tickFormat(""))
+        .style("stroke-opacity", 0.1)
+        .style("stroke-dasharray", "3,3");
+
+      // Bars
+      const groups = svg
+        .selectAll(".group")
+        .data(data)
+        .enter()
+        .append("g")
+        .attr("transform", (d) => `translate(${x0(d[config.xKey])},0)`);
+
+      groups
+        .selectAll("rect")
+        .data((d, i) =>
+          config.labels.map((label) => ({
+            key: label,
+            value: d[label],
+            groupIndex: i,
+          })),
+        )
+        .enter()
+        .append("rect")
+        .attr("x", (d) => x1(d.key))
+        .attr("y", height)
+        .attr("width", x1.bandwidth())
+        .attr("height", 0)
+        .attr("rx", 4)
+        .attr("fill", (d, i) => {
+          // If only one label, use the group index for colors to get different colors per bar
+          const colorIdx = config.labels.length === 1 ? d.groupIndex : i;
+          return `url(#grad-${id}-${colorIdx % (config.colors?.length || 10)})`;
+        })
+        .transition()
+        .duration(1000)
+        .delay((d, i) => i * 100)
+        .attr("y", (d) => {
+          const barH = Math.max(5, height - y(d.value));
+          return height - barH;
+        })
+        .attr("height", (d) => Math.max(5, height - y(d.value))); // Ensuring visible minimum height
+
+      groups
+        .selectAll("rect")
+        .on("mouseover", function (event, d) {
           d3.select(this).attr("filter", "brightness(1.2)");
-          tooltip.transition().duration(100).style("opacity", 1);
-          tooltip.html(`<strong>${d.category}</strong>${config.labels.length > 1 ? '<br/>' + d.key : ''}: ${d.value.toLocaleString()}`)
-            .style("left", (event.pageX || event.touches?. [0].pageX) + 15 + "px")
-            .style("top", (event.pageY || event.touches?. [0].pageY) - 20 + "px");
-        }).on("mousemove", function (event) {
-          tooltip.style("left", (event.pageX || event.touches?. [0].pageX) + 15 + "px")
-                 .style("top", (event.pageY || event.touches?. [0].pageY) - 20 + "px");
-        }).on("mouseout pointerup", function () {
+          tooltip.transition().duration(200).style("opacity", 1);
+          const label = config.labels.length === 1 ? data[d.groupIndex][config.xKey] : d.key;
+          tooltip.html(`<strong>${label}</strong>: ${d.value.toLocaleString()}`)
+            .style("left", event.pageX + 10 + "px")
+            .style("top", event.pageY - 28 + "px");
+        })
+        .on("mouseout", function () {
           d3.select(this).attr("filter", null);
-          tooltip.transition().duration(200).style("opacity", 0);
+          tooltip.transition().duration(500).style("opacity", 0);
         });
-
-      } else {
-        // --- VERTICAL MODE ---
-        const x0 = d3.scaleBand().domain(data.map((d) => d[config.xKey])).rangeRound([0, width]).paddingInner(0.2);
-        const x1 = d3.scaleBand().domain(config.labels).rangeRound([0, x0.bandwidth()]).padding(0.1);
-        const y = d3.scaleLinear()
-          .domain([0, d3.max(data, (d) => d3.max(config.labels, (label) => d[label]))])
-          .nice().rangeRound([height, 0]);
-
-        const xAxis = svg.append("g").attr("transform", `translate(0,${height})`).call(d3.axisBottom(x0))
-          .attr("font-size", isMobile ? "10px" : "12px");
-
-        xAxis.selectAll("text").style("fill", "var(--text-body)")
-          .style("text-anchor", data.length > 3 || isMobile ? "end" : "middle")
-          .attr("transform", data.length > 3 || isMobile ? "rotate(-45)" : "")
-          .attr("dx", data.length > 3 || isMobile ? "-0.8em" : "0")
-          .attr("dy", data.length > 3 || isMobile ? "0.5em" : ".5em");
-
-        svg.append("g").call(d3.axisLeft(y).ticks(isMobile ? 5 : null, "s"))
-          .selectAll("text").style("fill", "var(--text-body)");
-
-        const groups = svg.selectAll(".group").data(data).enter().append("g")
-          .attr("transform", (d) => `translate(${x0(d[config.xKey])},0)`);
-
-        groups.selectAll("rect")
-          .data((d, i) => config.labels.map((label) => ({ key: label, value: d[label], groupIndex: i, category: d[config.xKey] })))
-          .enter().append("rect")
-          .attr("x", (d) => x1(d.key)).attr("y", height).attr("width", x1.bandwidth()).attr("height", 0).attr("rx", 4)
-          .attr("fill", (d, i) => `url(#grad-${id}-${(config.labels.length === 1 ? d.groupIndex : i) % (config.colors?.length || 10)})`)
-          .transition().duration(1000).attr("y", (d) => height - Math.max(2, height - y(d.value)))
-          .attr("height", (d) => Math.max(2, height - y(d.value)));
-
-        groups.selectAll("rect").on("mouseover pointerdown", function (event, d) {
-          d3.select(this).attr("filter", "brightness(1.2)");
-          tooltip.transition().duration(100).style("opacity", 1);
-          tooltip.html(`<strong>${d.category}</strong>${config.labels.length > 1 ? '<br/>' + d.key : ''}: ${d.value.toLocaleString()}`)
-            .style("left", (event.pageX || event.touches?. [0].pageX) + 15 + "px")
-            .style("top", (event.pageY || event.touches?. [0].pageY) - 20 + "px");
-        }).on("mousemove", function (event) {
-          tooltip.style("left", (event.pageX || event.touches?. [0].pageX) + 15 + "px")
-                 .style("top", (event.pageY || event.touches?. [0].pageY) - 20 + "px");
-        }).on("mouseout pointerup", function () {
-          d3.select(this).attr("filter", null);
-          tooltip.transition().duration(200).style("opacity", 0);
-        });
-      }
     } else if (type === "pie" || type === "donut") {
       const radius = Math.min(width, height) / 2;
       const total = d3.sum(data, (d) => d.value);
-      const g = svg.append("g").attr("transform", `translate(${width / 2},${height / 2})`);
-      const getLabel = (d) => d[config.xKey] || d.label || d.category || d.type || d.status || "Unknown";
-      const colorScale = d3.scaleOrdinal().domain(data.map(getLabel)).range(config.colors || d3.schemeSet2);
-      const pie = d3.pie().value((d) => d.value).sort(null);
-      const arc = d3.arc().innerRadius(type === "donut" ? radius * 0.45 : 0).outerRadius(radius * 0.9).cornerRadius(6);
-      const arcs = g.selectAll(".arc").data(pie(data)).enter().append("g").attr("class", "arc");
+      const g = svg
+        .append("g")
+        .attr("transform", `translate(${width / 2},${height / 2})`);
 
-      arcs.append("path").attr("fill", (d) => colorScale(getLabel(d.data))).attr("stroke", "var(--card-bg)").style("stroke-width", "2px")
-        .on("mouseover pointerdown", function (event, d) {
-          d3.select(this).transition().duration(200).attr("transform", (d) => {
-            const angle = (d.startAngle + d.endAngle) / 2;
-            return `translate(${Math.sin(angle) * 12},${-Math.cos(angle) * 12})`;
-          }).style("filter", "brightness(1.1)");
-          const p = ((d.data.value / total) * 100).toFixed(1);
-          tooltip.html(`<strong>${getLabel(d.data)}</strong><br/>${d.data.value.toLocaleString()} (${p}%)`)
-            .style("left", (event.pageX || event.touches?. [0].pageX) + 15 + "px")
-            .style("top", (event.pageY || event.touches?. [0].pageY) - 20 + "px")
-            .transition().duration(100).style("opacity", 1);
-        }).on("mousemove", function (event) {
-          tooltip.style("left", (event.pageX || event.touches?. [0].pageX) + 15 + "px")
-                 .style("top", (event.pageY || event.touches?. [0].pageY) - 20 + "px");
-        }).on("mouseout pointerup", function () {
-          d3.select(this).transition().duration(300).attr("transform", "translate(0,0)").style("filter", null);
-          tooltip.transition().duration(200).style("opacity", 0);
+      const getLabel = (d) => d[config.xKey] || d.label || d.category || d.type || d.status || "Unknown";
+
+      const colorScale = d3
+        .scaleOrdinal()
+        .domain(data.map(getLabel))
+        .range(config.colors || d3.schemeSet2);
+
+      const pie = d3
+        .pie()
+        .value((d) => d.value)
+        .sort(null);
+
+      const arc = d3
+        .arc()
+        .innerRadius(type === "donut" ? radius * 0.4 : 0)
+        .outerRadius(radius * 0.8)
+        .cornerRadius(6);
+
+      const arcs = g
+        .selectAll(".arc")
+        .data(pie(data))
+        .enter()
+        .append("g")
+        .attr("class", "arc");
+
+      arcs
+        .append("path")
+        .attr("fill", (d) => colorScale(getLabel(d.data)))
+        .attr("stroke", "var(--card-bg)")
+        .style("stroke-width", "3px")
+        .attr("filter", "drop-shadow(0px 4px 6px rgba(0,0,0,0.1))")
+        .on("mouseover", function (event, d) {
+          d3.select(this)
+            .transition()
+            .duration(200)
+            .attr("transform", function (d) {
+              const dist = 12;
+              const angle = (d.startAngle + d.endAngle) / 2;
+              const x = Math.sin(angle) * dist;
+              const y = -Math.cos(angle) * dist;
+              return `translate(${x},${y})`;
+            })
+            .style(
+              "filter",
+              "brightness(1.1) drop-shadow(0px 8px 12px rgba(0,0,0,0.2))",
+            );
+
+          const percentage = ((d.data.value / total) * 100).toFixed(1);
+          tooltip
+            .html(
+              `<strong>${getLabel(d.data)}</strong><br/>Count: ${d.data.value.toLocaleString()}<br/>Percentage: ${percentage}%`,
+            )
+            .style("left", event.pageX + 10 + "px")
+            .style("top", event.pageY - 28 + "px")
+            .transition()
+            .duration(200)
+            .style("opacity", 1);
         })
-        .transition().duration(1200).attrTween("d", function (d) {
+        .on("mouseout", function () {
+          d3.select(this)
+            .transition()
+            .duration(300)
+            .attr("transform", "translate(0,0)")
+            .style("filter", "drop-shadow(0px 4px 6px rgba(0,0,0,0.1))");
+          tooltip.transition().duration(500).style("opacity", 0);
+        })
+        .transition()
+        .duration(1500)
+        .attrTween("d", function (d) {
           const i = d3.interpolate({ startAngle: 0, endAngle: 0 }, d);
-          return function (t) { return arc(i(t)); };
+          return function (t) {
+            return arc(i(t));
+          };
         });
 
-      const arcLabel = d3.arc().innerRadius(radius * 0.75).outerRadius(radius * 0.75);
-      arcs.append("text").attr("transform", (d) => `translate(${arcLabel.centroid(d)})`)
-        .style("text-anchor", "middle").style("font-size", isMobile ? "10px" : "12px").style("fill", "white")
-        .style("font-weight", "bold").style("pointer-events", "none")
-        .style("text-shadow", "1px 1px 2px black, -1px -1px 2px black")
+      // Add labels (for arcs > 5%)
+      const arcLabel = d3
+        .arc()
+        .innerRadius(radius * 0.9)
+        .outerRadius(radius * 0.9);
+      arcs
+        .append("text")
+        .attr("transform", (d) => `translate(${arcLabel.centroid(d)})`)
+        .attr("dy", "0.35em")
+        .style("text-anchor", (d) =>
+          (d.endAngle + d.startAngle) / 2 > Math.PI ? "end" : "start",
+        )
         .text((d) => {
           const p = (d.data.value / total) * 100;
-          return p >= 3 ? `${p.toFixed(0)}%` : "";
-        });
+          return p >= 3 ? `${p.toFixed(1)}%` : "";
+        })
+        .style("fill", "var(--text-heading)")
+        .style("font-weight", "bold")
+        .style("font-size", "14px")
+        .style("opacity", 0)
+        .transition()
+        .delay(1000)
+        .duration(500)
+        .style("opacity", 1);
     }
+      // --- LEGEND ---
+      if (config.labels.length > 1) {
+        const legend = svg.append("g")
+          .attr("class", "chart-legend")
+          .attr("transform", `translate(0, ${height + (isHorizontal ? 40 : 80)})`);
+        
+        let lx = 0;
+        let ly = 0;
+        const spacing = 140;
+        
+        config.labels.forEach((label, i) => {
+          if (lx + spacing > width) {
+            lx = 0;
+            ly += 25;
+          }
+          
+          const g = legend.append("g").attr("transform", `translate(${lx}, ${ly})`);
+          g.append("rect").attr("width", 12).attr("height", 12).attr("rx", 2)
+            .attr("fill", config.colors?.[i] || "#3b82f6");
+          g.append("text").attr("x", 20).attr("y", 10).text(label)
+            .style("font-size", "12px").style("fill", "var(--text-body)");
+            
+          lx += spacing;
+        });
+
+        // Center the legend
+        const actualWidth = Math.min(width, config.labels.length * spacing);
+        legend.attr("transform", `translate(${(width - Math.min(width, lx || spacing))/2}, ${height + (isHorizontal ? 40 : 80)})`);
+      }
     }
   })();
 </script>
