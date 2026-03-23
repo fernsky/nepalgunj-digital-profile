@@ -1,114 +1,30 @@
 {
   "type": "table",
   "data": {
-    "title": "तालिका नं. १०२: उप-महानगरपालिकाको स्वास्थ्य शाखामा कार्यरत कर्मचारीहरुको विवरण",
+    "title": "Table No. 102: Details of Employees working in the Health Division of the Sub-Metropolitan City",
     "headers": [
-      "क्र.स.",
-      "नाम थर",
-      "पद",
-      "तह",
-      "दरबन्दी",
-      "फोन नं."
+      "S.N.",
+      "Name, Surname",
+      "Position",
+      "Level",
+      "Post Type",
+      "Phone No."
     ],
     "rows": [
-      [
-        "१",
-        "राम वहादुर चन्द",
-        "जनस्वास्थ्य अधिकृत",
-        "७",
-        "स्थायी",
-        ""
-      ],
-      [
-        "२",
-        "अस्मित आचार्य",
-        "फार्मेसी अधिकृत",
-        "७",
-        "करार",
-        ""
-      ],
-      [
-        "३",
-        "जागेश्वर बस्नेत",
-        "जनस्वास्थ्य निरीक्षक",
-        "६",
-        "स्थायी",
-        ""
-      ],
-      [
-        "४",
-        "प्रेम कुमारी वि.सी.",
-        "सिअनमी निरीक्षक",
-        "६",
-        "स्थायी",
-        ""
-      ],
-      [
-        "५",
-        "गोरख नाथ योगी",
-        "सिअहेव अधिकृत",
-        "६",
-        "स्थायी",
-        ""
-      ],
-      [
-        "६",
-        "विनोद कुमार वि.क.",
-        "सिअहेव अधिकृत",
-        "६",
-        "स्थायी",
-        ""
-      ],
-      [
-        "७",
-        "सरोज रिमाल",
-        "जनस्वास्थ्य निरीक्षक",
-        "६",
-        "स्थायी",
-        ""
-      ],
-      [
-        "८",
-        "राजन कुमार शाही",
-        "जनस्वास्थ्य निरीक्षक",
-        "६",
-        "स्थायी",
-        ""
-      ],
-      [
-        "९",
-        "तेज वहादुर वली",
-        "जनस्वास्थ्य निरीक्षक",
-        "६",
-        "स्थायी",
-        ""
-      ],
-      [
-        "१०",
-        "रोहित कुमार गोडिया",
-        "सिअहेव",
-        "५",
-        "स्थायी",
-        ""
-      ],
-      [
-        "११",
-        "राज कुमार गोडिया",
-        "का.स.",
-        "श्रेणी विहिन",
-        "स्थायी",
-        ""
-      ],
-      [
-        "१२",
-        "वर्षा परियार",
-        "का.स.",
-        "श्रेणी विहिन",
-        "करार",
-        ""
-      ]
+      ["1", "Ram Bahadur Chand", "Public Health Officer", "7", "Permanent", ""],
+      ["2", "Asmit Acharya", "Pharmacy Officer", "7", "Contract", ""],
+      ["3", "Jageshwar Basnet", "Public Health Inspector", "6", "Permanent", ""],
+      ["4", "Prem Kumari V.C.", "Sr. ANM Inspector", "6", "Permanent", ""],
+      ["5", "Gorakh Nath Yogi", "Sr. AHW Officer", "6", "Permanent", ""],
+      ["6", "Vinod Kumar V.K.", "Sr. AHW Officer", "6", "Permanent", ""],
+      ["7", "Saroj Rimal", "Public Health Inspector", "6", "Permanent", ""],
+      ["8", "Rajan Kumar Shahi", "Public Health Inspector", "6", "Permanent", ""],
+      ["9", "Tej Bahadur Wali", "Public Health Inspector", "6", "Permanent", ""],
+      ["10", "Rohit Kumar Godiya", "Sr. AHW", "5", "Permanent", ""],
+      ["11", "Raj Kumar Godiya", "Office Assistant", "Level-less", "Permanent", ""],
+      ["12", "Varsha Pariyar", "Office Assistant", "Level-less", "Contract", ""]
     ],
-    "source": "स्रोत: नगरकार्यपालिकाको कार्यालय",
+    "source": "Source: Office of the Municipal Executive",
     "alignLeft": true
   }
 }

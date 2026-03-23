@@ -1,4041 +1,4041 @@
 {
   "annexNumber": "4",
-  "title": "Hotels, Resorts and Restaurants",
+  "title": "Annex 4: Details of Hotels, Resorts and Restaurants in the Sub-Metropolitan City",
   "type": "multi-block",
   "blocks": [
     {
       "type": "table",
       "data": {
-        "title": "उप-महानगरपालिकामा रहेका होटल, रिसोर्ट तथा रेष्टुरेन्ट सम्बन्धी विवरण",
+        "title": "Details of Hotels, Resorts and Restaurants in the Sub-Metropolitan City",
         "headers": [
-          "क्र.स.",
-          "व्यवसायको नाम",
-          "करदाताको नाम",
-          "वडा नं"
+          "S.N.",
+          "Business Name",
+          "Taxpayer's Name",
+          "Ward No"
         ],
         "rows": [
           [
-            "१",
-            "हिमालय आइसक्रीम एण्ड खाजा घर",
-            "कसले मिजार",
-            "१"
+            "1",
+            "Himalaya Aisakrima and Snack House",
+            "Kasale Mijar",
+            "1"
           ],
           [
-            "२",
-            "ज्ञानु नास्ता पसल",
-            "ज्ञानु लामा खडगी",
-            "४"
+            "2",
+            "Jnyanu Snack Shop",
+            "Jnyanu Lama Khadgi",
+            "4"
           ],
           [
-            "३",
-            "ग्रिन एप्पल",
-            "जहिद अलि सिद्दिकी",
+            "3",
+            "Grina Eppala",
+            "Jahida Ali Siddiqui",
             ""
           ],
           [
-            "४",
-            "क्लाउड नाईन रेष्ट्रो एण्ड लाउञ्ज बार",
-            "प्रतिक श्रेष्ठ",
+            "4",
+            "Klauda Naina Restro and Lounge Bar",
+            "Pratika Shrestha",
             ""
           ],
           [
-            "५",
-            "रुकुम सिम्ली दिपा होटल",
-            "दिपा ओली",
-            "४"
+            "5",
+            "Rukum Simli Dipa Hotel",
+            "Dipa Oli",
+            "4"
           ],
           [
-            "६",
-            "न्यू दैलेखी खाजा घर एण्ड सेल रोटी हाउस",
-            "धिरेन्द्र बहादुर थापा",
-            "४"
+            "6",
+            "New Dailekhi Snack House and Sela Roti Hausa",
+            "Dhirendra Bahadura Thapa",
+            "4"
           ],
           [
-            "७",
-            "न्यू राप्ती गेष्ट हाउस",
-            "बलदेव थापा",
-            "१"
+            "7",
+            "New Rapti Guest House",
+            "Baladeva Thapa",
+            "1"
           ],
           [
-            "८",
-            "घिमिरे खाजा घर",
-            "भरत घिमिरे",
-            "१"
+            "8",
+            "Ghimire Snack House",
+            "Bharata Ghimire",
+            "1"
           ],
           [
-            "९",
-            "होटल एभरेष्ट",
-            "जनार्दन पाण्डे",
+            "9",
+            "Hotel Ebhareshta",
+            "Janardana Pandey",
             ""
           ],
           [
-            "१०",
-            "गुरुङ्ग रेष्टुरेन्ट",
-            "नन्द बहादुर गुरुङ्ग",
+            "10",
+            "Gurung Restaurant",
+            "Nanda Bahadura Gurung",
             ""
           ],
           [
-            "११",
-            "दावा नास्ता पसल",
-            "दावा तामाङ्ग",
-            "१"
+            "11",
+            "Dava Snack Shop",
+            "Dava Tamang",
+            "1"
           ],
           [
-            "१२",
-            "बुलबुले म.म.सेन्टर",
-            "मान बहादुर थापा",
-            "१"
+            "12",
+            "Bulbule Momo Center",
+            "Mana Bahadura Thapa",
+            "1"
           ],
           [
-            "१३",
-            "लजिज पिज्जा वल्र्ड नेपाल",
-            "आदित्य गुप्ता",
-            "१"
+            "13",
+            "Lajija Pijja Valrda Nepal",
+            "Aditya Gupta",
+            "1"
           ],
           [
-            "१४",
-            "दंगाली होटल",
-            "एकराज पाण्डेय",
-            "१"
+            "14",
+            "Dangali Hotel",
+            "Ekaraja Pandeya",
+            "1"
           ],
           [
-            "१५",
-            "बर्दिया चौधरी होटल",
-            "कमला थारु",
-            "१"
+            "15",
+            "Bardiya Chaudhary Hotel",
+            "Kamala Tharu",
+            "1"
           ],
           [
-            "१६",
-            "मजदुर होटल",
-            "पप्पु शर्मा",
-            "१"
+            "16",
+            "Majadura Hotel",
+            "Pappu Sharma",
+            "1"
           ],
           [
-            "१७",
-            "होटल दरवार",
-            "कृष्ण बहादुर चन्द",
-            "२"
+            "17",
+            "Hotel Daravara",
+            "Karishna Bahadura Chand",
+            "2"
           ],
           [
-            "१८",
-            "होटल मिड्वेष्ट",
-            "पुष्प राज मल्ल",
-            "२"
+            "18",
+            "Hotel Midveshta",
+            "Pushpa Raja Malla",
+            "2"
           ],
           [
-            "१९",
-            "न्यू सलिम होटल एण्ड लज",
-            "मो.अजिम हलवाई",
-            "१"
+            "19",
+            "New Salima Hotel and Laja",
+            "mo.ajima Halwai",
+            "1"
           ],
           [
-            "२०",
-            "पाहुना घर",
-            "केदारनाथ गुप्ता",
-            "१"
+            "20",
+            "Pahuna Ghara",
+            "Kedaranatha Gupta",
+            "1"
           ],
           [
-            "२१",
-            "होटल अन्नपूर्ण",
-            "विष्णु प्रसाद पोख्रेल",
-            "१"
+            "21",
+            "Hotel Annapurna",
+            "Vishnu Prasada Pokhrel",
+            "1"
           ],
           [
-            "२२",
-            "लक्ष्मी खाजा घर",
-            "प्रेम लक्ष्मी देवि हमाल",
-            "१"
+            "22",
+            "Lakshmi Snack House",
+            "Prema Lakshmi Devi Hamala",
+            "1"
           ],
           [
-            "२३",
-            "होटल स्वर्गद्वारी एण्ड लज",
-            "रंग बहादुर खडका",
-            "२"
+            "23",
+            "Hotel Swargadwari and Laja",
+            "Ranga Bahadura Khadaka",
+            "2"
           ],
           [
-            "२४",
-            "होटल अश्लेवा एण्ड रेष्टुरेन्ट",
-            "दयाराम पाण्डे",
+            "24",
+            "Hotel Ashleva and Restaurant",
+            "Dayarama Pandey",
             ""
           ],
           [
-            "२५",
-            "सुशान्त होटल",
-            "बल बहादुर गुरुङ्ग",
-            "१"
+            "25",
+            "Sushanta Hotel",
+            "Bala Bahadura Gurung",
+            "1"
           ],
           [
-            "२६",
-            "न्यू सुर्खेंती अछामी होटल",
-            "टेक बहादुर बुढा",
-            "१"
+            "26",
+            "New Surkheti Achhami Hotel",
+            "Teka Bahadura Budha",
+            "1"
           ],
           [
-            "२७",
-            "होटल कस्तुरी",
-            "गोपाल प्रसाद गिरी",
-            "२"
+            "27",
+            "Hotel Kasturi",
+            "Gopala Prasada Giri",
+            "2"
           ],
           [
-            "२८",
-            "न्यू बुटवल गेष्ट हाउस",
-            "दयाराम ढकाल",
-            "२"
+            "28",
+            "New Butwal Guest House",
+            "Dayarama Dhakal",
+            "2"
           ],
           [
-            "२९",
-            "होटल पाकिंस प्रा.लि.",
-            "कुमार शाह",
-            "२"
+            "29",
+            "Hotel Pakinsa Pvt. Ltd.",
+            "Kumara Shaha",
+            "2"
           ],
           [
-            "३०",
-            "विनायक गेष्ट हाउस रेष्टुरेन्ट",
-            "राम लखन वैश्य",
-            "२"
+            "30",
+            "Vinayak Guest House Restaurant",
+            "Rama Lakhana Vaishya",
+            "2"
           ],
           [
-            "३१",
-            "रुकुम जाजरकोट होटल",
-            "लक्ष्मी सुनार",
-            "२"
+            "31",
+            "Rukum Jajarkot Hotel",
+            "Lakshmi Sunar",
+            "2"
           ],
           [
-            "३२",
-            "घनश्याम दास",
-            "घनश्याम दास गुप्ता",
-            "२"
+            "32",
+            "Ghanashyama Dasa",
+            "Ghanashyama Dasa Gupta",
+            "2"
           ],
           [
-            "३३",
-            "रेसुङ्गा खाजा घर",
-            "राजेन्द्र प्रसाद भण्डारी",
-            "१"
+            "33",
+            "Resungga Snack House",
+            "Rajendra Prasada Bhandari",
+            "1"
           ],
           [
-            "३४",
-            "जाजरकोटी दैलेखी रविन होटल",
-            "टोप गिरी",
-            "१"
+            "34",
+            "Jajarakoti Dailekhi Ravina Hotel",
+            "Topa Giri",
+            "1"
           ],
           [
-            "३५",
-            "हाम्रो म.म. सेन्टर",
-            "श्याम लाल अर्याल",
-            "२"
+            "35",
+            "Hamro Momo Center",
+            "Shyama Lala Aryal",
+            "2"
           ],
           [
-            "३६",
-            "थकाली म.म.सेन्टर",
-            "देवेन्द्र थकाली",
-            "२"
+            "36",
+            "Thakali Momo Center",
+            "Devendra Thakali",
+            "2"
           ],
           [
-            "३७",
-            "होटल रोयल",
-            "बद्री प्रसाद अधिकारी",
-            "२"
+            "37",
+            "Hotel Royal",
+            "Badri Prasada Adhikari",
+            "2"
           ],
           [
-            "३८",
-            "सयपत्री रेष्टुरेन्ट",
-            "दिपक कुमार खनाल उपाध्याय",
-            "२"
+            "38",
+            "Sayapatri Restaurant",
+            "Dipaka Kumara Khanal Upadhyay",
+            "2"
           ],
           [
-            "३९",
-            "होटल ग्रिन प्यालेस",
-            "गणेश कुमार सिंह",
+            "39",
+            "Hotel Grina Palace",
+            "Ganesha Kumara Sinha",
             ""
           ],
           [
-            "४०",
-            "न्यू बडिमालीका होटल एण्ड लज",
-            "ममिता बोहरा",
-            "२"
+            "40",
+            "New Badimalika Hotel and Laja",
+            "Mamita Bohara",
+            "2"
           ],
           [
-            "४१",
-            "गुल्मेली रेष्टुरेन्ट",
-            "सोनु बस्नेत",
+            "41",
+            "Gulmeli Restaurant",
+            "Sonu Basnet",
             ""
           ],
           [
-            "४२",
-            "नागरिक गेष्ट हाउस",
-            "डिल बहादुर गिरी",
+            "42",
+            "Nagarika Guest House",
+            "Dila Bahadura Giri",
             ""
           ],
           [
-            "४३",
-            "लुम्बिनी गेष्ट हाउस",
-            "मेनुका देवी आचार्य",
-            "२"
+            "43",
+            "Lumbini Guest House",
+            "Menuka Devi Acharya",
+            "2"
           ],
           [
-            "४४",
-            "स्वागत रेष्टुरेन्ट",
-            "दुर्गा नेपाल",
-            "२"
+            "44",
+            "Svagata Restaurant",
+            "Durga Nepal",
+            "2"
           ],
           [
-            "४५",
-            "न्यू रहिम म.म. होटल",
-            "चांद अहमद हलवाई",
-            "२"
+            "45",
+            "New Rahima ma.ma. Hotel",
+            "Chanda Ahamada Halwai",
+            "2"
           ],
           [
-            "४६",
-            "खनाल कम्प्लेक्स होटल प्रा.ली.",
-            "लक्ष्मी देवी खनाल",
-            "२"
+            "46",
+            "Khanal Kampleksa Hotel Pvt. Ltd.",
+            "Lakshmi Devi Khanal",
+            "2"
           ],
           [
-            "४७",
-            "न्यू साथी सौरभ रेष्टुरेन्ट",
-            "कृष्ण बहादुर सिजापती",
-            "२"
+            "47",
+            "New Sathi Saurabha Restaurant",
+            "Karishna Bahadura Sijapati",
+            "2"
           ],
           [
-            "४८",
-            "न्यू हाम्रो म.म. सेन्टर",
-            "ङातेम्बा शेर्पा",
-            "२"
+            "48",
+            "New Hamro Momo Center",
+            "Ngatemba Sherpa",
+            "2"
           ],
           [
-            "४९",
-            "सेती गेष्ट हाउस",
-            "रतन थापा",
-            "२"
+            "49",
+            "Seti Guest House",
+            "Ratana Thapa",
+            "2"
           ],
           [
-            "५०",
-            "प्युठानी चतुर्भुज होटल",
-            "मालती अधिकारी",
-            "२"
+            "50",
+            "Pyuthani Chaturbhuja Hotel",
+            "Malati Adhikari",
+            "2"
           ],
           [
-            "५१",
-            "गंगा रेष्टुरेन्ट",
-            "पंकज क्षेत्री",
+            "51",
+            "Ganga Restaurant",
+            "Pankaja Kshetri",
             ""
           ],
           [
-            "५२",
-            "न्यू नेवारी खाजा घर",
-            "सुरेन्द्र भक्त प्रधान",
-            "२"
+            "52",
+            "New Newari Snack House",
+            "Surendra Bhakta Pradhana",
+            "2"
           ],
           [
-            "५३",
-            "होटल अमृत एण्ड रेष्टुरेन्ट",
-            "ध्रुव राज बर्मा",
-            "२"
+            "53",
+            "Hotel Amarita and Restaurant",
+            "Dhruva Raja Barma",
+            "2"
           ],
           [
-            "५४",
-            "स्याङ्गजा आरती होटल",
-            "मदन गिरी",
-            "२"
+            "54",
+            "Syangja Arati Hotel",
+            "Madana Giri",
+            "2"
           ],
           [
-            "५५",
-            "सोलुखुम्वु म.म.सेन्टर",
-            "फूर्वा शेर्पा",
-            "२"
+            "55",
+            "Solukhumvu Momo Center",
+            "Phurva Sherpa",
+            "2"
           ],
           [
-            "५६",
-            "सेभन नाइट म.म.सेन्टर",
-            "कुमारी जमुना चन्द",
+            "56",
+            "Sebhana Naita Momo Center",
+            "Kumari Jamuna Chand",
             ""
           ],
           [
-            "५७",
-            "वाफु खोला सल्याली होटल",
-            "जोगी भण्डारी",
-            "२"
+            "57",
+            "Vaphu Khola Salyali Hotel",
+            "Jogi Bhandari",
+            "2"
           ],
           [
-            "५८",
-            "अप्सरा होटल",
-            "कमला पोख्रेल",
-            "२"
+            "58",
+            "Apsara Hotel",
+            "Kamala Pokhrel",
+            "2"
           ],
           [
-            "५९",
-            "माउण्ट एभरेष्ट म.म.सेन्टर",
-            "अशोक कुमार शाह",
-            "२"
+            "5۹",
+            "Maunta Ebhareshta Momo Center",
+            "Ashoka Kumara Shaha",
+            "2"
           ],
           [
-            "६०",
-            "न्यू डण्डिलामा म.म.सेन्टर",
-            "ल्हाक्पा शेर्पा",
-            "२"
+            "60",
+            "New Dandilama Momo Center",
+            "Lhakpa Sherpa",
+            "2"
           ],
           [
-            "६१",
-            "स्याङ्गजा सम्झौता होटल",
-            "तिलोचन बस्याल",
-            "२"
+            "61",
+            "Syangja Samjhauta Hotel",
+            "Tilochana Basyal",
+            "2"
           ],
           [
-            "६२",
-            "लुम्विनी भेटघाट होटल",
-            "कल्पना घिमिरे",
-            "२"
+            "62",
+            "Lumvini Bhetaghata Hotel",
+            "Kalpana Ghimire",
+            "2"
           ],
           [
-            "६३",
-            "न्यू मेची महाकाली होटल",
-            "जंग बहादुर बिष्ट",
-            "२"
+            "63",
+            "New Mechi Mahakali Hotel",
+            "Janga Bahadura Bisht",
+            "2"
           ],
           [
-            "६४",
-            "न्यू श्री नगर होटल",
-            "लक्ष्मण पाण्डे",
-            "२"
+            "64",
+            "New Nagara Hotel",
+            "Lakshmana Pandey",
+            "2"
           ],
           [
-            "६५",
-            "द बेस्ट रेष्टुरेन्ट",
-            "नेत्र बहादुर डाँगी",
-            "२"
+            "65",
+            "Da Besta Restaurant",
+            "Netra Bahadura Dangi",
+            "2"
           ],
           [
-            "६६",
-            "न्यू तिनतोली दैलेखी सुदिप होटल",
-            "धना रोकाय",
-            "२"
+            "66",
+            "New Tinatoli Dailekhi Sudipa Hotel",
+            "Dhana Rokaya",
+            "2"
           ],
           [
-            "६७",
-            "न्यू लक्ष्मी होटल",
-            "धर्मराज बस्नेत",
-            "२"
+            "67",
+            "New Lakshmi Hotel",
+            "Dharmaraja Basnet",
+            "2"
           ],
           [
-            "६८",
-            "बर्दिया विकास चौधरी रेष्टुरेन्ट",
-            "समिर चौधरी",
-            "२"
+            "68",
+            "Bardiya Vikasa Chaudhary Restaurant",
+            "Samira Chaudhary",
+            "2"
           ],
           [
-            "६९",
-            "बर्दिया चौधरी होटल",
-            "तेलकन थारु",
-            "६"
+            "69",
+            "Bardiya Chaudhary Hotel",
+            "Telakana Tharu",
+            "6"
           ],
           [
-            "७०",
-            "भुमा खाजा पसल",
-            "भुमा साहु तेली",
-            "६"
+            "70",
+            "Bhuma Khaja Pasala",
+            "Bhuma Sahu Teli",
+            "6"
           ],
           [
-            "७१",
-            "मिरा होटल",
-            "रत्न बहादुर सुनार",
-            "६"
+            "71",
+            "Mira Hotel",
+            "Ratna Bahadura Sunar",
+            "6"
           ],
           [
-            "७२",
-            "न्यू दैलेखी बोगटी होटल",
-            "बाल कुमारी बम बोगटी",
-            "२"
+            "72",
+            "New Dailekhi Bogati Hotel",
+            "Bala Kumari Bama Bogati",
+            "2"
           ],
           [
-            "७३",
-            "दैलेखी बम होटल",
-            "भिम बहादुर बम",
-            "२"
+            "73",
+            "Dailekhi Bama Hotel",
+            "Bhima Bahadura Bama",
+            "2"
           ],
           [
-            "७४",
-            "दैलेखी पञ्चकन्या सन्तोष होटल",
-            "बम बहादुर क्षेत्री",
-            "२"
+            "74",
+            "Dailekhi Panychakanya Santosha Hotel",
+            "Bama Bahadura Kshetri",
+            "2"
           ],
           [
-            "७५",
-            "नमस्ते रोयल गेष्ट हाउस",
-            "विष्णु शाही",
-            "२"
+            "75",
+            "Namaste Royal Guest House",
+            "Vishnu Shahi",
+            "2"
           ],
           [
-            "७६",
-            "निधी क्याफे एण्ड रेष्टुरेन्ट",
-            "विद्या शाह",
-            "२"
+            "76",
+            "Nidhi Cafe and Restaurant",
+            "Vidya Shaha",
+            "2"
           ],
           [
-            "७७",
-            "माउण्ट एभरेष्ट म.म.सेन्टर",
-            "किरण शाह",
-            "२"
+            "77",
+            "Maunta Ebhareshta Momo Center",
+            "Kirana Shaha",
+            "2"
           ],
           [
-            "७८",
-            "मुवारक विरयानी कर्नर",
-            "मुवारक अली सिद्धिकी",
-            "७"
+            "78",
+            "Muvaraka Virayani Karnara",
+            "Muvaraka Ali Siddiqui",
+            "7"
           ],
           [
-            "७९",
-            "मिरा व्याग एण्ड किराना पसल",
-            "मिरा श्रेष्ठ",
-            "७"
+            "79",
+            "Mira Vyaga and Kirana Pasala",
+            "Mira Shrestha",
+            "7"
           ],
           [
-            "८०",
-            "हिमाल होटल",
-            "पेम्बा लामा",
-            "२"
+            "80",
+            "Himala Hotel",
+            "Pemba Lama",
+            "2"
           ],
           [
-            "८१",
-            "देवु रेष्टुरेन्ट",
-            "देव बहादुर पुन",
-            "३"
+            "81",
+            "Devu Restaurant",
+            "Deva Bahadura Puna",
+            "3"
           ],
           [
-            "८२",
-            "माइला रेष्टुरेन्ट",
-            "लोक बहादुर बुढा मगर",
-            "२"
+            "82",
+            "Maila Restaurant",
+            "Loka Bahadura Budha Magara",
+            "2"
           ],
           [
-            "८३",
-            "वली रेष्टुरेन्ट",
-            "तिल कुमारी वली",
-            "३"
+            "83",
+            "Vali Restaurant",
+            "Tila Kumari Vali",
+            "3"
           ],
           [
-            "८४",
-            "आयुष म.म.रेष्टुरेन्ट",
-            "चन्द्र बहादुर महतरा",
-            "८"
+            "84",
+            "Ayusha ma.ma.Restaurant",
+            "Chandra Bahadura Mahatra",
+            "8"
           ],
           [
-            "८५",
-            "नेवारी म.म.सेन्टर",
-            "विजय कुमार श्रेष्ठ",
-            "११"
+            "85",
+            "Newari Momo Center",
+            "Vijaya Kumara Shrestha",
+            "11"
           ],
           [
-            "८६",
-            "शोलु रेष्टुरेन्ट",
-            "कर्मा फितर शेर्पा",
-            "९"
+            "86",
+            "Sholu Restaurant",
+            "Karma Phitara Sherpa",
+            "9"
           ],
           [
-            "८७",
-            "न्यू नेपाल म.म.सेन्टर",
-            "विनोद श्रेष्ठ",
-            "९"
+            "87",
+            "New Nepal Momo Center",
+            "Vinoda Shrestha",
+            "9"
           ],
           [
-            "८८",
-            "प्रतिक होटल",
-            "पुर्ण कुमार रास्कोटी",
-            "९"
+            "88",
+            "Pratika Hotel",
+            "Purna Kumara Raskoti",
+            "9"
           ],
           [
-            "८९",
-            "सागर रेष्टुरेन्ट",
-            "चन्द्र कुमारी धमला",
-            "९"
+            "89",
+            "Sagara Restaurant",
+            "Chandra Kumari Dhamala",
+            "9"
           ],
           [
-            "९०",
-            "बाह्रसुरे होटल",
-            "भरत विक्रम सिंह ठकुरी",
-            "९"
+            "90",
+            "Bahrasure Hotel",
+            "Bharata Vikrama Sinha Thakuri",
+            "9"
           ],
           [
-            "९१",
-            "नेपाल म.म.सेन्टर",
-            "टिका प्रसाद नेपाल",
-            "९"
+            "91",
+            "Nepal Momo Center",
+            "Tika Prasada Nepal",
+            "9"
           ],
           [
-            "९२",
-            "तिवारी होटल",
-            "युवराज तिवारी",
-            "९"
+            "92",
+            "Tivari Hotel",
+            "Yuvaraja Tivari",
+            "9"
           ],
           [
-            "९३",
-            "सुर्खेंती चौधरी होटल",
-            "बुझाउना थारु",
-            "४"
+            "93",
+            "Surkheti Chaudhary Hotel",
+            "Bujhauna Tharu",
+            "4"
           ],
           [
-            "९४",
-            "न्यू हाम्रो होटल",
-            "राजु उपाध्याय",
-            "१३"
+            "94",
+            "New Hamro Hotel",
+            "Raju Upadhyay",
+            "13"
           ],
           [
-            "९५",
-            "चौधरी नास्ता पसल",
-            "सुनकेशरी थारु",
-            "१३"
+            "95",
+            "Chaudhary Snack Shop",
+            "Sunakeshari Tharu",
+            "13"
           ],
           [
-            "९६",
-            "मिडमार होटल",
-            "डवाङ नुरी शेर्पा",
-            "१३"
+            "96",
+            "Midamara Hotel",
+            "Davanga Nuri Sherpa",
+            "13"
           ],
           [
-            "९७",
-            "पाल्पाली स्टाफ होटल",
-            "महा देवी राना मगर",
-            "१५"
+            "97",
+            "Palpali Stapha Hotel",
+            "Maha Devi Rana Magara",
+            "15"
           ],
           [
-            "९८",
-            "सल्यानी काला गाउने होटल",
-            "डण्डविर सार्कि",
-            "१५"
+            "98",
+            "Salyani Kala Gaune Hotel",
+            "Dandavira Sarki",
+            "15"
           ],
           [
-            "९९",
-            "रुकुम चौरजहारी खोलागाउ प्रलिन होटल",
-            "रत्ने बुढा",
-            "१५"
+            "99",
+            "Rukum Chaurajahari Kholagau Pralina Hotel",
+            "Ratne Budha",
+            "15"
           ],
           [
-            "१००",
-            "सिर्जना तास सेन्टर",
-            "इश्वरी प्रसाद गौतम",
-            "११"
+            "100",
+            "Sirjana Tasa Sentara",
+            "Ishvari Prasada Gautama",
+            "11"
           ],
           [
-            "१०१",
-            "गण्डकी भान्सा एण्ड रेष्टुरेन्ट",
-            "राज कुमार खड्का",
-            "११"
+            "101",
+            "Gandaki Bhansa and Restaurant",
+            "Raja Kumara Khadka",
+            "11"
           ],
           [
-            "१०२",
-            "गण्डकी रेष्टुरेन्ट",
-            "डिला राम शर्मा",
-            "११"
+            "102",
+            "Gandaki Restaurant",
+            "Dila Rama Sharma",
+            "11"
           ],
           [
-            "१०३",
-            "वागेश्वरी रेष्टुरेन्ट",
-            "पन्ना लाल वैश्य",
-            "११"
+            "103",
+            "Vageshvari Restaurant",
+            "Panna Lala Vaishya",
+            "11"
           ],
           [
-            "१०४",
-            "सुर्खेंती दिपा रेष्टुरेन्ट",
-            "खुम प्रसाद वास्तोला",
-            "११"
+            "104",
+            "Surkheti Dipa Restaurant",
+            "Khuma Prasada Vastola",
+            "11"
           ],
           [
-            "१०५",
-            "सिन्धी रेष्टुरेन्ट",
-            "अशोक कुमार",
-            "११"
+            "105",
+            "Sindhi Restaurant",
+            "Ashoka Kumara",
+            "11"
           ],
           [
-            "१०६",
-            "होटल प्रभात एण्ड रेष्टुरेन्ट",
-            "विन्दु कुमारी वि.क.",
-            "११"
+            "106",
+            "Hotel Prabhata and Restaurant",
+            "Vindu Kumari vi.ka.",
+            "11"
           ],
           [
-            "१०७",
-            "न्यू फेवा रेष्टुरेन्ट",
-            "नवराज जोशी",
-            "११"
+            "107",
+            "New Pheva Restaurant",
+            "Navaraja Joshi",
+            "11"
           ],
           [
-            "१०८",
-            "के.सी.म.म.सेन्टर",
-            "राधिका कुमारी कुवर",
-            "११"
+            "108",
+            "ke.si.MoMo Center",
+            "Radhika Kumari Kuvara",
+            "11"
           ],
           [
-            "१०९",
-            "रुकुम घेत्माली होटल",
-            "शान्त वहादुर मल्ल",
-            "४"
+            "109",
+            "Rukum Ghetmali Hotel",
+            "Shanta Vahadura Malla",
+            "4"
           ],
           [
-            "११०",
-            "किङ्गस म.म.रेष्टुरेन्ट एण्ड बार",
-            "शैलेन्द्र कुमार श्रेष्ठ",
-            "११"
+            "110",
+            "Kinggasa ma.ma.Restaurant and Bar",
+            "Shailendra Kumara Shrestha",
+            "11"
           ],
           [
-            "१११",
-            "सागर विर्यानी कर्नर",
-            "सोम नाथ साहु",
-            "११"
+            "111",
+            "Sagara Viryani Karnara",
+            "Soma Natha Sahu",
+            "11"
           ],
           [
-            "११२",
-            "शुभम रेष्टुरेन्ट",
-            "अशोक खत्री क्षेत्री",
-            "११"
+            "112",
+            "Shubhama Restaurant",
+            "Ashoka Khatri Kshetri",
+            "11"
           ],
           [
-            "११३",
-            "अतिथि रैन बसेरा गेष्ट हाउस",
-            "वन्टी प्रसाद कसौधन वनिया",
-            "११"
+            "113",
+            "Atithi Raina Basera Guest House",
+            "Vanti Prasada Kasaudhana Vaniya",
+            "11"
           ],
           [
-            "११४",
-            "जानकी रेष्टुरेन्ट",
-            "सावित्री श्रेष्ठ",
-            "४"
+            "114",
+            "Janaki Restaurant",
+            "Savitri Shrestha",
+            "4"
           ],
           [
-            "११५",
-            "राप्ती होटल",
-            "देवीराज मरासिनी",
-            "४"
+            "115",
+            "Rapti Hotel",
+            "Deviraja Marasini",
+            "4"
           ],
           [
-            "११६",
-            "होटल मारुती नन्दन",
-            "सन्तोष कुमार सिंह",
-            "४"
+            "116",
+            "Hotel Maruti Nandana",
+            "Santosha Kumara Sinha",
+            "4"
           ],
           [
-            "११७",
-            "सुर्खेंती दंगाली होटल",
-            "चन्द्रकला पौडेल",
-            "४"
+            "117",
+            "Surkheti Dangali Hotel",
+            "Chandrakala Paudela",
+            "4"
           ],
           [
-            "११८",
-            "हाम्रो रेष्टुरेन्ट",
-            "श्रीधर पौडेल",
-            "४"
+            "118",
+            "Hamro Restaurant",
+            "Dhara Paudela",
+            "4"
           ],
           [
-            "११९",
-            "दंगाली रेष्टुरेन्ट",
-            "खीमराज चौधरी",
-            "४"
+            "119",
+            "Dangali Restaurant",
+            "Khimaraja Chaudhary",
+            "4"
           ],
           [
-            "१२०",
-            "सल्यान जिमाली होटल",
-            "बस्पती डाँगी",
-            "४"
+            "120",
+            "Salyan Jimali Hotel",
+            "Baspati Dangi",
+            "4"
           ],
           [
-            "१२१",
-            "क्यापिटल होटल",
-            "छविलाल के.सी.",
-            "४"
+            "121",
+            "Kyapitala Hotel",
+            "Chhavilala ke.si.",
+            "4"
           ],
           [
-            "१२२",
-            "न्यू लुम्विनी होटल",
-            "टोप लाल खरेल",
-            "४"
+            "122",
+            "New Lumvini Hotel",
+            "Topa Lala Kharela",
+            "4"
           ],
           [
-            "१२३",
-            "लेक साइड रेष्टुरेन्ट",
-            "भिम बहादुर थापा",
-            "१८"
+            "123",
+            "Leka Saida Restaurant",
+            "Bhima Bahadura Thapa",
+            "18"
           ],
           [
-            "१२४",
-            "पे.पे. पिजा रेष्टुरेन्ट वार प्रा.लि.",
-            "कौशल तिमल्सीना",
-            "१८"
+            "124",
+            "pe.pe. Pija Restaurant Bar Pvt. Ltd.",
+            "Kaushala Timalsina",
+            "18"
           ],
           [
-            "१२५",
-            "किचन हट प्रा.लि.",
-            "किचन हट प्रा.लि.",
-            "१८"
+            "125",
+            "Kichana Hata Pvt. Ltd.",
+            "Kichana Hata Pvt. Ltd.",
+            "18"
           ],
           [
-            "१२६",
-            "होटल रोयल प्यालेस",
-            "कल्याण खत्री",
-            "१८"
+            "126",
+            "Hotel Royal Palace",
+            "Kalyana Khatri",
+            "18"
           ],
           [
-            "१२७",
-            "मिलन रेष्टुरेन्ट एण्ड खाजा घर",
-            "संगीता शाही",
-            "१८"
+            "127",
+            "Milana Restaurant and Snack House",
+            "Sangita Shahi",
+            "18"
           ],
           [
-            "१२८",
-            "रुकुमेली बर्दिया होटल",
-            "गंगा बुढा",
-            "१०"
+            "128",
+            "Rukumeli Bardiya Hotel",
+            "Ganga Budha",
+            "10"
           ],
           [
-            "१२९",
-            "सिप्टी फाइन होटल",
-            "सिता गुरुङ्ग",
-            "१०"
+            "129",
+            "Sipti Phaina Hotel",
+            "Sita Gurung",
+            "10"
           ],
           [
-            "१३०",
-            "रुकुम पश्चिम होटल एण्ड रेष्टुरेन्ट",
-            "लेखा नेपाली",
-            "१०"
+            "130",
+            "Rukum Pashchima Hotel and Restaurant",
+            "Lekha Nepali",
+            "10"
           ],
           [
-            "१३१",
-            "गुल्मी रेष्टुरेन्ट",
-            "सानुमाया ढकाल",
+            "131",
+            "Gulmi Restaurant",
+            "Sanumaya Dhakal",
             ""
           ],
           [
-            "१३२",
-            "सुर्खेंती होटल",
-            "लोक बहादुर बुढा",
+            "132",
+            "Surkheti Hotel",
+            "Loka Bahadura Budha",
             ""
           ],
           [
-            "१३३",
-            "हाम्रो रेष्टुरेन्ट एण्ड खाजा घर",
-            "प्रेम बहादुर विष्ट",
-            "४"
+            "133",
+            "Hamro Restaurant and Snack House",
+            "Prema Bahadura Vishta",
+            "4"
           ],
           [
-            "१३४",
-            "बुटवल होटल एण्ड लज",
-            "कुल बहादुर कार्की",
-            "२०"
+            "134",
+            "Butwal Hotel and Laja",
+            "Kula Bahadura Karki",
+            "20"
           ],
           [
-            "१३५",
-            "सुर्खेंती होटल",
-            "लोक बहादुर बुढा",
-            "१३"
+            "135",
+            "Surkheti Hotel",
+            "Loka Bahadura Budha",
+            "13"
           ],
           [
-            "१३६",
-            "मिलन होटल",
-            "तेज बहादुर पुन मगर",
-            "१०"
+            "136",
+            "Milana Hotel",
+            "Teja Bahadura Puna Magara",
+            "10"
           ],
           [
-            "१३७",
-            "समृद्ध वोमेन होसटेल",
-            "उमा श्रेष्ठ समेत",
+            "137",
+            "Samariddha Vomena Hosatela",
+            "Uma Shrestha Sameta",
             ""
           ],
           [
-            "१३८",
-            "चिन्ता हरण रेष्टुरेन्ट",
-            "खुमानन्द काफ्ले",
-            "१०"
+            "138",
+            "Chinta Harana Restaurant",
+            "Khumananda Kaphle",
+            "10"
           ],
           [
-            "१३۹",
-            "फुडगन्ज रेष्टुरेन्ट",
-            "रति श्रेष्ठ",
-            "२०"
+            "139",
+            "Phudaganja Restaurant",
+            "Rati Shrestha",
+            "20"
           ],
           [
-            "१४०",
-            "शर्मा भोजनालय",
-            "विनय कुमार शर्मा",
+            "140",
+            "Sharma Bhojanalaya",
+            "Vinaya Kumara Sharma",
             ""
           ],
           [
-            "१४१",
-            "हाम्रो सुर्खेंती सिम्ताली होटल एण्ड रेष्टुरेन्ट",
-            "भद्र बहादुर बुढा",
-            "१२"
+            "141",
+            "Hamro Surkheti Simtali Hotel and Restaurant",
+            "Bhadra Bahadura Budha",
+            "12"
           ],
           [
-            "१४२",
-            "पिता रेष्टुरेन्ट",
-            "बृष ब महतरा क्षेत्री",
+            "142",
+            "Pita Restaurant",
+            "Barisha Ba Mahatra Kshetri",
             ""
           ],
           [
-            "१४३",
-            "हरिकला रेष्टुरेन्ट",
-            "हरिकला कामी",
+            "143",
+            "Harikala Restaurant",
+            "Harikala Kami",
             ""
           ],
           [
-            "१४४",
-            "पर्वत आनन्द होटल",
-            "आनन्द पौडेल",
-            "२"
+            "144",
+            "Parvata Ananda Hotel",
+            "Ananda Paudela",
+            "2"
           ],
           [
-            "१४५",
-            "लक्ष्मी खाजा घर",
-            "प्रेम लक्ष्मी देवी हमाल",
+            "145",
+            "Lakshmi Snack House",
+            "Prema Lakshmi Devi Hamala",
             ""
           ],
           [
-            "१४६",
-            "डिलक्स नास्ता पसल",
-            "लक्ष्मी डाँगी",
-            "१०"
+            "146",
+            "Dilaksa Snack Shop",
+            "Lakshmi Dangi",
+            "10"
           ],
           [
-            "१४७",
-            "निशा रेष्टुरेन्ट",
-            "सुमित्रा यादव",
+            "147",
+            "Nisha Restaurant",
+            "Sumitra Yadav",
             ""
           ],
           [
-            "१४८",
-            "होटल मध्य पश्चिम गेष्ट हाउस",
-            "सरस्वती थापा मगर",
-            "४"
+            "148",
+            "Hotel Madhya Pashchima Guest House",
+            "Sarasvati Thapa Magara",
+            "4"
           ],
           [
-            "१४९",
-            "कोल्टे भान्सा घर",
-            "श्रीराम सिग्देल",
+            "149",
+            "Kolte Bhansa Ghara",
+            "Rama Sigdela",
             ""
           ],
           [
-            "१५०",
-            "मनिषा होटल",
-            "लाल कुमारी योगी",
-            "१७"
+            "150",
+            "Manisha Hotel",
+            "Lala Kumari Yogi",
+            "17"
           ],
           [
-            "१५१",
-            "सोलुखुम्बु शेर्पा होटल",
-            "कुसाङ्ग शेर्पा",
-            "२०"
+            "151",
+            "Solukhumbu Sherpa Hotel",
+            "Kusangga Sherpa",
+            "20"
           ],
           [
-            "१५२",
-            "एभरेष्ट लामा नास्ता पसल",
-            "सर्किनी शेर्पा",
-            "२०"
+            "152",
+            "Ebhareshta Lama Snack Shop",
+            "Sarkini Sherpa",
+            "20"
           ],
           [
-            "१५३",
-            "लामा नास्ता पसल",
-            "डीमि शेर्पा",
-            "२०"
+            "153",
+            "Lama Snack Shop",
+            "Dimi Sherpa",
+            "20"
           ],
           [
-            "१५४",
-            "पोताला खाजा घर",
-            "पासाङ बङ्दी तामाङ्ग",
-            "२०"
+            "154",
+            "Potala Snack House",
+            "Pasanga Bangdi Tamang",
+            "20"
           ],
           [
-            "१५५",
-            "हाम्रो सगरमाथा म.म. सेन्टर",
-            "आङपासाङ्ग शेर्पा",
-            "२०"
+            "155",
+            "Hamro Sagaramatha Momo Center",
+            "Angapasangga Sherpa",
+            "20"
           ],
           [
-            "१५६",
-            "ल्हासो फास्टफुड रेष्टुरेन्ट",
-            "माया रानी तामाङ्ग",
-            "१२"
+            "156",
+            "Lhaso Phastaphuda Restaurant",
+            "Maya Rani Tamang",
+            "12"
           ],
           [
-            "१५७",
-            "प्रशान्त नास्ता पसल तथा रेष्टुरेन्ट",
-            "प्रशान्त शर्मा",
-            "१०"
+            "157",
+            "Prashanta Snack Shop Tatha Restaurant",
+            "Prashanta Sharma",
+            "10"
           ],
           [
-            "१५८",
-            "एकान्त कटेज एण्ड रेष्टुरेन्ट",
-            "सेतु बुढाथोकी",
+            "158",
+            "Ekanta Kateja and Restaurant",
+            "Setu Budhathoki",
             ""
           ],
           [
-            "१५९",
-            "शेर्पा रेष्टुरेन्ट",
-            "ल्हाक्पा पेन्डु शेर्पा",
-            "२"
+            "159",
+            "Sherpa Restaurant",
+            "Lhakpa Pendu Sherpa",
+            "2"
           ],
           [
-            "१६०",
-            "चौधरी दंगाली रेष्टुरेन्ट",
-            "पुनाराम थारु",
-            "४"
+            "160",
+            "Chaudhary Dangali Restaurant",
+            "Punarama Tharu",
+            "4"
           ],
           [
-            "१६१",
-            "न्यू सुर्खेंती बुलबुले गेष्ट हाउस",
-            "लिलाराम वली",
-            "२"
+            "161",
+            "New Surkheti Bulbule Guest House",
+            "Lilarama Vali",
+            "2"
           ],
           [
-            "१६२",
-            "न्यू स्टेण्डर्ड होटल एण्ड लज",
-            "पदम बहादुर अर्जेल",
-            "२०"
+            "162",
+            "New Stendarda Hotel and Laja",
+            "Padama Bahadura Arjela",
+            "20"
           ],
           [
-            "१६३",
-            "डि.एड्ज रेष्टुरेन्ट एण्ड वार",
-            "प्रियंका थापा",
+            "163",
+            "di.edja Restaurant and Bar",
+            "Priyanka Thapa",
             ""
           ],
           [
-            "१६४",
-            "न्यू जलजला होटल एण्ड धौलागरी लज",
-            "दल बहादुर विश्वकर्मा",
-            "४"
+            "164",
+            "New Jalajala Hotel and Dhaulagari Laja",
+            "Dala Bahadura Vishvakarma",
+            "4"
           ],
           [
-            "१६५",
-            "न्यू जक्सन",
-            "कवीता भण्डारी मगर",
+            "165",
+            "New Jaksana",
+            "Kavita Bhandari Magara",
             ""
           ],
           [
-            "१६६",
-            "न्यू शुभारम्भ रेष्टुरेन्ट",
-            "शुष्मा रावत",
-            "१८"
+            "166",
+            "New Shubharambha Restaurant",
+            "Shushma Ravata",
+            "18"
           ],
           [
-            "१६७",
-            "हिमाल होटल एण्ड रेष्टुरेन्ट",
-            "उषादेवी सापकोटा",
+            "167",
+            "Himala Hotel and Restaurant",
+            "Ushadevi Sapakota",
             ""
           ],
           [
-            "१६८",
-            "आयरा रेष्टुरेन्ट",
-            "वसन्ती देवी वि.क.",
-            "१८"
+            "168",
+            "Ayara Restaurant",
+            "Vasanti Devi vi.ka.",
+            "18"
           ],
           [
-            "१६९",
-            "राजु खाजा घर",
-            "राजु कुमारी मल्ल",
+            "169",
+            "Raju Snack House",
+            "Raju Kumari Malla",
             ""
           ],
           [
-            "१७०",
-            "प्रेम खाजा घर",
-            "प्रेम वहादुर शाही",
-            "२०"
+            "170",
+            "Prema Snack House",
+            "Prema Vahadura Shahi",
+            "20"
           ],
           [
-            "१७१",
-            "नेप क्याफे",
-            "जाहिदा बानो सिद्धिकी",
+            "171",
+            "Nepa Cafe",
+            "Jahida Bano Siddiqui",
             ""
           ],
           [
-            "१७२",
-            "शोभा होटल एण्ड कटेज",
-            "भूमिसरा देवकोटा रावल",
+            "172",
+            "Shobha Hotel and Kateja",
+            "Bhumisara Devakota Ravala",
             ""
           ],
           [
-            "१७३",
-            "जनपुरे सेकुवा कर्नर",
-            "मान कुमारी घलान",
-            "२०"
+            "173",
+            "Janapure Sekuva Karnara",
+            "Mana Kumari Ghalana",
+            "20"
           ],
           [
-            "१७४",
-            "सुस्मा होटल",
-            "बेद बहादुर ढकाली",
-            "२०"
+            "174",
+            "Susma Hotel",
+            "Beda Bahadura Dhakali",
+            "20"
           ],
           [
-            "१७५",
-            "यम्मी टम्मी रेष्टुरेन्ट",
-            "नमन मल्ल सिद्धान्त राज शाही",
+            "175",
+            "Yammi Tammi Restaurant",
+            "Namana Malla Siddhanta Raja Shahi",
             ""
           ],
           [
-            "१७६",
-            "काठमाण्डौ होटल एण्ड लज",
-            "नयन बहादुर नापित",
+            "176",
+            "Kathamandau Hotel and Laja",
+            "Nayana Bahadura Napita",
             ""
           ],
           [
-            "१७७",
-            "होटल ड्रिम सिटी",
-            "तारा थापा",
+            "177",
+            "Hotel Drima Siti",
+            "Tara Thapa",
             ""
           ],
           [
-            "१७८",
-            "न्यू अछामी सुर्खेंती होटल",
-            "लक्ष्मी चलाउने",
+            "178",
+            "New Achhami Surkheti Hotel",
+            "Lakshmi Chalaune",
             ""
           ],
           [
-            "१७९",
-            "जगतीया होटल",
-            "दुखनी थारु",
-            "४"
+            "179",
+            "Jagatiya Hotel",
+            "Dukhani Tharu",
+            "4"
           ],
           [
-            "१८०",
-            "फुलवारी खाजा घर",
-            "गंगाराम वली",
-            "४"
+            "180",
+            "Phulavari Snack House",
+            "Gangarama Vali",
+            "4"
           ],
           [
-            "१८१",
-            "न्यू रुकुमेली मनकामना होटल",
-            "डण्डे विष्ट",
-            "४"
+            "181",
+            "New Rukumeli Manakamana Hotel",
+            "Dande Vishta",
+            "4"
           ],
           [
-            "१८२",
-            "सुर्खेंती अछामी मटेला होटल",
-            "गणेश सावद",
-            "४"
+            "182",
+            "Surkheti Achhami Matela Hotel",
+            "Ganesha Savada",
+            "4"
           ],
           [
-            "१८३",
-            "अछामि न्यू सुर्खेंती होटल",
-            "कमला मार्फी",
-            "२"
+            "183",
+            "Achhami New Surkheti Hotel",
+            "Kamala Marphi",
+            "2"
           ],
           [
-            "१८४",
-            "धौलाकोटी होटल एण्ड लज",
-            "विर वहादुर धौलाकोटी",
+            "184",
+            "Dhaulakoti Hotel and Laja",
+            "Vira Vahadura Dhaulakoti",
             ""
           ],
           [
-            "१८५",
-            "वागेश्वरी खाजा घर",
-            "उमादेवी पौडेल",
+            "185",
+            "Vageshvari Snack House",
+            "Umadevi Paudela",
             ""
           ],
           [
-            "१८६",
-            "कल्पना होटल",
-            "कृष्ण राज थापा",
-            "४"
+            "186",
+            "Kalpana Hotel",
+            "Karishna Raja Thapa",
+            "4"
           ],
           [
-            "१८७",
-            "स्ट्रिम पिक इन्टरनेशनल प्रा.लि",
-            "दिनेश वहादुर विष्ट",
-            "१९"
+            "187",
+            "Strima Pika Intaraneshanala pra.li",
+            "Dinesha Vahadura Vishta",
+            "19"
           ],
           [
-            "१८८",
-            "रोयल आर.सी होटल एण्ड रेष्टुरेन्ट",
-            "सिता रावत",
+            "188",
+            "Royal ara.si Hotel and Restaurant",
+            "Sita Ravata",
             ""
           ],
           [
-            "१८९",
-            "सनिशा नास्ता पसल",
-            "सिता देवी बोहरा क्षेत्री",
+            "189",
+            "Sanisha Snack Shop",
+            "Sita Devi Bohara Kshetri",
             ""
           ],
           [
-            "१९०",
-            "मिनाक्षी रेष्टुरेन्ट",
-            "सुसिला रिमाल सापकोटा",
+            "190",
+            "Minakshi Restaurant",
+            "Susila Rimala Sapakota",
             ""
           ],
           [
-            "१९१",
-            "वली खाजा घर",
-            "मैसरा वलि",
+            "191",
+            "Vali Snack House",
+            "Maisara Vali",
             ""
           ],
           [
-            "१९२",
-            "कलपतरु होटल एण्ड कौशिकी बैंक्विट",
-            "जगदीश प्रसाद वैश्य",
-            "४"
+            "192",
+            "Kalapataru Hotel and Kaushiki Bainkvita",
+            "Jagadisha Prasada Vaishya",
+            "4"
           ],
           [
-            "१९३",
-            "डि.एस. रेष्टुरेन्ट",
-            "मिना देवी बम",
-            "१"
+            "193",
+            "di.esa. Restaurant",
+            "Mina Devi Bama",
+            "1"
           ],
           [
-            "१९४",
-            "जाजरकोटी मालिका होटल एण्ड रेष्टुरेन्ट",
-            "मन्जु कुमारी राना",
-            "४"
+            "194",
+            "Jajarakoti Malika Hotel and Restaurant",
+            "Manju Kumari Rana",
+            "4"
           ],
           [
-            "१९५",
-            "एच.आर.के. फास्ट फुड रेष्टुरेन्ट",
-            "हरिस कुमार विश्वकर्मा",
+            "195",
+            "echa.ara.ke. Phasta Phuda Restaurant",
+            "Harisa Kumara Vishvakarma",
             ""
           ],
           [
-            "१९६",
-            "होटल पीस प्लाजा",
-            "लिलावती गिरी",
-            "२"
+            "196",
+            "Hotel Pisa Plaja",
+            "Lilavati Giri",
+            "2"
           ],
           [
-            "१९७",
-            "ज्योती सिम्ताली होटल",
-            "सुरत बहादुर खत्री",
-            "१२"
+            "197",
+            "Jyoti Simtali Hotel",
+            "Surata Bahadura Khatri",
+            "12"
           ],
           [
-            "१९८",
-            "जय नेपाल होटल",
-            "निर्मला थापा",
-            "२"
+            "198",
+            "Jaya Nepal Hotel",
+            "Nirmala Thapa",
+            "2"
           ],
           [
-            "१९९",
-            "तेजदिन रात रेष्टुरेन्ट",
-            "तिर्थ माया सार्की",
-            "४"
+            "199",
+            "Tejadina Rata Restaurant",
+            "Tirtha Maya Sarki",
+            "4"
           ],
           [
-            "२००",
-            "सोनु खाजा घर",
-            "सोनु गुरुङ्ग",
+            "200",
+            "Sonu Snack House",
+            "Sonu Gurung",
             ""
           ],
           [
-            "२०१",
-            "देउराली भान्सा घर",
-            "भावना खड्का",
+            "201",
+            "Deurali Bhansa Ghara",
+            "Bhavana Khadka",
             ""
           ],
           [
-            "२०२",
-            "मुस्कान होटल",
-            "शिला थापा",
-            "१"
+            "202",
+            "Muskana Hotel",
+            "Shila Thapa",
+            "1"
           ],
           [
-            "२०३",
-            "सुसान्त नास्ता एण्ड रेष्टुरेन्ट",
-            "शोभा कुमाल",
+            "203",
+            "Susanta Nasta and Restaurant",
+            "Shobha Kumala",
             ""
           ],
           [
-            "२०४",
-            "रुकुम पश्चिम के.सी होटल",
-            "सरिता के.सी.",
-            "५"
+            "204",
+            "Rukum Pashchima ke.si Hotel",
+            "Sarita ke.si.",
+            "5"
           ],
           [
-            "२०५",
-            "म्याडिसन होटल",
-            "सुदिक्षा न्यौपाने",
+            "205",
+            "Myadisana Hotel",
+            "Sudiksha Nyaupane",
             ""
           ],
           [
-            "२०६",
-            "आर वि नास्ता पसल",
-            "खुस्वु के.सी.",
+            "206",
+            "Ara Vi Snack Shop",
+            "Khusvu ke.si.",
             ""
           ],
           [
-            "२०७",
-            "होटल बर्दिया दैलेखी खाजा घर",
-            "चन्द्रा कुमारी विष्ट",
-            "१०"
+            "207",
+            "Hotel Bardiya Dailekhi Snack House",
+            "Chandra Kumari Vishta",
+            "10"
           ],
           [
-            "२०८",
-            "सन्तोष जाजरकोटी होटल",
-            "चन्द्रकला लुहार",
+            "208",
+            "Santosha Jajarakoti Hotel",
+            "Chandrakala Luhara",
             ""
           ],
           [
-            "२०९",
-            "रुकुमेली होटल",
-            "नरि बोहरा",
+            "209",
+            "Rukumeli Hotel",
+            "Nari Bohara",
             ""
           ],
           [
-            "२१०",
-            "अन्जली होटल एण्ड रेष्टुरेन्ट",
-            "तुलसी वि.क.",
+            "210",
+            "Anjali Hotel and Restaurant",
+            "Tulasi vi.ka.",
             ""
           ],
           [
-            "२११",
-            "द किचन टप्स रेष्टुरेण्ट एण्ड पार्टी प्यालेस",
-            "इन्द्र वहादुर थापा",
+            "211",
+            "Da Kichana Tapsa Reshturenta and Parti Palace",
+            "Indra Vahadura Thapa",
             ""
           ],
           [
-            "२१२",
-            "लक्ष्मी चिया नास्ता रेष्टुरेन्ट पसल",
-            "वृहस्पति वि.क.",
-            "१३"
+            "212",
+            "Lakshmi Chiya Nasta Restaurant Pasala",
+            "Varihaspati vi.ka.",
+            "13"
           ],
           [
-            "२१३",
-            "सल्यान सिद्ध कुमाख चाख्लिघाट खाजा घर",
-            "सिता चलाउने",
-            "६"
+            "213",
+            "Salyan Siddha Kumakha Chakhlighata Snack House",
+            "Sita Chalaune",
+            "6"
           ],
           [
-            "२१४",
-            "मनकामना रेष्टुरेन्ट",
-            "गिता खत्री",
-            "१"
+            "214",
+            "Manakamana Restaurant",
+            "Gita Khatri",
+            "1"
           ],
           [
-            "२१५",
-            "रोहिणी नास्ता पसल एण्ड कोल्ड स्टोर",
-            "मिरा कुमारी पाल",
+            "215",
+            "Rohini Snack Shop and Kolda Stora",
+            "Mira Kumari Pala",
             ""
           ],
           [
-            "२१६",
-            "रवि विर्यानी म.म. सेन्टर",
-            "नविल अहमद शेष",
+            "216",
+            "Ravi Viryani Momo Center",
+            "Navila Ahamada Shesha",
             ""
           ],
           [
-            "२१७",
-            "न्यू सल्यानी दाजु भाई गेष्ट हाउस",
-            "बन्दना भण्डारी",
+            "217",
+            "New Salyani Daju Bhai Guest House",
+            "Bandana Bhandari",
             ""
           ],
           [
-            "२१८",
-            "मंगल नास्ता पसल",
-            "मंगल राम थारु",
+            "218",
+            "Mangala Snack Shop",
+            "Mangala Rama Tharu",
             ""
           ],
           [
-            "२१९",
-            "पासा नेवारी खाजा घर",
-            "निस्मा जोशी",
+            "219",
+            "Pasa Newari Snack House",
+            "Nisma Joshi",
             ""
           ],
           [
-            "२२०",
-            "न्यू राप्ती होटल",
-            "रिमा डाँगी",
-            "४"
+            "220",
+            "New Rapti Hotel",
+            "Rima Dangi",
+            "4"
           ],
           [
-            "२२१",
-            "माया फास्टफुड एण्ड रेष्टुरेन्ट",
-            "माया चौधरी",
+            "221",
+            "Maya Phastaphuda and Restaurant",
+            "Maya Chaudhary",
             ""
           ],
           [
-            "२२२",
-            "जय भाटभटेनि खाजा घर",
-            "सुशिला श्रेष्ठ",
+            "222",
+            "Jaya Bhatabhateni Snack House",
+            "Sushila Shrestha",
             ""
           ],
           [
-            "२२३",
-            "डुडुवा साईड रेष्टुरेन्ट",
-            "दुर्गा देवि बुढाथोकि",
-            "२०"
+            "223",
+            "Duduva Saida Restaurant",
+            "Durga Devi Budhathoki",
+            "20"
           ],
           [
-            "२२४",
-            "मोर्डन डिलाईट रेष्टुरेन्ट",
-            "आष्मा के.सि.",
+            "224",
+            "Mordana Dilaita Restaurant",
+            "Ashma ke.si.",
             ""
           ],
           [
-            "२२५",
-            "रितु जि.आर.एन रेष्टुरेन्ट",
-            "रितु गुरुङ",
-            "१०"
+            "225",
+            "Ritu ji.ara.ena Restaurant",
+            "Ritu Gurunga",
+            "10"
           ],
           [
-            "२२६",
-            "होटल आयुषमा एण्ड पाटि प्यालेस",
-            "नविन जि.सि.",
-            "४"
+            "226",
+            "Hotel Ayushama and Pati Palace",
+            "Navina ji.si.",
+            "4"
           ],
           [
-            "२२७",
-            "पश्चिम रुकुम सौगात होटल",
-            "पम्पा कंवर योगी",
+            "227",
+            "Pashchima Rukum Saugata Hotel",
+            "Pampa Kanvara Yogi",
             ""
           ],
           [
-            "२२८",
-            "डिजिटल हाईट",
-            "भरत गिरि",
-            "१९"
+            "228",
+            "Dijitala Haita",
+            "Bharata Giri",
+            "19"
           ],
           [
-            "२२९",
-            "थाला सेराघाट होटल",
-            "मिना हमाल",
-            "२"
+            "229",
+            "Thala Seraghata Hotel",
+            "Mina Hamala",
+            "2"
           ],
           [
-            "२३०",
-            "दिदीको खाजा घर रेष्टुरेन्ट एण्ड चिया पसल",
-            "शान्ता योगी",
-            "१८"
+            "230",
+            "Didiko Snack House Restaurant and Chiya Pasala",
+            "Shanta Yogi",
+            "18"
           ],
           [
-            "२३१",
-            "मासु व्यवसायी इन्भेष्टमेन्ट कम्पनी लि.",
-            "दिपेन्द्र राज श्रेष्ठ",
+            "231",
+            "Masu Vyavasayi Inbheshtamenta Kampani li.",
+            "Dipendra Raja Shrestha",
             ""
           ],
           [
-            "२३२",
-            "सजिलो खाजा एण्ड सेकुवा कर्नर",
-            "विमला सिंजाली",
-            "१८"
+            "232",
+            "Sajilo Khaja and Sekuva Karnara",
+            "Vimala Sinjali",
+            "18"
           ],
           [
-            "२३३",
-            "होटल इन्द्रेणी एण्ड रेष्टुरेन्ट",
-            "भिमलाल कँडेल",
+            "233",
+            "Hotel Indreni and Restaurant",
+            "Bhimalala Kaँdela",
             ""
           ],
           [
-            "२३४",
-            "न्यू कर्णाली राप्ती हरियाली गेष्ट हाउस",
-            "हिमाल महतारा",
-            "४"
+            "234",
+            "New Karnali Rapti Hariyali Guest House",
+            "Himala Mahatara",
+            "4"
           ],
           [
-            "२३५",
-            "चौतारी भान्सा घर",
-            "वसन्त कुमार हमाल",
+            "235",
+            "Chautari Bhansa Ghara",
+            "Vasanta Kumara Hamala",
             ""
           ],
           [
-            "२३६",
-            "ह्याङ्ग आउट रेष्ट्रो एण्ड बार",
-            "सन्तोष श्रेष्ठ",
+            "236",
+            "Hyangga Auta Restro and Bar",
+            "Santosha Shrestha",
             ""
           ],
           [
-            "२३७",
-            "लिटील हंगर क्याफे एण्ड रेष्टुरेन्ट",
-            "पियुष गुप्ता",
+            "237",
+            "Litila Hangara Cafe and Restaurant",
+            "Piyusha Gupta",
             ""
           ],
           [
-            "२३८",
-            "पंजावी खाजा घर",
-            "लक्ष्मी कौर सिख",
+            "238",
+            "Panjavi Snack House",
+            "Lakshmi Kaura Sikha",
             ""
           ],
           [
-            "२३९",
-            "गुल्मेली थापा खाजा घर",
-            "माया थापा मगर",
+            "239",
+            "Gulmeli Thapa Snack House",
+            "Maya Thapa Magara",
             ""
           ],
           [
-            "२४०",
-            "अछाम मेची महाकाली होटल",
-            "औसे विष्ट",
-            "४"
+            "240",
+            "Achhama Mechi Mahakali Hotel",
+            "Ause Vishta",
+            "4"
           ],
           [
-            "२४१",
-            "वागेश्वरी गर्लस होस्टेल",
-            "वविता कुमारी थापा मगर",
+            "241",
+            "Vageshvari Garlasa Hostela",
+            "Vavita Kumari Thapa Magara",
             ""
           ],
           [
-            "२४२",
-            "न्यू सुर्खेंती समिक्षा होटल",
-            "कृष्ण प्रसाद रिजाल",
+            "242",
+            "New Surkheti Samiksha Hotel",
+            "Karishna Prasada Rijala",
             ""
           ],
           [
-            "२४३",
-            "दंगाली गंगा गेष्ट हाउस",
-            "फणिन्द्र राज भट्टराई",
-            "११"
+            "243",
+            "Dangali Ganga Guest House",
+            "Phanindra Raja Bhattarai",
+            "11"
           ],
           [
-            "२४४",
-            "होटल न्यु ताज",
-            "मान वहादुर बस्नेत",
-            "२"
+            "244",
+            "Hotel New Taja",
+            "Mana Vahadura Basnet",
+            "2"
           ],
           [
-            "२४५",
-            "गाँउले रेष्टुरेन्ट",
-            "देवा गुरुङ्ग",
+            "245",
+            "Gaँule Restaurant",
+            "Deva Gurung",
             ""
           ],
           [
-            "२४६",
-            "भट्टी लाईभ बार एण्ड रेष्ट्रो",
-            "अंकित थापा",
+            "246",
+            "Bhatti Laibha Bar and Restro",
+            "Ankita Thapa",
             ""
           ],
           [
-            "२४७",
-            "चेतना नास्ता एण्ड रेष्टुरेन्ट",
-            "शिला कुमारी एम.सी.",
-            "१"
+            "247",
+            "Chetana Nasta and Restaurant",
+            "Shila Kumari ema.si.",
+            "1"
           ],
           [
-            "२४८",
-            "वर्षा खाजा घर एण्ड रेष्टुरेन्ट",
-            "सरिता शाही",
-            "२"
+            "248",
+            "Varsha Snack House and Restaurant",
+            "Sarita Shahi",
+            "2"
           ],
           [
-            "२४९",
-            "ट्राभलर्स भिलेज बुटिक होटल प्रा.लि.",
-            "पुरुषोत्तम नेपाल",
+            "249",
+            "Trabhalarsa Bhileja Butika Hotel Pvt. Ltd.",
+            "Purushottama Nepal",
             ""
           ],
           [
-            "२५०",
-            "माया खाजा एण्ड सेकुवा कर्नर",
-            "तिलमाया गुरुङ्ग खड्का",
-            "२"
+            "250",
+            "Maya Khaja and Sekuva Karnara",
+            "Tilamaya Gurung Khadka",
+            "2"
           ],
           [
-            "२५१",
-            "सिम्ताली दुल्लू भिजन होटल",
-            "पदम वहादुर बुढा",
-            "१"
+            "251",
+            "Simtali Dullu Bhijana Hotel",
+            "Padama Vahadura Budha",
+            "1"
           ],
           [
-            "२५२",
-            "श्यामु रेष्टुरेन्ट",
-            "रेनु लोनिया",
-            "१३"
+            "252",
+            "Shyamu Restaurant",
+            "Renu Loniya",
+            "13"
           ],
           [
-            "२५३",
-            "प्युठान चतुर्भुज होटल एण्ड रेष्टुरेन्ट",
-            "टेक माया पौडेल",
-            "२"
+            "253",
+            "Pyuthana Chaturbhuja Hotel and Restaurant",
+            "Teka Maya Paudela",
+            "2"
           ],
           [
-            "२५४",
-            "ईशा खाजा घर",
-            "सर भण्डारी",
+            "254",
+            "Isha Snack House",
+            "Sara Bhandari",
             ""
           ],
           [
-            "२५५",
-            "रोयल क्याफे",
-            "राधिका शाही",
+            "255",
+            "Royal Cafe",
+            "Radhika Shahi",
             ""
           ],
           [
-            "२५६",
-            "होटल हटपट",
-            "महेश बहादुर विष्ट",
-            "१८"
+            "256",
+            "Hotel Hatapata",
+            "Mahesha Bahadura Vishta",
+            "18"
           ],
           [
-            "२५७",
-            "पुष्पञ्जली दंगाली होटल",
-            "रिक्खा पोखरेल",
-            "५"
+            "257",
+            "Pushpanyjali Dangali Hotel",
+            "Rikkha Pokharela",
+            "5"
           ],
           [
-            "२५८",
-            "पुष्पाञ्जली दंगाली होटल",
-            "रिक्खा पोख्रेल",
-            "३"
+            "258",
+            "Pushpanyjali Dangali Hotel",
+            "Rikkha Pokhrel",
+            "3"
           ],
           [
-            "२५९",
-            "दर्शन दोहोरी साँझ एण्ड रेष्टुरेन्ट",
-            "सिद्धिकला रावत",
-            "१५"
+            "259",
+            "Darshana Dohori Saँjha and Restaurant",
+            "Siddhikala Ravata",
+            "15"
           ],
           [
-            "२६०",
-            "दर्शन दोहोरी साँझ एण्ड रेष्टुरेन्ट",
-            "सिद्धकला रावत",
-            "१८"
+            "260",
+            "Darshana Dohori Saँjha and Restaurant",
+            "Siddhakala Ravata",
+            "18"
           ],
           [
-            "२६१",
-            "रोहिनि नास्ता पसल",
-            "माया देवी सुनार",
-            "२"
+            "261",
+            "Rohini Snack Shop",
+            "Maya Devi Sunar",
+            "2"
           ],
           [
-            "२६२",
-            "हाम्रो दैलेखी थापा होटल होटल एण्ड लज",
-            "कल्पना कुमारी भण्डारी",
-            "१"
+            "262",
+            "Hamro Dailekhi Thapa Hotel Hotel and Laja",
+            "Kalpana Kumari Bhandari",
+            "1"
           ],
           [
-            "२६३",
-            "बैजापुर चौधरी होटल एण्ड रेष्टुरेन्ट",
-            "राम चरण चौधरी",
-            "४"
+            "263",
+            "Baijapura Chaudhary Hotel and Restaurant",
+            "Rama Charana Chaudhary",
+            "4"
           ],
           [
-            "२६४",
-            "चन्दन नाथ होटल",
-            "गोर्ख बुढा",
+            "264",
+            "Chandana Natha Hotel",
+            "Gorkha Budha",
             ""
           ],
           [
-            "२६५",
-            "होटल देउती गेष्ट हाउस एण्ड रेष्टुरेन्ट",
-            "विर वहादुर कार्की",
-            "४"
+            "265",
+            "Hotel Deuti Guest House and Restaurant",
+            "Vira Vahadura Karki",
+            "4"
           ],
           [
-            "२६६",
-            "मन्दिप नास्ता तथा कोल्ड स्टोर",
-            "मैना क्षेत्री",
-            "१८"
+            "266",
+            "Mandipa Nasta Tatha Kolda Stora",
+            "Maina Kshetri",
+            "18"
           ],
           [
-            "२६७",
-            "सुनाखरी रेष्टुरेन्ट प्रा.लि",
-            "घनश्याम शर्मा",
-            "१२"
+            "267",
+            "Sunakhari Restaurant pra.li",
+            "Ghanashyama Sharma",
+            "12"
           ],
           [
-            "२६८",
-            "सगरमाथा म.म. एण्ड फास्टफुड",
-            "रघुविर कपाडी",
-            "१८"
+            "268",
+            "Sagaramatha ma.ma. and Phastaphuda",
+            "Raghuvira Kapadi",
+            "18"
           ],
           [
-            "२६९",
-            "टेस्टी प्लस होटल एण्ड रेष्टुरेन्ट",
-            "राम गिरी",
+            "269",
+            "Testi Plasa Hotel and Restaurant",
+            "Rama Giri",
             ""
           ],
           [
-            "२७०",
-            "लिलि रेष्टुरेन्ट",
-            "टिका फुयाल",
+            "270",
+            "Lili Restaurant",
+            "Tika Phuyala",
             ""
           ],
           [
-            "२७१",
-            "नाचो रेष्टुरेन्ट एण्ड क्याफे",
-            "रिता भण्डारी",
-            "१८"
+            "271",
+            "Nacho Restaurant and Cafe",
+            "Rita Bhandari",
+            "18"
           ],
           [
-            "२७२",
-            "न्यू कस क्याफे एण्ड रेष्टुरेन्ट",
-            "मिना नेपाली",
-            "४"
+            "272",
+            "New Kasa Cafe and Restaurant",
+            "Mina Nepali",
+            "4"
           ],
           [
-            "२७३",
-            "सम्पन्न होटल",
-            "पवित्रा बन्जारा",
+            "273",
+            "Sampanna Hotel",
+            "Pavitra Banjara",
             ""
           ],
           [
-            "२७४",
-            "नाज विर्यानी सेन्टर",
-            "सविया मनिहारनी सिद्धिकी",
+            "274",
+            "Naja Viryani Sentara",
+            "Saviya Maniharani Siddiqui",
             ""
           ],
           [
-            "२७५",
-            "बर्दिया चौधरी खाना नास्ता पसल",
-            "भगत वहादुर थारु",
-            "१०"
+            "275",
+            "Bardiya Chaudhary Khana Snack Shop",
+            "Bhagata Vahadura Tharu",
+            "10"
           ],
           [
-            "२७६",
-            "सागर लभ रेष्टुरेन्ट",
-            "सौनी थारु",
-            "९"
+            "276",
+            "Sagara Labha Restaurant",
+            "Sauni Tharu",
+            "9"
           ],
           [
-            "२७७",
-            "हाम्रो सुर्खेंती नकुल होटल एण्ड रेष्टुरेन्ट",
-            "देवीसरा रावत",
-            "२"
+            "277",
+            "Hamro Surkheti Nakula Hotel and Restaurant",
+            "Devisara Ravata",
+            "2"
           ],
           [
-            "२७८",
-            "द ब्ल्याक फरेष्ट",
-            "पुष्पा गिरी",
-            "४"
+            "278",
+            "Da Blyaka Phareshta",
+            "Pushpa Giri",
+            "4"
           ],
           [
-            "२७९",
-            "बाह्रसिंगे रेष्टुरेन्ट एण्ड वार",
-            "ओसन श्रेष्ठ",
-            "१६"
+            "279",
+            "Bahrasinge Restaurant and Bar",
+            "Osana Shrestha",
+            "16"
           ],
           [
-            "२८०",
-            "ब्लू मिमोसा द क्याफे",
-            "कल्पना श्रेष्ठ",
-            "२"
+            "280",
+            "Blu Mimosa Da Cafe",
+            "Kalpana Shrestha",
+            "2"
           ],
           [
-            "२८१",
-            "सल्यानी कालागाउँले होटल",
-            "नर वहादुर बुढाथोकी",
-            "४"
+            "281",
+            "Salyani Kalagauँle Hotel",
+            "Nara Vahadura Budhathoki",
+            "4"
           ],
           [
-            "२८२",
-            "जाजरकोट रावल होटल",
-            "उर्मिला रावल",
-            "४"
+            "282",
+            "Jajarkot Ravala Hotel",
+            "Urmila Ravala",
+            "4"
           ],
           [
-            "२८३",
-            "होटल बांके बर्दिया एण्ड रेष्टुरेन्ट",
-            "देवी पौडेल",
+            "283",
+            "Hotel Banke Bardiya and Restaurant",
+            "Devi Paudela",
             ""
           ],
           [
-            "२८४",
-            "रोयल लेगसी प्रा.लि.",
-            "कमल वहादुर शाही",
-            "२"
+            "284",
+            "Royal Legasi Pvt. Ltd.",
+            "Kamala Vahadura Shahi",
+            "2"
           ],
           [
-            "२८५",
-            "द रोड हाउस फेमिली रेष्टुरेन्ट",
-            "हिरा थारु",
-            "४"
+            "285",
+            "Da Roda Hausa Phemili Restaurant",
+            "Hira Tharu",
+            "4"
           ],
           [
-            "२८६",
-            "मामा भान्जा फास्ट फुड एण्ड वाइन सेन्टर",
-            "विक्की कुमार वैश्य",
-            "३"
+            "286",
+            "Mama Bhanja Phasta Phuda and Vaina Sentara",
+            "Vikki Kumara Vaishya",
+            "3"
           ],
           [
-            "२८७",
-            "नेवारी भोल म.म. सेन्टर",
-            "माया श्रेष्ठ",
-            "२"
+            "287",
+            "Newari Bhola Momo Center",
+            "Maya Shrestha",
+            "2"
           ],
           [
-            "२८८",
-            "सन्तोषी होटल",
-            "सन्तोषी सुनार",
-            "४"
+            "288",
+            "Santoshi Hotel",
+            "Santoshi Sunar",
+            "4"
           ],
           [
-            "२८९",
-            "फुड प्वाईन्ट",
-            "मोहन लाल खत्री",
-            "५"
+            "289",
+            "Phuda Pvainta",
+            "Mohana Lala Khatri",
+            "5"
           ],
           [
-            "२९०",
-            "होटल डाइमण्ड प्यालेस प्रा.लि",
+            "290",
+            "Hotel Daimanda Palace pra.li",
             "",
-            "२"
+            "2"
           ],
           [
-            "२९१",
-            "आर.एस.रेष्टुरेन्ट",
-            "रुपा श्रेष्ठ",
-            "१०"
+            "291",
+            "ara.esa.Restaurant",
+            "Rupa Shrestha",
+            "10"
           ],
           [
-            "२९२",
-            "गुरुङ्ग नास्ता पसल",
-            "देवी गुरुङ्ग",
-            "४"
+            "292",
+            "Gurung Snack Shop",
+            "Devi Gurung",
+            "4"
           ],
           [
-            "२९३",
-            "होटल स्टारलाईट नील देवी प्रा.ली.",
-            "मनोज प्रसाद सुवेदी समेत",
-            "१८"
+            "293",
+            "Hotel Staralaita Nila Devi Pvt. Ltd.",
+            "Manoja Prasada Suvedi Sameta",
+            "18"
           ],
           [
-            "२९४",
-            "रोहित खाजा तथा नास्ता पसल",
-            "विष्णु बुढाथोकी",
+            "294",
+            "Rohita Khaja Tatha Snack Shop",
+            "Vishnu Budhathoki",
             ""
           ],
           [
-            "२९५",
-            "यमुना खाजा घर",
-            "यमुना वि.सी.",
+            "295",
+            "Yamuna Snack House",
+            "Yamuna vi.si.",
             ""
           ],
           [
-            "२९६",
-            "हाम्रो खाजा घर",
-            "तुलसा देवी गुरुङ्ग",
-            "१"
+            "296",
+            "Hamro Snack House",
+            "Tulasa Devi Gurung",
+            "1"
           ],
           [
-            "२९७",
-            "म.म.वार नेक्स्ट इन",
-            "हरि विक्रम चौधरी / प्रविन थारु / भुवन सिंह थारु",
-            "११"
+            "297",
+            "ma.ma.vara Neksta Ina",
+            "Hari Vikrama Chaudhary / Pravina Tharu / Bhuvana Sinha Tharu",
+            "11"
           ],
           [
-            "२९८",
-            "मतिना रेष्टुरेन्ट",
-            "संजय श्रेष्ठ",
-            "४"
+            "298",
+            "Matina Restaurant",
+            "Sanjaya Shrestha",
+            "4"
           ],
           [
-            "२९९",
-            "अस्मिता रेष्टुरेन्ट",
-            "गिता वाईवा",
+            "299",
+            "Asmita Restaurant",
+            "Gita Vaiva",
             ""
           ],
           [
-            "३००",
-            "न्यू कैलाश दर्शन होटल",
-            "पार्वती देवी कपाडी",
+            "300",
+            "New Kailasha Darshana Hotel",
+            "Parvati Devi Kapadi",
             ""
           ],
           [
-            "३०१",
-            "द बर्गर हाउस एण्ड क्रन्ची फ्राइड चिकेन",
-            "देवेन्द्र गौतम",
-            "१८"
+            "301",
+            "Da Bargara Hausa and Kranchi Phraida Chikena",
+            "Devendra Gautama",
+            "18"
           ],
           [
-            "३०२",
-            "रुक्मेली सिस्ने होटल",
-            "लक्ष्मी खत्री",
+            "302",
+            "Rukmeli Sisne Hotel",
+            "Lakshmi Khatri",
             ""
           ],
           [
-            "३०३",
-            "स्टेशन नेपालगंज द फुड क्लव एण्ड ससेज पार्क",
-            "युद्ध वहादुर ओली संजय राज रेग्मी",
-            "२"
+            "303",
+            "Steshana Nepalaganja Da Phuda Klava and Saseja Parka",
+            "Yuddha Vahadura Oli Sanjaya Raja Regmi",
+            "2"
           ],
           [
-            "३०४",
-            "द फरेष्ट होटल एण्ड रेष्टुरेन्ट",
-            "विक्रान्त भट्ट",
+            "304",
+            "Da Phareshta Hotel and Restaurant",
+            "Vikranta Bhatta",
             ""
           ],
           [
-            "३०५",
-            "वेष्ट साइड रेष्टुरेन्ट",
-            "डील कुमारी भण्डारी",
-            "२०"
+            "305",
+            "Veshta Saida Restaurant",
+            "Dila Kumari Bhandari",
+            "20"
           ],
           [
-            "३०६",
-            "पुरानो रहिम होटल",
-            "अव्दुल हकिम हलवाइ",
+            "306",
+            "Purano Rahima Hotel",
+            "Avdula Hakima Halavai",
             ""
           ],
           [
-            "३०७",
-            "गुल्मेली रेसुङ्गा रेष्टुरेन्ट",
-            "विष्णु बहादुर टण्डन",
-            "४"
+            "307",
+            "Gulmeli Resungga Restaurant",
+            "Vishnu Bahadura Tandana",
+            "4"
           ],
           [
-            "३०८",
-            "श्री निवास होटल",
-            "श्री निवास भुजुवा",
-            "१"
+            "308",
+            "Nivasa Hotel",
+            "Nivasa Bhujuva",
+            "1"
           ],
           [
-            "३०९",
-            "जाजरकोट जुगाथापा चौर दिपेन्द्र होटल",
-            "दिपेन्द्र सिंह ठकुरी",
-            "४"
+            "309",
+            "Jajarkot Jugathapa Chaura Dipendra Hotel",
+            "Dipendra Sinha Thakuri",
+            "4"
           ],
           [
-            "३१०",
-            "न्यू सुर्खेंती उत्सव होटल",
-            "धन वहादुर चौधन मगर",
-            "१३"
+            "310",
+            "New Surkheti Utsava Hotel",
+            "Dhana Vahadura Chaudhana Magara",
+            "13"
           ],
           [
-            "३११",
-            "होटल चिङ्गार काची सुर्खेंती",
-            "खकेन्द्र सिंह राना",
+            "311",
+            "Hotel Chinggara Kachi Surkheti",
+            "Khakendra Sinha Rana",
             ""
           ],
           [
-            "३१२",
-            "मोमेन्टो",
-            "निरिना श्रेष्ठ",
-            "११"
+            "312",
+            "Momento",
+            "Nirina Shrestha",
+            "11"
           ],
           [
-            "३१३",
-            "मगर रेष्टुरेन्ट",
-            "जैसरा घर्ती",
-            "२"
+            "313",
+            "Magara Restaurant",
+            "Jaisara Gharti",
+            "2"
           ],
           [
-            "३१४",
-            "राप्ती रुकुमेली होटल एण्ड लज",
-            "विजय कुमार शाही",
-            "१०"
+            "314",
+            "Rapti Rukumeli Hotel and Laja",
+            "Vijaya Kumara Shahi",
+            "10"
           ],
           [
-            "३१५",
-            "सागर विर्यानी सेन्टर",
-            "कंचन कुमारी शाह सोनार",
+            "315",
+            "Sagara Viryani Sentara",
+            "Kanchana Kumari Shaha Sonara",
             ""
           ],
           [
-            "३१६",
-            "रुकुम खत्री होटल",
-            "रमेश के.सी.",
-            "४"
+            "316",
+            "Rukum Khatri Hotel",
+            "Ramesha ke.si.",
+            "4"
           ],
           [
-            "३१७",
-            "तमु शेर्पा खाजा घर",
-            "लमु शेर्पा",
-            "१७"
+            "317",
+            "Tamu Sherpa Snack House",
+            "Lamu Sherpa",
+            "17"
           ],
           [
-            "३१८",
-            "द डोल्पा फोक्सुन्डो होटल एण्ड लज",
-            "हस्तमान बोहोरा",
-            "२०"
+            "318",
+            "Da Dolpa Phoksundo Hotel and Laja",
+            "Hastamana Bohora",
+            "20"
           ],
           [
-            "३१९",
-            "श्रेष्ठ म.म",
-            "लक्ष्मण मान श्रेष्ठ",
-            "४"
+            "319",
+            "Shrestha ma.ma",
+            "Lakshmana Mana Shrestha",
+            "4"
           ],
           [
-            "३२०",
-            "सल्यानी होटल",
-            "भर्दै कुमाल",
-            "४"
+            "320",
+            "Salyani Hotel",
+            "Bhardai Kumala",
+            "4"
           ],
           [
-            "३२१",
-            "द सन राइज गेष्ट हाउस",
-            "चन्द्रा देवी खड्का",
-            "४"
+            "321",
+            "Da Sana Raija Guest House",
+            "Chandra Devi Khadka",
+            "4"
           ],
           [
-            "३२२",
-            "याम.डी स्क्वायर रेष्टुरेन्ट एण्ड वार",
-            "मुना श्रेष्ठ",
-            "१९"
+            "322",
+            "yama.di Skvayara Restaurant and Bar",
+            "Muna Shrestha",
+            "19"
           ],
           [
-            "३२३",
-            "जाजरकोटी सिहं ठकुरी होटल",
-            "राजकुमारी सिंह",
-            "४"
+            "323",
+            "Jajarakoti Sihan Thakuri Hotel",
+            "Rajakumari Sinha",
+            "4"
           ],
           [
-            "३२४",
-            "लामा रेष्टुरेन्ट",
-            "ल्हाक्पा रिन्जी शेर्पा",
+            "324",
+            "Lama Restaurant",
+            "Lhakpa Rinji Sherpa",
             ""
           ],
           [
-            "३२५",
-            "स्वर्गद्वारी होटल एण्ड रेष्टुरेन्ट",
-            "दिपक राज चन्द",
+            "325",
+            "Swargadwari Hotel and Restaurant",
+            "Dipaka Raja Chand",
             ""
           ],
           [
-            "३२६",
-            "सुपा देउराली खाना नास्ता पसल",
-            "राधा देवी पन्थी",
-            "२"
+            "326",
+            "Supa Deurali Khana Snack Shop",
+            "Radha Devi Panthi",
+            "2"
           ],
           [
-            "३२७",
-            "सल्यानी चाँदे न्यू प्रेम होटल",
-            "भिम वहादुर खड्का समेत",
+            "327",
+            "Salyani Chaँde New Prema Hotel",
+            "Bhima Vahadura Khadka Sameta",
             ""
           ],
           [
-            "३२८",
-            "किन्जल रेष्टुरेन्ट",
-            "आरती कुमारी शाहु",
-            "१३"
+            "328",
+            "Kinjala Restaurant",
+            "Arati Kumari Shahu",
+            "13"
           ],
           [
-            "३२۹",
-            "लक्ष्मी होटल",
-            "लक्ष्मी मोरिया",
-            "६"
+            "32۹",
+            "Lakshmi Hotel",
+            "Lakshmi Moriya",
+            "6"
           ],
           [
-            "३३०",
-            "सल्यानी रेष्टुरेन्ट एण्ड खाजा घर",
-            "हिरा के.सी.",
-            "४"
+            "330",
+            "Salyani Restaurant and Snack House",
+            "Hira ke.si.",
+            "4"
           ],
           [
-            "३३१",
-            "समृद्धि खाजा घर",
-            "तारामाया कँडेल",
-            "२"
+            "331",
+            "Samariddhi Snack House",
+            "Taramaya Kaँdela",
+            "2"
           ],
           [
-            "३३२",
-            "पुष्पाञ्जली दंगाली होटल",
-            "रिक्खा पोख्रेल",
-            "४"
+            "332",
+            "Pushpanyjali Dangali Hotel",
+            "Rikkha Pokhrel",
+            "4"
           ],
           [
-            "३३३",
-            "सिता रेष्टुरेन्ट",
-            "सिता कुमारी रुचाल",
-            "४"
+            "333",
+            "Sita Restaurant",
+            "Sita Kumari Ruchala",
+            "4"
           ],
           [
-            "३३४",
-            "शाही रेष्टुरेन्ट",
-            "गिता देवी मल्ल",
+            "334",
+            "Shahi Restaurant",
+            "Gita Devi Malla",
             ""
           ],
           [
-            "३३५",
-            "जे जेरी म.म. सेन्टर",
-            "अन्जली कुमारी वैद्य",
-            "१"
+            "335",
+            "Je Jeri Momo Center",
+            "Anjali Kumari Vaidya",
+            "1"
           ],
           [
-            "३३६",
-            "न्यू दैलेखी स्टाफ होटल",
-            "तारा कुमारी रावल",
-            "१८"
+            "336",
+            "New Dailekhi Stapha Hotel",
+            "Tara Kumari Ravala",
+            "18"
           ],
           [
-            "३३७",
-            "साईकुमारी रेष्टुरेन्ट एण्ड लज",
-            "जसवीर रावत",
+            "337",
+            "Saikumari Restaurant and Laja",
+            "Jasavira Ravata",
             ""
           ],
           [
-            "३३८",
-            "नेपालगन्ज रेष्टुरेन्ट एण्ड वार",
-            "लाल कुमारी देवकोटा",
-            "२"
+            "338",
+            "Nepalaganja Restaurant and Bar",
+            "Lala Kumari Devakota",
+            "2"
           ],
           [
-            "३३९",
-            "नमस्ते खाजा घर",
-            "खुमा देवी के.सी खड्का",
-            "४"
+            "339",
+            "Namaste Snack House",
+            "Khuma Devi ke.si Khadka",
+            "4"
           ],
           [
-            "३४०",
-            "टोमेटो वार एण्ड रेष्टुरेन्ट पार्टी प्यालेस",
-            "सुदिप खत्री मुकुन्द ओली",
-            "४"
+            "340",
+            "Tometo Bar and Restaurant Parti Palace",
+            "Sudipa Khatri Mukunda Oli",
+            "4"
           ],
           [
-            "३४१",
-            "रुकुमेली मगर होटल",
-            "विरमान राना",
-            "१५"
+            "341",
+            "Rukumeli Magara Hotel",
+            "Viramana Rana",
+            "15"
           ],
           [
-            "३४२",
-            "श्रिया होटल",
-            "धीर्जा वडवाल",
-            "४"
+            "342",
+            "Shriya Hotel",
+            "Dhirja Vadavala",
+            "4"
           ],
           [
-            "३४३",
-            "अनु रेष्टुरेन्ट एण्ड सेकुवा सेन्टर",
-            "धनकला सिजापति",
+            "343",
+            "Anu Restaurant and Sekuva Sentara",
+            "Dhanakala Sijapati",
             ""
           ],
           [
-            "३४४",
-            "राप्ती स्टाफ होटल",
-            "सविता उपाध्याय मरासिनी",
-            "४"
+            "344",
+            "Rapti Stapha Hotel",
+            "Savita Upadhyay Marasini",
+            "4"
           ],
           [
-            "३४५",
-            "रोयल कर्णाली होटल एण्ड लज नेपालगंज",
-            "लोकेन्द्र वहादुर शाही",
-            "४"
+            "345",
+            "Royal Karnali Hotel and Laja Nepalaganja",
+            "Lokendra Vahadura Shahi",
+            "4"
           ],
           [
-            "३४६",
-            "बर्दिया होटल एण्ड म.म. सेन्टर",
-            "सविता थापा मगर",
+            "346",
+            "Bardiya Hotel and Momo Center",
+            "Savita Thapa Magara",
             ""
           ],
           [
-            "३४७",
-            "न्यू सुर्खेंती होटल",
-            "मिना बुढाथोकी",
-            "१०"
+            "347",
+            "New Surkheti Hotel",
+            "Mina Budhathoki",
+            "10"
           ],
           [
-            "३४८",
-            "होटल डायमण",
-            "देव वहादुर के.सी",
-            "२"
+            "348",
+            "Hotel Dayamana",
+            "Deva Vahadura ke.si",
+            "2"
           ],
           [
-            "३४९",
-            "पानस रेष्टुरेन्ट",
-            "केशव सिर्पाइली",
+            "349",
+            "Panasa Restaurant",
+            "Keshava Sirpaili",
             ""
           ],
           [
-            "३५०",
-            "कर्णाली होटल",
-            "छिरिङ तेम्पा लामा",
-            "२०"
+            "350",
+            "Karnali Hotel",
+            "Chhiringa Tempa Lama",
+            "20"
           ],
           [
-            "३५१",
-            "न्यू वनगाडी होटल",
-            "गंगाराम कामी",
-            "४"
+            "351",
+            "New Vanagadi Hotel",
+            "Gangarama Kami",
+            "4"
           ],
           [
-            "३५२",
-            "शुभम होटल प्रा.लि.",
-            "रविन्द्र लामिछाने",
-            "२०"
+            "352",
+            "Shubhama Hotel Pvt. Ltd.",
+            "Ravindra Lamichhane",
+            "20"
           ],
           [
-            "३५३",
-            "न्यू नारायणी सल्ली वजार होटल",
-            "याम वहादुर वस्नेत",
+            "353",
+            "New Narayani Salli Vajara Hotel",
+            "Yama Vahadura Vasneta",
             ""
           ],
           [
-            "३५४",
-            "एवन दैलेखी खाजा घर एण्ड रेष्टुरेन्ट",
-            "गोमा कुमारी विष्ट",
-            "१८"
+            "354",
+            "Evana Dailekhi Snack House and Restaurant",
+            "Goma Kumari Vishta",
+            "18"
           ],
           [
-            "३५५",
-            "मुस्कान होटल",
-            "नमराज सापकोटा",
+            "355",
+            "Muskana Hotel",
+            "Namaraja Sapakota",
             ""
           ],
           [
-            "३५६",
-            "न्यू राकम कर्णाली गेष्ट हाउस",
-            "ममता मार्फी",
+            "356",
+            "New Rakama Karnali Guest House",
+            "Mamata Marphi",
             ""
           ],
           [
-            "३५७",
-            "बारेकोटी शंकर होटल",
-            "शंकर कामी",
-            "४"
+            "357",
+            "Barekoti Shankara Hotel",
+            "Shankara Kami",
+            "4"
           ],
           [
-            "३५८",
-            "स्टेन्जर इन क्याफे",
-            "अनुराग श्रेष्ठ त् सम्वन्ध रावल",
+            "358",
+            "Stenjara Ina Cafe",
+            "Anuraga Shrestha T Samvandha Ravala",
             ""
           ],
           [
-            "३५९",
-            "मानसरोवर म्युजमेन्ट पार्क एण्ड रिसोर्ट प्रा.लि",
-            "ओम प्रकाश मिश्रा",
+            "359",
+            "Manasarovara Myujamenta Parka and Resort pra.li",
+            "Oma Prakasha Mishra",
             ""
           ],
           [
-            "३६०",
-            "टेण्ट कर्नर एण्ड रेष्टुरेन्ट",
-            "निलम सिंह बुढाथोकी",
-            "२"
+            "360",
+            "Tenta Karnara and Restaurant",
+            "Nilama Sinha Budhathoki",
+            "2"
           ],
           [
-            "३६१",
-            "तिलक म.म. सेन्टर",
-            "ममता टमटा",
-            "१८"
+            "361",
+            "Tilaka Momo Center",
+            "Mamata Tamata",
+            "18"
           ],
           [
-            "३६२",
-            "भुकुटीनगर रेष्टुरेन्ट",
-            "वसत्ती आले सारु मगर",
+            "362",
+            "Bhukutinagara Restaurant",
+            "Vasatti Ale Saru Magara",
             ""
           ],
           [
-            "३६३",
-            "भट्ट होटल",
-            "वालकुमारी भट्ट",
-            "१७"
+            "363",
+            "Bhatta Hotel",
+            "Valakumari Bhatta",
+            "17"
           ],
           [
-            "३६४",
-            "रुफ हप गार्डेन रेष्टुरेन्ट",
-            "दल वहादुर सुनार",
-            "२"
+            "364",
+            "Rupha Hapa Gardena Restaurant",
+            "Dala Vahadura Sunar",
+            "2"
           ],
           [
-            "३६५",
-            "शाही क्याफे एण्ड वार",
-            "सानी मल्ल",
-            "२"
+            "365",
+            "Shahi Cafe and Bar",
+            "Sani Malla",
+            "2"
           ],
           [
-            "३६६",
-            "रष्ट्री हाउस रेष्टुरेन्ट र वार",
-            "सुरज गुरुङ्ग",
-            "४"
+            "366",
+            "Rashtri Hausa Restaurant Ra Bar",
+            "Suraja Gurung",
+            "4"
           ],
           [
-            "३६७",
-            "नारायणी रेष्टुरेन्ट",
-            "मनिषा कहार",
-            "११"
+            "367",
+            "Narayani Restaurant",
+            "Manisha Kahara",
+            "11"
           ],
           [
-            "३६८",
-            "एभरेष्ट होटल",
-            "दिपा पोखरेल",
-            "४"
+            "368",
+            "Ebhareshta Hotel",
+            "Dipa Pokharela",
+            "4"
           ],
           [
-            "३६९",
-            "ओम होटल स्वस्तिक",
-            "अन्जु भण्डारी",
-            "२"
+            "369",
+            "Oma Hotel Svastika",
+            "Anju Bhandari",
+            "2"
           ],
           [
-            "३७०",
-            "अतिथी वाईन डाईन कटेज",
-            "यज्ञ प्रसाद आचार्य/ इन्द्र प्रसाद भुषाल",
-            "१२"
+            "370",
+            "Atithi Vaina Daina Kateja",
+            "Yajnya Prasada Acharya/ Indra Prasada Bhushala",
+            "12"
           ],
           [
-            "३७१",
-            "सटरडे रेष्टुरेन्ट",
-            "कुमारी भारती वली",
-            "४"
+            "371",
+            "Satarade Restaurant",
+            "Kumari Bharati Vali",
+            "4"
           ],
           [
-            "३७२",
-            "दुल्लु दरवार होटल",
-            "राधा भण्डारी",
-            "१"
+            "372",
+            "Dullu Daravara Hotel",
+            "Radha Bhandari",
+            "1"
           ],
           [
-            "३७३",
-            "न्यु दैलेखी विशाला होटल एण्ड रेष्टुरेन्ट",
-            "राज कुमारी भण्डारी",
-            "२"
+            "373",
+            "New Dailekhi Vishala Hotel and Restaurant",
+            "Raja Kumari Bhandari",
+            "2"
           ],
           [
-            "३७४",
-            "दैलेखी विशाला होटल एण्ड रेष्टुरेन्ट",
-            "राजकुमारी भण्डारी",
-            "२"
+            "374",
+            "Dailekhi Vishala Hotel and Restaurant",
+            "Rajakumari Bhandari",
+            "2"
           ],
           [
-            "३७५",
-            "ए.एन.रेष्टुरेन्ट",
-            "निरा परियार",
-            "१२"
+            "375",
+            "e.ena.Restaurant",
+            "Nira Pariyara",
+            "12"
           ],
           [
-            "३७६",
-            "न्यू सेती कर्णाली होटल एण्ड लज",
-            "सरस्वति पाध्या",
-            "२०"
+            "376",
+            "New Seti Karnali Hotel and Laja",
+            "Sarasvati Padhya",
+            "20"
           ],
           [
-            "३७७",
-            "नुर विर्यानी म.म. सेन्टर",
-            "आरजु वानो कबडीया",
-            "६"
+            "377",
+            "Nura Viryani Momo Center",
+            "Araju Vano Kabadiya",
+            "6"
           ],
           [
-            "३७८",
-            "जुनु खाजा घर",
-            "जुनु थापा मगर",
-            "१९"
+            "378",
+            "Junu Snack House",
+            "Junu Thapa Magara",
+            "19"
           ],
           [
-            "३७९",
-            "बडीमालिका होटल एण्ड लज",
-            "प्रेमा शाही",
-            "२०"
+            "379",
+            "Badimalika Hotel and Laja",
+            "Prema Shahi",
+            "20"
           ],
           [
-            "३८०",
-            "पिस सिद्धार्थ कटेज एण्ड रेष्टुरेन्ट",
-            "मुक्तिराम भण्डारी",
-            "१२"
+            "380",
+            "Pisa Siddhartha Kateja and Restaurant",
+            "Muktirama Bhandari",
+            "12"
           ],
           [
-            "३८१",
-            "कंचन गेष्ट हाउस",
-            "मन कुमारी कडेल",
-            "२०"
+            "381",
+            "Kanchana Guest House",
+            "Mana Kumari Kadela",
+            "20"
           ],
           [
-            "३८२",
-            "जाजरकोटी जुनी चाँदे लेलिन होटल एण्ड रेष्टुरेन्ट",
-            "विजय शाही",
-            "४"
+            "382",
+            "Jajarakoti Juni Chaँde Lelina Hotel and Restaurant",
+            "Vijaya Shahi",
+            "4"
           ],
           [
-            "३८३",
-            "ब्लेसिड पिश गेष्ट हाउस",
-            "दानीएल शाही",
-            "४"
+            "383",
+            "Blesida Pisha Guest House",
+            "Daniela Shahi",
+            "4"
           ],
           [
-            "३८४",
-            "अन्नपुर्ण म.म",
-            "एनी नकर्मी",
-            "१०"
+            "384",
+            "Annapurna ma.ma",
+            "Eni Nakarmi",
+            "10"
           ],
           [
-            "३८५",
-            "मनिषा खाजा घर",
-            "तुल्सी वि.क",
-            "२"
+            "385",
+            "Manisha Snack House",
+            "Tulsi vi.ka",
+            "2"
           ],
           [
-            "३८६",
-            "नारायणी भान्सा घर एण्ड सेकुवा कर्नर",
-            "लक्ष्मी वि.क",
-            "१"
+            "386",
+            "Narayani Bhansa Ghara and Sekuva Karnara",
+            "Lakshmi vi.ka",
+            "1"
           ],
           [
-            "३८७",
-            "नन्दनी समिक्षा भेट सेन्टर",
-            "शशि चन्द्र सापकोटा",
-            "१"
+            "387",
+            "Nandani Samiksha Bheta Sentara",
+            "Shashi Chandra Sapakota",
+            "1"
           ],
           [
-            "३८८",
-            "म.म.घर",
-            "पुनम भुजुवा",
-            "२"
+            "388",
+            "ma.ma.ghara",
+            "Punama Bhujuva",
+            "2"
           ],
           [
-            "३८९",
-            "न्यु नेपाल गेष्ट हाउस",
-            "उपेन्द्र वहादुर शाही",
-            "२"
+            "389",
+            "New Nepal Guest House",
+            "Upendra Vahadura Shahi",
+            "2"
           ],
           [
-            "३९०",
-            "लक्की सेभेन फेमली रेष्टुरेन्ट",
-            "रम्मादेवी विश्वकर्मा",
-            "१४"
+            "390",
+            "Lakki Sebhena Phemali Restaurant",
+            "Rammadevi Vishvakarma",
+            "14"
           ],
           [
-            "३९१",
-            "होटल मानसरोवर एण्ड दोहोरी साझ",
-            "टोप वहादुर वलि",
-            "४"
+            "391",
+            "Hotel Manasarovara and Dohori Sajha",
+            "Topa Vahadura Vali",
+            "4"
           ],
           [
-            "३९२",
-            "द होटल श्रीकृष्ण",
-            "तुलमी महतरा",
-            "४"
+            "392",
+            "Da Hotel Karishna",
+            "Tulami Mahatra",
+            "4"
           ],
           [
-            "३९३",
-            "डि.एन रेष्टुरेन्ट",
-            "तुल्सी खनाल",
-            "४"
+            "393",
+            "di.ena Restaurant",
+            "Tulsi Khanal",
+            "4"
           ],
           [
-            "३९४",
-            "बर्दिया कैलाली होटल एण्ड लज",
-            "यमुना गौडेल पाण्डेय",
-            "१०"
+            "394",
+            "Bardiya Kailali Hotel and Laja",
+            "Yamuna Gaudela Pandeya",
+            "10"
           ],
           [
-            "३९५",
-            "राधे राधे रोड साईड क्याफे",
-            "पवन न्यौपाने",
-            "१८"
+            "395",
+            "Radhe Radhe Roda Saida Cafe",
+            "Pavana Nyaupane",
+            "18"
           ],
           [
-            "३९६",
-            "नेपाल कफि रेष्टुरेन्ट एण्ड वार",
-            "आकाश सिंह राजपुत",
-            "१०"
+            "396",
+            "Nepal Kaphi Restaurant and Bar",
+            "Akasha Sinha Rajaputa",
+            "10"
           ],
           [
-            "३९७",
-            "सुखेती स्टाफ रेष्टुरेन्ट",
-            "रिता कुमारी डी,सी",
-            "४"
+            "397",
+            "Sukheti Stapha Restaurant",
+            "Rita Kumari Di,si",
+            "4"
           ],
           [
-            "३९८",
-            "श्रीनगर गेष्ट हाउस",
-            "जानकी घर्ति",
-            "४"
+            "398",
+            "Nagara Guest House",
+            "Janaki Gharti",
+            "4"
           ],
           [
-            "३९९",
-            "बाझकोटी सल्यान होटल एण्ड लज",
-            "संगिता पुन",
-            "४"
+            "399",
+            "Bajhakoti Salyan Hotel and Laja",
+            "Sangita Puna",
+            "4"
           ],
           [
-            "४००",
-            "नेपालगन्ज गेष्ट हाउस एण्ड लज",
-            "गोविन्द वहादुर विष्ट",
-            "४"
+            "400",
+            "Nepalaganja Guest House and Laja",
+            "Govinda Vahadura Vishta",
+            "4"
           ],
           [
-            "४०१",
-            "चोक तिर क्याफे एण्ड रेष्टुरेन्ट",
-            "लक्ष्मी राना",
-            "१८"
+            "401",
+            "Choka Tira Cafe and Restaurant",
+            "Lakshmi Rana",
+            "18"
           ],
           [
-            "४०२",
-            "दंगाली स्याङ्जाली होटल",
-            "सुजता श्रेष्ठ",
-            "२"
+            "402",
+            "Dangali Syangjali Hotel",
+            "Sujata Shrestha",
+            "2"
           ],
           [
-            "४०३",
-            "चौधरी रेष्टुरेन्ट",
-            "जानकी कुमारी थारु",
-            "४"
+            "403",
+            "Chaudhary Restaurant",
+            "Janaki Kumari Tharu",
+            "4"
           ],
           [
-            "४०४",
-            "विशाल खाजा घर",
-            "राम कुमार महरा",
-            "१३"
+            "404",
+            "Vishala Snack House",
+            "Rama Kumara Mahara",
+            "13"
           ],
           [
-            "४०५",
-            "गोदावरी होटल एण्ड रेष्टुरेन्ट",
-            "सरिता क्षेत्री श्रेष्ठ",
-            "१८"
+            "405",
+            "Godavari Hotel and Restaurant",
+            "Sarita Kshetri Shrestha",
+            "18"
           ],
           [
-            "४०६",
-            "सिस्ने होटल रेष्टुरेन्ट एण्ड लज",
-            "गणेश कुमार खड्का",
-            "२"
+            "406",
+            "Sisne Hotel Restaurant and Laja",
+            "Ganesha Kumara Khadka",
+            "2"
           ],
           [
-            "४०७",
-            "होटल चौरजहरी",
-            "राकेश विष्ट",
-            "४"
+            "407",
+            "Hotel Chaurajahari",
+            "Rakesha Vishta",
+            "4"
           ],
           [
-            "४०८",
-            "आर्यन फास्ट फुड एण्ड रेष्टुरेन्ट",
-            "तेजश्वनी वर्मा",
-            "१८"
+            "408",
+            "Aryana Phasta Phuda and Restaurant",
+            "Tejashvani Varma",
+            "18"
           ],
           [
-            "४०९",
-            "नारायणी होटल एण्ड सेकुवा कर्नर",
-            "लक्ष्मी वि.क",
-            "१"
+            "409",
+            "Narayani Hotel and Sekuva Karnara",
+            "Lakshmi vi.ka",
+            "1"
           ],
           [
-            "४१०",
-            "द भिजन रेष्टुरेन्ट",
-            "दिपेन्द्र वहादुर शाही",
-            "४"
+            "410",
+            "Da Bhijana Restaurant",
+            "Dipendra Vahadura Shahi",
+            "4"
           ],
           [
-            "४११",
-            "खानेकुरा कम्पनी प्रा ली",
-            "गौरव गौतम",
-            "२"
+            "411",
+            "Khanekura Kampani Pra Li",
+            "Gaurava Gautama",
+            "2"
           ],
           [
-            "४१२",
-            "मुगल जायका विरयानी",
-            "मोहम्मद अफाक हल्वाई",
-            "३"
+            "412",
+            "Mugala Jayaka Virayani",
+            "Mohammada Aphaka Halvai",
+            "3"
           ],
           [
-            "४१३",
-            "होटल सम्मीट",
-            "सुमित मुराउ",
-            "१२"
+            "413",
+            "Hotel Sammita",
+            "Sumita Murau",
+            "12"
           ],
           [
-            "४१४",
-            "कठायत जाजरकोटी होटल एण्ड रेष्टुरेन्ट",
-            "भिम वहादुर कठायत",
-            "५"
+            "414",
+            "Kathayata Jajarakoti Hotel and Restaurant",
+            "Bhima Vahadura Kathayata",
+            "5"
           ],
           [
-            "४१५",
-            "ताज कृष्ण रेष्टुरेन्ट",
-            "श्रद्धा जोशी खतिवडा",
-            "२"
+            "415",
+            "Taja Karishna Restaurant",
+            "Shraddha Joshi Khativada",
+            "2"
           ],
           [
-            "४१६",
-            "होटल सेन्ट्रल प्लाजा प्रा.लि",
+            "416",
+            "Hotel Sentrala Plaja pra.li",
             "",
-            "२०"
+            "20"
           ],
           [
-            "४१७",
-            "लक्स रेष्टुरेन्ट एण्ड वार",
-            "अपूर्व सिंह",
-            "२"
+            "417",
+            "Laksa Restaurant and Bar",
+            "Apurva Sinha",
+            "2"
           ],
           [
-            "४१८",
-            "लाहुरे रेष्टुरेन्ट एण्ड वार",
-            "प्रेम वहादुर शाही केशर वहादुर ओ.सी",
-            "१०"
+            "418",
+            "Lahure Restaurant and Bar",
+            "Prema Vahadura Shahi Keshara Vahadura o.si",
+            "10"
           ],
           [
-            "४१९",
-            "फुड स्टेशन",
-            "निलम चन्द",
-            "२"
+            "419",
+            "Phuda Steshana",
+            "Nilama Chand",
+            "2"
           ],
           [
-            "४२०",
-            "मध्यपश्चिम दंगाली होटल",
-            "भरत दहाल",
-            "१०"
+            "420",
+            "Madhyapashchima Dangali Hotel",
+            "Bharata Dahala",
+            "10"
           ],
           [
-            "४२१",
-            "कार्की नास्ता पसल",
-            "कृष्ण वहादुर कार्की",
-            "१०"
+            "421",
+            "Karki Snack Shop",
+            "Karishna Vahadura Karki",
+            "10"
           ],
           [
-            "४२२",
-            "राधिका होटल",
-            "विरे विष्ट",
-            "४"
+            "422",
+            "Radhika Hotel",
+            "Vire Vishta",
+            "4"
           ],
           [
-            "४२३",
-            "होटल एलिसा वि.सि.एण्ड लज",
-            "मिना कुमारी साउद",
-            "२"
+            "423",
+            "Hotel Elisa vi.si.enda Laja",
+            "Mina Kumari Sauda",
+            "2"
           ],
           [
-            "४२४",
-            "ग्लोबल रेस्ट्रो एण्ड वार",
-            "भुवन जोशी",
-            "१८"
+            "424",
+            "Globala Restro and Bar",
+            "Bhuvana Joshi",
+            "18"
           ],
           [
-            "४२५",
-            "म्याजेष्टिक पार्टि प्यालेस",
-            "गणेश विक्रम शाह",
-            "५"
+            "425",
+            "Myajeshtika Parti Palace",
+            "Ganesha Vikrama Shaha",
+            "5"
           ],
           [
-            "४२६",
-            "हाम्रो रहिम म.म. सेन्टर",
-            "कहकशा हलवाई",
-            "२"
+            "426",
+            "Hamro Rahima Momo Center",
+            "Kahakasha Halwai",
+            "2"
           ],
           [
-            "४२७",
-            "रुकमेली वोहरा होटल",
-            "कालो वोहरा",
-            "४"
+            "427",
+            "Rukameli Vohara Hotel",
+            "Kalo Vohara",
+            "4"
           ],
           [
-            "४२८",
-            "काई कविला क्याफे एण्ड रेष्टुरेन्ट",
-            "प्रवेज अलि सिद्दीकी",
-            "४"
+            "428",
+            "Kai Kavila Cafe and Restaurant",
+            "Praveja Ali Siddiki",
+            "4"
           ],
           [
-            "४२۹",
-            "सल्यानी दाजु भाई होटल",
-            "हेम वहादुर वली",
-            "४"
+            "42۹",
+            "Salyani Daju Bhai Hotel",
+            "Hema Vahadura Vali",
+            "4"
           ],
           [
-            "४३०",
-            "न्यु लुम्विनी गिता होटल एण्ड लज",
-            "अनिता लामा",
-            "२०"
+            "430",
+            "New Lumvini Gita Hotel and Laja",
+            "Anita Lama",
+            "20"
           ],
           [
-            "४३१",
-            "रेष्टुरेन्ट स्वादिलो म.म चिकेन क्वालिटि",
-            "अम्मर वहादुर वोहरा",
-            "२"
+            "431",
+            "Restaurant Svadilo ma.ma Chikena Kvaliti",
+            "Ammara Vahadura Vohara",
+            "2"
           ],
           [
-            "४३२",
-            "द न्यू बडिमालिका होटल एण्ड लज",
-            "तुला देवी साउद",
-            "४"
+            "432",
+            "Da New Badimalika Hotel and Laja",
+            "Tula Devi Sauda",
+            "4"
           ],
           [
-            "४३३",
-            "दंगाली हरिततारा होटल",
-            "योगराज पार्दे",
-            "१०"
+            "433",
+            "Dangali Haritatara Hotel",
+            "Yogaraja Parde",
+            "10"
           ],
           [
-            "४३४",
-            "साईना यम्मी नेपाली भान्सा घर",
-            "रोजी बोस दिपेन्द्र राज श्रेष्ठ",
-            "१२"
+            "434",
+            "Saina Yammi Nepali Bhansa Ghara",
+            "Roji Bosa Dipendra Raja Shrestha",
+            "12"
           ],
           [
-            "४३५",
-            "सरिता रेष्टुरेन्ट",
-            "सरिता डगौरा",
-            "१२"
+            "435",
+            "Sarita Restaurant",
+            "Sarita Dagaura",
+            "12"
           ],
           [
-            "४३६",
-            "पौडेल बर्दिया होटल",
-            "विपिन ढुङ्गा",
-            "१३"
+            "436",
+            "Paudela Bardiya Hotel",
+            "Vipina Dhungga",
+            "13"
           ],
           [
-            "४३७",
-            "संजय खाजा घर",
-            "संजय वारी",
-            "६"
+            "437",
+            "Sanjaya Snack House",
+            "Sanjaya Vari",
+            "6"
           ],
           [
-            "४३८",
-            "वाहिद विर्यानी कर्नर",
-            "फहमिन हल्वाई",
-            "१०"
+            "438",
+            "Vahida Viryani Karnara",
+            "Phahamina Halvai",
+            "10"
           ],
           [
-            "४३९",
-            "वि,एम, खाजा घर एण्ड रेष्टुरेन्ट",
-            "लिला राज वराल",
-            "२"
+            "439",
+            "Vi,ema, Snack House and Restaurant",
+            "Lila Raja Varala",
+            "2"
           ],
           [
-            "४४०",
-            "आफ्नै होटल एण्ड लज",
-            "हिमा सापकोटा अर्याल",
-            "४"
+            "440",
+            "Aphnai Hotel and Laja",
+            "Hima Sapakota Aryal",
+            "4"
           ],
           [
-            "४४१",
-            "समिर चौधरी होटल एण्ड रेष्टुरेन्ट",
-            "चन्द्रकला थारु",
-            "२"
+            "441",
+            "Samira Chaudhary Hotel and Restaurant",
+            "Chandrakala Tharu",
+            "2"
           ],
           [
-            "४४२",
-            "हाम्रो फेवा रेष्टुरेन्ट",
-            "हिरा जोशी",
-            "११"
+            "442",
+            "Hamro Pheva Restaurant",
+            "Hira Joshi",
+            "11"
           ],
           [
-            "४४३",
-            "द वयवस क्याफेटेरिया",
-            "रन्जना चौधरी",
-            "१"
+            "443",
+            "Da Vayavasa Kyapheteriya",
+            "Ranjana Chaudhary",
+            "1"
           ],
           [
-            "४४४",
-            "फेवा रेष्टुरेन्ट",
-            "दिपा पौडेल",
-            "४"
+            "444",
+            "Pheva Restaurant",
+            "Dipa Paudela",
+            "4"
           ],
           [
-            "४४५",
-            "न्यु सम्मिट होटल एण्ड लज",
-            "निरु कुमारी मुराउ",
-            "२"
+            "445",
+            "New Sammita Hotel and Laja",
+            "Niru Kumari Murau",
+            "2"
           ],
           [
-            "४४६",
-            "सोलु शेर्पा म.म. सेन्टर",
-            "फुर्वा शेर्पा",
-            "४"
+            "446",
+            "Solu Sherpa Momo Center",
+            "Phurva Sherpa",
+            "4"
           ],
           [
-            "४४७",
-            "मुना फास्टफुड",
-            "मुना न्यौपाने",
-            "१२"
+            "447",
+            "Muna Phastaphuda",
+            "Muna Nyaupane",
+            "12"
           ],
           [
-            "४४८",
-            "इडेन क्याफे",
-            "निर्मला कुमारी वि.एम.",
-            "१९"
+            "448",
+            "Idena Cafe",
+            "Nirmala Kumari vi.ema.",
+            "19"
           ],
           [
-            "४४९",
-            "आन्टिको अचार",
-            "कमला चौधरी",
-            "२"
+            "449",
+            "Antiko Achara",
+            "Kamala Chaudhary",
+            "2"
           ],
           [
-            "४५०",
-            "नेपालगंज खाजा घर",
-            "हरिकला न्यौपाने",
-            "४"
+            "450",
+            "Nepalaganja Snack House",
+            "Harikala Nyaupane",
+            "4"
           ],
           [
-            "४५१",
-            "मम्स किचन",
-            "पुष्पा गुप्ता",
-            "१०"
+            "451",
+            "Mamsa Kichana",
+            "Pushpa Gupta",
+            "10"
           ],
           [
-            "४५२",
-            "होटल अन्नपुर्ण प्लाजा",
-            "गोमा पोखेल",
-            "४"
+            "452",
+            "Hotel Annapurna Plaja",
+            "Goma Pokhela",
+            "4"
           ],
           [
-            "४५३",
-            "एभरेष्ट होटल",
-            "दिपा पोखरेल",
-            "४"
+            "453",
+            "Ebhareshta Hotel",
+            "Dipa Pokharela",
+            "4"
           ],
           [
-            "४५४",
-            "होटल न्यु दर्शन एण्ड सिम्ताली लज",
-            "भीमसरा सिंह ठकुरी",
-            "४"
+            "454",
+            "Hotel New Darshana and Simtali Laja",
+            "Bhimasara Sinha Thakuri",
+            "4"
           ],
           [
-            "४५५",
-            "न्यु राप्ती हरीयाली गेष्ट हाउस",
-            "वासुदेव पराजुली",
-            "४"
+            "455",
+            "New Rapti Hariyali Guest House",
+            "Vasudeva Parajuli",
+            "4"
           ],
           [
-            "४५६",
-            "जुरेली रेष्टुरेन्ट एण्ड लज",
-            "निम वहादुर बुढा",
-            "१०"
+            "456",
+            "Jureli Restaurant and Laja",
+            "Nima Vahadura Budha",
+            "10"
           ],
           [
-            "४५७",
-            "शुशिल होटल एण्ड रेष्टुरेन्ट",
-            "शुशिल यादव",
-            "१"
+            "457",
+            "Shushila Hotel and Restaurant",
+            "Shushila Yadav",
+            "1"
           ],
           [
-            "४५८",
-            "फुड हव रेष्टुरेन्ट",
-            "निसम गिरी",
-            "१८"
+            "458",
+            "Phuda Hava Restaurant",
+            "Nisama Giri",
+            "18"
           ],
           [
-            "४५९",
-            "के.जी एन गरीब नवाज रेष्टुरेन्ट",
-            "सिरताज हुसेन हल्वाई",
-            "११"
+            "459",
+            "ke.ji Ena Gariba Navaja Restaurant",
+            "Sirataja Husena Halvai",
+            "11"
           ],
           [
-            "४६०",
-            "चकटी लाउन्ज",
-            "सुरेश ज्ञवाली",
-            "२"
+            "460",
+            "Chakati Launja",
+            "Suresha Jnyavali",
+            "2"
           ],
           [
-            "४६१",
-            "फिट क्याफे एण्ड रेष्टुरेन्ट",
-            "साहा जहां कवडिया",
-            "१२"
+            "461",
+            "Phita Cafe and Restaurant",
+            "Saha Jahan Kavadiya",
+            "12"
           ],
           [
-            "४६२",
-            "पुजा खाजा घर",
-            "टिका देवी वयक",
-            "१८"
+            "462",
+            "Puja Snack House",
+            "Tika Devi Vayaka",
+            "18"
           ],
           [
-            "४६३",
-            "नेपालगन्ज ववल टी एण्ड क्याफे",
-            "समिक्षा कुमारी शाही",
-            "११"
+            "463",
+            "Nepalaganja Vavala Ti and Cafe",
+            "Samiksha Kumari Shahi",
+            "11"
           ],
           [
-            "४६४",
-            "पुष्कर रेष्टुरेन्ट एण्ड वाइन सेन्टर",
-            "सुनिल जोशी",
-            "८"
+            "464",
+            "Pushkara Restaurant and Vaina Sentara",
+            "Sunila Joshi",
+            "8"
           ],
           [
-            "४६५",
-            "कैलाली सुर्खेंती होटल एण्ड लज",
-            "सावित्री कुमारी शाही",
-            "१८"
+            "465",
+            "Kailali Surkheti Hotel and Laja",
+            "Savitri Kumari Shahi",
+            "18"
           ],
           [
-            "४६६",
-            "प्युठानी रेष्टुरेन्ट",
-            "शालिक राम जैसी",
-            "१५"
+            "466",
+            "Pyuthani Restaurant",
+            "Shalika Rama Jaisi",
+            "15"
           ],
           [
-            "४६७",
-            "थारु हाउस क्याफे",
-            "मिना थारु",
-            "१०"
+            "467",
+            "Tharu Hausa Cafe",
+            "Mina Tharu",
+            "10"
           ],
           [
-            "४६८",
-            "जन्नत कटेज एण्ड फुड क्याफे",
-            "मोहम्मद समिर शेष",
-            "५"
+            "468",
+            "Jannata Kateja and Phuda Cafe",
+            "Mohammada Samira Shesha",
+            "5"
           ],
           [
-            "४६९",
-            "गुडनाईट भेटघाट रेष्टुरेन्ट",
-            "रमेश चौधरी",
-            "१८"
+            "469",
+            "Gudanaita Bhetaghata Restaurant",
+            "Ramesha Chaudhary",
+            "18"
           ],
           [
-            "४७०",
-            "आराध्या रेष्टुरेन्ट",
-            "दिवेन्द्र प्रताप सिंह",
-            "१"
+            "470",
+            "Aradhya Restaurant",
+            "Divendra Pratapa Sinha",
+            "1"
           ],
           [
-            "४७१",
-            "माई फिटनेश जिम शाखा",
-            "सलिम कुरेसी",
-            "१२"
+            "471",
+            "Mai Phitanesha Jima Shakha",
+            "Salima Kuresi",
+            "12"
           ],
           [
-            "४७२",
-            "ग्यालेक्सी प्याराडाईज बैंक्विट एण्ड रुफटप रेष्टुरेन्ट",
-            "शिवम् गुप्ता",
-            "८"
+            "472",
+            "Gyaleksi Pyaradaija Bainkvita and Ruphatapa Restaurant",
+            "Shivam Gupta",
+            "8"
           ],
           [
-            "४७३",
-            "होटल मल्ल",
-            "कर्ण वहादुर मल्ल",
-            "४"
+            "473",
+            "Hotel Malla",
+            "Karna Vahadura Malla",
+            "4"
           ],
           [
-            "४७४",
-            "शारदा मौर्य खाजा पसल",
-            "शारदा कुमारी मौर्य",
-            "११"
+            "474",
+            "Sharada Maurya Khaja Pasala",
+            "Sharada Kumari Maurya",
+            "11"
           ],
           [
-            "४७५",
-            "चौरजहारी सौगात होटल एण्ड लज",
-            "केशव कुवर योगी",
-            "४"
+            "475",
+            "Chaurajahari Saugata Hotel and Laja",
+            "Keshava Kuvara Yogi",
+            "4"
           ],
           [
-            "४७६",
-            "बांके वर्दिया रेष्टुरेन्ट",
-            "महली चौधरी",
-            "१"
+            "476",
+            "Banke Vardiya Restaurant",
+            "Mahali Chaudhary",
+            "1"
           ],
           [
-            "४७७",
-            "जाजरकोटी नलगाड गेष्ट हाउस",
-            "राजन वहादुर रावत",
-            "४"
+            "477",
+            "Jajarakoti Nalagada Guest House",
+            "Rajana Vahadura Ravata",
+            "4"
           ],
           [
-            "४७८",
-            "जगतीया होटल",
-            "दुखनी थारु",
-            "१"
+            "478",
+            "Jagatiya Hotel",
+            "Dukhani Tharu",
+            "1"
           ],
           [
-            "४७९",
-            "राजधानी रेष्टुरेन्ट",
-            "भद्रा कुमारी कार्की थापा",
-            "४"
+            "479",
+            "Rajadhani Restaurant",
+            "Bhadra Kumari Karki Thapa",
+            "4"
           ],
           [
-            "४८०",
-            "डीलाइट टी पोइन्ट एण्ड रेष्टुरेन्ट",
-            "हिमान्सु मौर्य",
-            "११"
+            "480",
+            "Dilaita Ti Pointa and Restaurant",
+            "Himansu Maurya",
+            "11"
           ],
           [
-            "४८१",
-            "रुपा नास्ता पसल",
-            "रुपा खत्री",
-            "१"
+            "481",
+            "Rupa Snack Shop",
+            "Rupa Khatri",
+            "1"
           ],
           [
-            "४८२",
-            "न्यु साहिल होटल एण्ड विर्यानी",
-            "मोहम्मद मुस्लेमिन बेहना",
-            "१"
+            "482",
+            "New Sahila Hotel and Viryani",
+            "Mohammada Muslemina Behana",
+            "1"
           ],
           [
-            "४८३",
-            "लाहुरे खाजा घर",
-            "भक्त वहादुर गुरुङ्ग",
-            "१०"
+            "483",
+            "Lahure Snack House",
+            "Bhakta Vahadura Gurung",
+            "10"
           ],
           [
-            "४८४",
-            "करण खाजा घर एण्ड रेष्टुरेन्ट",
-            "राम वहादुर रावल",
-            "१८"
+            "484",
+            "Karana Snack House and Restaurant",
+            "Rama Vahadura Ravala",
+            "18"
           ],
           [
-            "४८५",
-            "कफि लिम",
-            "सागर राज शाक्य",
-            "१"
+            "485",
+            "Kaphi Lima",
+            "Sagara Raja Shakya",
+            "1"
           ],
           [
-            "४८६",
-            "स्ट्रीट विट क्लव एण्ड रेष्टुरेन्ट",
-            "दिपेश कार्की, गौरव कुमार कर्ण सरेज दास",
-            "४"
+            "486",
+            "Strita Vita Klava and Restaurant",
+            "Dipesha Karki, Gaurava Kumara Karna Sareja Dasa",
+            "4"
           ],
           [
-            "४८७",
-            "होटल गुड्स गिफ्ट",
-            "तुलसरी घर्तिनी",
-            "४"
+            "487",
+            "Hotel Gudsa Giphta",
+            "Tulasari Ghartini",
+            "4"
           ],
           [
-            "४८८",
-            "भेटघाट खाजा घर एण्ड रेष्टुरेन्ट",
-            "लोकेश वहादुर धामी पुर्ण वहादुर थापा",
-            "१८"
+            "488",
+            "Bhetaghata Snack House and Restaurant",
+            "Lokesha Vahadura Dhami Purna Vahadura Thapa",
+            "18"
           ],
           [
-            "४८९",
-            "रेड चिल्ली फ्लोरा रेष्टुरेन्ट एण्ड वार",
-            "दिनेश तिरुवा अनुजा आचार्य सोडारी",
-            "२"
+            "489",
+            "Reda Chilli Phlora Restaurant and Bar",
+            "Dinesha Tiruva Anuja Acharya Sodari",
+            "2"
           ],
           [
-            "४९०",
-            "नेपाल होटल",
-            "अमरीता नेपाल",
-            "११"
+            "490",
+            "Nepal Hotel",
+            "Amarita Nepal",
+            "11"
           ],
           [
-            "४९१",
-            "सगरमाथा गेष्ट हाउस एण्ड रेष्टुरेन्ट",
-            "संगिता शाही",
-            "२"
+            "491",
+            "Sagaramatha Guest House and Restaurant",
+            "Sangita Shahi",
+            "2"
           ],
           [
-            "४९२",
-            "बटुक भैरव एग्रो फार्म हाउस एण्ड होमस्टे",
-            "गंगा नाथ",
-            "१९"
+            "492",
+            "Batuka Bhairava Egro Pharma Hausa and Homaste",
+            "Ganga Natha",
+            "19"
           ],
           [
-            "४९३",
-            "रुकुम शिव होटल",
-            "संगिता गिरी गोसाई",
-            "४"
+            "493",
+            "Rukum Shiva Hotel",
+            "Sangita Giri Gosai",
+            "4"
           ],
           [
-            "४९४",
-            "दर्शन म.म. सेन्टर",
-            "शर्मिला बुढा",
-            "१०"
+            "494",
+            "Darshana Momo Center",
+            "Sharmila Budha",
+            "10"
           ],
           [
-            "४९५",
-            "एफ.वन होटल",
-            "नरसिंह दाहाल",
-            "१०"
+            "495",
+            "epha.vana Hotel",
+            "Narasinha Dahala",
+            "10"
           ],
           [
-            "४९६",
-            "रुकुम आस्मिता चौरजहारी होटल",
-            "राजेन्द्र कवर योगी",
-            "४"
+            "496",
+            "Rukum Asmita Chaurajahari Hotel",
+            "Rajendra Kavara Yogi",
+            "4"
           ],
           [
-            "४९७",
-            "न्यु वर्दिया होटल एण्ड रेष्टुरेन्ट",
-            "सुकुम राज चौधरी",
-            "४"
+            "497",
+            "New Vardiya Hotel and Restaurant",
+            "Sukuma Raja Chaudhary",
+            "4"
           ],
           [
-            "४९८",
-            "रोशनी रेष्टुरेन्ट",
-            "पदमा क्षेत्री",
-            "३"
+            "498",
+            "Roshani Restaurant",
+            "Padama Kshetri",
+            "3"
           ],
           [
-            "४९९",
-            "शौरव रेष्टुरेन्ट",
-            "विमला राई",
-            "१"
+            "499",
+            "Shaurava Restaurant",
+            "Vimala Rai",
+            "1"
           ],
           [
-            "५००",
-            "पांतारासी जुम्ला होटल",
-            "सुक वहादुर बुढा",
-            "२"
+            "500",
+            "Pantarasi Jumla Hotel",
+            "Suka Vahadura Budha",
+            "2"
           ],
           [
-            "५०१",
-            "न्यु मानसरोवर होटल एण्ड न्यु मानसरोवर दोहोरी साँझ",
-            "कौसिला कुमारी वि.सी.",
-            "४"
+            "501",
+            "New Manasarovara Hotel and New Manasarovara Dohori Saँjha",
+            "Kausila Kumari vi.si.",
+            "4"
           ],
           [
-            "५०२",
-            "होटल अन्नपुर्ण",
-            "गिता सुवेदी",
-            "२"
+            "502",
+            "Hotel Annapurna",
+            "Gita Suvedi",
+            "2"
           ],
           [
-            "५०३",
-            "न्यु लेकसाइड रेष्टुरेन्ट",
-            "भुमी थापा",
-            "१८"
+            "503",
+            "New Lekasaida Restaurant",
+            "Bhumi Thapa",
+            "18"
           ],
           [
-            "५०४",
-            "दिव्या रेष्टुरेन्ट",
-            "छाया तिरुवा (टमट्टा)",
-            "१"
+            "504",
+            "Divya Restaurant",
+            "Chhaya Tiruva (tamatta)",
+            "1"
           ],
           [
-            "५०५",
-            "रुकुम अर्माली सल्यान दर्माली होटल एण्ड लज",
-            "कल्पना खत्री",
-            "४"
+            "505",
+            "Rukum Armali Salyan Darmali Hotel and Laja",
+            "Kalpana Khatri",
+            "4"
           ],
           [
-            "५०६",
-            "रेड चिल्ली फ्लोरा रेष्टुरेन्ट एण्ड वार",
-            "दिनेश तिरुवा अनुजा आचार्य सोडारी",
-            "२"
+            "506",
+            "Reda Chilli Phlora Restaurant and Bar",
+            "Dinesha Tiruva Anuja Acharya Sodari",
+            "2"
           ],
           [
-            "५०७",
-            "जयसवाल रेष्टुरेन्ट एण्ड खाजा घर",
-            "सावित्री कलवार",
-            "१०"
+            "507",
+            "Jayasavala Restaurant and Snack House",
+            "Savitri Kalavara",
+            "10"
           ],
           [
-            "५०८",
-            "होटल दरवार",
-            "देवीमाया पाण्डे",
-            "२"
+            "508",
+            "Hotel Daravara",
+            "Devimaya Pandey",
+            "2"
           ],
           [
-            "५०९",
-            "सित्तन घर",
-            "किशोर कुमार क्षेत्री",
-            "२"
+            "509",
+            "Sittana Ghara",
+            "Kishora Kumara Kshetri",
+            "2"
           ],
           [
-            "५१०",
-            "ईश्वरी खाजा घर एण्ड रेष्टुरेन्ट",
-            "पदम गडरिया",
-            "१८"
+            "510",
+            "Ishvari Snack House and Restaurant",
+            "Padama Gadariya",
+            "18"
           ],
           [
-            "५११",
-            "न्यु सुर्खेंती खाजा घर एण्ड नास्ता पसल",
-            "सन्ध्या नेपाली",
-            "१८"
+            "511",
+            "New Surkheti Snack House and Snack Shop",
+            "Sandhya Nepali",
+            "18"
           ],
           [
-            "५१२",
-            "सुपर रोयल बांके होटल",
-            "चुनु माया पौडेल",
-            "२"
+            "512",
+            "Supara Royal Banke Hotel",
+            "Chunu Maya Paudela",
+            "2"
           ],
           [
-            "५१३",
-            "समीक्षा होटल एण्ड लज",
-            "लाल वहादुर थापा",
-            "२"
+            "513",
+            "Samiksha Hotel and Laja",
+            "Lala Vahadura Thapa",
+            "2"
           ],
           [
-            "५१४",
-            "भ्यु होटल सिद्धार्थ प्रा. लि.",
+            "514",
+            "Bhyu Hotel Siddhartha pra. li.",
             "",
-            "१८"
+            "18"
           ],
           [
-            "५१५",
-            "रेड हाउस रेष्ट्रो वार एण्ड ग्रिल",
-            "विकास काउचा मगर",
-            "११"
+            "515",
+            "Reda Hausa Restro Bar and Grila",
+            "Vikasa Kaucha Magara",
+            "11"
           ],
           [
-            "५१६",
-            "स्टार लज",
-            "शारदा शाक्य",
-            "२"
+            "516",
+            "Stara Laja",
+            "Sharada Shakya",
+            "2"
           ],
           [
-            "५१७",
-            "सुमन होटल",
-            "सुनिता महतारा वटाला",
-            "१०"
+            "517",
+            "Sumana Hotel",
+            "Sunita Mahatara Vatala",
+            "10"
           ],
           [
-            "५१८",
-            "वाटर पार्क मोमो सेन्टर",
-            "सुरेश वसकोड",
-            "१८"
+            "518",
+            "Vatara Parka Momo Sentara",
+            "Suresha Vasakoda",
+            "18"
           ],
           [
-            "५१९",
-            "थापा होटल",
-            "ममता वस्नेत",
-            "२"
+            "519",
+            "Thapa Hotel",
+            "Mamata Vasneta",
+            "2"
           ],
           [
-            "५२०",
-            "दैलेख वर्दिया रविना रेष्टुरेन्ट",
-            "रमेश कुमार विष्ट",
-            "१"
+            "520",
+            "Dailekh Vardiya Ravina Restaurant",
+            "Ramesha Kumara Vishta",
+            "1"
           ],
           [
-            "५२१",
-            "लालीगुरांस रेष्टुरेन्ट",
-            "नृप वहादुर कुँवर",
-            "२"
+            "521",
+            "Laliguransa Restaurant",
+            "Naripa Vahadura Kuँvara",
+            "2"
           ],
           [
-            "५२२",
-            "विनु खाजा घर एण्ड रेष्टुरेन्ट",
-            "मदन कुमार वि.क.",
-            "१०"
+            "522",
+            "Vinu Snack House and Restaurant",
+            "Madana Kumara vi.ka.",
+            "10"
           ],
           [
-            "५२३",
-            "पञ्चकोशी सेकुवा कर्नर एण्ड रेष्टुरेन्ट",
-            "वीरेन्द्र वहादुर शाही",
-            "४"
+            "523",
+            "Panychakoshi Sekuva Karnara and Restaurant",
+            "Virendra Vahadura Shahi",
+            "4"
           ],
           [
-            "५२४",
-            "कृष्णा सटाली रेष्टुरेन्ट",
-            "कृष्णा सटाली",
-            "१३"
+            "524",
+            "Karishna Satali Restaurant",
+            "Karishna Satali",
+            "13"
           ],
           [
-            "५२५",
-            "कुटुम्व क्याफे",
-            "शारदा भण्डारी",
-            "२"
+            "525",
+            "Kutumva Cafe",
+            "Sharada Bhandari",
+            "2"
           ],
           [
-            "५२६",
-            "वेलकम श्रेष्ठ रेष्टुरेन्ट",
-            "तुल्सी श्रेष्ठ",
-            "१०"
+            "526",
+            "Velakama Shrestha Restaurant",
+            "Tulsi Shrestha",
+            "10"
           ],
           [
-            "५२७",
-            "वागेश्वरी रोधी एण्ड थकाली भान्सा घर",
-            "सुनिता मल्ल",
-            "१८"
+            "527",
+            "Vageshvari Rodhi and Thakali Bhansa Ghara",
+            "Sunita Malla",
+            "18"
           ],
           [
-            "५२८",
-            "होटल मन्त्र थकाली एण्ड हस्पिटालिटी प्रा.लि.",
-            "हस्त वहादुर बुढाथोकी",
-            "१८"
+            "528",
+            "Hotel Mantra Thakali and Haspitaliti Pvt. Ltd.",
+            "Hasta Vahadura Budhathoki",
+            "18"
           ],
           [
-            "५२९",
-            "नेपालगंज लाहुरे रेष्टुरेन्ट एण्ड वार",
-            "केशर वहादुर ओ.सी.",
-            "१०"
+            "529",
+            "Nepalaganja Lahure Restaurant and Bar",
+            "Keshara Vahadura o.si.",
+            "10"
           ],
           [
-            "५३०",
-            "कमला होटल एण्ड लज",
-            "टेक राज वि.क.",
-            "२"
+            "530",
+            "Kamala Hotel and Laja",
+            "Teka Raja vi.ka.",
+            "2"
           ],
           [
-            "५३१",
-            "अछामी गेष्ट हाउस",
-            "छत्र चलाउने",
-            "४"
+            "531",
+            "Achhami Guest House",
+            "Chhatra Chalaune",
+            "4"
           ],
           [
-            "५३२",
-            "फुलवारी रेष्टुरेन्ट एण्ड लज",
-            "नारायण आचार्य",
-            "४"
+            "532",
+            "Phulavari Restaurant and Laja",
+            "Narayana Acharya",
+            "4"
           ],
           [
-            "५३३",
-            "हिमालय आइसक्रिम एण्ड खाजा घर",
-            "कसले मिजार",
-            "१"
+            "533",
+            "Himalaya Aisakrima and Snack House",
+            "Kasale Mijar",
+            "1"
           ],
           [
-            "५३४",
-            "सल्यान वागचौर रिम रेष्टुरेन्ट एण्ड लज",
-            "महेन्द्र प्रकाश चन्द",
-            "४"
+            "534",
+            "Salyan Vagachaura Rima Restaurant and Laja",
+            "Mahendra Prakasha Chand",
+            "4"
           ],
           [
-            "५३५",
-            "हिमालय आइसक्रिम एण्ड खाजा घर",
-            "कसले मिजार",
-            "१"
+            "535",
+            "Himalaya Aisakrima and Snack House",
+            "Kasale Mijar",
+            "1"
           ],
           [
-            "५३६",
-            "मुल्ला जी नाज होटल",
-            "इरसाद अहमद हल्वाई",
-            "११"
+            "536",
+            "Mulla Ji Naja Hotel",
+            "Irasada Ahamada Halvai",
+            "11"
           ],
           [
-            "५३७",
-            "जाजरकोटी गांउ बेसी होटल",
-            "मान वहादुर सिंह",
-            "४"
+            "537",
+            "Jajarakoti Ganu Besi Hotel",
+            "Mana Vahadura Sinha",
+            "4"
           ],
           [
-            "५३८",
-            "न्यु सोनाखरी होटल एण्ड रेष्टुरेन्ट",
-            "महेश प्रसाद शर्मा",
-            "२"
+            "538",
+            "New Sonakhari Hotel and Restaurant",
+            "Mahesha Prasada Sharma",
+            "2"
           ],
           [
-            "५३९",
-            "रोमिन मदिरा रेष्टुरेन्ट",
-            "मेघराज चिडिमार",
-            "१२"
+            "539",
+            "Romina Madira Restaurant",
+            "Megharaja Chidimara",
+            "12"
           ],
           [
-            "५४०",
-            "दर्माली चन्द गेष्ट हाउस एण्ड लज",
-            "हिरा शाही चन्द",
-            "४"
+            "540",
+            "Darmali Chand Guest House and Laja",
+            "Hira Shahi Chand",
+            "4"
           ],
           [
-            "५४१",
-            "वर्दिया म.म. सेन्टर",
-            "अतिथ गौतम",
-            "१८"
+            "541",
+            "Vardiya Momo Center",
+            "Atitha Gautama",
+            "18"
           ],
           [
-            "५४२",
-            "सिम्ताली काफ्ले होटल एण्ड लज",
-            "चन्द्र वहादुर वली",
-            "४"
+            "542",
+            "Simtali Kaphle Hotel and Laja",
+            "Chandra Vahadura Vali",
+            "4"
           ],
           [
-            "५४३",
-            "डायमण्ड रेष्टुरेन्ट एण्ड लज",
-            "राम गिरी",
-            "२०"
+            "543",
+            "Dayamanda Restaurant and Laja",
+            "Rama Giri",
+            "20"
           ],
           [
-            "५४४",
-            "सागर दङ्गाली होटल",
-            "सागर कार्की",
-            "४"
+            "544",
+            "Sagara Danggali Hotel",
+            "Sagara Karki",
+            "4"
           ],
           [
-            "५४५",
-            "स्मोक वल क्याफे",
-            "सोमिया गुप्ता",
-            "३"
+            "545",
+            "Smoka Vala Cafe",
+            "Somiya Gupta",
+            "3"
           ],
           [
-            "५४६",
-            "फास्ट फुड रेष्टुरेन्ट",
-            "सीता कुमारी थारु",
-            "१"
+            "546",
+            "Phasta Phuda Restaurant",
+            "Sita Kumari Tharu",
+            "1"
           ],
           [
-            "५४७",
-            "ज्ञवाली रेष्टुरेन्ट",
-            "करुण कुमारी खत्री",
-            "११"
+            "547",
+            "Jnyavali Restaurant",
+            "Karuna Kumari Khatri",
+            "11"
           ],
           [
-            "५४८",
-            "न्यू सल्याणी वनगाड कुपिण्डेदह दाजु भाई होटल एण्ड लज",
-            "दुर्गा वहादुर रोका मगर",
-            "४"
+            "548",
+            "New Salyani Vanagada Kupindedaha Daju Bhai Hotel and Laja",
+            "Durga Vahadura Roka Magara",
+            "4"
           ],
           [
-            "५४९",
-            "रोमा नास्ता पसल",
-            "चन्द्रा आले मगर",
-            "१"
+            "549",
+            "Roma Snack Shop",
+            "Chandra Ale Magara",
+            "1"
           ],
           [
-            "५५०",
-            "महावल रेष्टुरेन्ट",
-            "महावल चिडिमार",
-            "१२"
+            "550",
+            "Mahavala Restaurant",
+            "Mahavala Chidimara",
+            "12"
           ],
           [
-            "५५१",
-            "नमस्ते दोहोरी साँझ एण्ड रेष्टुरेन्ट",
-            "निरकला रावल कुंवर",
-            "१२"
+            "551",
+            "Namaste Dohori Saँjha and Restaurant",
+            "Nirakala Ravala Kunvara",
+            "12"
           ],
           [
-            "५५२",
-            "अनमोल वैंकेट एण्ड होटल प्रा.लि.",
-            "अम्मर वहादुर पौडेल",
-            "४"
+            "552",
+            "Anamola Vainketa and Hotel Pvt. Ltd.",
+            "Ammara Vahadura Paudela",
+            "4"
           ],
           [
-            "५५३",
-            "लाइफ स्टाइल कटेज",
-            "चन्द्र कला वि.क.",
-            "४"
+            "553",
+            "Laipha Staila Kateja",
+            "Chandra Kala vi.ka.",
+            "4"
           ],
           [
-            "५५४",
-            "नेक्स्ट इन फुड",
-            "हरि विक्रम चौधरी/ रमेश वस्नेत",
-            "१२"
+            "554",
+            "Neksta Ina Phuda",
+            "Hari Vikrama Chaudhari/ Ramesha Vasneta",
+            "12"
           ],
           [
-            "५५५",
-            "अर्याल ॐ तन्दुरी होटल एण्ड लज",
-            "शिव प्रसाद अर्याल",
-            "१२"
+            "555",
+            "Aryal ॐ Tanduri Hotel and Laja",
+            "Shiva Prasada Aryal",
+            "12"
           ],
           [
-            "५५६",
-            "एस.जे.एस.होटल",
-            "सुरेन्द्र तामाङ/भक्त वहादुर खत्री",
-            "१८"
+            "556",
+            "esa.je.esa.Hotel",
+            "Surendra Tamanga/bhakta Vahadura Khatri",
+            "18"
           ],
           [
-            "५५७",
-            "स्नेहा होटल एण्ड लज",
-            "रम नाथ ढकाल",
-            "२"
+            "557",
+            "Sneha Hotel and Laja",
+            "Rama Natha Dhakal",
+            "2"
           ],
           [
-            "५५८",
-            "होटल दियालो रेष्टुरेन्ट एण्ड लज",
-            "अन्जु चौलागाई (शाह)",
-            "१८"
+            "558",
+            "Hotel Diyalo Restaurant and Laja",
+            "Anju Chaulagai (shaha)",
+            "18"
           ],
           [
-            "५५९",
-            "नातिको सेकुवा एण्ड भान्सा घर",
-            "जुद्धराम खत्री",
-            "११"
+            "559",
+            "Natiko Sekuva and Bhansa Ghara",
+            "Juddharama Khatri",
+            "11"
           ],
           [
-            "५६०",
-            "हाम्रो होटल कर्णाली प्रदेश",
-            "हिमा कुमारी थापा (वि.सी.)",
-            "४"
+            "560",
+            "Hamro Hotel Karnali Pradesha",
+            "Hima Kumari Thapa (vi.si.)",
+            "4"
           ],
           [
-            "५६१",
-            "बारेकोटी दाजु भाई होटल",
-            "दिलमाया वस्नेत",
-            "४"
+            "561",
+            "Barekoti Daju Bhai Hotel",
+            "Dilamaya Vasneta",
+            "4"
           ],
           [
-            "५६२",
-            "होटल जाजरकोटी एण्ड चौरजहारी गेष्ट हाउस",
-            "गणेश वहादुर वोहरा",
-            "४"
+            "562",
+            "Hotel Jajarakoti and Chaurajahari Guest House",
+            "Ganesha Vahadura Vohara",
+            "4"
           ],
           [
-            "५६३",
-            "सामारिका खाजा घर एण्ड रेष्टुरेन्ट",
-            "पोखराज डाँगी",
-            "१८"
+            "563",
+            "Samarika Snack House and Restaurant",
+            "Pokharaja Dangi",
+            "18"
           ],
           [
-            "५६४",
-            "अनुस्का खाजा घर",
-            "सरिता परियार",
-            "१८"
+            "564",
+            "Anuska Snack House",
+            "Sarita Pariyara",
+            "18"
           ],
           [
-            "५६५",
-            "पलक रेष्टुरेन्ट",
-            "वसन्त सिंह सिख",
-            "१५"
+            "565",
+            "Palaka Restaurant",
+            "Vasanta Sinha Sikha",
+            "15"
           ],
           [
-            "५६६",
-            "होटल स्वास्तिक एण्ड रेष्टुरेन्ट",
-            "सुरज वहादुर भण्डारी",
-            "२"
+            "566",
+            "Hotel Svastika and Restaurant",
+            "Suraja Vahadura Bhandari",
+            "2"
           ],
           [
-            "५६७",
-            "अर्वान क्याफे",
-            "अन्जु गुरुङ्ग",
-            "१०"
+            "567",
+            "Arvana Cafe",
+            "Anju Gurung",
+            "10"
           ],
           [
-            "५६८",
-            "होटल दिप्सन",
-            "शंकर गिरी",
-            "२"
+            "568",
+            "Hotel Dipsana",
+            "Shankara Giri",
+            "2"
           ],
           [
-            "५६९",
-            "सनसाइन क्याफे एण्ड रेष्टुरेन्ट",
-            "पशुराम वारी",
-            "२"
+            "569",
+            "Sanasaina Cafe and Restaurant",
+            "Pashurama Vari",
+            "2"
           ],
           [
-            "५७०",
-            "रोयल डाँफे गेष्ट हाउस",
-            "सिता कुमारी शाही",
-            "४"
+            "570",
+            "Royal Daँphe Guest House",
+            "Sita Kumari Shahi",
+            "4"
           ],
           [
-            "५७१",
-            "रेखा सुर्खेंती होटल एण्ड लज",
-            "रेखादेवी माझी",
-            "१८"
+            "571",
+            "Rekha Surkheti Hotel and Laja",
+            "Rekhadevi Majhi",
+            "18"
           ],
           [
-            "५७२",
-            "चौधरी देवा खाजा घर",
-            "पवन कुमारी थारु",
-            "४"
+            "572",
+            "Chaudhary Deva Snack House",
+            "Pavana Kumari Tharu",
+            "4"
           ],
           [
-            "५७३",
-            "प्लेजर स्पा",
-            "राज कुमारी थारु",
-            "१०"
+            "573",
+            "Plejara Spa",
+            "Raja Kumari Tharu",
+            "10"
           ],
           [
-            "५७४",
-            "द ब्रदर्श रेष्टुरेन्ट एण्ड सेकुवा कर्नर",
-            "दिक्षा थापा",
-            "४"
+            "574",
+            "Da Bradarsha Restaurant and Sekuva Karnara",
+            "Diksha Thapa",
+            "4"
           ],
           [
-            "५७५",
-            "डाँफे मुनाल गेष्ट हाउस एण्ड रेष्टुरेन्ट",
-            "मदन कुमार खत्री",
-            "४"
+            "575",
+            "Daँphe Munala Guest House and Restaurant",
+            "Madana Kumara Khatri",
+            "4"
           ],
           [
-            "५७६",
-            "भगवती सुर्खेंती गेष्ट हाउस एण्ड लज",
-            "भगवती वि.क.",
-            "४"
+            "576",
+            "Bhagavati Surkheti Guest House and Laja",
+            "Bhagavati vi.ka.",
+            "4"
           ],
           [
-            "५७७",
-            "द होटल कर्णाली",
-            "प्रेम वहादुर खत्री",
-            "४"
+            "577",
+            "Da Hotel Karnali",
+            "Prema Vahadura Khatri",
+            "4"
           ],
           [
-            "५७८",
-            "द वर्गर हाउस एण्ड क्रन्ची फ्राइड चिकेन",
-            "जिवन शर्मा फुयाल",
-            "१८"
+            "578",
+            "Da Vargara Hausa and Kranchi Phraida Chikena",
+            "Jivana Sharma Phuyala",
+            "18"
           ],
           [
-            "५७९",
-            "हिमालयन वाइट्स एण्ड ब्रिउच",
-            "सिता कोइराला",
-            "४"
+            "579",
+            "Himalayana Vaitsa and Briucha",
+            "Sita Koirala",
+            "4"
           ],
           [
-            "५८०",
-            "होटल शुभ",
-            "राम चन्द्र पोख्रेल",
-            "४"
+            "580",
+            "Hotel Shubha",
+            "Rama Chandra Pokhrel",
+            "4"
           ],
           [
-            "५८१",
-            "पूर्णागिरी राना होटल",
-            "रन्जना कुमारी बुढाथोकी",
-            "४"
+            "581",
+            "Purnagiri Rana Hotel",
+            "Ranjana Kumari Budhathoki",
+            "4"
           ],
           [
-            "५८२",
-            "मयुरा क्याफे",
-            "दिलिप गिरी",
-            "१०"
+            "582",
+            "Mayura Cafe",
+            "Dilipa Giri",
+            "10"
           ],
           [
-            "५८३",
-            "सेभेन क्याफे",
-            "सविता चौधरी",
-            "१०"
+            "583",
+            "Sebhena Cafe",
+            "Savita Chaudhary",
+            "10"
           ],
           [
-            "५८४",
-            "न्यू कर्णाली कालिकोट होटल",
-            "इन्द्रा बुढा (बोहोरा)",
-            "२"
+            "584",
+            "New Karnali Kalikota Hotel",
+            "Indra Budha (bohora)",
+            "2"
           ],
           [
-            "५८५",
-            "न्यू मालिका होटल एण्ड रेष्टुरेन्ट",
-            "तुलछा कामी",
-            "२"
+            "585",
+            "New Malika Hotel and Restaurant",
+            "Tulachha Kami",
+            "2"
           ],
           [
-            "५८६",
-            "भेरी राप्ती होटल",
-            "पदमा बुढा मगर",
-            "४"
+            "586",
+            "Bheri Rapti Hotel",
+            "Padama Budha Magara",
+            "4"
           ],
           [
-            "५८७",
-            "सौगात होटल",
-            "सागर यादव",
-            "१३"
+            "587",
+            "Saugata Hotel",
+            "Sagara Yadav",
+            "13"
           ],
           [
-            "५८८",
-            "सन्दिप सुर्खेंती रेष्टुरेन्ट",
-            "मनिषा कुमारी वयक (वुढा)",
-            "२"
+            "588",
+            "Sandipa Surkheti Restaurant",
+            "Manisha Kumari Vayaka (vudha)",
+            "2"
           ],
           [
-            "५८९",
-            "हिमालयन म.म.सेन्टर",
-            "गेल्जेन शेर्पा",
-            "२"
+            "589",
+            "Himalayana Momo Center",
+            "Geljena Sherpa",
+            "2"
           ],
           [
-            "५९०",
-            "विजय रेष्टुरेन्ट",
-            "तिलोत्तमा ठठेर",
-            "१०"
+            "590",
+            "Vijaya Restaurant",
+            "Tilottama Thathera",
+            "10"
           ],
           [
-            "५९१",
-            "निर्मला होटल एण्ड लज",
-            "निर्मला खत्री",
-            "१०"
+            "591",
+            "Nirmala Hotel and Laja",
+            "Nirmala Khatri",
+            "10"
           ],
           [
-            "५९२",
-            "होटल सुदुरपश्चिम",
-            "लोग वहादुर रावल",
-            "२"
+            "592",
+            "Hotel Sudurapashchima",
+            "Loga Vahadura Ravala",
+            "2"
           ],
           [
-            "५९३",
-            "प्रदिप सुर्खेंती एण्ड जाजरकोटी होटल",
-            "रतन भण्डारी",
-            "२"
+            "593",
+            "Pradipa Surkheti and Jajarakoti Hotel",
+            "Ratana Bhandari",
+            "2"
           ],
           [
-            "५९४",
-            "सुर्खेंती सलामी रेष्टुरेन्ट",
-            "टेक वहादुर सलामी",
-            "२"
+            "594",
+            "Surkheti Salami Restaurant",
+            "Teka Vahadura Salami",
+            "2"
           ],
           [
-            "५९५",
-            "सिम्ताली भिजन होटल",
-            "टिका कुमारी खत्री",
-            "१"
+            "595",
+            "Simtali Bhijana Hotel",
+            "Tika Kumari Khatri",
+            "1"
           ],
           [
-            "५९६",
-            "नेशनल खाजा घर",
-            "जैसरा कुमारी शाही",
-            "२"
+            "596",
+            "Neshanala Snack House",
+            "Jaisara Kumari Shahi",
+            "2"
           ],
           [
-            "५९७",
-            "होटल स्नो वाईट",
-            "खिमा कुमारी शाही",
-            "४"
+            "597",
+            "Hotel Sno Vaita",
+            "Khima Kumari Shahi",
+            "4"
           ],
           [
-            "५९८",
-            "दैलेखी रेखा होटल",
-            "धनाकुमारी रोकाय",
-            "२"
+            "598",
+            "Dailekhi Rekha Hotel",
+            "Dhanakumari Rokaya",
+            "2"
           ],
           [
-            "५९९",
-            "होटल घाट चौर सल्यान",
-            "देवका बुढा",
-            "६"
+            "599",
+            "Hotel Ghata Chaura Salyan",
+            "Devaka Budha",
+            "6"
           ],
           [
-            "६००",
-            "होटल देउराली",
-            "भावना खड्का",
-            "२"
+            "600",
+            "Hotel Deurali",
+            "Bhavana Khadka",
+            "2"
           ],
           [
-            "६०१",
-            "एस भगवती होटल एण्ड भान्सा घर",
-            "भुमिका खत्री",
-            "१८"
+            "601",
+            "Esa Bhagavati Hotel and Bhansa Ghara",
+            "Bhumika Khatri",
+            "18"
           ],
           [
-            "६०२",
-            "ए.एण्ड वि.क्याफे एण्ड रेष्टुरेन्ट",
-            "गिता वि.के.",
-            "१"
+            "602",
+            "e.enda vi.kyaphe and Restaurant",
+            "Gita vi.ke.",
+            "1"
           ],
           [
-            "६०३",
-            "रुकुम आठविसकोट गंगा जमुना होटल",
-            "खिम प्रकाश कामी",
-            "४"
+            "603",
+            "Rukum Athavisakota Ganga Jamuna Hotel",
+            "Khima Prakasha Kami",
+            "4"
           ],
           [
-            "६०४",
-            "रुत्वा क्याफे एण्ड रेष्टुरेन्ट वार",
-            "अरुन सिंह सिख",
-            "४"
+            "604",
+            "Rutva Cafe and Restaurant Bar",
+            "Aruna Sinha Sikha",
+            "4"
           ],
           [
-            "६०५",
-            "नेवा ऐला खाजा घर",
-            "कृतिका राजभण्डारी",
-            "२"
+            "605",
+            "Neva Aila Snack House",
+            "Karitika Rajabhandari",
+            "2"
           ],
           [
-            "६०६",
-            "हाम्रो सेकुवा घर",
-            "गजेन्द्र थापा",
-            "११"
+            "606",
+            "Hamro Sekuva Ghara",
+            "Gajendra Thapa",
+            "11"
           ],
           [
-            "६०७",
-            "कर्मा क्याफे रेष्ट्रो एण्ड वार",
-            "दिक्षणा घिमिरे",
-            "१०"
+            "607",
+            "Karma Cafe Restro and Bar",
+            "Dikshana Ghimire",
+            "10"
           ],
           [
-            "६०८",
-            "रुकुमेली शिशिर होटल एण्ड लज",
-            "पवन वि.क.",
-            "४"
+            "608",
+            "Rukumeli Shishira Hotel and Laja",
+            "Pavana vi.ka.",
+            "4"
           ],
           [
-            "६०९",
-            "जाजरकोटी राधिका रोमन स्टाफ होटल एण्ड लज",
-            "गोरख वहादुर मल्ल",
-            "४"
+            "609",
+            "Jajarakoti Radhika Romana Stapha Hotel and Laja",
+            "Gorakha Vahadura Malla",
+            "4"
           ],
           [
-            "६१०",
-            "द रोयल प्यालेस होटल एण्ड लज",
-            "दिनेश वली",
-            "४"
+            "610",
+            "Da Royal Palace Hotel and Laja",
+            "Dinesha Vali",
+            "4"
           ],
           [
-            "६११",
-            "मेफेयर रेष्टुरेन्ट एण्ड डान्स वार",
-            "ललिता बुढाथोकी/ अकिरा भण्डारी",
-            "१८"
+            "611",
+            "Mepheyara Restaurant and Dansa Bar",
+            "Lalita Budhathoki/ Akira Bhandari",
+            "18"
           ],
           [
-            "६१२",
-            "ॐ होटल न्यू नेपाल",
-            "देवी कुमारी नेपाली",
-            "४"
+            "612",
+            "ॐ Hotel New Nepal",
+            "Devi Kumari Nepali",
+            "4"
           ],
           [
-            "६१३",
-            "स्काईडेक रेष्ट्रो एण्ड वार",
-            "टोप वहादुर खत्री",
-            "१०"
+            "613",
+            "Skaideka Restro and Bar",
+            "Topa Vahadura Khatri",
+            "10"
           ],
           [
-            "६१४",
-            "एम.एम.नास्ता पसल",
-            "विनिता कुमारी थारु",
-            "१८"
+            "614",
+            "ema.ema.Snack Shop",
+            "Vinita Kumari Tharu",
+            "18"
           ],
           [
-            "६१५",
-            "रोयल तातोपानी होटल एण्ड रेष्टुरेन्ट",
-            "गोरी बुढा",
-            "२०"
+            "615",
+            "Royal Tatopani Hotel and Restaurant",
+            "Gori Budha",
+            "20"
           ],
           [
-            "६१६",
-            "एम.डि.क्याफे एण्ड रेष्टुरेन्ट",
-            "रिहाना खातुन राई",
-            "१२"
+            "616",
+            "ema.di.kyaphe and Restaurant",
+            "Rihana Khatuna Rai",
+            "12"
           ],
           [
-            "६१७",
-            "भुवन चौधरी होटल",
-            "शंकरीया थरुनी",
-            "१"
+            "617",
+            "Bhuvana Chaudhary Hotel",
+            "Shankariya Tharuni",
+            "1"
           ],
           [
-            "६१८",
-            "कालिकोट विराज होटल",
-            "नमराज पाण्डे",
-            "४"
+            "618",
+            "Kalikota Viraja Hotel",
+            "Namaraja Pandey",
+            "4"
           ],
           [
-            "६१९",
-            "द नेक्स्ट वाइट रेष्ट्रो एन क्याफे",
-            "प्रेम भट्टराई",
-            "१८"
+            "619",
+            "Da Neksta Vaita Restro Ena Cafe",
+            "Prema Bhattarai",
+            "18"
           ],
           [
-            "६२०",
-            "होटल डाँफे एण्ड रेष्टुरेन्ट",
-            "जिमिन वहादुर खराल",
-            "४"
+            "620",
+            "Hotel Daँphe and Restaurant",
+            "Jimina Vahadura Kharala",
+            "4"
           ],
           [
-            "६२१",
-            "रुकुमेली भगवति स्टाफ होटल",
-            "भगवति सुनार",
-            "१२"
+            "621",
+            "Rukumeli Bhagavati Stapha Hotel",
+            "Bhagavati Sunar",
+            "12"
           ],
           [
-            "६२२",
-            "रेश्मी खाजा घर",
-            "मन कुमारी रेश्मी",
-            "१९"
+            "622",
+            "Reshmi Snack House",
+            "Mana Kumari Reshmi",
+            "19"
           ],
           [
-            "६२३",
-            "होमिज रेष्टुरेन्ट एण्ड स्नोकर हाउस",
-            "नारायण परियार",
-            "६"
+            "623",
+            "Homija Restaurant and Snokara Hausa",
+            "Narayana Pariyara",
+            "6"
           ],
           [
-            "६२४",
-            "अन्डर ग्राउण्ड खाजा घर",
-            "रामचन्द्र अर्याल",
-            "२"
+            "624",
+            "Andara Graunda Snack House",
+            "Ramachandra Aryal",
+            "2"
           ],
           [
-            "६२५",
-            "अतिथी गेष्ट हाउस",
-            "निरज कुमार कसौधन वनिया",
-            "११"
+            "625",
+            "Atithi Guest House",
+            "Niraja Kumara Kasaudhana Vaniya",
+            "11"
           ],
           [
-            "६२६",
-            "स्वस्तिक कटेज गार्डेन एण्ड रेष्टुरेन्ट",
-            "सुरज वहादुर भण्डारी",
-            "१२"
+            "626",
+            "Svastika Kateja Gardena and Restaurant",
+            "Suraja Vahadura Bhandari",
+            "12"
           ],
           [
-            "६२७",
-            "सुर्खेंती होटल",
-            "मनिषा खत्री",
-            "१०"
+            "627",
+            "Surkheti Hotel",
+            "Manisha Khatri",
+            "10"
           ],
           [
-            "६२८",
-            "दैलेखी होटल",
-            "भविसरा गुरुङ्ग",
-            "१०"
+            "628",
+            "Dailekhi Hotel",
+            "Bhavisara Gurung",
+            "10"
           ],
           [
-            "६२९",
-            "होटल सेन्ट्रल प्लाजा प्रा.लि.",
-            "क्याविनेट श्रेष्ठ (प्रवन्ध निर्देशक)",
-            "२०"
+            "629",
+            "Hotel Sentrala Plaja Pvt. Ltd.",
+            "Kyavineta Shrestha (pravandha Nirdeshaka)",
+            "20"
           ],
           [
-            "६३०",
-            "टेष्टी म.म हाउस एण्ड क्याफे",
-            "सुरज वराल",
-            "१"
+            "630",
+            "Teshti ma.ma Hausa and Cafe",
+            "Suraja Varala",
+            "1"
           ],
           [
-            "६३१",
-            "सेभेन्टी एस.एली. क्याफे एण्ड रेष्टुरेन्ट",
-            "दिलिप गिरी",
-            "१०"
+            "631",
+            "Sebhenti esa.eli. Cafe and Restaurant",
+            "Dilipa Giri",
+            "10"
           ],
           [
-            "६३२",
-            "टुङ्ना रेष्टुरेन्ट एण्ड क्याफे",
-            "पूर्णा देवी शाही",
-            "१२"
+            "632",
+            "Tungna Restaurant and Cafe",
+            "Purna Devi Shahi",
+            "12"
           ],
           [
-            "६३३",
-            "वाइट हाउस क्याफे",
-            "नागेन्द्र कुर्मी",
-            "६"
+            "633",
+            "Vaita Hausa Cafe",
+            "Nagendra Kurmi",
+            "6"
           ],
           [
-            "६३४",
-            "राइज द माउन्ट एभरेष्ट",
-            "ध्रुव प्रसाद पौडेल",
-            "४"
+            "634",
+            "Raija Da Maunta Ebhareshta",
+            "Dhruva Prasada Paudela",
+            "4"
           ],
           [
-            "६३५",
-            "रोयल होटल एण्ड लज",
-            "पारस मल्ल/ दीपक कुमार सिंह",
-            "४"
+            "635",
+            "Royal Hotel and Laja",
+            "Parasa Malla/ Dipaka Kumara Sinha",
+            "4"
           ],
           [
-            "६३६",
-            "जाजरकोटी हेमराज होटल",
-            "चन्द्रकला रावत",
-            "२"
+            "636",
+            "Jajarakoti Hemaraja Hotel",
+            "Chandrakala Ravata",
+            "2"
           ],
           [
-            "६३७",
-            "जाजरकोटी म्यारिना होटल",
-            "निर्मला शाही",
-            "१२"
+            "637",
+            "Jajarakoti Myarina Hotel",
+            "Nirmala Shahi",
+            "12"
           ],
           [
-            "६३८",
-            "चौधरी खाजा घर",
-            "उजेली थारु",
-            "१"
+            "638",
+            "Chaudhary Snack House",
+            "Ujeli Tharu",
+            "1"
           ],
           [
-            "६३९",
-            "सल्यानी जनता होटल",
-            "खल वहादुर खत्री",
-            "१"
+            "639",
+            "Salyani Janata Hotel",
+            "Khala Vahadura Khatri",
+            "1"
           ],
           [
-            "६४०",
-            "मामाज फायर रेष्टुरेन्ट एण्ड क्याफे",
-            "अयुज मान श्रेष्ठ",
-            "५"
+            "640",
+            "Mamaja Phayara Restaurant and Cafe",
+            "Ayuja Mana Shrestha",
+            "5"
           ],
           [
-            "६४१",
-            "अतिथी रेष्टुरेन्ट",
-            "कमला कुमारी सिंह",
-            "२"
+            "641",
+            "Atithi Restaurant",
+            "Kamala Kumari Sinha",
+            "2"
           ],
           [
-            "६४२",
-            "साहु रेष्टुरेन्ट एण्ड बार",
-            "अमन कुमार साहु (तेल",
-            "१८"
+            "642",
+            "Sahu Restaurant and Bar",
+            "Amana Kumara Sahu (tela",
+            "18"
           ],
           [
-            "६४३",
-            "ससुराली रेष्टुरेन्ट",
-            "रोसन के.सी.",
-            "२"
+            "643",
+            "Sasurali Restaurant",
+            "Rosana ke.si.",
+            "2"
           ],
           [
-            "६४४",
-            "९० र ९० रेष्टुरेन्ट",
-            "सुनिता कुमारी गुप्ता",
-            "१०"
+            "644",
+            "90 Ra 90 Restaurant",
+            "Sunita Kumari Gupta",
+            "10"
           ],
           [
-            "६४५",
-            "न्यू भीर सेकुवा घर",
-            "गिता कुमारी वास्तोला",
-            "२"
+            "645",
+            "New Bhira Sekuva Ghara",
+            "Gita Kumari Vastola",
+            "2"
           ],
           [
-            "६४६",
-            "होटल वोनिष्का अर्गानिक",
-            "प्रेम वहादुर वस्नेत",
-            "५"
+            "646",
+            "Hotel Vonishka Arganika",
+            "Prema Vahadura Vasneta",
+            "5"
           ],
           [
-            "६४७",
-            "स्टार डान्सवार",
-            "ललिता बुढाथोकी/ माया कुमारी वली",
-            "२"
+            "647",
+            "Stara Dansavara",
+            "Lalita Budhathoki/ Maya Kumari Vali",
+            "2"
           ],
           [
-            "६४८",
-            "काड्डा चिया एण्ड क्याफे",
-            "पवित्री शर्मा",
-            "६"
+            "648",
+            "Kadda Chiya and Cafe",
+            "Pavitri Sharma",
+            "6"
           ],
           [
-            "६४९",
-            "विश्वास होटल एण्ड लज",
-            "विरेन्द्र शाही",
-            "४"
+            "649",
+            "Vishvasa Hotel and Laja",
+            "Virendra Shahi",
+            "4"
           ],
           [
-            "६५०",
-            "संगालो रेष्टुरेन्ट प्रा.लि.",
-            "भोला शर्मा (सन्चालक)",
-            "४"
+            "650",
+            "Sangalo Restaurant Pvt. Ltd.",
+            "Bhola Sharma (sanchalaka)",
+            "4"
           ],
           [
-            "६५१",
-            "द फिस्टेल रेष्ट्रो एण्ड मिनिवार",
-            "सुनिल मुराउ",
-            "५"
+            "651",
+            "Da Phistela Restro and Minivara",
+            "Sunila Murau",
+            "5"
           ],
           [
-            "६५२",
-            "विष्ट नास्ता पसल",
-            "अमृता विष्ट",
-            "१८"
+            "652",
+            "Vishta Snack Shop",
+            "Amarita Vishta",
+            "18"
           ],
           [
-            "६५३",
-            "पवित्र गांउले होटल एण्ड लज",
-            "रुद्र वहादुर बुढा",
-            "४"
+            "653",
+            "Pavitra Ganule Hotel and Laja",
+            "Rudra Vahadura Budha",
+            "4"
           ],
           [
-            "६५४",
-            "मिस्टर ग्रिन हव क्याफे एण्ड रेष्टुरेन्ट",
-            "भिमा देवी सुनार",
-            "१"
+            "654",
+            "Mistara Grina Hava Cafe and Restaurant",
+            "Bhima Devi Sunar",
+            "1"
           ],
           [
-            "६५५",
-            "न्यू मनकामना रेष्टुरेन्ट",
-            "मिन वहादुर खत्री",
-            "२"
+            "655",
+            "New Manakamana Restaurant",
+            "Mina Vahadura Khatri",
+            "2"
           ],
           [
-            "६५६",
-            "होटल कैलाश इन",
-            "झरना शाही",
-            "४"
+            "656",
+            "Hotel Kailasha Ina",
+            "Jharana Shahi",
+            "4"
           ],
           [
-            "६५७",
-            "मामाघर क्याफे रेष्ट्रो एण्ड वार",
-            "हरि प्रसाद चौधरी",
-            "११"
+            "657",
+            "Mamaghara Cafe Restro and Bar",
+            "Hari Prasada Chaudhary",
+            "11"
           ],
           [
-            "६५८",
-            "होटल ग्रेट पाराडाइज प्रा.लि.",
-            "गणेश वहादुर शाही (संचालक अध्यक्ष)",
-            "२"
+            "658",
+            "Hotel Greta Paradaija Pvt. Ltd.",
+            "Ganesha Vahadura Shahi (sanchalaka Adhyaksha)",
+            "2"
           ],
           [
-            "६५९",
-            "कफि घर",
-            "एलिना शाही",
-            "१८"
+            "659",
+            "Kaphi Ghara",
+            "Elina Shahi",
+            "18"
           ],
           [
-            "६६०",
-            "मध्यपश्चिम गेष्ट हाउस",
-            "पृथी वहादुर थापा",
-            "४"
+            "660",
+            "Madhyapashchima Guest House",
+            "Parithi Vahadura Thapa",
+            "4"
           ],
           [
-            "६६१",
-            "ए.आर.पि.होटल",
-            "लक्ष्मण महतरा/ राज वहादुर गुरुङ्ग",
-            "४"
+            "661",
+            "e.ara.pi.Hotel",
+            "Lakshmana Mahatara/ Raja Vahadura Gurung",
+            "4"
           ],
           [
-            "६६२",
-            "बिगबेल रेष्टुरेन्ट",
-            "ध्रुव राज वर्मा",
-            "४"
+            "662",
+            "Bigabela Restaurant",
+            "Dhruva Raja Varma",
+            "4"
           ],
           [
-            "६६३",
-            "मधुशाला रेष्टुरेन्ट एण्ड वार",
-            "सुदिप बाबु पौडेल",
-            "४"
+            "663",
+            "Madhushala Restaurant and Bar",
+            "Sudipa Babu Paudela",
+            "4"
           ],
           [
-            "६६४",
-            "नेपालगन्ज रोधी घर",
-            "कृष्ण खत्री",
-            "१८"
+            "664",
+            "Nepalaganja Rodhi Ghara",
+            "Karishna Khatri",
+            "18"
           ],
           [
-            "६६५",
-            "ए.वन.पा प्रा.लि.",
-            "निरज कुमार वर्मा",
-            "१८"
+            "665",
+            "e.vana.pa Pvt. Ltd.",
+            "Niraja Kumara Varma",
+            "18"
           ],
           [
-            "६६६",
-            "माईला दाईको खाजा घर",
-            "राम वहादुर बुढामगर",
-            "१८"
+            "666",
+            "Maila Daiko Snack House",
+            "Rama Vahadura Budhamagara",
+            "18"
           ],
           [
-            "६६७",
-            "फोर-एक्स क्याफे एण्ड रेष्ट्रो",
-            "इब्राहिम बागवान",
-            "१"
+            "667",
+            "Phora-eksa Cafe and Restro",
+            "Ibrahima Bagavana",
+            "1"
           ],
           [
-            "६६८",
-            "द फोर्क रेष्टुरेन्ट एण्ड हुक्का लन्ज",
-            "ओमप्रकाश खत्री",
-            "१०"
+            "668",
+            "Da Phorka Restaurant and Hukka Lanja",
+            "Omaprakasha Khatri",
+            "10"
           ],
           [
-            "६६९",
-            "न्यु अछाम ढकारी जुम्ला होटल एण्ड लज",
-            "भावना भण्डारी",
-            "४"
+            "669",
+            "New Achhama Dhakari Jumla Hotel and Laja",
+            "Bhavana Bhandari",
+            "4"
           ],
           [
-            "६७०",
-            "होटल कान्तिपुर प्लाजा प्रा.लि.",
-            "ऋषिराम कंडेल (संचालक अध्यक्ष)",
-            "२"
+            "670",
+            "Hotel Kantipura Plaja Pvt. Ltd.",
+            "ऋshirama Kandela (sanchalaka Adhyaksha)",
+            "2"
           ]
         ],
-        "source": "स्रोत: नगरकार्यपालिकाको कार्यालय",
+        "source": "Source: Office of the Municipal Executive",
         "alignLeft": true
       }
     }

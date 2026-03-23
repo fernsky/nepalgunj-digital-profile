@@ -1,506 +1,79 @@
 {
   "type": "table",
   "data": {
-    "title": "तालिका नं. १००: उप-महानगरपालिका भित्र रहेका स्थानीय निकायमा कार्यरत कर्मचारीहरुको विवरण",
+    "title": "Table No. 100: Details of Employees working in Local Bodies within the Sub-Metropolitan City",
     "headers": [
-      "क्र.स.",
-      "नाम, थर",
-      "क.सं.नं.",
-      "पद",
-      "सेवा/समूह",
-      "श्रेणी/तह"
+      "S.N.",
+      "Name, Surname",
+      "Emp. ID No.",
+      "Position",
+      "Service/Group",
+      "Grade/Level"
     ],
     "rows": [
-      [
-        "१",
-        "श्री राजन कुमार के.सी.",
-        "स्थानिय",
-        "वरिष्ठ लेखा अधिकृत",
-        "प्रशासन/लेखा",
-        "अधिकृत आठौं"
-      ],
-      [
-        "२",
-        "श्री कृष्ण प्रसाद जोशी",
-        "स्थानिय",
-        "वरिष्ठ प्रशासकीय अधिकृत",
-        "प्रशासन/सा.प्र.",
-        "अधिकृत आठौं"
-      ],
-      [
-        "३",
-        "श्री सुरज शर्मा",
-        "स्थानिय",
-        "सिभिल ईन्जिनियर",
-        "ईन्जिनियरिङ्ग/सिभिल",
-        "अधिकृत सातौं"
-      ],
-      [
-        "४",
-        "श्री प्रकाश डि.सी.",
-        "स्थानिय",
-        "वातावरण ईन्जिनियर",
-        "ईन्जिनियरिङ्ग/वातावरण",
-        "अधिकृत सातौं"
-      ],
-      [
-        "५",
-        "श्री माया शर्मा",
-        "स्थानिय",
-        "कानून अधिकृत",
-        "प्रशासन/कानून",
-        "अधिकृत सातौं"
-      ],
-      [
-        "६",
-        "श्री सुरजकुमार गुप्ता",
-        "स्थानिय",
-        "सिभिल ईन्जिनियर",
-        "ईन्जिनियरिङ्ग/सिभिल",
-        "अधिकृत सातौं"
-      ],
-      [
-        "७",
-        "श्री खेमराज सुवेदी",
-        "स्थानिय",
-        "सहायक प्रशासकीय अधिकृत",
-        "प्रशासन/सा.प्र.",
-        "अधिकृत छैठौं"
-      ],
-      [
-        "८",
-        "श्री राजसिंह सिंजापति",
-        "स्थानिय",
-        "सहायक प्रशासकीय अधिकृत",
-        "प्रशासन/सा.प्र.",
-        "अधिकृत छैठौं"
-      ],
-      [
-        "९",
-        "श्री मक्खनराज गिरी",
-        "स्थानिय",
-        "सहायक प्रशासकीय अधिकृत",
-        "प्रशासन/सा.प्र.",
-        "अधिकृत छैठौं"
-      ],
-      [
-        "१०",
-        "श्री रामकुमार पौडेल",
-        "स्थानिय",
-        "सहायक प्रशासकीय अधिकृत",
-        "प्रशासन/सा.प्र.",
-        "अधिकृत छैठौं"
-      ],
-      [
-        "११",
-        "श्री अशोक खरेल",
-        "स्थानिय",
-        "सहायक प्रशासकीय अधिकृत",
-        "प्रशासन/सा.प्र.",
-        "अधिकृत छैठौं"
-      ],
-      [
-        "१२",
-        "श्री शोभाकर भण्डारी",
-        "स्थानिय",
-        "सहायक प्रशासकीय अधिकृत",
-        "प्रशासन/सा.प्र.",
-        "अधिकृत छैठौं"
-      ],
-      [
-        "१३",
-        "श्री सलाउद्दिन अन्सारी",
-        "स्थानिय",
-        "सहायक प्रशासकीय अधिकृत",
-        "प्रशासन/सा.प्र.",
-        "अधिकृत छैठौं"
-      ],
-      [
-        "१४",
-        "श्री सुचिता के.सी.",
-        "स्थानिय",
-        "सहायक प्रशासकीय अधिकृत",
-        "प्रशासन/सा.प्र.",
-        "अधिकृत छैठौं"
-      ],
-      [
-        "१५",
-        "श्री चित्राकुमारी पुनमगर",
-        "स्थानिय",
-        "सहायक प्रशासकीय अधिकृत",
-        "प्रशासन/सा.प्र.",
-        "अधिकृत छैठौं"
-      ],
-      [
-        "१६",
-        "श्री धर्मेन्द्र श्रीवास्तव",
-        "स्थानिय",
-        "सहायक प्रशासकीय अधिकृत",
-        "प्रशासन/सा.प्र.",
-        "अधिकृत छैठौं"
-      ],
-      [
-        "१७",
-        "श्री सरस्वती चौधरी",
-        "स्थानिय",
-        "वरिष्ठ प्रशासन सहायक",
-        "प्रशासन/सा.प्र.",
-        "सहायक पाँचौ"
-      ],
-      [
-        "१८",
-        "श्री मनोजकुमार रिजाल",
-        "स्थानिय",
-        "वरिष्ठ प्रशासन सहायक",
-        "प्रशासन/सा.प्र.",
-        "सहायक पाँचौ"
-      ],
-      [
-        "१९",
-        "श्री सन्तोषी विष्ट",
-        "स्थानिय",
-        "वरिष्ठ प्रशासन सहायक",
-        "प्रशासन/सा.प्र.",
-        "सहायक पाँचौ"
-      ],
-      [
-        "२०",
-        "श्री पवन देव अर्याल",
-        "स्थानिय",
-        "प्राविधिक अधिकृत",
-        "ईन्जिनियरिङ्ग/सर्भे",
-        "अधिकृत छैठौं"
-      ],
-      [
-        "२१",
-        "श्री कन्चन श्रेष्ठ",
-        "स्थानिय",
-        "वरिष्ठ प्रशासन सहायक",
-        "प्रशासन/सा.प्र.",
-        "सहायक पाँचौ"
-      ],
-      [
-        "२२",
-        "श्री टंकबहादुर पुन",
-        "स्थानिय",
-        "वरिष्ठ प्रशासन सहायक",
-        "प्रशासन/सा.प्र.",
-        "सहायक पाँचौ"
-      ],
-      [
-        "२३",
-        "श्री रत्न प्रसाद शर्मा",
-        "स्थानिय",
-        "कार्यालय सहयोगी",
-        "प्रशासन/सा.प्र.",
-        "श्रेणी विहिन"
-      ],
-      [
-        "२४",
-        "श्री पवन कुमार कनौजिया",
-        "स्थानिय",
-        "नगर प्रहरी सहायक निरीक्षक",
-        "प्रशासन/सा.प्र.",
-        "सहायक चौथो"
-      ],
-      [
-        "२५",
-        "श्री नरेन्द्र सिंह सरदार",
-        "स्थानिय",
-        "फायरम्यान",
-        "प्रशासन/सा.प्र.",
-        "श्रेणी विहिन तेस्रो"
-      ],
-      [
-        "२६",
-        "श्री जुवेर हलवाई",
-        "स्थानिय",
-        "फायरम्यान",
-        "प्रशासन/सा.प्र.",
-        "श्रेणी विहिन तेस्रो"
-      ],
-      [
-        "२७",
-        "श्री मेराज अलि वाग्वान",
-        "स्थानिय",
-        "फायरम्यान",
-        "प्रशासन/सा.प्र.",
-        "श्रेणी विहिन तेस्रो"
-      ],
-      [
-        "२८",
-        "श्री पुरन चमार",
-        "स्थानिय",
-        "फायरम्यान",
-        "प्रशासन/सा.प्र.",
-        "श्रेणी विहिन पाँचौ"
-      ],
-      [
-        "२९",
-        "श्री रिख वहादुर राना",
-        "स्थानिय",
-        "फायरम्यान",
-        "प्रशासन/सा.प्र.",
-        "श्रेणी विहिन पाँचौ"
-      ],
-      [
-        "३०",
-        "श्री लाल सिंह कोरी",
-        "स्थानिय",
-        "कुचिकार",
-        "प्रशासन/सा.प्र.",
-        "श्रेणी विहिन"
-      ],
-      [
-        "३१",
-        "श्री गिरधारी भंगी",
-        "स्थानिय",
-        "कुचिकार",
-        "प्रशासन/सा.प्र.",
-        "श्रेणी विहिन"
-      ],
-      [
-        "३२",
-        "श्री प्रेम कुमार वाल्मिकी भंगी",
-        "स्थानिय",
-        "कुचिकार",
-        "प्रशासन/सा.प्र.",
-        "श्रेणी विहिन"
-      ],
-      [
-        "३३",
-        "श्री घनश्याम वाल्मिकी",
-        "स्थानिय",
-        "कुचिकार",
-        "प्रशासन/सा.प्र.",
-        "श्रेणी विहिन"
-      ],
-      [
-        "३४",
-        "श्री मलती भंगी",
-        "स्थानिय",
-        "कुचिकार",
-        "प्रशासन/सा.प्र.",
-        "श्रेणी विहिन"
-      ],
-      [
-        "३५",
-        "श्री प्रकाश भंगी",
-        "स्थानिय",
-        "कुचिकार",
-        "प्रशासन/सा.प्र.",
-        "श्रेणी विहिन"
-      ],
-      [
-        "३६",
-        "श्री रमेश वाल्मिकी ४९०",
-        "स्थानिय",
-        "कुचिकार",
-        "प्रशासन/सा.प्र.",
-        "श्रेणी विहिन"
-      ],
-      [
-        "३७",
-        "श्री वावुलाल भंगी/वाल्मिकी",
-        "स्थानिय",
-        "कुचिकार",
-        "प्रशासन/सा.प्र.",
-        "श्रेणी विहिन"
-      ],
-      [
-        "३८",
-        "श्री गीता भंगी",
-        "स्थानिय",
-        "कुचिकार",
-        "प्रशासन/सा.प्र.",
-        "श्रेणी विहिन"
-      ],
-      [
-        "३९",
-        "श्री रामा देवी भंगी",
-        "स्थानिय",
-        "कुचिकार",
-        "प्रशासन/सा.प्र.",
-        "श्रेणी विहिन"
-      ],
-      [
-        "४०",
-        "श्री रामेश्वर वाल्मिकी",
-        "स्थानिय",
-        "कुचिकार",
-        "प्रशासन/सा.प्र.",
-        "श्रेणी विहिन"
-      ],
-      [
-        "४१",
-        "श्री गोपाल भंगी",
-        "स्थानिय",
-        "कुचिकार",
-        "प्रशासन/सा.प्र.",
-        "श्रेणी विहिन"
-      ],
-      [
-        "४२",
-        "श्री सुमाई वाल्मिकी",
-        "स्थानिय",
-        "कुचिकार",
-        "प्रशासन/सा.प्र.",
-        "श्रेणी विहिन"
-      ],
-      [
-        "४३",
-        "श्री कृष्ण कुमार वाल्मिकी",
-        "स्थानिय",
-        "कुचिकार",
-        "प्रशासन/सा.प्र.",
-        "श्रेणी विहिन"
-      ],
-      [
-        "४४",
-        "श्री मैकु वाल्मिकी",
-        "स्थानिय",
-        "कुचिकार",
-        "प्रशासन/सा.प्र.",
-        "श्रेणी विहिन"
-      ],
-      [
-        "४५",
-        "श्री रुपरानी वाल्मिकी",
-        "स्थानिय",
-        "कुचिकार",
-        "प्रशासन/सा.प्र.",
-        "श्रेणी विहिन"
-      ],
-      [
-        "४६",
-        "श्री साहिद अहेमद हलवाई",
-        "स्थानिय",
-        "कुचिकार",
-        "प्रशासन/सा.प्र.",
-        "श्रेणी विहिन"
-      ],
-      [
-        "४७",
-        "श्री शान्ति देवि महतरा",
-        "स्थानिय",
-        "कुचिकार",
-        "प्रशासन/सा.प्र.",
-        "श्रेणी विहिन"
-      ],
-      [
-        "४८",
-        "श्री सुन्दर लाल वाल्मिकी",
-        "स्थानिय",
-        "कुचिकार",
-        "प्रशासन/सा.प्र.",
-        "श्रेणी विहिन"
-      ],
-      [
-        "४९",
-        "श्री नागेश्वर भंगी",
-        "स्थानिय",
-        "कुचिकार",
-        "प्रशासन/सा.प्र.",
-        "श्रेणी विहिन"
-      ],
-      [
-        "५०",
-        "श्री रमेश वाल्मिकि ४५९",
-        "स्थानिय",
-        "कुचिकार",
-        "प्रशासन/सा.प्र.",
-        "श्रेणी विहिन"
-      ],
-      [
-        "५१",
-        "श्री लक्ष्मी प्रसाद वाल्मिकी",
-        "स्थानिय",
-        "कुचिकार",
-        "प्रशासन/सा.प्र.",
-        "श्रेणी विहिन"
-      ],
-      [
-        "५२",
-        "श्री तारा देवी भंगी",
-        "स्थानिय",
-        "कुचिकार",
-        "प्रशासन/सा.प्र.",
-        "श्रेणी विहिन"
-      ],
-      [
-        "५३",
-        "श्री धनिराम वाल्मिकी",
-        "स्थानिय",
-        "कुचिकार",
-        "प्रशासन/सा.प्र.",
-        "श्रेणी विहिन"
-      ],
-      [
-        "५४",
-        "श्री सीमा वाल्मिकी",
-        "स्थानिय",
-        "कुचिकार",
-        "प्रशासन/सा.प्र.",
-        "श्रेणी विहिन"
-      ],
-      [
-        "५५",
-        "श्री दिनेश वाल्मिकी",
-        "स्थानिय",
-        "कुचिकार",
-        "प्रशासन/सा.प्र.",
-        "श्रेणी विहिन"
-      ],
-      [
-        "५६",
-        "श्री पप्पु वाल्मिकी",
-        "स्थानिय",
-        "कुचिकार",
-        "प्रशासन/सा.प्र.",
-        "श्रेणी विहिन"
-      ],
-      [
-        "५७",
-        "श्री बब्बन भंगी",
-        "स्थानिय",
-        "कुचिकार",
-        "प्रशासन/सा.प्र.",
-        "श्रेणी विहिन"
-      ],
-      [
-        "५८",
-        "श्री मायादेवी वाल्मिकी",
-        "स्थानिय",
-        "कुचिकार",
-        "प्रशासन/सा.प्र.",
-        "श्रेणी विहिन"
-      ],
-      [
-        "५९",
-        "श्री नलम वाल्मिकी",
-        "स्थानिय",
-        "कुचिकार",
-        "प्रशासन/सा.प्र.",
-        "श्रेणी विहिन"
-      ],
-      [
-        "६०",
-        "श्री मुन्ना वाल्मिकि",
-        "स्थानिय",
-        "कुचिकार",
-        "प्रशासन/सा.प्र.",
-        "श्रेणी विहिन"
-      ],
-      [
-        "६१",
-        "श्री लल्लन वाल्मिकी",
-        "स्थानिय",
-        "कुचिकार",
-        "प्रशासन/सा.प्र.",
-        "श्रेणी विहिन"
-      ]
+      ["1", "Mr. Rajan Kumar K.C.", "Local", "Senior Account Officer", "Administration/Account", "Officer 8th"],
+      ["2", "Mr. Krishna Prasad Joshi", "Local", "Senior Administrative Officer", "Administration/General Admin", "Officer 8th"],
+      ["3", "Mr. Suraj Sharma", "Local", "Civil Engineer", "Engineering/Civil", "Officer 7th"],
+      ["4", "Mr. Prakash D.C.", "Local", "Environment Engineer", "Engineering/Environment", "Officer 7th"],
+      ["5", "Ms. Maya Sharma", "Local", "Law Officer", "Administration/Law", "Officer 7th"],
+      ["6", "Mr. Surajkumar Gupta", "Local", "Civil Engineer", "Engineering/Civil", "Officer 7th"],
+      ["7", "Mr. Khemraj Subedi", "Local", "Assistant Administrative Officer", "Administration/General Admin", "Officer 6th"],
+      ["8", "Mr. Raj Singh Sinjapati", "Local", "Assistant Administrative Officer", "Administration/General Admin", "Officer 6th"],
+      ["9", "Mr. Makkhanraj Giri", "Local", "Assistant Administrative Officer", "Administration/General Admin", "Officer 6th"],
+      ["10", "Mr. Ramkumar Paudel", "Local", "Assistant Administrative Officer", "Administration/General Admin", "Officer 6th"],
+      ["11", "Mr. Ashok Kharel", "Local", "Assistant Administrative Officer", "Administration/General Admin", "Officer 6th"],
+      ["12", "Mr. Shobhakar Bhandari", "Local", "Assistant Administrative Officer", "Administration/General Admin", "Officer 6th"],
+      ["13", "Mr. Salauddin Ansari", "Local", "Assistant Administrative Officer", "Administration/General Admin", "Officer 6th"],
+      ["14", "Ms. Suchita K.C.", "Local", "Assistant Administrative Officer", "Administration/General Admin", "Officer 6th"],
+      ["15", "Ms. Chitrakumari Punmagar", "Local", "Assistant Administrative Officer", "Administration/General Admin", "Officer 6th"],
+      ["16", "Mr. Dharmendra Srivastava", "Local", "Assistant Administrative Officer", "Administration/General Admin", "Officer 6th"],
+      ["17", "Ms. Saraswati Chaudhary", "Local", "Senior Administration Assistant", "Administration/General Admin", "Assistant 5th"],
+      ["18", "Mr. Manojkumar Rijal", "Local", "Senior Administration Assistant", "Administration/General Admin", "Assistant 5th"],
+      ["19", "Ms. Santoshi Bishta", "Local", "Senior Administration Assistant", "Administration/General Admin", "Assistant 5th"],
+      ["20", "Mr. Pawan Dev Aryal", "Local", "Technical Officer", "Engineering/Survey", "Officer 6th"],
+      ["21", "Ms. Kanchan Shrestha", "Local", "Senior Administration Assistant", "Administration/General Admin", "Assistant 5th"],
+      ["22", "Mr. Tankabahadur Pun", "Local", "Senior Administration Assistant", "Administration/General Admin", "Assistant 5th"],
+      ["23", "Mr. Ratna Prasad Sharma", "Local", "Office Assistant", "Administration/General Admin", "Level-less"],
+      ["24", "Mr. Pawan Kumar Kanojia", "Local", "City Police Assistant Inspector", "Administration/General Admin", "Assistant 4th"],
+      ["25", "Mr. Narendra Singh Sardar", "Local", "Fireman", "Administration/General Admin", "Level-less 3rd"],
+      ["26", "Mr. Juber Halwai", "Local", "Fireman", "Administration/General Admin", "Level-less 3rd"],
+      ["27", "Mr. Meraj Ali Wagwan", "Local", "Fireman", "Administration/General Admin", "Level-less 3rd"],
+      ["28", "Mr. Puran Chamar", "Local", "Fireman", "Administration/General Admin", "Level-less 5th"],
+      ["29", "Mr. Rikh Bahadur Rana", "Local", "Fireman", "Administration/General Admin", "Level-less 5th"],
+      ["30", "Mr. Lal Singh Kori", "Local", "Sweeper", "Administration/General Admin", "Level-less"],
+      ["31", "Mr. Girdhari Bhangi", "Local", "Sweeper", "Administration/General Admin", "Level-less"],
+      ["32", "Mr. Prem Kumar Valmiki Bhangi", "Local", "Sweeper", "Administration/General Admin", "Level-less"],
+      ["33", "Mr. Ghanshyam Valmiki", "Local", "Sweeper", "Administration/General Admin", "Level-less"],
+      ["34", "Ms. Malati Bhangi", "Local", "Sweeper", "Administration/General Admin", "Level-less"],
+      ["35", "Mr. Prakash Bhangi", "Local", "Sweeper", "Administration/General Admin", "Level-less"],
+      ["36", "Mr. Ramesh Valmiki 490", "Local", "Sweeper", "Administration/General Admin", "Level-less"],
+      ["37", "Mr. Babulal Bhangi/Valmiki", "Local", "Sweeper", "Administration/General Admin", "Level-less"],
+      ["38", "Ms. Gita Bhangi", "Local", "Sweeper", "Administration/General Admin", "Level-less"],
+      ["39", "Ms. Rama Devi Bhangi", "Local", "Sweeper", "Administration/General Admin", "Level-less"],
+      ["40", "Mr. Rameshwar Valmiki", "Local", "Sweeper", "Administration/General Admin", "Level-less"],
+      ["41", "Mr. Gopal Bhangi", "Local", "Sweeper", "Administration/General Admin", "Level-less"],
+      ["42", "Mr. Sumai Valmiki", "Local", "Sweeper", "Administration/General Admin", "Level-less"],
+      ["43", "Mr. Krishna Kumar Valmiki", "Local", "Sweeper", "Administration/General Admin", "Level-less"],
+      ["44", "Mr. Maiku Valmiki", "Local", "Sweeper", "Administration/General Admin", "Level-less"],
+      ["45", "Ms. Ruprani Valmiki", "Local", "Sweeper", "Administration/General Admin", "Level-less"],
+      ["46", "Mr. Sahid Ahmed Halwai", "Local", "Sweeper", "Administration/General Admin", "Level-less"],
+      ["47", "Ms. Shanti Devi Mahatara", "Local", "Sweeper", "Administration/General Admin", "Level-less"],
+      ["48", "Mr. Sundar Lal Valmiki", "Local", "Sweeper", "Administration/General Admin", "Level-less"],
+      ["49", "Mr. Nageshwar Bhangi", "Local", "Sweeper", "Administration/General Admin", "Level-less"],
+      ["50", "Mr. Ramesh Valmiki 459", "Local", "Sweeper", "Administration/General Admin", "Level-less"],
+      ["51", "Mr. Lakshmi Prasad Valmiki", "Local", "Sweeper", "Administration/General Admin", "Level-less"],
+      ["52", "Ms. Tara Devi Bhangi", "Local", "Sweeper", "Administration/General Admin", "Level-less"],
+      ["53", "Mr. Dhaniram Valmiki", "Local", "Sweeper", "Administration/General Admin", "Level-less"],
+      ["54", "Ms. Sima Valmiki", "Local", "Sweeper", "Administration/General Admin", "Level-less"],
+      ["55", "Mr. Dinesh Valmiki", "Local", "Sweeper", "Administration/General Admin", "Level-less"],
+      ["56", "Mr. Pappu Valmiki", "Local", "Sweeper", "Administration/General Admin", "Level-less"],
+      ["57", "Mr. Babban Bhangi", "Local", "Sweeper", "Administration/General Admin", "Level-less"],
+      ["58", "Ms. Mayadevi Valmiki", "Local", "Sweeper", "Administration/General Admin", "Level-less"],
+      ["59", "Mr. Nalam Valmiki", "Local", "Sweeper", "Administration/General Admin", "Level-less"],
+      ["60", "Mr. Munna Valmiki", "Local", "Sweeper", "Administration/General Admin", "Level-less"],
+      ["61", "Mr. Lallan Valmiki", "Local", "Sweeper", "Administration/General Admin", "Level-less"]
     ],
-    "source": "स्रोत: नगर कार्यपालिकाको कार्यालय",
+    "source": "Source: Office of the Municipal Executive",
     "alignLeft": true
   }
 }
