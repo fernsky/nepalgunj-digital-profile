@@ -103,7 +103,7 @@ const alternateUrl = getAlternateUrl(currentPath, alternateLang);
                   <div class="h-px my-3" style={`background:var(--border);`}></div>
                   <div class="space-y-1">
                     {annexItems.map((annex) => (
-                      <a href={`/${lang}/annexes#${annex.id}`} class="block py-2 text-sm transition-colors duration-200 no-underline hover:text-primary-400" style={`color:var(--text-body);`}>{annex.title[lang]}</a>
+                      <a href={`/${lang}/annexes#${annex.slug}`} class="block py-2 text-sm transition-colors duration-200 no-underline hover:text-primary-400" style={`color:var(--text-body);`}>{annex.title[lang]}</a>
                     ))}
                   </div>
                 </div>
