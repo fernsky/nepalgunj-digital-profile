@@ -11,29 +11,36 @@ const alternateUrl = getAlternateUrl(currentPath, alternateLang);
 ---
 
 <nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b" style={`background:var(--nav-bg);border-color:var(--border);`}>
-  <div class="max-w-7xl mx-auto px-6 lg:px-14">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-14">
     <div class="flex items-center justify-between h-16">
       <!-- Logo -->
-      <a href={`/${lang}/`} class="flex items-center gap-3 no-underline group">
-        <div class="w-10 h-10 rounded-full bg-primary-700 flex items-center justify-center border-2 border-primary-500">
-          <svg viewBox="0 0 40 40" class="w-8 h-8">
+      <a href={`/${lang}/`} class="flex items-center gap-2 sm:gap-3 no-underline group shrink-0">
+        <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-primary-700 flex items-center justify-center border-2 border-primary-500">
+          <svg viewBox="0 0 40 40" class="w-7 h-7 sm:w-8 sm:h-8">
             <circle cx="20" cy="20" r="18" fill="#1d4ed8" stroke="#60a5fa" stroke-width="1.5"/>
             <text x="20" y="25" text-anchor="middle" fill="white" font-size="14" font-weight="bold">न</text>
           </svg>
         </div>
         <div class="flex flex-col leading-tight">
-          <span class="font-bold text-lg" style="color:var(--text-heading);">{t(lang, "site.name")}</span>
-          <span class="text-xs" style="color:var(--text-muted);">{t(lang, "site.subtitle")}</span>
+          <span class="font-bold text-base sm:text-lg" style="color:var(--text-heading);">{t(lang, "site.name")}</span>
+          <span class="text-[10px] sm:text-xs hidden sm:block" style="color:var(--text-muted);">{t(lang, "site.subtitle")}</span>
         </div>
       </a>
 
-      <!-- Nav Links -->
-      <div class="flex items-center gap-1">
+      <!-- Desktop Nav Links (hidden on mobile) -->
+      <div class="hidden lg:flex items-center gap-1">
         <a href={`/${lang}/`} class="px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 no-underline" style={`color:var(--text-body);`}
           onmouseover="this.style.color='var(--text-heading)';this.style.background='var(--hover-bg)'"
           onmouseout="this.style.color='var(--text-body)';this.style.background='transparent'"
         >
           {t(lang, "nav.home")}
+        </a>
+
+        <a href={`/${lang}/profile`} class="px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 no-underline" style={`color:var(--text-body);`}
+          onmouseover="this.style.color='var(--text-heading)';this.style.background='var(--hover-bg)'"
+          onmouseout="this.style.color='var(--text-body)';this.style.background='transparent'"
+        >
+          {lang === 'ne' ? 'पूर्ण प्रोफाइल' : 'Full Profile'}
         </a>
 
         <div class="relative" id="chapters-dropdown-container">
@@ -44,8 +51,8 @@ const alternateUrl = getAlternateUrl(currentPath, alternateLang);
             </svg>
           </button>
 
-          <!-- Mega Dropdown - positioned below Chapters button -->
-          <div id="chapters-mega-dropdown" class="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[860px] rounded-xl shadow-2xl opacity-0 invisible translate-y-2 transition-all duration-300 overflow-hidden" style={`background:var(--dropdown-bg);border:1px solid var(--border);`}>
+          <!-- Mega Dropdown -->
+          <div id="chapters-mega-dropdown" class="absolute top-full right-0 lg:left-1/2 lg:-translate-x-1/2 mt-2 w-[860px] rounded-xl shadow-2xl opacity-0 invisible translate-y-2 transition-all duration-300 overflow-hidden" style={`background:var(--dropdown-bg);border:1px solid var(--border);`}>
             <div class="flex">
               <!-- Left Panel -->
               <div class="w-[260px] py-3 max-h-[480px] overflow-y-auto border-r" style={`background:var(--dropdown-sidebar);border-color:var(--border);`}>
@@ -106,30 +113,82 @@ const alternateUrl = getAlternateUrl(currentPath, alternateLang);
         </div>
       </div>
 
-      <!-- Right: Theme + Lang -->
-      <div class="flex items-center gap-3">
+      <!-- Right: Theme + Lang + Mobile Hamburger -->
+      <div class="flex items-center gap-2 sm:gap-3">
         <button id="theme-toggle" class="p-2 rounded-lg transition-all duration-200 cursor-pointer border-0" style="color:var(--text-muted);background:transparent;" aria-label="Toggle theme">
           <svg id="theme-icon-sun" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
           <svg id="theme-icon-moon" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" /></svg>
         </button>
         <div class="flex items-center">
           <a href={lang === "ne" ? currentPath : getAlternateUrl(currentPath, "ne")}
-            class:list={["px-3 py-1.5 text-sm font-medium rounded-l-lg border transition-all duration-200 no-underline", lang === "ne" ? "bg-primary-700 text-white border-primary-600" : "border-gray-600"]}
+            class:list={["px-2.5 py-1.5 text-xs sm:text-sm font-medium rounded-l-lg border transition-all duration-200 no-underline", lang === "ne" ? "bg-primary-700 text-white border-primary-600" : "border-gray-600"]}
             style={lang !== "ne" ? "color:var(--text-muted);background:var(--card-bg);" : ""}
           >ने</a>
           <a href={lang === "en" ? currentPath : getAlternateUrl(currentPath, "en")}
-            class:list={["px-3 py-1.5 text-sm font-medium rounded-r-lg border-t border-b border-r transition-all duration-200 no-underline", lang === "en" ? "bg-primary-700 text-white border-primary-600" : "border-gray-600"]}
+            class:list={["px-2.5 py-1.5 text-xs sm:text-sm font-medium rounded-r-lg border-t border-b border-r transition-all duration-200 no-underline", lang === "en" ? "bg-primary-700 text-white border-primary-600" : "border-gray-600"]}
             style={lang !== "en" ? "color:var(--text-muted);background:var(--card-bg);" : ""}
           >En</a>
         </div>
+
+        <!-- Mobile Hamburger Button -->
+        <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg transition-all duration-200 cursor-pointer border-0" style="color:var(--text-heading);background:transparent;" aria-label="Open menu">
+          <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
       </div>
     </div>
   </div>
 </nav>
+
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu-overlay" class="fixed inset-0 z-40 bg-black/60 backdrop-blur-sm opacity-0 invisible transition-all duration-300 lg:hidden"></div>
+
+<!-- Mobile Slide-out Drawer -->
+<div id="mobile-drawer" class="fixed top-0 right-0 z-50 h-full w-[85vw] max-w-[360px] translate-x-full transition-transform duration-300 ease-out overflow-y-auto lg:hidden" style="background:var(--dropdown-bg);">
+  <div class="p-5 pt-20">
+    <!-- Main Links -->
+    <div class="space-y-1 mb-6">
+      <a href={`/${lang}/`} class="block px-4 py-3 text-base font-medium rounded-xl no-underline transition-colors" style="color:var(--text-heading);">
+        {t(lang, "nav.home")}
+      </a>
+      <a href={`/${lang}/profile`} class="block px-4 py-3 text-base font-bold rounded-xl no-underline transition-colors bg-primary-600 text-white">
+        {lang === 'ne' ? 'पूर्ण प्रोफाइल हेर्नुहोस्' : 'View Full Profile'}
+      </a>
+    </div>
+
+    <!-- Chapters List -->
+    <div class="mb-4">
+      <h3 class="px-4 text-xs font-bold uppercase tracking-wider mb-3" style="color:var(--text-muted);">
+        {t(lang, "nav.chapters")}
+      </h3>
+      <div class="space-y-0.5">
+        {chapters.map((chapter) => (
+          <a href={`/${lang}/${chapter.slug}`} class="mobile-chapter-link block px-4 py-3 rounded-xl no-underline transition-all" style="color:var(--text-body);">
+            <span class="text-xs font-medium block" style="color:var(--text-muted);">{t(lang, "chapter.label")} {chapter.num}</span>
+            <span class="font-medium text-sm">{chapter.title[lang]}</span>
+          </a>
+        ))}
+      </div>
+    </div>
+
+    <!-- Annexes -->
+    <div class="pt-4" style={`border-top:1px solid var(--border);`}>
+      <a href={`/${lang}/annexes`} class="block px-4 py-3 rounded-xl no-underline transition-colors text-sm font-medium" style="color:var(--text-body);">
+        {t(lang, "nav.annexes")}
+      </a>
+    </div>
+  </div>
+</div>
+
 <div class="h-16"></div>
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
+    // Desktop mega menu
     const btn = document.getElementById("chapters-btn");
     const dropdown = document.getElementById("chapters-mega-dropdown");
     const chevron = document.getElementById("chapters-chevron");
@@ -153,7 +212,53 @@ const alternateUrl = getAlternateUrl(currentPath, alternateLang);
     btn?.addEventListener("click", (e) => { e.preventDefault(); e.stopPropagation(); isOpen ? close() : open(); });
     document.addEventListener("click", (e) => { if (container && !container.contains(e.target as Node)) close(); });
     tabs.forEach((tab) => { tab.addEventListener("mouseenter", () => activate(tab.dataset.chapter || "")); });
-    document.addEventListener("keydown", (e) => { if (e.key === "Escape") close(); });
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape") { close(); closeMobile(); } });
+
+    // Mobile menu
+    const mobileBtn = document.getElementById("mobile-menu-btn");
+    const overlay = document.getElementById("mobile-menu-overlay");
+    const drawer = document.getElementById("mobile-drawer");
+    const hamburger = document.getElementById("hamburger-icon");
+    const closeIcon = document.getElementById("close-icon");
+    let mobileOpen = false;
+
+    function openMobile() {
+      if (mobileOpen) return;
+      mobileOpen = true;
+      document.body.style.overflow = "hidden";
+      overlay?.classList.remove("opacity-0", "invisible");
+      overlay?.classList.add("opacity-100", "visible");
+      drawer?.classList.remove("translate-x-full");
+      drawer?.classList.add("translate-x-0");
+      hamburger?.classList.add("hidden");
+      closeIcon?.classList.remove("hidden");
+    }
+
+    function closeMobile() {
+      if (!mobileOpen) return;
+      mobileOpen = false;
+      document.body.style.overflow = "";
+      overlay?.classList.add("opacity-0", "invisible");
+      overlay?.classList.remove("opacity-100", "visible");
+      drawer?.classList.add("translate-x-full");
+      drawer?.classList.remove("translate-x-0");
+      hamburger?.classList.remove("hidden");
+      closeIcon?.classList.add("hidden");
+    }
+
+    mobileBtn?.addEventListener("click", () => { mobileOpen ? closeMobile() : openMobile(); });
+    overlay?.addEventListener("click", closeMobile);
+
+    // Close mobile menu on link click
+    drawer?.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", closeMobile);
+    });
+
+    // Hover effects for mobile chapter links
+    drawer?.querySelectorAll(".mobile-chapter-link").forEach((link) => {
+      link.addEventListener("mouseenter", () => { (link as HTMLElement).style.background = "var(--hover-bg)"; });
+      link.addEventListener("mouseleave", () => { (link as HTMLElement).style.background = "transparent"; });
+    });
 
     // Theme toggle
     const themeBtn = document.getElementById("theme-toggle");

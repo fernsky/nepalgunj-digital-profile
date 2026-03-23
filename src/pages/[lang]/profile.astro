@@ -1,0 +1,99 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { type Lang, chapters } from "../../i18n/translations";
+import { t, formatSectionId } from "../../i18n/utils";
+import SectionRenderer from "../../components/SectionRenderer.astro";
+import Chapter4Renderer from "../../components/chapters/4/Chapter4Renderer.astro";
+
+export function getStaticPaths() {
+  return [{ params: { lang: "ne" } }, { params: { lang: "en" } }];
+}
+
+const lang = Astro.params.lang as Lang;
+
+// Load all JSON content files at build time
+const jsonFiles = import.meta.glob('../../lib/i18n/chapters/**/*.json', { eager: true }) as Record<string, { default: any }>;
+
+function getSectionContent(chapterNum: number, slug: string) {
+  const key = `../../lib/i18n/chapters/${chapterNum}/${slug}/${lang}.json`;
+  return jsonFiles[key]?.default ?? null;
+}
+---
+
+<Layout lang={lang} title={lang === 'ne' ? 'पूर्ण प्रोफाइल - नेपालगंज' : 'Full Profile - Nepalgunj'}>
+  <!-- Profile Hero -->
+  <section class="relative py-12 sm:py-20 overflow-hidden" style="background: var(--nav-bg);">
+    <div class="absolute inset-0 opacity-[0.03]" style="background-image: url('data:image/svg+xml,%3Csvg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cg fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;%3E%3Cpath d=&quot;M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z&quot; fill=&quot;%23888&quot;/%3E%3C/g%3E%3C/svg%3E');"></div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-14">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full mb-4" style="background:rgba(29,78,216,0.15);border:1px solid rgba(29,78,216,0.3);">
+        <span class="text-primary-400 text-sm font-medium">{lang === 'ne' ? 'पूर्ण विवरण' : 'Complete Profile'}</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black mb-4" style="color:var(--text-heading);">
+        {t(lang, "hero.title")}
+      </h1>
+      <p class="text-base sm:text-lg max-w-3xl" style="color:var(--text-body);">
+        {t(lang, "hero.description")}
+      </p>
+
+      <!-- Quick Jump Navigation -->
+      <div class="mt-8 sm:mt-12 flex flex-wrap gap-2 sm:gap-3">
+        {chapters.map((ch) => (
+          <a href={`#chapter-${ch.num}`} class="px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium rounded-xl no-underline transition-all border hover:border-primary-500 hover:bg-primary-500/10" style="color:var(--text-body);border-color:var(--border);">
+            {t(lang, "chapter.label")} {ch.num}
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- All Chapters -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-14 py-8 sm:py-16">
+    {chapters.map((chapter, idx) => (
+      <div id={`chapter-${chapter.num}`} class="scroll-mt-20 mb-16 sm:mb-24">
+        <!-- Chapter Header -->
+        <div class="relative py-8 sm:py-12 mb-8 sm:mb-12 overflow-hidden rounded-2xl sm:rounded-3xl" style="background:linear-gradient(135deg, rgba(29,78,216,0.08) 0%, transparent 50%); border: 1px solid rgba(29,78,216,0.1);">
+          <div class="relative z-10 px-5 sm:px-8">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full mb-3 sm:mb-4" style="background:rgba(29,78,216,0.15);border:1px solid rgba(29,78,216,0.3);">
+              <span class="text-primary-400 text-sm font-medium">{t(lang, "chapter.label")} {chapter.num}</span>
+            </div>
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold mb-3" style="color:var(--text-heading);">
+              {chapter.title[lang]}
+            </h2>
+            <p class="text-base sm:text-lg max-w-2xl" style="color:var(--text-body);">{chapter.description[lang]}</p>
+          </div>
+        </div>
+
+        <!-- Chapter Sections -->
+        {chapter.sections.map((section: any) => {
+          const content = getSectionContent(chapter.num, section.slug);
+          return (
+            <>
+              {chapter.num === 4 ? (
+                <Chapter4Renderer content={content} lang={lang} id={section.slug} chapterNum={chapter.num} />
+              ) : (
+                <SectionRenderer content={content} lang={lang} id={section.slug} />
+              )}
+              {section.children && section.children.map((child: any) => {
+                const childContent = getSectionContent(chapter.num, child.slug);
+                return chapter.num === 4 ? (
+                  <Chapter4Renderer content={childContent} lang={lang} id={child.slug} chapterNum={chapter.num} />
+                ) : (
+                  <SectionRenderer content={childContent} lang={lang} id={child.slug} />
+                );
+              })}
+            </>
+          );
+        })}
+
+        {/* Divider between chapters */}
+        {idx < chapters.length - 1 && (
+          <div class="mt-12 sm:mt-16 flex items-center gap-4">
+            <div class="flex-1 h-px" style="background:var(--border);"></div>
+            <div class="w-2 h-2 rounded-full bg-primary-500/50"></div>
+            <div class="flex-1 h-px" style="background:var(--border);"></div>
+          </div>
+        )}
+      </div>
+    ))}
+  </div>
+</Layout>
