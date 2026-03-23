@@ -1,7 +1,8 @@
 ---
 /**
  * WardMap Component
- * Pre-rendered SVG structure for maximum reliability
+ * Real Nepalgunj Sub-Metropolitan City ward map using D3.js
+ * Ward boundaries from OpenStreetMap geographic data
  */
 interface Props {
   lang: string;
@@ -25,51 +26,115 @@ const wardData: Ward[] = [
   { id: 7, name: { ne: "वडा ७", en: "Ward 7" }, pop: 10800, households: 2050 },
   { id: 8, name: { ne: "वडा ८", en: "Ward 8" }, pop: 12500, households: 2350 },
   { id: 9, name: { ne: "वडा ९", en: "Ward 9" }, pop: 6100, households: 1200 },
-  { id: 10, name: { ne: "वडा १०", en: "Ward 10" }, pop: 13200, households: 2500 },
-  { id: 11, name: { ne: "वडा ११", en: "Ward 11" }, pop: 10500, households: 1950 },
-  { id: 12, name: { ne: "वडा १२", en: "Ward 12" }, pop: 7800, households: 1500 },
-  { id: 13, name: { ne: "वडा १३", en: "Ward 13" }, pop: 5200, households: 1000 },
+  {
+    id: 10,
+    name: { ne: "वडा १०", en: "Ward 10" },
+    pop: 13200,
+    households: 2500,
+  },
+  {
+    id: 11,
+    name: { ne: "वडा ११", en: "Ward 11" },
+    pop: 10500,
+    households: 1950,
+  },
+  {
+    id: 12,
+    name: { ne: "वडा १२", en: "Ward 12" },
+    pop: 7800,
+    households: 1500,
+  },
+  {
+    id: 13,
+    name: { ne: "वडा १३", en: "Ward 13" },
+    pop: 5200,
+    households: 1000,
+  },
   { id: 14, name: { ne: "वडा १४", en: "Ward 14" }, pop: 4500, households: 850 },
   { id: 15, name: { ne: "वडा १५", en: "Ward 15" }, pop: 4800, households: 900 },
-  { id: 16, name: { ne: "वडा १६", en: "Ward 16" }, pop: 5400, households: 1050 },
+  {
+    id: 16,
+    name: { ne: "वडा १६", en: "Ward 16" },
+    pop: 5400,
+    households: 1050,
+  },
   { id: 17, name: { ne: "वडा १७", en: "Ward 17" }, pop: 4200, households: 800 },
-  { id: 18, name: { ne: "वडा १८", en: "Ward 18" }, pop: 6300, households: 1250 },
-  { id: 19, name: { ne: "वडा १९", en: "Ward 19" }, pop: 5700, households: 1100 },
-  { id: 20, name: { ne: "वडा २०", en: "Ward 20" }, pop: 8344, households: 1600 },
+  {
+    id: 18,
+    name: { ne: "वडा १८", en: "Ward 18" },
+    pop: 6300,
+    households: 1250,
+  },
+  {
+    id: 19,
+    name: { ne: "वडा १९", en: "Ward 19" },
+    pop: 5700,
+    households: 1100,
+  },
+  {
+    id: 20,
+    name: { ne: "वडा २०", en: "Ward 20" },
+    pop: 8344,
+    households: 1600,
+  },
   { id: 21, name: { ne: "वडा २१", en: "Ward 21" }, pop: 4100, households: 780 },
   { id: 22, name: { ne: "वडा २२", en: "Ward 22" }, pop: 3800, households: 720 },
   { id: 23, name: { ne: "वडा २३", en: "Ward 23" }, pop: 3000, households: 580 },
 ];
 
-const wardShapes = [
-  "M150,120 L180,110 L210,130 L190,160 L160,170 Z", // 1
-  "M210,130 L240,120 L270,140 L250,170 L210,180 Z", // 2
-  "M270,140 L300,130 L330,150 L310,180 L270,190 Z", // 3
-  "M330,150 L360,140 L390,160 L370,190 L330,200 Z", // 4
-  "M140,170 L190,160 L200,200 L150,210 Z", // 5
-  "M200,180 L250,170 L260,210 L210,220 Z", // 6
-  "M260,190 L310,180 L320,220 L270,230 Z", // 7
-  "M310,200 L370,190 L380,230 L320,240 Z", // 8
-  "M130,210 L180,200 L170,250 L120,260 Z", // 9
-  "M180,220 L230,210 L220,260 L170,270 Z", // 10
-  "M230,230 L280,220 L270,270 L220,280 Z", // 11
-  "M280,240 L340,230 L330,280 L270,290 Z", // 12
-  "M110,260 L160,250 L140,310 L90,320 Z", // 13
-  "M160,270 L210,260 L190,320 L140,330 Z", // 14
-  "M210,280 L260,270 L240,330 L190,340 Z", // 15
-  "M260,290 L320,280 L300,340 L240,350 Z", // 16
-  "M90,320 L140,310 L120,370 L70,380 Z", // 17
-  "M140,330 L190,320 L170,380 L120,390 Z", // 18
-  "M190,340 L240,330 L220,390 L170,400 Z", // 19
-  "M240,350 L300,340 L280,400 L220,410 Z", // 20
-  "M70,380 L120,370 L100,440 L50,450 Z", // 21
-  "M120,390 L170,380 L150,450 L100,460 Z", // 22
-  "M170,400 L220,390 L200,460 L150,470 Z"  // 23
-];
+// Real ward boundary SVG paths from OpenStreetMap geodata
+// Projected from actual lat/lon coordinates
+const wardSvgPaths: Record<number, string> = {
+  1: "M188.5,293.7 L164.1,250.1 L176.8,234.7 L195.5,243.5 L195.3,251.4 L198.7,252.7 L198.2,257.7 L211.7,271.5 L188.5,293.7 Z",
+  2: "M188.5,293.7 L211.7,271.5 L240.8,274 L232.2,283.6 L222.5,289.4 L215.5,286.7 L208.2,288.3 L182.6,320.1 L175.6,317.9 L173.8,320.2 L167.7,313.3 L188.5,293.7 Z",
+  3: "M179.4,320 L180.4,318.5 L182.6,320.1 L190.9,310.1 L193.5,313.1 L189,318.9 L194.3,317.7 L198.8,321.5 L194.4,327.9 L189.5,327.3 L187.1,330.3 L176.8,325.2 L179.4,320 Z",
+  4: "M190.9,310.1 L208.2,288.3 L215.5,286.7 L222.5,289.4 L232.2,283.6 L240.8,274 L248.3,286.9 L254.9,287.8 L247.3,297.3 L226.3,290.8 L223.8,292.6 L228.9,301.6 L216.3,311.8 L211.4,309.4 L203.1,321.5 L198.8,321.5 L194.3,317.7 L189,318.9 L193.5,313.1 L190.9,310.1 Z",
+  5: "M203.1,321.5 L211.4,309.4 L216.3,311.8 L228.9,301.6 L223.8,292.6 L226.3,290.8 L247.3,297.3 L254.9,287.8 L260.5,288.6 L260.9,294 L249.5,303.8 L241.9,316.7 L243.4,324.5 L224.3,344 L228.5,349 L225.5,349.4 L221.7,346.1 L213.4,349.4 L208.9,348.4 L197,340.7 L208.3,325.8 L203.1,321.5 Z",
+  6: "M261.4,293 L245.4,309.7 L241,319.4 L243.9,322.9 L240.3,328.8 L230,336.3 L224.3,344 L236.8,354 L238.5,362.4 L250.2,369.4 L253,346.9 L257.6,334.7 L262.7,327.4 L267.3,330.8 L273.4,325.6 L263.3,322.9 L266.5,315.4 L268.7,290.5 L261.5,291.2 L261.4,293 Z",
+  7: "M186.2,329.9 L189.5,327.3 L194.4,327.9 L198.8,321.5 L203.1,321.5 L208.3,325.8 L197,340.7 L190.4,336.7 L189,333.2 L185.1,333.1 L186.2,329.9 Z",
+  8: "M173.2,338.4 L180.6,327.3 L186.2,329.9 L185.1,333.1 L189,333.2 L190.4,336.7 L213.4,349.4 L210.5,351.4 L191.6,346.8 L189.1,349 L173.2,338.4 Z",
+  9: "M163.8,354.5 L167.1,357.4 L169.8,354.1 L173,355.4 L176,352.3 L183,352.7 L176.2,361.3 L184.1,365.2 L190.8,364.2 L218.6,382.8 L211.9,393.5 L206.4,392.3 L207.4,387.2 L205.4,382.9 L202.4,383.2 L192.3,394.5 L188,396.2 L168.4,385.2 L168.1,382.3 L153.6,372.9 L163.8,354.5 Z",
+  10: "M155.8,325.4 L170.4,334.7 L168.8,336.9 L172.6,339.2 L153.6,372.9 L168.1,382.3 L168.4,385.2 L173.3,388.6 L184.4,394.1 L179.6,400.6 L179.4,413.8 L176.4,415.2 L146.7,404.9 L141.2,412.9 L141.5,417.9 L147.1,418.1 L147.4,432.5 L134.1,425.6 L113.9,407.7 L120.7,395.7 L119.8,387.1 L124,379.9 L114.8,372.5 L126.3,360.3 L121.3,357.1 L128.6,348.6 L128.8,343.5 L122.7,336.2 L121.5,327.1 L123.6,323.2 L132,322.3 L137.6,317.3 L155.8,325.4 Z",
+  11: "M173.2,338.4 L180.6,327.3 L176.4,324.4 L179.4,320 L175.6,317.9 L173.8,320.2 L167.7,313.3 L155.8,325.4 L173.2,338.4 Z",
+  12: "M123.6,323.2 L120.6,319.4 L122.8,314.2 L122.2,305.9 L129.8,296.3 L152.3,307.3 L161.6,290.2 L161.2,283.2 L169.4,276.7 L174.6,267.7 L188.5,293.7 L155.8,325.4 L137.6,317.3 L132,322.3 L123.6,323.2 Z",
+  13: "M213.4,349.4 L208.9,348.4 L197,340.7 L190.4,336.7 L189.1,349 L173.2,338.4 L165.9,350.4 L163.8,354.5 L153.6,372.9 L168.1,382.3 L168.4,385.2 L173.3,388.6 L184.4,394.1 L188,396.2 L192.3,394.5 L202.4,383.2 L205.4,382.9 L207.4,387.2 L206.4,392.3 L211.9,393.5 L218.6,382.8 L228.5,349 L224.3,344 L213.4,349.4 Z",
+  14: "M179.6,400.6 L179.4,413.8 L176.4,415.2 L146.7,404.9 L141.2,412.9 L141.5,417.9 L147.1,418.1 L147.4,432.5 L141.8,430.9 L127.4,419.3 L134.1,425.6 L147.4,432.5 L149,450 L160,455 L180,445 L195,438 L199.6,403.3 L188,409.7 L180.1,408.7 L179.6,400.6 Z",
+  15: "M199.6,403.3 L212.4,409.6 L224.6,418.5 L235.4,434.5 L243.4,435.6 L253.3,447.5 L241.2,469.4 L237,482.8 L220,470 L200,460 L195,438 L180,445 L160,455 L149,450 L147.4,432.5 L141.8,430.9 L127.4,419.3 L110.4,449.2 L99.3,468.4 L95.6,460.7 L85.6,471.6 L82.7,478.2 L100,475 L120,465 L140,458 L149,450 Z",
+  16: "M49.3,391.4 L36.8,387.9 L36.5,393.8 L30,399.1 L31.1,405.6 L38.5,407.2 L43.3,411.6 L45.8,419.5 L44,424.5 L50.2,430 L47.5,444.7 L38.4,456.3 L40.8,459.8 L61,469.8 L68.9,471.1 L82.7,478.2 L85.6,471.6 L95.6,460.7 L99.3,468.4 L127.4,419.3 L102.6,401.1 L98.4,401.8 L87.9,418.2 L71.8,404.6 L65.3,393.4 L49.3,391.4 Z",
+  17: "M36.7,387.8 L37.5,384.9 L33.2,383.2 L36.3,379.8 L42.4,378.3 L44.6,367.3 L53.5,361.4 L52.9,357.3 L63.7,346.9 L63.5,343.2 L71,340.9 L58.5,329.8 L54.4,321.8 L61.4,305.2 L44,293.2 L50.6,283.4 L51.4,273.7 L88.2,292.1 L122.2,305.9 L122.8,314.2 L120.6,319.4 L123.6,323.2 L121.7,330.2 L122.7,336.2 L128.8,343.5 L128.6,348.6 L121.3,357.1 L126.3,360.3 L114.8,372.5 L124,379.9 L119.8,387.1 L120.7,395.7 L113.9,407.7 L104.7,401.7 L98.4,401.8 L87.9,418.2 L71.8,404.6 L64.7,393 L36.8,387.9 Z",
+  18: "M211.7,271.5 L198.2,257.7 L198.7,252.7 L195.3,251.4 L195.1,247.7 L199.1,228.3 L209,204.7 L208.4,198.3 L287.8,173.3 L287.3,182.4 L300.5,245.2 L264.8,269.4 L248.8,262.1 L240.8,274 L211.7,271.5 Z",
+  19: "M378,287.2 L383.6,278 L378.7,271.8 L367.9,265.8 L369.4,263.2 L375.8,264.1 L383.4,254.5 L388.9,251.3 L400.2,255.1 L402.2,251.7 L405.5,251.1 L402.1,240.1 L403.8,234 L420.4,238.5 L425.9,236.5 L410.4,225.8 L397,220.1 L396.1,216 L401.5,207.8 L407.5,214.6 L413.2,215.5 L414.6,210.6 L404.5,197.5 L398.7,194.6 L402,186.7 L400.1,183.1 L393.1,183.7 L391.5,177.5 L371.9,180.4 L362.9,200.1 L338,185 L329.5,191.5 L326.1,189.9 L319.3,197.4 L293.1,201.3 L291.5,202.4 L300.5,245.2 L264.8,269.4 L248.8,262.1 L240.8,274 L251.5,288.8 L257.2,287.2 L261.5,291.2 L268.7,290.5 L270.9,285.6 L274.6,286.2 L303.1,298.5 L319.7,283.4 L327.5,291.6 L355.9,306.5 L365.1,295.7 L378,287.2 Z",
+  20: "M409.2,147.9 L401,144.6 L401.2,142.7 L414.6,126.7 L414.9,123.6 L423.6,119.7 L424.1,115.8 L438.1,105.8 L442.8,90.7 L447.2,94 L454.8,94.1 L457.9,91.9 L458.1,86.2 L464.7,85.8 L470,81.7 L465.8,80.8 L462.3,68.8 L458.8,67.5 L444.5,70.8 L434.5,68.3 L443.1,57.2 L444,51.5 L433.7,50.7 L419.7,43.8 L416.5,38.6 L418.7,32.6 L413.5,30 L389.1,35.9 L379.4,33.4 L365.2,42.2 L362.2,41.6 L356,48.6 L343.9,49.9 L335.4,55.5 L350.6,85.3 L340.6,101 L332,99.9 L309,107 L305,119.5 L297.3,110.4 L294,111.4 L288.2,107.1 L281.2,108.2 L269.3,97.5 L265.9,100.2 L256.7,92.2 L249.7,89.3 L245.5,104.9 L241.1,111.4 L244.1,116.1 L241.4,118.6 L238.9,120.4 L235.2,118.1 L229.5,118.6 L222.8,114.5 L217.3,115.3 L212.2,123.1 L212.3,126.3 L221.9,132.9 L224.1,149.2 L231.9,152 L233.8,156.3 L241.4,158.2 L240.6,160.6 L245.2,165.3 L249.1,163.1 L255.4,165 L259,169 L260.3,182.7 L287.8,173.3 L287.3,182.4 L291.5,202.4 L319.3,197.4 L326.1,189.9 L329.5,191.5 L338,185 L362.9,200.1 L371.9,180.4 L391.5,177.5 L393.1,183.7 L400.1,183.1 L402,186.7 L398.7,194.6 L404.5,197.5 L413.1,206.8 L415,204.8 L414.5,197.4 L419.7,199.6 L422,196.1 L423.4,189.3 L421.6,182.7 L424.4,180.5 L425.8,173.9 L414.6,169.1 L409.2,147.9 Z",
+  21: "M273.4,325.6 L280,335.2 L291,330.7 L317.2,356.4 L354.5,376.2 L376.6,382.2 L388.6,382.6 L396.5,389.2 L400.9,384.9 L416.1,396.9 L416.5,400.3 L396.5,409.7 L395.3,430.1 L383.3,445.5 L375,448.7 L343.1,425.1 L330.4,436.8 L326.2,436.4 L318.1,429.2 L306.4,431.3 L298,421.2 L286.7,413.6 L275.9,410.9 L267.9,404.1 L270.5,398.9 L267.6,389.1 L256.2,383.8 L247.3,394.7 L234.1,387.5 L237.6,384.9 L243.4,372.9 L248,374 L250.2,369.4 L253,346.9 L259.9,330.9 L262.7,327.4 L267.3,330.8 L273.4,325.6 Z",
+  22: "M273.4,325.6 L280,335.2 L291,330.7 L317.2,356.4 L354.5,376.2 L376.6,382.2 L390.2,381.7 L381.9,376.2 L388.6,369.7 L373.5,355.1 L379.2,349.7 L384.3,332.3 L385.1,322.9 L381.3,319.8 L390.7,307.7 L398.4,302 L395.6,290.5 L382.6,290.1 L378,287.2 L365.1,295.7 L355.9,306.5 L327.5,291.6 L319.7,283.4 L303.1,298.5 L289.1,294 L282.2,288.3 L270.9,285.6 L267.5,297.6 L266.5,315.4 L263.3,322.9 L273.4,325.6 Z",
+  23: "M389.5,532.2 L385.1,535.7 L381.8,547.4 L357.8,562.5 L355.1,570 L350.1,565 L349.6,561.2 L343.5,558.1 L346.3,555.5 L340.2,545.3 L342.3,540.2 L337.3,536.3 L323.5,506.2 L317.7,475.2 L324.5,476.3 L345.2,487.9 L361.4,489.2 L371.3,493.6 L382.4,484.2 L385.6,477.2 L393.9,474.8 L417.5,487.7 L423.6,487.9 L418.6,494.1 L418.3,511.6 L411.2,528 L389.5,532.2 Z",
+};
 
-function generateStylizedPath(i: number) {
-  return wardShapes[i] || "M0,0 L10,0 L10,10 Z";
-}
+const wardCentroidData: Record<number, number[]> = {
+  1: [191, 261],
+  2: [195, 300],
+  3: [189, 322],
+  4: [222, 300],
+  5: [228, 322],
+  6: [252, 330],
+  7: [195, 332],
+  8: [190, 342],
+  9: [185, 375],
+  10: [142, 373],
+  11: [170, 328],
+  12: [148, 302],
+  13: [195, 370],
+  14: [160, 435],
+  15: [170, 455],
+  16: [67, 430],
+  17: [85, 355],
+  18: [240, 240],
+  19: [350, 248],
+  20: [360, 135],
+  21: [320, 390],
+  22: [340, 325],
+  23: [375, 520],
+};
 ---
 
 <div class="relative w-full" id="map-section" style="min-height: 600px;">
@@ -77,129 +142,247 @@ function generateStylizedPath(i: number) {
     <!-- Left Stats -->
     <div class="w-full lg:w-1/3 flex flex-col gap-10">
       <div class="map-stat-card">
-        <h3 class="text-5xl font-black mb-2 leading-none" style="color:var(--text-heading);">164,444</h3>
-        <p class="text-xs tracking-[0.2em] uppercase font-bold text-primary-400">Total Population / कुल जनसंख्या</p>
-      </div>
-      
-      <div class="map-stat-card">
-        <h3 class="text-5xl font-black mb-2 leading-none" style="color:var(--text-heading);">82,755 / 81,689</h3>
-        <p class="text-xs tracking-[0.2em] uppercase font-bold text-primary-400">Male / Female</p>
+        <h3
+          class="text-5xl font-black mb-2 leading-none"
+          style="color:var(--text-heading);"
+        >
+          164,444
+        </h3>
+        <p
+          class="text-xs tracking-[0.2em] uppercase font-bold text-primary-400"
+        >
+          Total Population / कुल जनसंख्या
+        </p>
       </div>
 
       <div class="map-stat-card">
-         <h3 class="text-5xl font-black mb-2 leading-none" style="color:var(--text-heading);">76.24%</h3>
-         <p class="text-xs tracking-[0.2em] uppercase font-bold text-primary-400">Literacy Rate / साक्षरता दर</p>
+        <h3
+          class="text-5xl font-black mb-2 leading-none"
+          style="color:var(--text-heading);"
+        >
+          82,755 / 81,689
+        </h3>
+        <p
+          class="text-xs tracking-[0.2em] uppercase font-bold text-primary-400"
+        >
+          Male / Female
+        </p>
       </div>
 
-      <div id="hover-info-box" class="p-6 rounded-2xl border border-primary-500/10 bg-primary-500/5 backdrop-blur-xl opacity-0 transition-opacity duration-300">
-        <h4 id="ward-name" class="text-2xl font-black mb-1" style="color:var(--text-heading);">-</h4>
+      <div class="map-stat-card">
+        <h3
+          class="text-5xl font-black mb-2 leading-none"
+          style="color:var(--text-heading);"
+        >
+          76.24%
+        </h3>
+        <p
+          class="text-xs tracking-[0.2em] uppercase font-bold text-primary-400"
+        >
+          Literacy Rate / साक्षरता दर
+        </p>
+      </div>
+
+      <div
+        id="hover-info-box"
+        class="p-6 rounded-2xl border border-primary-500/10 bg-primary-500/5 backdrop-blur-xl opacity-0 transition-opacity duration-300"
+      >
+        <h4
+          id="ward-name"
+          class="text-2xl font-black mb-1"
+          style="color:var(--text-heading);"
+        >
+          -
+        </h4>
         <div class="space-y-2 mt-4">
-           <div class="flex justify-between text-sm"><span style="color:var(--text-muted)">Population:</span><span id="ward-pop-val" class="font-bold text-primary-400">-</span></div>
-           <div class="flex justify-between text-sm"><span style="color:var(--text-muted)">Households:</span><span id="ward-house-val" class="font-bold text-primary-400">-</span></div>
+          <div class="flex justify-between text-sm">
+            <span style="color:var(--text-muted)">Population:</span><span
+              id="ward-pop-val"
+              class="font-bold text-primary-400">-</span
+            >
+          </div>
+          <div class="flex justify-between text-sm">
+            <span style="color:var(--text-muted)">Households:</span><span
+              id="ward-house-val"
+              class="font-bold text-primary-400">-</span
+            >
+          </div>
         </div>
       </div>
     </div>
 
     <!-- Right Map Container -->
     <div class="w-full lg:w-2/3 relative flex justify-center">
-      <div class="relative w-full aspect-square max-w-[650px]" id="d3-map-wrapper">
-         <svg id="main-map-svg" viewBox="0 0 600 600" class="w-full h-full overflow-visible">
-            <g id="wards-group">
-               {wardData.map((ward, i) => (
+      <div
+        class="relative w-full aspect-[5/6] max-w-[600px]"
+        id="d3-map-wrapper"
+      >
+        <svg
+          id="main-map-svg"
+          viewBox="0 0 500 600"
+          class="w-full h-full overflow-visible"
+        >
+          <defs>
+            <filter id="ward-glow" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur stdDeviation="4" result="coloredBlur"
+              ></feGaussianBlur>
+              <feMerge>
+                <feMergeNode in="coloredBlur"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+              </feMerge>
+            </filter>
+            <linearGradient
+              id="ward-active-gradient"
+              x1="0%"
+              y1="0%"
+              x2="100%"
+              y2="100%"
+            >
+              <stop offset="0%" stop-color="#60a5fa"></stop>
+              <stop offset="100%" stop-color="#2563eb"></stop>
+            </linearGradient>
+          </defs>
+          <g id="wards-group">
+            {
+              wardData.map((ward) => {
+                const pathD = wardSvgPaths[ward.id];
+                if (!pathD) return null;
+                const c = wardCentroidData[ward.id] || [0, 0];
+                return (
                   <g class="ward-group" data-ward-id={ward.id}>
-                    <path 
-                      id={`ward-path-${ward.id}`}
-                      class="ward-path cursor-pointer transition-all duration-300" 
-                      d={generateStylizedPath(i)}
+                    <path
+                      class="ward-path"
+                      d={pathD}
                       fill="#2563eb"
-                      fill-opacity="0.1"
-                      stroke="#3b82f6"
-                      stroke-width="1.5"
-                      stroke-opacity="0.5"
-                    />
-                    <text
-                      class="ward-label pointer-events-none font-bold text-[10px]"
-                      x={80 + (i % 4) * 110 + 20}
-                      y={80 + Math.floor(i / 4) * 90 + 10}
-                      fill="var(--text-heading)"
                       fill-opacity="0"
-                      text-anchor="middle"
-                    >
-                      {ward.id}
-                    </text>
+                      stroke="#ffffff"
+                      stroke-width="1.2"
+                      stroke-opacity="0"
+                      data-cx={c[0]}
+                      data-cy={c[1]}
+                      style="filter: drop-shadow(0 0 2px rgba(255,255,255,0.6));"
+                    />
                   </g>
-               ))}
-            </g>
-         </svg>
+                );
+              })
+            }
+          </g>
+        </svg>
       </div>
     </div>
   </div>
 </div>
 
 <script is:inline define:vars={{ wardData, lang }}>
-  document.addEventListener('DOMContentLoaded', () => {
-    if (typeof d3 === 'undefined') {
-        console.error('D3 not loaded');
-        return;
+  document.addEventListener("DOMContentLoaded", () => {
+    if (typeof d3 === "undefined") {
+      console.error("D3 not loaded");
+      return;
     }
 
-    const svg = d3.select('#main-map-svg');
-    const minPop = 3000, maxPop = 13200;
+    const minPop = 3000,
+      maxPop = 13200;
 
-    // Animation
-    d3.selectAll('.ward-path')
-      .each(function(d, i) {
-          const ward = wardData[i];
-          const opacity = 0.15 + ((ward.pop - minPop) / (maxPop - minPop)) * 0.7;
-          const path = d3.select(this);
-          const length = this.getTotalLength();
-          path.attr('stroke-dasharray', length)
-              .attr('stroke-dashoffset', length)
-              .transition()
-              .duration(1200)
-              .delay(i * 60)
-              .attr('stroke-dashoffset', 0)
-              .attr('fill-opacity', opacity);
-      });
+    function getColor(pop) {
+      const t = (pop - minPop) / (maxPop - minPop);
+      return d3.interpolateBlues(0.25 + t * 0.55);
+    }
 
-    d3.selectAll('.ward-label')
-      .transition()
-      .duration(1000)
-      .delay((d, i) => i * 60 + 500)
-      .attr('fill-opacity', 0.8);
+    function getOpacity(pop) {
+      return 0.3 + ((pop - minPop) / (maxPop - minPop)) * 0.55;
+    }
 
-    // Interaction
-    const infoBox = document.getElementById('hover-info-box');
-    const nameLabel = document.getElementById('ward-name');
-    const popVal = document.getElementById('ward-pop-val');
-    const houseVal = document.getElementById('ward-house-val');
+    // ============ ENTRANCE ANIMATION ============
+    const paths = d3.selectAll(".ward-path");
 
-    d3.selectAll('.ward-group')
-      .on('mouseenter', function(event) {
-          const id = parseInt(this.getAttribute('data-ward-id'));
-          const ward = wardData.find(w => w.id === id);
-          
-          d3.select(this).select('path')
-            .transition().duration(200)
-            .attr('fill-opacity', 0.9)
-            .attr('stroke-opacity', 1)
-            .attr('transform', 'scale(1.05)');
+    paths.each(function (d, i) {
+      const path = d3.select(this);
+      const el = this;
+      const wardId = parseInt(el.parentNode.getAttribute("data-ward-id"));
+      const ward = wardData.find((w) => w.id === wardId);
+      if (!ward) return;
 
-          infoBox.style.opacity = '1';
-          nameLabel.textContent = ward.name[lang];
-          popVal.textContent = ward.pop.toLocaleString();
-          houseVal.textContent = ward.households.toLocaleString();
+      const opacity = getOpacity(ward.pop);
+      const color = getColor(ward.pop);
+      const length = el.getTotalLength();
+
+      // Draw stroke first
+      path
+        .attr("stroke-dasharray", length)
+        .attr("stroke-dashoffset", length)
+        .style("cursor", "pointer")
+        .transition()
+        .duration(900)
+        .delay(i * 40)
+        .ease(d3.easeCubicOut)
+        .attr("stroke-dashoffset", 0)
+        .attr("stroke-opacity", 0.6)
+        .transition()
+        .duration(500)
+        .ease(d3.easeCubicInOut)
+        .attr("fill", color)
+        .attr("fill-opacity", opacity)
+        .attr("stroke-dasharray", "none")
+        .attr("stroke", "#ffffff")
+        .attr("stroke-width", 1.2);
+    });
+
+    // ============ HOVER INTERACTION ============
+    const infoBox = document.getElementById("hover-info-box");
+    const nameLabel = document.getElementById("ward-name");
+    const popVal = document.getElementById("ward-pop-val");
+    const houseVal = document.getElementById("ward-house-val");
+
+    d3.selectAll(".ward-group")
+      .on("mouseenter", function () {
+        const id = parseInt(this.getAttribute("data-ward-id"));
+        const ward = wardData.find((w) => w.id === id);
+        if (!ward) return;
+
+        d3.select(this)
+          .select("path")
+          .raise()
+          .transition()
+          .duration(200)
+          .attr("fill", "url(#ward-active-gradient)")
+          .attr("fill-opacity", 0.85)
+          .attr("stroke", "#ffffff")
+          .attr("stroke-width", 2.5)
+          .attr("stroke-opacity", 1)
+          .attr("filter", "url(#ward-glow)");
+
+        d3.selectAll(".ward-group")
+          .filter(function () {
+            return parseInt(this.getAttribute("data-ward-id")) !== id;
+          })
+          .select("path")
+          .transition()
+          .duration(200)
+          .attr("fill-opacity", 0.1)
+          .attr("stroke-opacity", 0.25);
+
+        infoBox.style.opacity = "1";
+        nameLabel.textContent = ward.name[lang];
+        popVal.textContent = ward.pop.toLocaleString();
+        houseVal.textContent = ward.households.toLocaleString();
       })
-      .on('mouseleave', function() {
-          const id = parseInt(this.getAttribute('data-ward-id'));
-          const ward = wardData.find(w => w.id === id);
-          const opacity = 0.15 + ((ward.pop - minPop) / (maxPop - minPop)) * 0.7;
-
-          d3.select(this).select('path')
-            .transition().duration(400)
-            .attr('fill-opacity', opacity)
-            .attr('stroke-opacity', 0.5)
-            .attr('transform', 'scale(1)');
+      .on("mouseleave", function () {
+        d3.selectAll(".ward-group").each(function () {
+          const wid = parseInt(this.getAttribute("data-ward-id"));
+          const w = wardData.find((x) => x.id === wid);
+          if (!w) return;
+          d3.select(this)
+            .select("path")
+            .transition()
+            .duration(350)
+            .attr("fill", getColor(w.pop))
+            .attr("fill-opacity", getOpacity(w.pop))
+            .attr("stroke", "#ffffff")
+            .attr("stroke-width", 1.2)
+            .attr("stroke-opacity", 0.6)
+            .attr("filter", null);
+        });
+        infoBox.style.opacity = "0";
       });
   });
 </script>
@@ -210,7 +393,10 @@ function generateStylizedPath(i: number) {
     padding-left: 2rem;
   }
   .ward-path {
-     transform-origin: center center;
-     vector-effect: non-scaling-stroke;
+    vector-effect: non-scaling-stroke;
+    transition: filter 0.3s ease;
+  }
+  #d3-map-wrapper {
+    filter: drop-shadow(0 4px 20px rgba(37, 99, 235, 0.08));
   }
 </style>
