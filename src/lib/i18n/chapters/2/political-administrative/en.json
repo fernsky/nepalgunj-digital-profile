@@ -31,12 +31,14 @@
     },
     {
       "type": "image",
-      "src": "/2/map 1.png",
+      "src": "/2/map1.png",
       "alt": "Map No. 1: Administrative Division Map",
       "caption": "Map No. 1: Administrative Division Map"
     },
     {
       "type": "image",
+      "src": "/2/map2.png",
+      "alt": "Map No. 2: Ward Division Map",
       "caption": "Map No. 2: Ward Division Map"
     }
   ]

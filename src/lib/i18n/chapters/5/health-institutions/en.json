@@ -5,10 +5,14 @@
   "blocks": [
     {
       "type": "image",
+      "src": "/5/swasthya_tatha_posharn.png",
+      "alt": "Bheri Hospital",
       "caption": "Bheri Hospital"
     },
     {
       "type": "image",
+      "src": "/5/map2.png",
+      "alt": "Map No. 8: Health Map of Sub-Metropolitan City",
       "caption": "Map No. 8: Health Map of Sub-Metropolitan City"
     },
     {

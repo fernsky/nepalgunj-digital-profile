@@ -34,7 +34,8 @@
     },
     {
       "type": "image",
-      "url": "image-placeholder",
+      "src": "/5/map3.png",
+      "alt": "Map No. 9: Peace Area Map of Sub-Metropolitan City",
       "caption": "Map No. 9: Peace Area Map of Sub-Metropolitan City"
     }
   ]
