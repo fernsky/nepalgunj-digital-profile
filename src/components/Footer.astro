@@ -8,104 +8,94 @@ interface Props {
 const { lang } = Astro.props;
 
 const currentYear = new Date().getFullYear();
+// Approx Nepali year conversion
+const nepaliYear = lang === 'ne' ? '२०८१' : '2024';
 ---
 
-<footer class="py-16 border-t mt-20" style="background: var(--nav-bg); color: var(--text-body); border-color: var(--border);">
-  <div class="max-w-7xl mx-auto px-6 lg:px-14">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-      <!-- Section 1: Logo & Name -->
-      <div class="col-span-1 lg:col-span-1">
-        <h2 class="text-xl font-bold mb-3" style="color:var(--text-heading);">
-          {lang === 'ne' ? 'नेपालगंज उप-महानगरपालिका' : 'Nepalgunj Sub-Metropolitan City'}
-        </h2>
-        <p class="text-sm border-l-2 border-primary-600 pl-4 py-2" style="color:var(--text-muted);">
+<footer class="py-8 md:py-12 mt-10" style="background: var(--bg-page); color: var(--text-body); border-top: 1px solid var(--border);">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-14">
+    <!-- Header Section: Municipality Name & Address -->
+    <div class="mb-8">
+      <h2 class="text-xl md:text-2xl font-serif font-bold mb-2" style="color:var(--text-heading);">
+        {lang === 'ne' ? 'नेपालगंज उप-महानगरपालिका' : 'Nepalgunj Sub-Metropolitan City'}
+      </h2>
+      <div class="text-sm md:text-base leading-relaxed" style="color:var(--text-muted); font-family: var(--font-serif);">
+        <p>{lang === 'ne' ? 'नगर कार्यपालिकाको कार्यालय' : 'Office of the Municipal Executive'}</p>
+        <p>
           {lang === 'ne' 
-            ? 'नगर कार्यपालिकाको कार्यालय\nनेपालगंज, बाँके, लुम्बिनी प्रदेश, नेपाल' 
-            : 'Office of the Municipal Executive\nNepalgunj, Banke, Lumbini Province, Nepal'}
+            ? 'नेपालगंज, बाँके, लुम्बिनी प्रदेश, नेपाल' 
+            : 'Nepalgunj, Banke, Lumbini Province, Nepal'}
         </p>
-      </div>
-
-      <!-- Section 2: Contact -->
-      <div>
-        <h3 class="text-lg font-bold mb-6 border-b pb-2" style="color:var(--text-heading); border-color:var(--border);">
-           {lang === 'ne' ? 'सम्पर्क' : 'Contact'}
-        </h3>
-        <ul class="space-y-4 text-sm">
-          <li class="flex justify-between">
-            <span style="color:var(--text-muted)">{lang === 'ne' ? 'फोन नं' : 'Phone'}:</span>
-            <span style="color:var(--text-heading)">०८१-५२०२९६, २०७</span>
-          </li>
-          <li class="flex justify-between">
-            <span style="color:var(--text-muted)">{lang === 'ne' ? 'फ्याक्स नं' : 'Fax'}:</span>
-            <span style="color:var(--text-heading)">०८१-५२०२४७</span>
-          </li>
-          <li class="flex flex-col gap-1">
-            <span style="color:var(--text-muted)">{lang === 'ne' ? 'इमेल' : 'Email'}:</span>
-            <span style="color:var(--text-heading)">info@nepalgunjmun.gov.np</span>
-            <span style="color:var(--text-heading)">nepalgunj.submetro@gmail.com</span>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Section 3: Links -->
-      <div class="lg:ml-auto">
-        <h3 class="text-lg font-bold mb-6 border-b pb-2" style="color:var(--text-heading); border-color:var(--border);">
-           {lang === 'ne' ? 'महत्वपूर्ण लिङ्कहरू' : 'Important Links'}
-        </h3>
-        <ul class="space-y-3 text-sm">
-          <li>
-            <a href="https://mofaga.gov.np" target="_blank" class="hover:text-primary-400 border-b border-transparent hover:border-primary-400 no-underline transition-all">
-               {lang === 'ne' ? 'सङ्घीय मामिला तथा सामान्य प्रशासन मन्त्रालय' : 'Ministry of Federal Affairs'}
-            </a>
-          </li>
-          <li>
-            <a href="https://censusnepal.gov.np" target="_blank" class="hover:text-primary-400 border-b border-transparent hover:border-primary-400 no-underline transition-all">
-               {lang === 'ne' ? 'राष्ट्रिय जनगणनाको नतिजा' : 'National Census Results'}
-            </a>
-          </li>
-          <li>
-            <a href="https://nepalgunjmun.gov.np" target="_blank" class="hover:text-primary-400 border-b border-transparent hover:border-primary-400 no-underline transition-all">
-               {lang === 'ne' ? 'नगरपालिकाको आधिकारिक वेबसाइट' : 'Official Municipality Website'}
-            </a>
-          </li>
-        </ul>
       </div>
     </div>
 
-    <!-- Bottom Footer -->
-    <div class="mt-20 pt-8 border-t flex flex-col md:flex-row justify-between items-center gap-4 text-xs" style="color:var(--text-muted); border-color:var(--border);">
-      <p>© {currentYear} {lang === 'ne' ? 'नेपालगंज उप-महानगरपालिका। सर्वाधिकार सुरक्षित।' : 'Nepalgunj Sub-Metropolitan City. All Rights Reserved.'}</p>
-      <p>Digital Profile | Digital Governance Initiative</p>
+    <!-- Middle Section: Contact & Links Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-10">
+      <!-- Contact Column -->
+      <div>
+        <h3 class="text-lg font-serif font-bold mb-3" style="color:var(--text-heading);">
+           {lang === 'ne' ? 'सम्पर्क' : 'Contact'}
+        </h3>
+        <div class="space-y-2 text-sm md:text-base">
+          <div class="flex items-start">
+            <span class="w-24 md:w-48 shrink-0 font-medium" style="color:var(--text-muted)">{lang === 'ne' ? 'फोन नं' : 'Phone'}:</span>
+            <span style="color:var(--text-heading)">०८१-५२०२९६, २०७</span>
+          </div>
+          <div class="flex items-start">
+            <span class="w-24 md:w-48 shrink-0 font-medium" style="color:var(--text-muted)">{lang === 'ne' ? 'फ्याक्स नं' : 'Fax'}:</span>
+            <span style="color:var(--text-heading)">०८१-५२०२४७</span>
+          </div>
+          <div class="flex items-start">
+            <span class="w-24 md:w-48 shrink-0 font-medium" style="color:var(--text-muted)">{lang === 'ne' ? 'इमेल' : 'Email'}:</span>
+            <div class="flex flex-col gap-1">
+              <span style="color:var(--text-heading)">info@nepalgunjmun.gov.np</span>
+              <span style="color:var(--text-heading)">nepalgunj.submetro@gmail.com</span>
+            </div>
+          </div>
+          <div class="flex items-start">
+            <span class="w-24 md:w-48 shrink-0 font-medium" style="color:var(--text-muted)">{lang === 'ne' ? 'अडियो नोटिस बोर्ड नम्बर' : 'Audio Notice Board'}:</span>
+            <span style="color:var(--text-heading)">१६१८०८१५२०२९६</span>
+          </div>
+          <div class="flex items-start">
+            <span class="w-24 md:w-48 shrink-0 font-medium" style="color:var(--text-muted)">{lang === 'ne' ? 'वेबसाइट' : 'Website'}:</span>
+            <a href="https://nepalgunjmun.gov.np" target="_blank" class="no-underline hover:underline underline-offset-4" style="color:var(--text-heading)">nepalgunjmun.gov.np</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Links Column -->
+      <div class="lg:text-right">
+        <div class="inline-block text-left">
+          <h3 class="text-lg font-serif font-bold mb-3" style="color:var(--text-heading);">
+             {lang === 'ne' ? 'महत्वपूर्ण लिङ्कहरू' : 'Important Links'}
+          </h3>
+          <ul class="space-y-2 text-sm md:text-base">
+            <li>
+              <a href="https://mofaga.gov.np" target="_blank" class="no-underline hover:underline underline-offset-4 transition-all" style="color:var(--text-body);">
+                 {lang === 'ne' ? 'सङ्घीय मामिला तथा सामान्य प्रशासन मन्त्रालय' : 'Ministry of Federal Affairs'}
+              </a>
+            </li>
+            <li>
+              <a href="https://censusnepal.gov.np" target="_blank" class="no-underline hover:underline underline-offset-4 transition-all" style="color:var(--text-body);">
+                 {lang === 'ne' ? 'राष्ट्रिय जनगणनाको नतिजा' : 'National Census Results'}
+              </a>
+            </li>
+            <li>
+              <a href="https://nepalgunjmun.gov.np" target="_blank" class="no-underline hover:underline underline-offset-4 transition-all" style="color:var(--text-body);">
+                 {lang === 'ne' ? 'नगरपालिकाको आधिकारिक वेबसाइट' : 'Official Municipality Website'}
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Separator Line -->
+    <div class="w-full h-px mb-6" style="background: var(--card-border);"></div>
+
+    <!-- Bottom Copyright -->
+    <div class="flex flex-col md:flex-row justify-between items-center gap-6 text-xs md:text-sm" style="color:var(--text-muted);">
+      <p>© {nepaliYear} {lang === 'ne' ? 'नेपालगंज उप-महानगरपालिका। सर्वाधिकार सुरक्षित।' : 'Nepalgunj Sub-Metropolitan City. All Rights Reserved.'}</p>
     </div>
   </div>
 </footer>
-
-<!-- Go-To Top Button -->
-<button 
-  id="go-top-btn"
-  class="fixed bottom-8 right-8 w-12 h-12 rounded-lg bg-primary-600/20 border border-primary-500/20 backdrop-blur-xl flex items-center justify-center text-white hover:bg-primary-600 hover:scale-110 transition-all duration-300 opacity-0 invisible translate-y-4"
-  aria-label="Go to top"
->
-  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 15l7-7 7 7" />
-  </svg>
-</button>
-
-<script is:inline>
-  const goTopBtn = document.getElementById('go-top-btn');
-  
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 500) {
-      goTopBtn.classList.remove('opacity-0', 'invisible', 'translate-y-4');
-    } else {
-      goTopBtn.classList.add('opacity-0', 'invisible', 'translate-y-4');
-    }
-  });
-
-  goTopBtn.addEventListener('click', () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  });
-</script>

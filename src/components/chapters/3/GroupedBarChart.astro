@@ -1,5 +1,7 @@
 ---
 import InteractiveChart from "../../InteractiveChart.astro";
+import { type Lang } from "../../../i18n/translations";
+
 interface Props {
     content: {
         caption?: string;
@@ -7,9 +9,10 @@ interface Props {
         colors?: string[];
         id?: string;
     };
+    lang?: Lang;
 }
 
-const { content } = Astro.props;
+const { content, lang = "ne" } = Astro.props;
 const barChartData = content?.barChartData ?? [];
 const caption = content?.caption ?? "";
 const colors = content?.colors ?? ["#0ea5e9", "#f43f5e", "#10b981", "#f59e0b", "#8b5cf6"];
@@ -26,4 +29,5 @@ const chartId = content?.id ?? "grouped-bar-chart-" + Math.random().toString(36)
     title: caption
   }}
   id={chartId}
+  lang={lang}
 />

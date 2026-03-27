@@ -5,9 +5,10 @@ interface Props {
         caption?: string;
         barChartData?: any[];
     };
+    lang?: any;
 }
 
-const { content } = Astro.props;
+const { content, lang = "ne" } = Astro.props;
 const barChartData = content?.barChartData ?? [];
 const caption = content?.caption ?? "Population by Religion";
 ---
@@ -22,4 +23,5 @@ const caption = content?.caption ?? "Population by Religion";
     colors: ["#3b82f6", "#f43f5e"]
   }}
   id="population-religion"
+  lang={lang}
 />
