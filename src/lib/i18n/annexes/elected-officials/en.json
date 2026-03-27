@@ -6,41 +6,176 @@
     {
       "type": "table",
       "data": {
-        "headers": ["S.N.", "Name", "Post", "Municipality/Ward No."],
+        "headers": [
+          "S.N.",
+          "Name",
+          "Post",
+          "Municipality/Ward No."
+        ],
         "rows": [
-          ["1", "Prashant Bisht", "Mayor", "Sub-Metropolitan City"],
-          ["2", "Kamaruddin Rai", "Deputy Mayor", "Sub-Metropolitan City"]
+          [
+            "1",
+            "Prashant Bisht",
+            "Mayor",
+            "Sub-Metropolitan City"
+          ],
+          [
+            "2",
+            "Kamaruddin Rai",
+            "Deputy Mayor",
+            "Sub-Metropolitan City"
+          ]
         ]
       }
     },
     {
       "type": "table",
       "data": {
-        "headers": ["S.N.", "Name", "Post", "Ward No."],
+        "headers": [
+          "S.N.",
+          "Name",
+          "Post",
+          "Ward No."
+        ],
         "rows": [
-          ["1", "Pramod Rijal", "Ward Chairperson", "1"],
-          ["2", "Manoj Kumar Shrestha", "Ward Chairperson", "2"],
-          ["3", "Mohammad Ayub Siddiqui", "Ward Chairperson", "3"],
-          ["4", "Gopal Pun", "Ward Chairperson", "4"],
-          ["5", "Sharafat Hussain Sheikh", "Ward Chairperson", "5"],
-          ["6", "Samir Pratap Singh", "Ward Chairperson", "6"],
-          ["7", "Prashant Shrestha", "Ward Chairperson", "7"],
-          ["8", "Rajnish Vajpayee", "Ward Chairperson", "8"],
-          ["9", "Govind Prasad Regmi", "Ward Chairperson", "9"],
-          ["10", "Shrawan Kumar Shrestha", "Ward Chairperson", "10"],
-          ["11", "Nand Kishore Kashyam (Kahar)", "Ward Chairperson", "11"],
-          ["12", "Tarun Kumar Bancharya", "Ward Chairperson", "12"],
-          ["13", "Suresh Singh Thakur", "Ward Chairperson", "13"],
-          ["14", "Majhar Ali Sai", "Ward Chairperson", "14"],
-          ["15", "Madan Bikam Shah", "Ward Chairperson", "15"],
-          ["16", "Kalim Ahmad Jolah", "Ward Chairperson", "16"],
-          ["17", "Laxman Prasad Verma", "Ward Chairperson", "17"],
-          ["18", "Dipak Kumar Verma", "Ward Chairperson", "18"],
-          ["19", "Paras Ram Kurmi", "Ward Chairperson", "19"],
-          ["20", "Kaushal Kumar Dhobi", "Ward Chairperson", "20"],
-          ["21", "Raj Kumar Sahu Teli", "Ward Chairperson", "21"],
-          ["22", "Abdul Gaffar Halwai", "Ward Chairperson", "22"],
-          ["23", "Jabar Ali Behna", "Ward Chairperson", "23"]
+          [
+            "1",
+            "Pramod Rijal",
+            "Ward Chairperson",
+            "1"
+          ],
+          [
+            "2",
+            "Manoj Kumar Shrestha",
+            "Ward Chairperson",
+            "2"
+          ],
+          [
+            "3",
+            "Mohammad Ayub Siddiqui",
+            "Ward Chairperson",
+            "3"
+          ],
+          [
+            "4",
+            "Gopal Pun",
+            "Ward Chairperson",
+            "4"
+          ],
+          [
+            "5",
+            "Sharafat Hussain Sheikh",
+            "Ward Chairperson",
+            "5"
+          ],
+          [
+            "6",
+            "Samir Pratap Singh",
+            "Ward Chairperson",
+            "6"
+          ],
+          [
+            "7",
+            "Prashant Shrestha",
+            "Ward Chairperson",
+            "7"
+          ],
+          [
+            "8",
+            "Rajnish Vajpayee",
+            "Ward Chairperson",
+            "8"
+          ],
+          [
+            "9",
+            "Govind Prasad Regmi",
+            "Ward Chairperson",
+            "9"
+          ],
+          [
+            "10",
+            "Shrawan Kumar Shrestha",
+            "Ward Chairperson",
+            "10"
+          ],
+          [
+            "11",
+            "Nand Kishore Kashyam (Kahar)",
+            "Ward Chairperson",
+            "11"
+          ],
+          [
+            "12",
+            "Tarun Kumar Bancharya",
+            "Ward Chairperson",
+            "12"
+          ],
+          [
+            "13",
+            "Suresh Singh Thakur",
+            "Ward Chairperson",
+            "13"
+          ],
+          [
+            "14",
+            "Majhar Ali Sai",
+            "Ward Chairperson",
+            "14"
+          ],
+          [
+            "15",
+            "Madan Bikam Shah",
+            "Ward Chairperson",
+            "15"
+          ],
+          [
+            "16",
+            "Kalim Ahmad Jolah",
+            "Ward Chairperson",
+            "16"
+          ],
+          [
+            "17",
+            "Laxman Prasad Verma",
+            "Ward Chairperson",
+            "17"
+          ],
+          [
+            "18",
+            "Dipak Kumar Verma",
+            "Ward Chairperson",
+            "18"
+          ],
+          [
+            "19",
+            "Paras Ram Kurmi",
+            "Ward Chairperson",
+            "19"
+          ],
+          [
+            "20",
+            "Kaushal Kumar Dhobi",
+            "Ward Chairperson",
+            "20"
+          ],
+          [
+            "21",
+            "Raj Kumar Sahu Teli",
+            "Ward Chairperson",
+            "21"
+          ],
+          [
+            "22",
+            "Abdul Gaffar Halwai",
+            "Ward Chairperson",
+            "22"
+          ],
+          [
+            "23",
+            "Jabar Ali Behna",
+            "Ward Chairperson",
+            "23"
+          ]
         ],
         "source": "Source: Office of the Municipal Executive"
       }

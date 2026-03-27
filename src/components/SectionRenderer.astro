@@ -162,6 +162,7 @@ if (content?.type === "multi-block" && content.blocks) {
                          data={block.chart?.data || block.data} 
                          config={block.chart?.config || block.config} 
                          id={`${id}-${idx}`} 
+                         lang={lang}
                        />
                     ) : (
                       <div class="d3-chart-wrapper" data-chart={JSON.stringify(block.chart || block.data)}>
@@ -180,7 +181,7 @@ if (content?.type === "multi-block" && content.blocks) {
                     {(() => {
                       const Component = loadedComponents[`${block.chapter}-${block.name}`];
                       if (Component) {
-                        return <Component content={block.data || content} />;
+                        return <Component content={block.data || content} lang={lang} />;
                       }
                       return (
                         <div class="p-4 rounded-xl border border-dashed border-primary-500/30 bg-primary-500/5">

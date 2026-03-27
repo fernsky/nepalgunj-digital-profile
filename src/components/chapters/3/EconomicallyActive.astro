@@ -5,9 +5,10 @@ interface Props {
         caption?: string;
         pieChartData?: any[];
     };
+    lang?: any;
 }
 
-const { content } = Astro.props;
+const { content, lang = "ne" } = Astro.props;
 // Use population for the actual pie slices, 'value' is just the percentage
 const pieChartData = (content?.pieChartData ?? []).map(d => ({
     ...d,
@@ -25,4 +26,5 @@ const caption = content?.caption ?? "Economically Active Population";
     title: caption
   }}
   id="economically-active"
+  lang={lang}
 />

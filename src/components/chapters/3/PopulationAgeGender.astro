@@ -1,13 +1,17 @@
 ---
+import { type Lang } from "../../../i18n/translations";
+
 interface Props {
     content: {
         title: string;
         pyramidData?: any[];
     };
+    lang?: Lang;
 }
 
-const { content } = Astro.props;
+const { content, lang = "ne" } = Astro.props;
 const pyramidData = content?.pyramidData ?? [];
+const title = content?.title ?? "";
 ---
 
 <div class="w-full">
@@ -20,12 +24,13 @@ const pyramidData = content?.pyramidData ?? [];
             class="text-xl font-bold mb-6 text-center"
             style="color:var(--text-heading);"
         >
-            {content.title}
+            {title}
         </h3>
         <div
             id="population-pyramid"
             class="w-full h-[500px] flex justify-center items-center"
             data-chart={JSON.stringify(pyramidData)}
+            data-lang={lang}
         >
         </div>
     </div>
@@ -34,9 +39,37 @@ const pyramidData = content?.pyramidData ?? [];
 <script>
     import * as d3 from "d3";
 
+    function toNepaliDigits(num: any): string {
+        if (num === null || num === undefined) return String(num);
+        const str = num.toString();
+        const nepaliDigits = ["०", "१", "२", "३", "४", "५", "६", "७", "८", "९"];
+        return str.replace(/\d/g, (digit: string) => nepaliDigits[parseInt(digit)]);
+    }
+
+    function translateLabel(label: string, lang: string): string {
+        if (lang === "en" || !label) return String(label);
+        const translations: Record<string, string> = {
+            "Male": "पुरुष",
+            "Female": "महिला",
+            "Age": "उमेर",
+            "Total": "जम्मा"
+        };
+        return translations[String(label)] || String(label);
+    }
+
+    function formatNumber(num: number, lang: string): string {
+        if (lang === "ne") {
+            return toNepaliDigits(num.toLocaleString());
+        }
+        return num.toLocaleString();
+    }
+
     function renderChart() {
         const container = document.getElementById("population-pyramid");
         if (!container) return;
+
+        // Read lang from data attribute
+        const lang = container.getAttribute("data-lang") || document.documentElement.lang || "ne";
 
         container.innerHTML = "";
         const dataString = container.getAttribute("data-chart");
@@ -47,16 +80,15 @@ const pyramidData = content?.pyramidData ?? [];
         const width = container.clientWidth || 800;
         const height = isMobile ? 400 : 450;
         const margin = { 
-          top: 30, 
-          right: isMobile ? 10 : 30, 
-          bottom: 40, 
-          left: isMobile ? 10 : 30 
+            top: 30, 
+            right: isMobile ? 10 : 30, 
+            bottom: 40, 
+            left: isMobile ? 10 : 30 
         };
         const center = width / 2;
         const centerGap = isMobile ? 25 : 40;
 
-        const maxVal =
-            d3.max(data, (d: any) => Math.max(d.male, d.female)) || 1000;
+        const maxVal = d3.max(data, (d: any) => Math.max(d.male, d.female)) || 1000;
         const xMax = Math.ceil(Number(maxVal) / 100) * 100;
 
         // Cleanup old tooltips if present
@@ -65,196 +97,87 @@ const pyramidData = content?.pyramidData ?? [];
         const tooltip = d3
             .select("body")
             .append("div")
-            .attr(
-                "class",
-                "pyramid-tooltip absolute hidden bg-gray-900 border border-gray-700 text-white p-3 rounded-lg shadow-xl shadow-black/50 z-50 text-sm pointer-events-none transform -translate-x-1/2 -translate-y-full mt-[-10px]"
-            )
+            .attr("class", "pyramid-tooltip absolute hidden bg-gray-900 border border-gray-700 text-white p-3 rounded-lg shadow-xl shadow-black/50 z-50 text-sm pointer-events-none transform -translate-x-1/2 -translate-y-full mt-[-10px]")
             .style("opacity", 0);
 
-        const xScaleMale = d3
-            .scaleLinear()
-            .domain([0, xMax])
-            .range([center - centerGap, margin.left]);
+        const xScaleMale = d3.scaleLinear().domain([0, xMax]).range([center - centerGap, margin.left]);
+        const xScaleFemale = d3.scaleLinear().domain([0, xMax]).range([center + centerGap, width - margin.right]);
+        const yScale = d3.scaleBand().domain(data.map((d: any) => d.age)).range([height - margin.bottom, margin.top]).padding(0.2);
 
-        const xScaleFemale = d3
-            .scaleLinear()
-            .domain([0, xMax])
-            .range([center + centerGap, width - margin.right]);
-
-        const yScale = d3
-            .scaleBand()
-            .domain(data.map((d: any) => d.age))
-            .range([height - margin.bottom, margin.top])
-            .padding(0.2);
-
-        const svg = d3
-            .select(container)
-            .append("svg")
-            .attr("width", width)
-            .attr("height", height)
+        const svg = d3.select(container).append("svg")
+            .attr("width", width).attr("height", height)
             .attr("viewBox", `0 0 ${width} ${height}`)
             .attr("style", "max-width: 100%; height: auto;");
 
         const colorMale = "#1e3a8a";
         const colorFemale = "#60a5fa";
 
-        const xAxisMale = d3.axisBottom(xScaleMale).ticks(5);
-        const xAxisFemale = d3.axisBottom(xScaleFemale).ticks(5);
+        const xAxisMale = d3.axisBottom(xScaleMale).ticks(5).tickFormat((d: any) => lang === "ne" ? toNepaliDigits(d) : String(d));
+        const xAxisFemale = d3.axisBottom(xScaleFemale).ticks(5).tickFormat((d: any) => lang === "ne" ? toNepaliDigits(d) : String(d));
 
         const isLight = document.documentElement.classList.contains("light");
         const tickColor = isLight ? "#555555" : "#a1a1aa";
 
-        svg.append("g")
-            .attr("transform", `translate(0,${height - margin.bottom})`)
-            .call(xAxisMale)
+        svg.append("g").attr("transform", `translate(0,${height - margin.bottom})`).call(xAxisMale)
             .call((g) => g.select(".domain").remove())
-            .call((g) =>
-                g
-                    .selectAll(".tick line")
-                    .attr("stroke", tickColor)
-                    .attr("opacity", 0.3)
-            )
-            .call((g) =>
-                g
-                    .selectAll(".tick text")
-                    .attr("fill", tickColor)
-                    .attr("font-size", "11px")
-            );
+            .call((g) => g.selectAll(".tick line").attr("stroke", tickColor).attr("opacity", 0.3))
+            .call((g) => g.selectAll(".tick text").attr("fill", tickColor).attr("font-size", "11px"));
 
-        svg.append("g")
-            .attr("transform", `translate(0,${height - margin.bottom})`)
-            .call(xAxisFemale)
+        svg.append("g").attr("transform", `translate(0,${height - margin.bottom})`).call(xAxisFemale)
             .call((g) => g.select(".domain").remove())
-            .call((g) =>
-                g
-                    .selectAll(".tick line")
-                    .attr("stroke", tickColor)
-                    .attr("opacity", 0.3)
-            )
-            .call((g) =>
-                g
-                    .selectAll(".tick text")
-                    .attr("fill", tickColor)
-                    .attr("font-size", "11px")
-            );
+            .call((g) => g.selectAll(".tick line").attr("stroke", tickColor).attr("opacity", 0.3))
+            .call((g) => g.selectAll(".tick text").attr("fill", tickColor).attr("font-size", "11px"));
 
-        svg.append("g")
-            .selectAll("text")
-            .data(data)
-            .join("text")
-            .attr("x", center)
-            .attr(
-                "y",
-                (d: any) => (yScale(d.age) || 0) + yScale.bandwidth() / 2
-            )
-            .attr("dy", "0.32em")
-            .attr("text-anchor", "middle")
-            .attr("fill", tickColor)
-            .attr("font-size", "12px")
-            .attr("font-weight", "500")
-            .text((d: any) => d.age);
+        // Age labels in center
+        svg.append("g").selectAll("text").data(data).join("text")
+            .attr("x", center).attr("y", (d: any) => (yScale(d.age) || 0) + yScale.bandwidth() / 2)
+            .attr("dy", "0.32em").attr("text-anchor", "middle").attr("fill", tickColor)
+            .attr("font-size", "12px").attr("font-weight", "500")
+            .text((d: any) => lang === "ne" ? toNepaliDigits(d.age) : d.age);
 
-        svg.append("g")
-            .selectAll("rect.male")
-            .data(data)
-            .join("rect")
-            .attr("class", "male")
-            .attr("x", (d: any) => xScaleMale(d.male))
-            .attr("y", (d: any) => yScale(d.age) || 0)
-            .attr("width", (d: any) =>
-                Math.max(0, xScaleMale(0) - xScaleMale(d.male))
-            )
-            .attr("height", yScale.bandwidth())
-            .attr("fill", colorMale)
-            .attr("rx", 2)
-            .on("mouseover", function (event, d: any) {
+        // Male bars
+        svg.append("g").selectAll("rect.male").data(data).join("rect").attr("class", "male")
+            .attr("x", (d: any) => xScaleMale(d.male)).attr("y", (d: any) => yScale(d.age) || 0)
+            .attr("width", (d: any) => Math.max(0, xScaleMale(0) - xScaleMale(d.male)))
+            .attr("height", yScale.bandwidth()).attr("fill", colorMale).attr("rx", 2)
+            .on("mouseover", function(event: any, d: any) {
                 d3.select(this).attr("opacity", 0.8);
+                const ageLabel = lang === "ne" ? translateLabel("Age", lang) : "Age";
+                const maleLabel = translateLabel("Male", lang);
                 tooltip.html(
-                    `<div class="font-bold text-gray-300 mb-1">Age: ${
-                        d.age
-                    }</div><div class="flex justify-between gap-4"><span class="text-blue-400">Male:</span><span class="font-medium">${d.male.toLocaleString()}</span></div>`
+                    `<div class="font-bold text-gray-300 mb-1">${ageLabel}: ${lang === "ne" ? toNepaliDigits(d.age) : d.age}</div><div class="flex justify-between gap-4"><span class="text-blue-400">${maleLabel}:</span><span class="font-medium">${formatNumber(d.male, lang)}</span></div>`
                 );
                 tooltip.style("display", "block").style("opacity", 1);
             })
-            .on("mousemove", function (event) {
-                tooltip
-                    .style("left", event.pageX + "px")
-                    .style("top", event.pageY - 10 + "px");
-            })
-            .on("mouseout", function () {
-                d3.select(this).attr("opacity", 1);
-                tooltip.style("display", "none").style("opacity", 0);
-            });
+            .on("mousemove", (event: any) => tooltip.style("left", event.pageX + "px").style("top", event.pageY - 10 + "px"))
+            .on("mouseout", function() { d3.select(this).attr("opacity", 1); tooltip.style("display", "none").style("opacity", 0); });
 
-        svg.append("g")
-            .selectAll("rect.female")
-            .data(data)
-            .join("rect")
-            .attr("class", "female")
-            .attr("x", xScaleFemale(0))
-            .attr("y", (d: any) => yScale(d.age) || 0)
-            .attr("width", (d: any) =>
-                Math.max(0, xScaleFemale(d.female) - xScaleFemale(0))
-            )
-            .attr("height", yScale.bandwidth())
-            .attr("fill", colorFemale)
-            .attr("rx", 2)
-            .on("mouseover", function (event, d: any) {
+        // Female bars
+        svg.append("g").selectAll("rect.female").data(data).join("rect").attr("class", "female")
+            .attr("x", xScaleFemale(0)).attr("y", (d: any) => yScale(d.age) || 0)
+            .attr("width", (d: any) => Math.max(0, xScaleFemale(d.female) - xScaleFemale(0)))
+            .attr("height", yScale.bandwidth()).attr("fill", colorFemale).attr("rx", 2)
+            .on("mouseover", function(event: any, d: any) {
                 d3.select(this).attr("opacity", 0.8);
+                const ageLabel = lang === "ne" ? translateLabel("Age", lang) : "Age";
+                const femaleLabel = translateLabel("Female", lang);
                 tooltip.html(
-                    `<div class="font-bold text-gray-300 mb-1">Age: ${
-                        d.age
-                    }</div><div class="flex justify-between gap-4"><span class="text-blue-300">Female:</span><span class="font-medium">${d.female.toLocaleString()}</span></div>`
+                    `<div class="font-bold text-gray-300 mb-1">${ageLabel}: ${lang === "ne" ? toNepaliDigits(d.age) : d.age}</div><div class="flex justify-between gap-4"><span class="text-blue-300">${femaleLabel}:</span><span class="font-medium">${formatNumber(d.female, lang)}</span></div>`
                 );
                 tooltip.style("display", "block").style("opacity", 1);
             })
-            .on("mousemove", function (event) {
-                tooltip
-                    .style("left", event.pageX + "px")
-                    .style("top", event.pageY - 10 + "px");
-            })
-            .on("mouseout", function () {
-                d3.select(this).attr("opacity", 1);
-                tooltip.style("display", "none").style("opacity", 0);
-            });
+            .on("mousemove", (event: any) => tooltip.style("left", event.pageX + "px").style("top", event.pageY - 10 + "px"))
+            .on("mouseout", function() { d3.select(this).attr("opacity", 1); tooltip.style("display", "none").style("opacity", 0); });
 
+        // Legend
+        const maleText = translateLabel("Male", lang);
+        const femaleText = translateLabel("Female", lang);
         const legendX = isMobile ? (width/2 - 80) : (center - 100);
-        const legend = svg
-            .append("g")
-            .attr(
-                "transform",
-                `translate(${legendX}, ${margin.top - 20})`
-            );
-        legend
-            .append("rect")
-            .attr("x", 0)
-            .attr("y", 0)
-            .attr("width", isMobile ? 12 : 16)
-            .attr("height", isMobile ? 12 : 16)
-            .attr("fill", colorMale)
-            .attr("rx", 2);
-        legend
-            .append("text")
-            .attr("x", isMobile ? 18 : 24)
-            .attr("y", isMobile ? 10 : 12)
-            .text(isMobile ? "Male" : "Male / पुरुष")
-            .attr("fill", tickColor)
-            .attr("font-size", isMobile ? "10px" : "12px");
-        legend
-            .append("rect")
-            .attr("x", isMobile ? 65 : 120)
-            .attr("y", 0)
-            .attr("width", isMobile ? 12 : 16)
-            .attr("height", isMobile ? 12 : 16)
-            .attr("fill", colorFemale)
-            .attr("rx", 2);
-        legend
-            .append("text")
-            .attr("x", isMobile ? 83 : 144)
-            .attr("y", isMobile ? 10 : 12)
-            .text(isMobile ? "Female" : "Female / महिला")
-            .attr("fill", tickColor)
-            .attr("font-size", isMobile ? "10px" : "12px");
+        const legend = svg.append("g").attr("transform", `translate(${legendX}, ${margin.top - 20})`);
+        legend.append("rect").attr("x", 0).attr("y", 0).attr("width", isMobile ? 12 : 16).attr("height", isMobile ? 12 : 16).attr("fill", colorMale).attr("rx", 2);
+        legend.append("text").attr("x", isMobile ? 18 : 24).attr("y", isMobile ? 10 : 12).text(maleText).attr("fill", tickColor).attr("font-size", isMobile ? "10px" : "12px");
+        legend.append("rect").attr("x", isMobile ? 65 : 100).attr("y", 0).attr("width", isMobile ? 12 : 16).attr("height", isMobile ? 12 : 16).attr("fill", colorFemale).attr("rx", 2);
+        legend.append("text").attr("x", isMobile ? 83 : 124).attr("y", isMobile ? 10 : 12).text(femaleText).attr("fill", tickColor).attr("font-size", isMobile ? "10px" : "12px");
     }
 
     let observerInitialized = false;

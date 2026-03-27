@@ -5,9 +5,10 @@ interface Props {
         caption?: string;
         barChartData?: any[];
     };
+    lang?: any;
 }
 
-const { content } = Astro.props;
+const { content, lang = "ne" } = Astro.props;
 const barChartData = content?.barChartData ?? [];
 const caption = content?.caption ?? "Population by Occupation";
 ---
@@ -22,4 +23,5 @@ const caption = content?.caption ?? "Population by Occupation";
     colors: ["#6366f1"]
   }}
   id="population-occupation"
+  lang={lang}
 />

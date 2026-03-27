@@ -8,103 +8,100 @@ const chapters = getChapters();
 const annexItems = getAnnexes();
 const alternateLang: Lang = lang === "ne" ? "en" : "ne";
 const alternateUrl = getAlternateUrl(currentPath, alternateLang);
+const cleanTitle = (title: string) => title.replace(/^[\d\u0966-\u096F\.]+\s*/, '');
 ---
 
 <nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b" style={`background:var(--nav-bg);border-color:var(--border);`}>
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-14">
     <div class="flex items-center justify-between h-16">
-      <!-- Logo -->
-      <a href={`/${lang}/`} class="flex items-center gap-2 sm:gap-3 no-underline group shrink-0">
-        <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-primary-700 flex items-center justify-center border-2 border-primary-500">
-          <svg viewBox="0 0 40 40" class="w-7 h-7 sm:w-8 sm:h-8">
-            <circle cx="20" cy="20" r="18" fill="#1d4ed8" stroke="#60a5fa" stroke-width="1.5"/>
-            <text x="20" y="25" text-anchor="middle" fill="white" font-size="14" font-weight="bold">न</text>
-          </svg>
-        </div>
-        <div class="flex flex-col leading-tight">
-          <span class="font-bold text-base sm:text-lg" style="color:var(--text-heading);">{t(lang, "site.name")}</span>
-          <span class="text-[10px] sm:text-xs hidden sm:block" style="color:var(--text-muted);">{t(lang, "site.subtitle")}</span>
-        </div>
-      </a>
-
-      <!-- Desktop Nav Links (hidden on mobile) -->
-      <div class="hidden lg:flex items-center gap-1">
-        <a href={`/${lang}/`} class="px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 no-underline" style={`color:var(--text-body);`}
-          onmouseover="this.style.color='var(--text-heading)';this.style.background='var(--hover-bg)'"
-          onmouseout="this.style.color='var(--text-body)';this.style.background='transparent'"
-        >
-          {t(lang, "nav.home")}
+      <div class="flex items-center gap-8 min-w-0">
+        <!-- Logo -->
+        <a href={`/${lang}/`} class="flex items-center gap-2 sm:gap-3 no-underline group shrink-0">
+          <img src="/coat of arms.png" alt="Coat of Arms" class="w-10 h-10 sm:w-12 sm:h-12 object-contain" />
+          <div class="flex flex-col leading-tight">
+            <span class="font-bold text-base sm:text-lg" style="color:var(--text-heading);">{t(lang, "site.name")}</span>
+            <span class="text-[10px] sm:text-xs hidden sm:block" style="color:var(--text-muted);">{t(lang, "site.subtitle")}</span>
+          </div>
         </a>
 
-        <a href={`/${lang}/profile`} class="px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 no-underline" style={`color:var(--text-body);`}
-          onmouseover="this.style.color='var(--text-heading)';this.style.background='var(--hover-bg)'"
-          onmouseout="this.style.color='var(--text-body)';this.style.background='transparent'"
-        >
-          {lang === 'ne' ? 'पूर्ण प्रोफाइल' : 'Full Profile'}
-        </a>
+        <!-- Desktop Nav Links (hidden on mobile) -->
+        <div class="hidden lg:flex items-center gap-1">
+          <a href={`/${lang}/`} class="px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 no-underline" style={`color:var(--text-body);`}
+            onmouseover="this.style.color='var(--text-heading)';this.style.background='var(--hover-bg)'"
+            onmouseout="this.style.color='var(--text-body)';this.style.background='transparent'"
+          >
+            {t(lang, "nav.home")}
+          </a>
 
-        <div class="relative" id="chapters-dropdown-container">
-          <button id="chapters-btn" class="px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 flex items-center gap-1.5 cursor-pointer border-0" style={`color:var(--text-body);background:transparent;`}>
-            {t(lang, "nav.chapters")}
-            <svg id="chapters-chevron" class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
+          <a href={`/${lang}/profile`} class="px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 no-underline" style={`color:var(--text-body);`}
+            onmouseover="this.style.color='var(--text-heading)';this.style.background='var(--hover-bg)'"
+            onmouseout="this.style.color='var(--text-body)';this.style.background='transparent'"
+          >
+            {lang === 'ne' ? 'पूर्ण प्रोफाइल' : 'Full Profile'}
+          </a>
 
-          <!-- Mega Dropdown -->
-          <div id="chapters-mega-dropdown" class="absolute top-full right-0 lg:left-1/2 lg:-translate-x-1/2 mt-2 w-[860px] rounded-xl shadow-2xl opacity-0 invisible translate-y-2 transition-all duration-300 overflow-hidden" style={`background:var(--dropdown-bg);border:1px solid var(--border);`}>
-            <div class="flex">
-              <!-- Left Panel -->
-              <div class="w-[260px] py-3 max-h-[480px] overflow-y-auto border-r" style={`background:var(--dropdown-sidebar);border-color:var(--border);`}>
-                {chapters.map((chapter) => (
-                  <a href={`/${lang}/${chapter.slug}`} class="chapter-tab block w-full text-left px-5 py-3 text-sm transition-all duration-200 border-l-3 border-transparent no-underline cursor-pointer" data-chapter={chapter.num} style={`color:var(--text-body);`}>
-                    <span class="text-xs font-medium" style="color:var(--text-muted);">{t(lang, "chapter.label")} {lang === "ne" ? toNepaliDigits(chapter.num) : chapter.num}:</span><br />
-                    <span class="font-medium">{chapter.title[lang]}</span>
-                  </a>
-                ))}
-                <div class="mt-1 pt-1" style={`border-top:1px solid var(--border);`}>
-                  <a href={`/${lang}/annexes`} class="chapter-tab block w-full text-left px-5 py-3 text-sm transition-all duration-200 border-l-3 border-transparent no-underline cursor-pointer" data-chapter="annexes" style={`color:var(--text-body);`}>
-                    <span class="font-medium">{t(lang, "nav.annexes")}</span>
-                  </a>
+          <div class="relative" id="chapters-dropdown-container">
+            <button id="chapters-btn" class="px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 flex items-center gap-1.5 cursor-pointer border-0" style={`color:var(--text-body);background:transparent;`}>
+              {t(lang, "nav.chapters")}
+              <svg id="chapters-chevron" class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+
+            <!-- Mega Dropdown -->
+            <div id="chapters-mega-dropdown" class="absolute top-full right-0 lg:left-1/2 lg:-translate-x-1/2 mt-2 w-[860px] rounded-xl shadow-2xl opacity-0 invisible translate-y-2 transition-all duration-300 overflow-hidden" style={`background:var(--dropdown-bg);border:1px solid var(--border);`}>              <div class="flex">
+                <!-- Left Panel -->
+                <div class="w-[260px] py-3 max-h-[480px] overflow-y-auto border-r" style={`background:var(--dropdown-sidebar);border-color:var(--border);`}>
+                  {chapters.map((chapter) => (
+                    <a href={`/${lang}/${chapter.slug}`} class="chapter-tab block w-full text-left px-5 py-3 text-sm transition-all duration-200 border-l-3 border-transparent no-underline cursor-pointer" data-chapter={chapter.num} style={`color:var(--text-body);`}>
+                      <span class="text-xs font-medium" style="color:var(--text-muted);">{t(lang, "chapter.label")} {lang === "ne" ? toNepaliDigits(chapter.num) : chapter.num}:</span><br />
+                      <span class="font-medium">{chapter.title[lang]}</span>
+                    </a>
+                  ))}
+                  <div class="mt-1 pt-1" style={`border-top:1px solid var(--border);`}>
+                    <a href={`/${lang}/annexes`} class="chapter-tab block w-full text-left px-5 py-3 text-sm transition-all duration-200 border-l-3 border-transparent no-underline cursor-pointer" data-chapter="annexes" style={`color:var(--text-body);`}>
+                      <span class="font-medium">{t(lang, "nav.annexes")}</span>
+                    </a>
+                  </div>
                 </div>
-              </div>
 
-              <!-- Right Panel -->
-              <div class="flex-1 py-4 px-6 min-h-[350px] max-h-[480px] overflow-y-auto">
-                {chapters.map((chapter) => (
-                  <div class="chapter-panel hidden" data-chapter-panel={chapter.num}>
-                    <h3 class="text-base font-bold mb-1" style="color:var(--text-heading);">{chapter.description[lang]}</h3>
-                    <div class="h-px my-3" style={`background:var(--border);`}></div>
-                    <div class="grid grid-cols-2 gap-x-6 gap-y-0.5">
-                      {chapter.sections.map((section) => (
-                        <div>
-                          <a href={`/${lang}/${chapter.slug}#${section.slug}`} class="block py-1.5 text-sm transition-colors duration-200 no-underline hover:text-primary-400" style={`color:var(--text-body);`}>
-                            <span style="color:var(--text-muted);" class="mr-1.5">{formatSectionId(section.id, lang)}</span>
-                            {section.title[lang]}
-                          </a>
-                          {section.children && section.children.map((child) => (
-                            <a href={`/${lang}/${chapter.slug}#${child.slug}`} class="block py-1 pl-5 text-xs transition-colors duration-200 no-underline hover:text-primary-400" style={`color:var(--text-muted);`}>
-                              <span class="mr-1">{formatSectionId(child.id, lang)}</span>
-                              {child.title[lang]}
+                <!-- Right Panel -->
+                <div class="flex-1 py-4 px-6 min-h-[350px] max-h-[480px] overflow-y-auto">
+                  {chapters.map((chapter) => (
+                    <div class="chapter-panel hidden" data-chapter-panel={chapter.num}>
+                      <h3 class="text-base font-bold mb-1" style="color:var(--text-heading);">{chapter.description[lang]}</h3>
+                      <div class="h-px my-3" style={`background:var(--border);`}></div>
+                      <div class="grid grid-cols-2 gap-x-6 gap-y-0.5">
+                        {chapter.sections.map((section) => (
+                          <div>
+                            <a href={`/${lang}/${chapter.slug}#${section.slug}`} class="block py-1.5 text-sm transition-colors duration-200 no-underline hover:text-primary-400" style={`color:var(--text-body);`}>
+                              <span style="color:var(--text-muted);" class="mr-1.5">{formatSectionId(section.id, lang)}</span>
+                              {cleanTitle(section.title[lang])}
                             </a>
-                          ))}
-                        </div>
+                            {section.children && section.children.map((child) => (
+                              <a href={`/${lang}/${chapter.slug}#${child.slug}`} class="block py-1 pl-5 text-xs transition-colors duration-200 no-underline hover:text-primary-400" style={`color:var(--text-muted);`}>
+                                <span class="mr-1">{formatSectionId(child.id, lang)}</span>
+                                {cleanTitle(child.title[lang])}
+                              </a>
+                            ))}
+                          </div>
+                        ))}
+                      </div>
+                      <div class="mt-4 pt-3" style={`border-top:1px solid var(--border);`}>
+                        <a href={`/${lang}/${chapter.slug}`} class="inline-flex items-center gap-1.5 text-sm font-semibold text-primary-500 hover:text-primary-400 transition-colors duration-200 no-underline">
+                          {t(lang, "nav.viewFullChapter")} →
+                        </a>
+                      </div>
+                    </div>
+                  ))}
+                  <div class="chapter-panel hidden" data-chapter-panel="annexes">
+                    <h3 class="text-base font-bold mb-1" style="color:var(--text-heading);">{t(lang, "nav.annexes")}</h3>
+                    <div class="h-px my-3" style={`background:var(--border);`}></div>
+                    <div class="space-y-1">
+                      {annexItems.map((annex) => (
+                        <a href={`/${lang}/annexes#${annex.slug}`} class="block py-2 text-sm transition-colors duration-200 no-underline hover:text-primary-400" style={`color:var(--text-body);`}>{annex.title[lang]}</a>
                       ))}
                     </div>
-                    <div class="mt-4 pt-3" style={`border-top:1px solid var(--border);`}>
-                      <a href={`/${lang}/${chapter.slug}`} class="inline-flex items-center gap-1.5 text-sm font-semibold text-primary-500 hover:text-primary-400 transition-colors duration-200 no-underline">
-                        {t(lang, "nav.viewFullChapter")} →
-                      </a>
-                    </div>
-                  </div>
-                ))}
-                <div class="chapter-panel hidden" data-chapter-panel="annexes">
-                  <h3 class="text-base font-bold mb-1" style="color:var(--text-heading);">{t(lang, "nav.annexes")}</h3>
-                  <div class="h-px my-3" style={`background:var(--border);`}></div>
-                  <div class="space-y-1">
-                    {annexItems.map((annex) => (
-                      <a href={`/${lang}/annexes#${annex.slug}`} class="block py-2 text-sm transition-colors duration-200 no-underline hover:text-primary-400" style={`color:var(--text-body);`}>{annex.title[lang]}</a>
-                    ))}
                   </div>
                 </div>
               </div>
@@ -112,6 +109,7 @@ const alternateUrl = getAlternateUrl(currentPath, alternateLang);
           </div>
         </div>
       </div>
+
 
       <!-- Right: Theme + Lang + Mobile Hamburger -->
       <div class="flex items-center gap-2 sm:gap-3">
@@ -186,12 +184,12 @@ const alternateUrl = getAlternateUrl(currentPath, alternateLang);
                 <div>
                    <a href={`/${lang}/${chapter.slug}#${section.slug}`} class="mobile-section-link block px-4 py-2 text-sm rounded-lg no-underline transition-colors" style="color:var(--text-body);">
                     <span class="opacity-50 mr-2 font-mono text-xs">{formatSectionId(section.id, lang)}</span>
-                    {section.title[lang]}
+                    {cleanTitle(section.title[lang])}
                   </a>
                   {section.children && section.children.map((child) => (
                     <a href={`/${lang}/${chapter.slug}#${child.slug}`} class="mobile-section-link block px-4 py-1.5 pl-10 text-xs rounded-lg no-underline transition-colors" style="color:var(--text-muted);">
                        <span class="opacity-40 mr-2 font-mono">{formatSectionId(child.id, lang)}</span>
-                       {child.title[lang]}
+                       {cleanTitle(child.title[lang])}
                     </a>
                   ))}
                 </div>

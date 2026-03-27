@@ -1,4 +1,7 @@
 ---
+import { toNepaliDigits, t } from "../i18n/utils";
+import { type Lang } from "../i18n/translations";
+
 interface Props {
   type: "bar" | "pie" | "donut";
   data: any[];
@@ -13,9 +16,34 @@ interface Props {
     title?: string;
   };
   id: string;
+  lang?: Lang;
 }
 
-const { type, data, config, id } = Astro.props;
+const { type, data, config, id, lang = "ne" } = Astro.props;
+
+// Simple helper to translate labels in the legend (server-side)
+function translateLabel(label: string, language: Lang): string {
+  if (language === "en") return label;
+  
+  const translations: Record<string, string> = {
+    "Male": "पुरुष",
+    "Female": "महिला",
+    "Total": "जम्मा",
+    "Population": "जनसंख्या",
+    "population": "जनसंख्या",
+    "others": "अन्य",
+    "Others": "अन्य",
+    "Unknown": "अज्ञात",
+    "value": "संख्या"
+  };
+
+  const wardMatch = label.match(/^W(\d+)$/);
+  if (wardMatch) {
+    return "वडा " + toNepaliDigits(wardMatch[1]);
+  }
+  
+  return translations[label] || label;
+}
 ---
 
 <div
@@ -33,12 +61,12 @@ const { type, data, config, id } = Astro.props;
     )
   }
 
-  <div id={`chart-${id}`} class="w-full h-auto min-h-[300px]"></div>
+  <div id={`chart-${id}`} class="w-full h-auto min-h-[300px]" data-lang={lang} data-chart-type={type} data-chart-data={JSON.stringify(data)} data-chart-config={JSON.stringify(config)} data-chart-id={id}></div>
 
   <div class="mt-4 flex flex-col items-center">
     <!-- Interaction Hint for Mobile -->
     <p class="text-[10px] uppercase tracking-widest font-bold opacity-30 mb-4 block sm:hidden">
-      Tap bars or slices to view details
+      {lang === "ne" ? "विवरण हेर्न बार वा स्लाइसहरूमा ट्याप गर्नुहोस्" : "Tap bars or slices to view details"}
     </p>
 
     <!-- Legend -->
@@ -46,7 +74,6 @@ const { type, data, config, id } = Astro.props;
       {
         (() => {
           const isPie = type === "pie" || type === "donut";
-          // For pie charts, if labels is just ["value"], we show categories as legends
           const useCategoriesAsLegend = isPie;
           
           const legendLabels = useCategoriesAsLegend 
@@ -68,7 +95,7 @@ const { type, data, config, id } = Astro.props;
                 style={`background: ${legendColors[idx % legendColors.length]}`}
               />
               <span class="text-xs font-semibold tracking-tight" style="color: var(--text-body);">
-                {label}
+                {translateLabel(label, lang)}
               </span>
             </div>
           ));
@@ -78,522 +105,352 @@ const { type, data, config, id } = Astro.props;
   </div>
 </div>
 
-<script is:inline define:vars={{ type, data, config, id }}>
-  (async () => {
-    const container = document.getElementById(`chart-${id}`);
-    if (!container) return;
+<script is:inline>
+  // Self-executing to avoid global scope pollution
+  document.addEventListener('DOMContentLoaded', function() {
+    // Find all chart containers that haven't been initialized yet
+    document.querySelectorAll('[data-chart-id]:not([data-initialized])').forEach(function(container) {
+      container.setAttribute('data-initialized', 'true');
+      initChart(container);
+    });
+  });
 
-    // Load D3 from CDN if not bundled
-    const containerId = `#chart-${id}`;
-    if (typeof d3 === "undefined") {
-        await new Promise((resolve) => {
-          const script = document.createElement("script");
-          script.src = "https://cdn.jsdelivr.net/npm/d3@7";
-          script.onload = resolve;
-          document.head.appendChild(script);
-        });
+  // Also handle Astro page transitions
+  document.addEventListener('astro:page-load', function() {
+    document.querySelectorAll('[data-chart-id]:not([data-initialized])').forEach(function(container) {
+      container.setAttribute('data-initialized', 'true');
+      initChart(container);
+    });
+  });
+
+  function initChart(container) {
+    // Read all config from data attributes - NOT from define:vars
+    var lang = container.getAttribute('data-lang') || document.documentElement.lang || 'ne';
+    var type = container.getAttribute('data-chart-type');
+    var data = JSON.parse(container.getAttribute('data-chart-data') || '[]');
+    var config = JSON.parse(container.getAttribute('data-chart-config') || '{}');
+    var id = container.getAttribute('data-chart-id');
+
+    // Helper functions
+    function toNepaliDigits(num) {
+      if (num === null || num === undefined) return num;
+      var str = num.toString();
+      var nepaliDigits = ["०", "१", "२", "३", "४", "५", "६", "७", "८", "९"];
+      return str.replace(/\d/g, function(digit) { return nepaliDigits[parseInt(digit)]; });
+    }
+
+    function translateLabel(label) {
+      if (lang === "en" || !label) return String(label);
+      
+      var translations = {
+        "Male": "पुरुष",
+        "Female": "महिला",
+        "Total": "जम्मा",
+        "Population": "जनसंख्या",
+        "population": "जनसंख्या",
+        "others": "अन्य",
+        "Others": "अन्य",
+        "Unknown": "अज्ञात",
+        "value": "संख्या",
+        "Count": "संख्या",
+        "Percentage": "प्रतिशत"
+      };
+
+      var wardMatch = String(label).match(/^W(\d+)$/);
+      if (wardMatch) {
+        return "वडा " + toNepaliDigits(wardMatch[1]);
+      }
+      
+      return translations[String(label)] || String(label);
+    }
+
+    function formatNumber(num) {
+      if (lang === "ne") {
+        return toNepaliDigits(num.toLocaleString());
+      }
+      return num.toLocaleString();
     }
 
     // Use Intersection Observer to trigger rendering when visible
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(async (entry) => {
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
         if (entry.isIntersecting) {
           observer.unobserve(entry.target);
-          await renderChart();
+          renderChart();
         }
       });
     }, { threshold: 0.2 });
 
     observer.observe(container);
 
-    async function renderChart() {
-      if (typeof d3 === "undefined") {
-        await new Promise((resolve) => {
-          const script = document.createElement("script");
-          script.src = "https://cdn.jsdelivr.net/npm/d3@7";
-          script.onload = resolve;
-          document.head.appendChild(script);
+    function renderChart() {
+      if (typeof d3 === "undefined") return;
+
+      var containerWidth = container.clientWidth || 800;
+      var isMobile = window.innerWidth < 768;
+      var isHorizontal = type === "bar" && isMobile && data.length > 12;
+
+      var margin = { 
+          top: 40, 
+          right: isHorizontal ? 40 : (isMobile ? 30 : 40), 
+          bottom: isHorizontal ? 100 : (isMobile ? 120 : 180), 
+          left: isHorizontal ? (isMobile ? 100 : 140) : (isMobile ? 60 : 100) 
+      };
+
+      var width = containerWidth - margin.left - margin.right;
+      var height = isHorizontal 
+          ? Math.max(300, data.length * 40) 
+          : (isMobile ? (data.length > 8 ? 400 : 300) : 450);
+
+      var totalHeight = height + margin.top + margin.bottom;
+
+      var svg = d3
+        .select(container)
+        .append("svg")
+        .attr("width", "100%")
+        .attr("height", "auto")
+        .attr("viewBox", "0 0 " + containerWidth + " " + totalHeight)
+        .style("display", "block")
+        .append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+      // Add gradients for bars
+      var defs = svg.append("defs");
+      (config.colors || []).forEach(function(color, i) {
+        var gradient = defs
+          .append("linearGradient")
+          .attr("id", "grad-" + id + "-" + i)
+          .attr("x1", "0%")
+          .attr("y1", "0%")
+          .attr("x2", "0%")
+          .attr("y2", "100%");
+
+        gradient.append("stop").attr("offset", "0%").attr("stop-color", color).attr("stop-opacity", 1);
+        gradient.append("stop").attr("offset", "100%").attr("stop-color", color).attr("stop-opacity", 0.7);
+      });
+
+      // Tooltip
+      var tooltip = d3
+        .select("body")
+        .append("div")
+        .attr("class", "chart-tooltip")
+        .style("position", "absolute")
+        .style("background", "rgba(15, 23, 42, 0.95)")
+        .style("color", "white")
+        .style("padding", "10px 14px")
+        .style("border-radius", "10px")
+        .style("font-size", "13px")
+        .style("pointer-events", "none")
+        .style("opacity", 0)
+        .style("z-index", 100)
+        .style("backdrop-filter", "blur(8px)")
+        .style("border", "1px solid rgba(255,255,255,0.15)")
+        .style("box-shadow", "0 10px 25px -5px rgba(0, 0, 0, 0.4)");
+
+      function wrapText(text, maxWidth) {
+        text.each(function() {
+          var textEl = d3.select(this),
+              words = textEl.text().split(/\s+/).reverse(),
+              word,
+              line = [],
+              lineNumber = 0,
+              lineHeight = 1.1,
+              y = textEl.attr("y"),
+              dy = parseFloat(textEl.attr("dy")),
+              tspan = textEl.text(null).append("tspan").attr("x", 0).attr("y", y).attr("dy", dy + "em");
+          while (word = words.pop()) {
+            line.push(word);
+            tspan.text(line.join(" "));
+            if (tspan.node().getComputedTextLength() > maxWidth) {
+              line.pop();
+              tspan.text(line.join(" "));
+              line = [word];
+              tspan = textEl.append("tspan").attr("x", 0).attr("y", y).attr("dy", ++lineNumber * lineHeight + dy + "em").text(word);
+            }
+          }
         });
       }
 
-    const containerWidth = container.clientWidth || 800;
-    const isMobile = window.innerWidth < 768;
-    const isHorizontal = type === "bar" && isMobile && data.length > 12;
+      if (type === "bar") {
+        if (isHorizontal) {
+          var y0 = d3.scaleBand().domain(data.map(function(d) { return d[config.xKey]; })).rangeRound([0, height]).paddingInner(0.2);
+          var y1 = d3.scaleBand().domain(config.labels).rangeRound([0, y0.bandwidth()]).padding(0.1);
+          var x = d3.scaleLinear().domain([0, d3.max(data, function(d) { return d3.max(config.labels, function(label) { return d[label]; }); })]).nice().rangeRound([0, width]);
 
-    const margin = { 
-        top: 40, 
-        right: isHorizontal ? 40 : (isMobile ? 30 : 40), 
-        bottom: isHorizontal ? 100 : (isMobile ? 120 : 180), 
-        left: isHorizontal ? (isMobile ? 100 : 140) : (isMobile ? 60 : 100) 
-    };
+          svg.append("g").attr("transform", "translate(0," + height + ")")
+            .call(d3.axisBottom(x).ticks(5, "s").tickFormat(function(d) { return lang === "ne" ? toNepaliDigits(d) : d; }))
+            .attr("font-size", "14px").selectAll("text").style("fill", "var(--text-body)");
 
-    const width = containerWidth - margin.left - margin.right;
-    const height = isHorizontal 
-        ? Math.max(300, data.length * 40) 
-        : (isMobile ? (data.length > 8 ? 400 : 300) : 450);
+          var yAxis = svg.append("g")
+            .call(d3.axisLeft(y0).tickFormat(function(d) { return translateLabel(d); }))
+            .attr("font-size", isMobile ? "12px" : "14px").attr("font-weight", "600");
+          yAxis.selectAll("text").style("fill", "var(--text-body)").call(wrapText, margin.left - 20).style("text-anchor", "end");
 
-    const totalHeight = height + margin.top + margin.bottom;
+          svg.append("g").attr("class", "grid").attr("transform", "translate(0," + height + ")")
+            .call(d3.axisBottom(x).tickSize(-height).tickFormat("")).style("stroke-opacity", 0.1).style("stroke-dasharray", "3,3");
 
-    const svg = d3
-      .select(container)
-      .append("svg")
-      .attr("width", "100%")
-      .attr("height", "auto")
-      .attr("viewBox", `0 0 ${containerWidth} ${totalHeight}`)
-      .style("display", "block")
-      .append("g")
-      .attr("transform", `translate(${margin.left},${margin.top})`);
+          var groups = svg.selectAll(".group").data(data).enter().append("g")
+            .attr("transform", function(d) { return "translate(0," + y0(d[config.xKey]) + ")"; });
 
-    // Add gradients for bars
-    const defs = svg.append("defs");
-    (config.colors || []).forEach((color, i) => {
-      const gradient = defs
-        .append("linearGradient")
-        .attr("id", `grad-${id}-${i}`)
-        .attr("x1", "0%")
-        .attr("y1", "0%")
-        .attr("x2", "0%")
-        .attr("y2", "100%");
+          groups.selectAll("rect").data(function(d, i) {
+            return config.labels.map(function(label) { return { key: label, value: d[label], groupIndex: i }; });
+          }).enter().append("rect")
+            .attr("y", function(d) { return y1(d.key); }).attr("x", 0).attr("height", y1.bandwidth()).attr("width", 0).attr("rx", 4)
+            .attr("fill", function(d, i) { var colorIdx = config.labels.length === 1 ? d.groupIndex : i; return "url(#grad-" + id + "-" + (colorIdx % (config.colors ? config.colors.length : 10)) + ")"; })
+            .transition().duration(1000).delay(function(d, i) { return i * 100; })
+            .attr("width", function(d) { return Math.max(2, x(d.value)); });
 
-      gradient
-        .append("stop")
-        .attr("offset", "0%")
-        .attr("stop-color", color)
-        .attr("stop-opacity", 1);
-      gradient
-        .append("stop")
-        .attr("offset", "100%")
-        .attr("stop-color", color)
-        .attr("stop-opacity", 0.7);
-    });
-
-    // Tooltip
-    const tooltip = d3
-      .select("body")
-      .append("div")
-      .attr("class", "chart-tooltip")
-      .style("position", "absolute")
-      .style("background", "rgba(15, 23, 42, 0.95)")
-      .style("color", "white")
-      .style("padding", "10px 14px")
-      .style("border-radius", "10px")
-      .style("font-size", "13px")
-      .style("pointer-events", "none")
-      .style("opacity", 0)
-      .style("z-index", 100)
-      .style("backdrop-filter", "blur(8px)")
-      .style("border", "1px solid rgba(255,255,255,0.15)")
-      .style("box-shadow", "0 10px 25px -5px rgba(0, 0, 0, 0.4)");
-
-    function wrapText(text, width) {
-      const isRTL = document.dir === 'rtl' || (typeof lang !== 'undefined' && lang === 'ne');
-      text.each(function() {
-        var text = d3.select(this),
-            words = text.text().split(/\s+/).reverse(),
-            word,
-            line = [],
-            lineNumber = 0,
-            lineHeight = 1.1, // ems
-            y = text.attr("y"),
-            dy = parseFloat(text.attr("dy")),
-            tspan = text.text(null).append("tspan").attr("x", 0).attr("y", y).attr("dy", dy + "em");
-        while (word = words.pop()) {
-          line.push(word);
-          tspan.text(line.join(" "));
-          if (tspan.node().getComputedTextLength() > width) {
-            line.pop();
-            tspan.text(line.join(" "));
-            line = [word];
-            tspan = text.append("tspan").attr("x", 0).attr("y", y).attr("dy", ++lineNumber * lineHeight + dy + "em").text(word);
-          }
-        }
-      });
-    }
-
-    if (type === "bar") {
-      if (isHorizontal) {
-        const y0 = d3
-          .scaleBand()
-          .domain(data.map((d) => d[config.xKey]))
-          .rangeRound([0, height])
-          .paddingInner(0.2);
-
-        const y1 = d3
-          .scaleBand()
-          .domain(config.labels)
-          .rangeRound([0, y0.bandwidth()])
-          .padding(0.1);
-
-        const x = d3
-          .scaleLinear()
-          .domain([
-            0,
-            d3.max(data, (d) => d3.max(config.labels, (label) => d[label])),
-          ])
-          .nice()
-          .rangeRound([0, width]);
-
-        // Axes
-        svg
-          .append("g")
-          .attr("transform", `translate(0,${height})`)
-          .call(d3.axisBottom(x).ticks(5, "s"))
-          .attr("font-size", "14px")
-          .selectAll("text")
-          .style("fill", "var(--text-body)");
-
-        const yAxis = svg
-          .append("g")
-          .call(d3.axisLeft(y0))
-          .attr("font-size", isMobile ? "12px" : "14px")
-          .attr("font-weight", "600");
-
-        yAxis.selectAll("text")
-          .style("fill", "var(--text-body)")
-          .call(wrapText, margin.left - 20)
-          .style("text-anchor", "end");
-
-        // Grid lines
-        svg
-          .append("g")
-          .attr("class", "grid")
-          .attr("transform", `translate(0,${height})`)
-          .call(d3.axisBottom(x).tickSize(-height).tickFormat(""))
-          .style("stroke-opacity", 0.1)
-          .style("stroke-dasharray", "3,3");
-
-        // Bars
-        const groups = svg
-          .selectAll(".group")
-          .data(data)
-          .enter()
-          .append("g")
-          .attr("transform", (d) => `translate(0,${y0(d[config.xKey])})`);
-
-        groups
-          .selectAll("rect")
-          .data((d, i) =>
-            config.labels.map((label) => ({
-              key: label,
-              value: d[label],
-              groupIndex: i,
-            })),
-          )
-          .enter()
-          .append("rect")
-          .attr("y", (d) => y1(d.key))
-          .attr("x", 0)
-          .attr("height", y1.bandwidth())
-          .attr("width", 0)
-          .attr("rx", 4)
-          .attr("fill", (d, i) => {
-            const colorIdx = config.labels.length === 1 ? d.groupIndex : i;
-            return `url(#grad-${id}-${colorIdx % (config.colors?.length || 10)})`;
-          })
-          .transition()
-          .duration(1000)
-          .delay((d, i) => i * 100)
-          .attr("width", (d) => Math.max(2, x(d.value)));
-
-        groups
-          .selectAll("rect")
-          .on("mouseover", function (event, d) {
-            d3.select(this).attr("filter", "brightness(1.2)");
-            tooltip.transition().duration(200).style("opacity", 1);
-            const label = config.labels.length === 1 ? data[d.groupIndex][config.xKey] : d.key;
-            tooltip.html(`<strong>${label}</strong>: ${d.value.toLocaleString()}`)
-              .style("left", event.pageX + 10 + "px")
-              .style("top", event.pageY - 28 + "px");
-          })
-          .on("click", function(event, d) {
-            if (isMobile) {
-               d3.select(this).attr("filter", "brightness(1.2)");
-               tooltip.transition().duration(200).style("opacity", 1);
-               const label = config.labels.length === 1 ? data[d.groupIndex][config.xKey] : d.key;
-               tooltip.html(`<strong>${label}</strong>: ${d.value.toLocaleString()}`)
-                 .style("left", event.pageX + 10 + "px")
-                 .style("top", event.pageY - 28 + "px");
-               
-               // Auto-hide after 3 seconds on mobile
-               setTimeout(() => {
-                 tooltip.transition().duration(500).style("opacity", 0);
-                 d3.select(this).attr("filter", null);
-               }, 3000);
-            }
-          })
-          .on("mouseout", function () {
-            if (!isMobile) {
-              d3.select(this).attr("filter", null);
-              tooltip.transition().duration(500).style("opacity", 0);
-            }
-          });
-
-      } else {
-        const x0 = d3
-          .scaleBand()
-          .domain(data.map((d) => d[config.xKey]))
-          .rangeRound([0, width])
-          .paddingInner(0.2);
-
-        const x1 = d3
-          .scaleBand()
-          .domain(config.labels)
-          .rangeRound([0, x0.bandwidth()])
-          .padding(0.1);
-
-        const y = d3
-          .scaleLinear()
-          .domain([
-            0,
-            d3.max(data, (d) => d3.max(config.labels, (label) => d[label])),
-          ])
-          .nice()
-          .rangeRound([height, 0]);
-
-        // Axes
-        const xAxis = svg
-          .append("g")
-          .attr("transform", `translate(0,${height})`)
-          .call(d3.axisBottom(x0))
-          .attr("font-size", isMobile ? "12px" : "14px")
-          .attr("font-weight", "600");
-
-        const needsRotation = x0.bandwidth() < 60 || data.length > 6;
-        
-        xAxis.selectAll("text")
-          .style("fill", "var(--text-body)")
-          .style("text-anchor", needsRotation ? "end" : "middle")
-          .attr("transform", needsRotation ? "rotate(-45)" : "")
-          .attr("dx", needsRotation ? "-.8em" : "0")
-          .attr("dy", needsRotation ? ".15em" : ".5em");
-
-        if (!needsRotation) {
-           xAxis.selectAll("text").call(wrapText, x0.bandwidth());
-        }
-
-        svg
-          .append("g")
-          .call(d3.axisLeft(y).ticks(null, "s"))
-          .attr("font-size", "14px")
-          .selectAll("text")
-          .style("fill", "var(--text-body)");
-
-        // Grid lines
-        svg
-          .append("g")
-          .attr("class", "grid")
-          .call(d3.axisLeft(y).tickSize(-width).tickFormat(""))
-          .style("stroke-opacity", 0.1)
-          .style("stroke-dasharray", "3,3");
-
-        // Bars
-        const groups = svg
-          .selectAll(".group")
-          .data(data)
-          .enter()
-          .append("g")
-          .attr("transform", (d) => `translate(${x0(d[config.xKey])},0)`);
-
-        groups
-          .selectAll("rect")
-          .data((d, i) =>
-            config.labels.map((label) => ({
-              key: label,
-              value: d[label],
-              groupIndex: i,
-            })),
-          )
-          .enter()
-          .append("rect")
-          .attr("x", (d) => x1(d.key))
-          .attr("y", height)
-          .attr("width", x1.bandwidth())
-          .attr("height", 0)
-          .attr("rx", 4)
-          .attr("fill", (d, i) => {
-            const colorIdx = config.labels.length === 1 ? d.groupIndex : i;
-            return `url(#grad-${id}-${colorIdx % (config.colors?.length || 10)})`;
-          })
-          .transition()
-          .duration(1000)
-          .delay((d, i) => i * 100)
-          .attr("y", (d) => {
-            const barH = Math.max(2, height - y(d.value));
-            return height - barH;
-          })
-          .attr("height", (d) => Math.max(2, height - y(d.value)));
-
-        groups
-          .selectAll("rect")
-          .on("mouseover", function (event, d) {
-            d3.select(this).attr("filter", "brightness(1.2)");
-            tooltip.transition().duration(200).style("opacity", 1);
-            const label = config.labels.length === 1 ? data[d.groupIndex][config.xKey] : d.key;
-            tooltip.html(`<strong>${label}</strong>: ${d.value.toLocaleString()}`)
-              .style("left", event.pageX + 10 + "px")
-              .style("top", event.pageY - 28 + "px");
-          })
-          .on("click", function(event, d) {
-            if (isMobile) {
-               d3.select(this).attr("filter", "brightness(1.2)");
-               tooltip.transition().duration(200).style("opacity", 1);
-               const label = config.labels.length === 1 ? data[d.groupIndex][config.xKey] : d.key;
-               tooltip.html(`<strong>${label}</strong>: ${d.value.toLocaleString()}`)
-                 .style("left", event.pageX + 10 + "px")
-                 .style("top", event.pageY - 28 + "px");
-               
-               // Auto-hide after 3 seconds on mobile
-               setTimeout(() => {
-                 tooltip.transition().duration(500).style("opacity", 0);
-                 d3.select(this).attr("filter", null);
-               }, 3000);
-            }
-          })
-          .on("mouseout", function () {
-            if (!isMobile) {
-              d3.select(this).attr("filter", null);
-              tooltip.transition().duration(500).style("opacity", 0);
-            }
-          });
-      }
-    } else if (type === "pie" || type === "donut") {
-      const radius = Math.min(width, height) / 2;
-      const total = d3.sum(data, (d) => d.value);
-      const g = svg
-        .append("g")
-        .attr("transform", `translate(${width / 2},${height / 2})`);
-
-      const getLabel = (d) => d[config.xKey] || d.label || d.category || d.type || d.status || "Unknown";
-
-      const colorScale = d3
-        .scaleOrdinal()
-        .domain(data.map(getLabel))
-        .range(config.colors || d3.schemeSet2);
-
-      const pie = d3
-        .pie()
-        .value((d) => d.value)
-        .sort(null);
-
-      const arc = d3
-        .arc()
-        .innerRadius(type === "donut" ? radius * 0.4 : 0)
-        .outerRadius(radius * 0.8)
-        .cornerRadius(6);
-
-      const arcs = g
-        .selectAll(".arc")
-        .data(pie(data))
-        .enter()
-        .append("g")
-        .attr("class", "arc");
-
-      arcs
-        .append("path")
-        .attr("fill", (d) => colorScale(getLabel(d.data)))
-        .attr("stroke", "var(--card-bg)")
-        .style("stroke-width", "3px")
-        .attr("filter", "drop-shadow(0px 4px 6px rgba(0,0,0,0.1))")
-        .on("mouseover", function (event, d) {
-          d3.select(this)
-            .transition()
-            .duration(200)
-            .attr("transform", function (d) {
-              const dist = 12;
-              const angle = (d.startAngle + d.endAngle) / 2;
-              const x = Math.sin(angle) * dist;
-              const y = -Math.cos(angle) * dist;
-              return `translate(${x},${y})`;
+          groups.selectAll("rect")
+            .on("mouseover", function(event, d) {
+              d3.select(this).attr("filter", "brightness(1.2)");
+              tooltip.transition().duration(200).style("opacity", 1);
+              var rawLabel = config.labels.length === 1 ? data[d.groupIndex][config.xKey] : d.key;
+              tooltip.html("<strong>" + translateLabel(rawLabel) + "</strong>: " + formatNumber(d.value))
+                .style("left", event.pageX + 10 + "px").style("top", event.pageY - 28 + "px");
             })
-            .style(
-              "filter",
-              "brightness(1.1) drop-shadow(0px 8px 12px rgba(0,0,0,0.2))",
-            );
+            .on("mouseout", function() {
+              d3.select(this).attr("filter", null);
+              tooltip.transition().duration(500).style("opacity", 0);
+            });
 
-          const percentage = ((d.data.value / total) * 100).toFixed(1);
-          tooltip
-            .html(
-              `<strong>${getLabel(d.data)}</strong><br/>Count: ${d.data.value.toLocaleString()}<br/>Percentage: ${percentage}%`,
-            )
-            .style("left", event.pageX + 10 + "px")
-            .style("top", event.pageY - 28 + "px")
-            .transition()
-            .duration(200)
-            .style("opacity", 1);
-        })
-        .on("click", function(event, d) {
-          if (isMobile) {
-            d3.select(this)
-              .transition()
-              .duration(200)
-              .attr("transform", function (d) {
-                const dist = 12;
-                const angle = (d.startAngle + d.endAngle) / 2;
-                const x = Math.sin(angle) * dist;
-                const y = -Math.cos(angle) * dist;
-                return `translate(${x},${y})`;
-              })
-              .style("filter", "brightness(1.1) drop-shadow(0px 8px 12px rgba(0,0,0,0.2))");
+        } else {
+          var x0 = d3.scaleBand().domain(data.map(function(d) { return d[config.xKey]; })).rangeRound([0, width]).paddingInner(0.2);
+          var x1 = d3.scaleBand().domain(config.labels).rangeRound([0, x0.bandwidth()]).padding(0.1);
+          var yScale = d3.scaleLinear().domain([0, d3.max(data, function(d) { return d3.max(config.labels, function(label) { return d[label]; }); })]).nice().rangeRound([height, 0]);
 
-            const percentage = ((d.data.value / total) * 100).toFixed(1);
-            tooltip
-              .html(`<strong>${getLabel(d.data)}</strong><br/>Count: ${d.data.value.toLocaleString()}<br/>Percentage: ${percentage}%`)
-              .style("left", event.pageX + 10 + "px")
-              .style("top", event.pageY - 28 + "px")
-              .transition().duration(200).style("opacity", 1);
+          var xAxis = svg.append("g").attr("transform", "translate(0," + height + ")")
+            .call(d3.axisBottom(x0).tickFormat(function(d) { return translateLabel(d); }))
+            .attr("font-size", isMobile ? "12px" : "14px").attr("font-weight", "600");
 
-            setTimeout(() => {
+          var needsRotation = x0.bandwidth() < 60 || data.length > 6;
+          xAxis.selectAll("text").style("fill", "var(--text-body)")
+            .style("text-anchor", needsRotation ? "end" : "middle")
+            .attr("transform", needsRotation ? "rotate(-45)" : "")
+            .attr("dx", needsRotation ? "-.8em" : "0")
+            .attr("dy", needsRotation ? ".15em" : ".5em");
+          if (!needsRotation) { xAxis.selectAll("text").call(wrapText, x0.bandwidth()); }
+
+          svg.append("g")
+            .call(d3.axisLeft(yScale).ticks(null, "s").tickFormat(function(d) { return lang === "ne" ? toNepaliDigits(d) : d; }))
+            .attr("font-size", "14px").selectAll("text").style("fill", "var(--text-body)");
+
+          svg.append("g").attr("class", "grid")
+            .call(d3.axisLeft(yScale).tickSize(-width).tickFormat("")).style("stroke-opacity", 0.1).style("stroke-dasharray", "3,3");
+
+          var groups = svg.selectAll(".group").data(data).enter().append("g")
+            .attr("transform", function(d) { return "translate(" + x0(d[config.xKey]) + ",0)"; });
+
+          groups.selectAll("rect").data(function(d, i) {
+            return config.labels.map(function(label) { return { key: label, value: d[label], groupIndex: i }; });
+          }).enter().append("rect")
+            .attr("x", function(d) { return x1(d.key); }).attr("y", height).attr("width", x1.bandwidth()).attr("height", 0).attr("rx", 4)
+            .attr("fill", function(d, i) { var colorIdx = config.labels.length === 1 ? d.groupIndex : i; return "url(#grad-" + id + "-" + (colorIdx % (config.colors ? config.colors.length : 10)) + ")"; })
+            .transition().duration(1000).delay(function(d, i) { return i * 100; })
+            .attr("y", function(d) { var barH = Math.max(2, height - yScale(d.value)); return height - barH; })
+            .attr("height", function(d) { return Math.max(2, height - yScale(d.value)); });
+
+          groups.selectAll("rect")
+            .on("mouseover", function(event, d) {
+              d3.select(this).attr("filter", "brightness(1.2)");
+              tooltip.transition().duration(200).style("opacity", 1);
+              var rawLabel = config.labels.length === 1 ? data[d.groupIndex][config.xKey] : d.key;
+              tooltip.html("<strong>" + translateLabel(rawLabel) + "</strong>: " + formatNumber(d.value))
+                .style("left", event.pageX + 10 + "px").style("top", event.pageY - 28 + "px");
+            })
+            .on("click", function(event, d) {
+              if (isMobile) {
+                d3.select(this).attr("filter", "brightness(1.2)");
+                tooltip.transition().duration(200).style("opacity", 1);
+                var rawLabel = config.labels.length === 1 ? data[d.groupIndex][config.xKey] : d.key;
+                tooltip.html("<strong>" + translateLabel(rawLabel) + "</strong>: " + formatNumber(d.value))
+                  .style("left", event.pageX + 10 + "px").style("top", event.pageY - 28 + "px");
+                var self = this;
+                setTimeout(function() { tooltip.transition().duration(500).style("opacity", 0); d3.select(self).attr("filter", null); }, 3000);
+              }
+            })
+            .on("mouseout", function() {
+              if (!isMobile) { d3.select(this).attr("filter", null); tooltip.transition().duration(500).style("opacity", 0); }
+            });
+        }
+      } else if (type === "pie" || type === "donut") {
+        var radius = Math.min(width, height) / 2;
+        var total = d3.sum(data, function(d) { return d.value; });
+        var g = svg.append("g").attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
+        var getLabel = function(d) { return d[config.xKey] || d.label || d.category || d.type || d.status || "Unknown"; };
+        var colorScale = d3.scaleOrdinal().domain(data.map(getLabel)).range(config.colors || d3.schemeSet2);
+
+        var pie = d3.pie().value(function(d) { return d.value; }).sort(null);
+        var arc = d3.arc().innerRadius(type === "donut" ? radius * 0.4 : 0).outerRadius(radius * 0.8).cornerRadius(6);
+
+        var arcs = g.selectAll(".arc").data(pie(data)).enter().append("g").attr("class", "arc");
+
+        arcs.append("path")
+          .attr("fill", function(d) { return colorScale(getLabel(d.data)); })
+          .attr("stroke", "var(--card-bg)").style("stroke-width", "3px")
+          .attr("filter", "drop-shadow(0px 4px 6px rgba(0,0,0,0.1))")
+          .on("mouseover", function(event, d) {
+            d3.select(this).transition().duration(200)
+              .attr("transform", function(d) {
+                var dist = 12, angle = (d.startAngle + d.endAngle) / 2;
+                return "translate(" + Math.sin(angle) * dist + "," + (-Math.cos(angle) * dist) + ")";
+              }).style("filter", "brightness(1.1) drop-shadow(0px 8px 12px rgba(0,0,0,0.2))");
+            var percentage = ((d.data.value / total) * 100).toFixed(1);
+            var countLabel = lang === "ne" ? "संख्या" : "Count";
+            var pctLabel = lang === "ne" ? "प्रतिशत" : "Percentage";
+            tooltip.html(
+              "<strong>" + translateLabel(getLabel(d.data)) + "</strong><br/>" + countLabel + ": " + formatNumber(d.data.value) + "<br/>" + pctLabel + ": " + (lang === "ne" ? toNepaliDigits(percentage) : percentage) + "%"
+            ).style("left", event.pageX + 10 + "px").style("top", event.pageY - 28 + "px").transition().duration(200).style("opacity", 1);
+          })
+          .on("click", function(event, d) {
+            if (isMobile) {
+              d3.select(this).transition().duration(200)
+                .attr("transform", function(d) {
+                  var dist = 12, angle = (d.startAngle + d.endAngle) / 2;
+                  return "translate(" + Math.sin(angle) * dist + "," + (-Math.cos(angle) * dist) + ")";
+                }).style("filter", "brightness(1.1) drop-shadow(0px 8px 12px rgba(0,0,0,0.2))");
+              var percentage = ((d.data.value / total) * 100).toFixed(1);
+              var countLabel = lang === "ne" ? "संख्या" : "Count";
+              var pctLabel = lang === "ne" ? "प्रतिशत" : "Percentage";
+              tooltip.html(
+                "<strong>" + translateLabel(getLabel(d.data)) + "</strong><br/>" + countLabel + ": " + formatNumber(d.data.value) + "<br/>" + pctLabel + ": " + (lang === "ne" ? toNepaliDigits(percentage) : percentage) + "%"
+              ).style("left", event.pageX + 10 + "px").style("top", event.pageY - 28 + "px").transition().duration(200).style("opacity", 1);
+              var self = this;
+              setTimeout(function() {
+                d3.select(self).transition().duration(300).attr("transform", "translate(0,0)").style("filter", "drop-shadow(0px 4px 6px rgba(0,0,0,0.1))");
+                tooltip.transition().duration(500).style("opacity", 0);
+              }, 3000);
+            }
+          })
+          .on("mouseout", function() {
+            if (!isMobile) {
               d3.select(this).transition().duration(300).attr("transform", "translate(0,0)").style("filter", "drop-shadow(0px 4px 6px rgba(0,0,0,0.1))");
               tooltip.transition().duration(500).style("opacity", 0);
-            }, 3000);
-          }
-        })
-        .on("mouseout", function () {
-          if (!isMobile) {
-            d3.select(this)
-              .transition()
-              .duration(300)
-              .attr("transform", "translate(0,0)")
-              .style("filter", "drop-shadow(0px 4px 6px rgba(0,0,0,0.1))");
-            tooltip.transition().duration(500).style("opacity", 0);
-          }
-        })
-        .transition()
-        .duration(1500)
-        .attrTween("d", function (d) {
-          const i = d3.interpolate({ startAngle: 0, endAngle: 0 }, d);
-          return function (t) {
-            return arc(i(t));
-          };
-        });
+            }
+          })
+          .transition().duration(1500)
+          .attrTween("d", function(d) {
+            var i = d3.interpolate({ startAngle: 0, endAngle: 0 }, d);
+            return function(t) { return arc(i(t)); };
+          });
 
-      // Add labels (for arcs > 5%)
-      const arcLabel = d3
-        .arc()
-        .innerRadius(radius * 0.9)
-        .outerRadius(radius * 0.9);
-      arcs
-        .append("text")
-        .attr("transform", (d) => `translate(${arcLabel.centroid(d)})`)
-        .attr("dy", "0.35em")
-        .style("text-anchor", (d) =>
-          (d.endAngle + d.startAngle) / 2 > Math.PI ? "end" : "start",
-        )
-        .text((d) => {
-          const p = (d.data.value / total) * 100;
-          return p >= 3 ? `${p.toFixed(1)}%` : "";
-        })
-        .style("fill", "var(--text-heading)")
-        .style("font-weight", "bold")
-        .style("font-size", "14px")
-        .style("opacity", 0)
-        .transition()
-        .delay(1000)
-        .duration(500)
-        .style("opacity", 1);
+        // Add percentage labels for arcs > 3%
+        var arcLabel = d3.arc().innerRadius(radius * 0.9).outerRadius(radius * 0.9);
+        arcs.append("text")
+          .attr("transform", function(d) { return "translate(" + arcLabel.centroid(d) + ")"; })
+          .attr("dy", "0.35em")
+          .style("text-anchor", function(d) { return (d.endAngle + d.startAngle) / 2 > Math.PI ? "end" : "start"; })
+          .text(function(d) {
+            var p = (d.data.value / total) * 100;
+            if (p < 3) return "";
+            var pStr = p.toFixed(1);
+            return (lang === "ne" ? toNepaliDigits(pStr) : pStr) + "%";
+          })
+          .style("fill", "var(--text-heading)").style("font-weight", "bold").style("font-size", "14px")
+          .style("opacity", 0).transition().delay(1000).duration(500).style("opacity", 1);
+      }
     }
-    }
-  })();
+  }
 </script>
 
 <style is:global>
