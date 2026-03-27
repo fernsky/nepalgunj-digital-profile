@@ -47,7 +47,7 @@ function translateLabel(label: string, language: Lang): string {
 ---
 
 <div
-  class="my-12 p-8 rounded-3xl group relative overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-primary-500/10"
+  class="my-12 p-8 rounded-xl group relative overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-primary-500/10"
   style="background: var(--card-bg); border: 1px solid var(--card-border);"
 >
   {
@@ -238,7 +238,7 @@ function translateLabel(label: string, language: Lang): string {
         .style("background", "rgba(15, 23, 42, 0.95)")
         .style("color", "white")
         .style("padding", "10px 14px")
-        .style("border-radius", "10px")
+        .style("border-radius", "6px")
         .style("font-size", "13px")
         .style("pointer-events", "none")
         .style("opacity", 0)
@@ -381,7 +381,7 @@ function translateLabel(label: string, language: Lang): string {
         var colorScale = d3.scaleOrdinal().domain(data.map(getLabel)).range(config.colors || d3.schemeSet2);
 
         var pie = d3.pie().value(function(d) { return d.value; }).sort(null);
-        var arc = d3.arc().innerRadius(type === "donut" ? radius * 0.4 : 0).outerRadius(radius * 0.8).cornerRadius(6);
+        var arc = d3.arc().innerRadius(type === "donut" ? radius * 0.4 : 0).outerRadius(radius * 0.8).cornerRadius(3);
 
         var arcs = g.selectAll(".arc").data(pie(data)).enter().append("g").attr("class", "arc");
 

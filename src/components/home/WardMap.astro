@@ -185,7 +185,7 @@ const wardCentroidData: Record<number, number[]> = {
 
       <div
         id="hover-info-box"
-        class="p-6 rounded-2xl border border-primary-500/10 bg-primary-500/5 backdrop-blur-xl opacity-0 transition-opacity duration-300"
+        class="p-6 rounded-lg border border-primary-500/10 bg-primary-500/5 backdrop-blur-xl opacity-0 transition-opacity duration-300"
       >
         <h4
           id="ward-name"
@@ -285,11 +285,14 @@ const wardCentroidData: Record<number, number[]> = {
 
     function getColor(pop) {
       const t = (pop - minPop) / (maxPop - minPop);
-      return d3.interpolateBlues(0.25 + t * 0.55);
+      const isDark = document.documentElement.classList.contains('dark');
+      return isDark ? d3.interpolateBlues(0.4 + t * 0.5) : d3.interpolateBlues(0.6 + t * 0.35);
     }
 
     function getOpacity(pop) {
-      return 0.3 + ((pop - minPop) / (maxPop - minPop)) * 0.55;
+      const isDark = document.documentElement.classList.contains('dark');
+      const base = isDark ? 0.7 : 0.85;
+      return base + ((pop - minPop) / (maxPop - minPop)) * (isDark ? 0.25 : 0.15);
     }
 
     // ============ ENTRANCE ANIMATION ============
@@ -316,7 +319,7 @@ const wardCentroidData: Record<number, number[]> = {
         .delay(i * 40)
         .ease(d3.easeCubicOut)
         .attr("stroke-dashoffset", 0)
-        .attr("stroke-opacity", 0.6)
+        .attr("stroke-opacity", 0.9)
         .transition()
         .duration(500)
         .ease(d3.easeCubicInOut)
@@ -324,7 +327,7 @@ const wardCentroidData: Record<number, number[]> = {
         .attr("fill-opacity", opacity)
         .attr("stroke-dasharray", "none")
         .attr("stroke", "#ffffff")
-        .attr("stroke-width", 1.2);
+        .attr("stroke-width", 2.2);
     });
 
     // ============ HOVER INTERACTION ============
@@ -378,8 +381,8 @@ const wardCentroidData: Record<number, number[]> = {
             .attr("fill", getColor(w.pop))
             .attr("fill-opacity", getOpacity(w.pop))
             .attr("stroke", "#ffffff")
-            .attr("stroke-width", 1.2)
-            .attr("stroke-opacity", 0.6)
+            .attr("stroke-width", 2.2)
+            .attr("stroke-opacity", 0.9)
             .attr("filter", null);
         });
         infoBox.style.opacity = "0";
@@ -397,6 +400,6 @@ const wardCentroidData: Record<number, number[]> = {
     transition: filter 0.3s ease;
   }
   #d3-map-wrapper {
-    filter: drop-shadow(0 4px 20px rgba(37, 99, 235, 0.08));
+    filter: drop-shadow(0 10px 40px rgba(37, 99, 235, 0.15));
   }
 </style>

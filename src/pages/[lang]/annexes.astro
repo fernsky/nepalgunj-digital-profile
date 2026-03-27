@@ -79,7 +79,7 @@ function getAnnexContent(slug: string) {
             {content ? (
               <SectionRenderer content={content} lang={lang} id={annex.slug} />
             ) : (
-              <div class="rounded-xl p-8" style="background:var(--card-bg);border:1px solid var(--card-border);">
+              <div class="rounded-lg p-8" style="background:var(--card-bg);border:1px solid var(--card-border);">
                 <p class="italic text-center text-lg mt-4" style="color:var(--text-muted);">
                   {lang === "ne" ? "सामग्री चाँडै थपिनेछ..." : "Content coming soon..."}
                 </p>
@@ -91,10 +91,10 @@ function getAnnexContent(slug: string) {
     </div>
 
     <div class="flex justify-between items-center mt-16 pt-8" style={`border-top:1px solid var(--border);`}>
-      <a href={`/${lang}/chapter-8`} class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium no-underline" style="color:var(--text-body);background:var(--card-bg);border:1px solid var(--card-border);">
+      <a href={`/${lang}/chapter-8`} class="inline-flex items-center gap-2 px-5 py-2.5 rounded-md text-sm font-medium no-underline" style="color:var(--text-body);background:var(--card-bg);border:1px solid var(--card-border);">
         ← {t(lang, "chapter.label")} 8
       </a>
-      <a href={`/${lang}/`} class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium no-underline" style="color:var(--text-body);background:var(--card-bg);border:1px solid var(--card-border);">
+      <a href={`/${lang}/`} class="inline-flex items-center gap-2 px-5 py-2.5 rounded-md text-sm font-medium no-underline" style="color:var(--text-body);background:var(--card-bg);border:1px solid var(--card-border);">
         {t(lang, "nav.home")}
       </a>
     </div>
