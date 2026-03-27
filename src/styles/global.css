@@ -11,8 +11,8 @@
   --color-primary-700: #1d4ed8;
   --color-primary-800: #1e40af;
   --color-primary-900: #1e3a5f;
-  --font-sans: "Inter", "Noto Sans Devanagari", system-ui, sans-serif;
-  --font-serif: "Lora", "Noto Sans Devanagari", serif;
+  --font-sans: "Inter", "Noto Serif Devanagari", system-ui, sans-serif;
+  --font-serif: "Noto Serif Devanagari", serif;
 }
 
 html {
