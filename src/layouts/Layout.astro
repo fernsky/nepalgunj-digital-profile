@@ -9,8 +9,9 @@ import { t } from "../i18n/utils";
 interface Props {
   lang: Lang;
   title?: string;
+  noSpacer?: boolean;
 }
-const { lang, title } = Astro.props;
+const { lang, title, noSpacer = false } = Astro.props;
 const pageTitle = title || t(lang, "site.title");
 ---
 
@@ -39,7 +40,7 @@ const pageTitle = title || t(lang, "site.title");
     </script>
   </head>
   <body>
-    <Navbar lang={lang} currentPath={Astro.url.pathname} />
+    <Navbar lang={lang} currentPath={Astro.url.pathname} noSpacer={noSpacer} />
     <main>
       <slot />
     </main>

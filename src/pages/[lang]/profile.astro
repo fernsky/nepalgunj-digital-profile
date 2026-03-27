@@ -38,7 +38,7 @@ function getSectionContent(chapterNum: number, slug: string) {
       <!-- Quick Jump Navigation -->
       <div class="mt-8 sm:mt-12 flex flex-wrap gap-2 sm:gap-3">
         {chapters.map((ch) => (
-          <a href={`#chapter-${ch.num}`} class="px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium rounded-xl no-underline transition-all border hover:border-primary-500 hover:bg-primary-500/10" style="color:var(--text-body);border-color:var(--border);">
+          <a href={`#chapter-${ch.num}`} class="px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium rounded-md no-underline transition-all border hover:border-primary-500 hover:bg-primary-500/10" style="color:var(--text-body);border-color:var(--border);">
             {t(lang, "chapter.label")} {lang === "ne" ? toNepaliDigits(ch.num) : ch.num}
           </a>
         ))}
@@ -51,7 +51,7 @@ function getSectionContent(chapterNum: number, slug: string) {
     {chapters.map((chapter, idx) => (
       <div id={`chapter-${chapter.num}`} class="scroll-mt-20 mb-16 sm:mb-24">
         <!-- Chapter Header -->
-        <div class="relative py-8 sm:py-12 mb-8 sm:mb-12 overflow-hidden rounded-2xl sm:rounded-3xl" style="background:linear-gradient(135deg, rgba(29,78,216,0.08) 0%, transparent 50%); border: 1px solid rgba(29,78,216,0.1);">
+        <div class="relative py-8 sm:py-12 mb-8 sm:mb-12 overflow-hidden rounded-lg sm:rounded-xl" style="background:linear-gradient(135deg, rgba(29,78,216,0.08) 0%, transparent 50%); border: 1px solid rgba(29,78,216,0.1);">
           <div class="relative z-10 px-5 sm:px-8">
             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full mb-3 sm:mb-4" style="background:rgba(29,78,216,0.15);border:1px solid rgba(29,78,216,0.3);">
               <span class="text-primary-400 text-sm font-medium">{t(lang, "chapter.label")} {lang === "ne" ? toNepaliDigits(chapter.num) : chapter.num}</span>

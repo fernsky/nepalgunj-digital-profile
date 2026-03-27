@@ -2,8 +2,8 @@
 import { type Lang } from "../i18n/translations";
 import { t, getChapters, getAnnexes, getAlternateUrl, formatSectionId, toNepaliDigits } from "../i18n/utils";
 
-interface Props { lang: Lang; currentPath: string; }
-const { lang, currentPath } = Astro.props;
+interface Props { lang: Lang; currentPath: string; noSpacer?: boolean; }
+const { lang, currentPath, noSpacer = false } = Astro.props;
 const chapters = getChapters();
 const annexItems = getAnnexes();
 const alternateLang: Lang = lang === "ne" ? "en" : "ne";
@@ -11,37 +11,37 @@ const alternateUrl = getAlternateUrl(currentPath, alternateLang);
 const cleanTitle = (title: string) => title.replace(/^[\d\u0966-\u096F\.]+\s*/, '');
 ---
 
-<nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b" style={`background:var(--nav-bg);border-color:var(--border);`}>
+<nav id="main-nav" class="absolute top-0 left-0 right-0 z-50 border-b" style={`background:transparent;border-color:rgba(255,255,255,0.4);`}>
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-14">
-    <div class="flex items-center justify-between h-16">
+    <div class="flex items-center justify-between h-24">
       <div class="flex items-center gap-8 min-w-0">
         <!-- Logo -->
-        <a href={`/${lang}/`} class="flex items-center gap-2 sm:gap-3 no-underline group shrink-0">
-          <img src="/coat of arms.png" alt="Coat of Arms" class="w-10 h-10 sm:w-12 sm:h-12 object-contain" />
+        <a href={`/${lang}/`} class="flex items-center gap-3 sm:gap-4 no-underline group shrink-0">
+          <img src="/coat of arms.png" alt="Coat of Arms" class="w-12 h-12 sm:w-16 sm:h-16 object-contain" />
           <div class="flex flex-col leading-tight">
-            <span class="font-bold text-base sm:text-lg" style="color:var(--text-heading);">{t(lang, "site.name")}</span>
-            <span class="text-[10px] sm:text-xs hidden sm:block" style="color:var(--text-muted);">{t(lang, "site.subtitle")}</span>
+            <span class="font-bold text-lg sm:text-xl" style="color:var(--text-heading);">{t(lang, "site.name")}</span>
+            <span class="text-xs sm:text-sm hidden sm:block" style="color:var(--text-heading); opacity: 0.8;">{t(lang, "site.subtitle")}</span>
           </div>
         </a>
 
         <!-- Desktop Nav Links (hidden on mobile) -->
         <div class="hidden lg:flex items-center gap-1">
-          <a href={`/${lang}/`} class="px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 no-underline" style={`color:var(--text-body);`}
-            onmouseover="this.style.color='var(--text-heading)';this.style.background='var(--hover-bg)'"
-            onmouseout="this.style.color='var(--text-body)';this.style.background='transparent'"
+          <a href={`/${lang}/`} class="px-4 py-2 text-base font-semibold rounded-md transition-all duration-200 no-underline" style={`color:var(--text-heading);`}
+            onmouseover="this.style.background='var(--hover-bg)'"
+            onmouseout="this.style.background='transparent'"
           >
             {t(lang, "nav.home")}
           </a>
 
-          <a href={`/${lang}/profile`} class="px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 no-underline" style={`color:var(--text-body);`}
-            onmouseover="this.style.color='var(--text-heading)';this.style.background='var(--hover-bg)'"
-            onmouseout="this.style.color='var(--text-body)';this.style.background='transparent'"
+          <a href={`/${lang}/profile`} class="px-4 py-2 text-base font-semibold rounded-md transition-all duration-200 no-underline" style={`color:var(--text-heading);`}
+            onmouseover="this.style.background='var(--hover-bg)'"
+            onmouseout="this.style.background='transparent'"
           >
             {lang === 'ne' ? 'पूर्ण प्रोफाइल' : 'Full Profile'}
           </a>
 
           <div class="relative" id="chapters-dropdown-container">
-            <button id="chapters-btn" class="px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 flex items-center gap-1.5 cursor-pointer border-0" style={`color:var(--text-body);background:transparent;`}>
+            <button id="chapters-btn" class="px-4 py-2 text-base font-semibold rounded-md transition-all duration-200 flex items-center gap-1.5 cursor-pointer border-0" style={`color:var(--text-heading);background:transparent;`}>
               {t(lang, "nav.chapters")}
               <svg id="chapters-chevron" class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -49,7 +49,7 @@ const cleanTitle = (title: string) => title.replace(/^[\d\u0966-\u096F\.]+\s*/, 
             </button>
 
             <!-- Mega Dropdown -->
-            <div id="chapters-mega-dropdown" class="absolute top-full right-0 lg:left-1/2 lg:-translate-x-1/2 mt-2 w-[860px] rounded-xl shadow-2xl opacity-0 invisible translate-y-2 transition-all duration-300 overflow-hidden" style={`background:var(--dropdown-bg);border:1px solid var(--border);`}>              <div class="flex">
+            <div id="chapters-mega-dropdown" class="absolute top-full right-0 lg:left-1/2 lg:-translate-x-1/2 mt-2 w-[860px] rounded-lg shadow-2xl opacity-0 invisible translate-y-2 transition-all duration-300 overflow-hidden" style={`background:var(--dropdown-bg);border:1px solid var(--border);`}>              <div class="flex">
                 <!-- Left Panel -->
                 <div class="w-[260px] py-3 max-h-[480px] overflow-y-auto border-r" style={`background:var(--dropdown-sidebar);border-color:var(--border);`}>
                   {chapters.map((chapter) => (
@@ -113,7 +113,7 @@ const cleanTitle = (title: string) => title.replace(/^[\d\u0966-\u096F\.]+\s*/, 
 
       <!-- Right: Theme + Lang + Mobile Hamburger -->
       <div class="flex items-center gap-2 sm:gap-3">
-        <button id="theme-toggle" class="p-2 rounded-lg transition-all duration-200 cursor-pointer border-0" style="color:var(--text-muted);background:transparent;" aria-label="Toggle theme">
+        <button id="theme-toggle" class="p-2 rounded-md transition-all duration-200 cursor-pointer border-0" style="color:var(--text-muted);background:transparent;" aria-label="Toggle theme">
           <svg id="theme-icon-sun" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
           <svg id="theme-icon-moon" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" /></svg>
         </button>
@@ -129,7 +129,7 @@ const cleanTitle = (title: string) => title.replace(/^[\d\u0966-\u096F\.]+\s*/, 
         </div>
 
         <!-- Mobile Hamburger Button -->
-        <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg transition-all duration-200 cursor-pointer border-0" style="color:var(--text-heading);background:transparent;" aria-label="Open menu">
+        <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-md transition-all duration-200 cursor-pointer border-0" style="color:var(--text-heading);background:transparent;" aria-label="Open menu">
           <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
@@ -210,7 +210,7 @@ const cleanTitle = (title: string) => title.replace(/^[\d\u0966-\u096F\.]+\s*/, 
   </div>
 </div>
 
-<div class="h-16"></div>
+{!noSpacer && <div class="h-16"></div>}
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
