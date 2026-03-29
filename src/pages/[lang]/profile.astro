@@ -25,8 +25,8 @@ function getSectionContent(chapterNum: number, slug: string) {
   <section class="relative py-12 sm:py-20 overflow-hidden" style="background: var(--nav-bg);">
     <div class="absolute inset-0 opacity-[0.03]" style="background-image: url('data:image/svg+xml,%3Csvg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cg fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;%3E%3Cpath d=&quot;M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z&quot; fill=&quot;%23888&quot;/%3E%3C/g%3E%3C/svg%3E');"></div>
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-14">
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full mb-4" style="background:rgba(29,78,216,0.15);border:1px solid rgba(29,78,216,0.3);">
-        <span class="text-primary-400 text-sm font-medium">{lang === 'ne' ? 'पूर्ण विवरण' : 'Complete Profile'}</span>
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full mb-4" style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);">
+        <span class="text-sm font-medium" style="color:var(--text-heading);">{lang === 'ne' ? 'पूर्ण विवरण' : 'Complete Profile'}</span>
       </div>
       <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black mb-4" style="color:var(--text-heading);">
         {t(lang, "hero.title")}
@@ -38,7 +38,7 @@ function getSectionContent(chapterNum: number, slug: string) {
       <!-- Quick Jump Navigation -->
       <div class="mt-8 sm:mt-12 flex flex-wrap gap-2 sm:gap-3">
         {chapters.map((ch) => (
-          <a href={`#chapter-${ch.num}`} class="px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium rounded-md no-underline transition-all border hover:border-primary-500 hover:bg-primary-500/10" style="color:var(--text-body);border-color:var(--border);">
+          <a href={`/${lang}/${ch.slug}`} class="px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium rounded-md no-underline transition-all border hover:border-primary-500 hover:bg-primary-500/10" style="color:var(--text-body);border-color:var(--border);">
             {t(lang, "chapter.label")} {lang === "ne" ? toNepaliDigits(ch.num) : ch.num}
           </a>
         ))}
@@ -51,10 +51,10 @@ function getSectionContent(chapterNum: number, slug: string) {
     {chapters.map((chapter, idx) => (
       <div id={`chapter-${chapter.num}`} class="scroll-mt-20 mb-16 sm:mb-24">
         <!-- Chapter Header -->
-        <div class="relative py-8 sm:py-12 mb-8 sm:mb-12 overflow-hidden rounded-lg sm:rounded-xl" style="background:linear-gradient(135deg, rgba(29,78,216,0.08) 0%, transparent 50%); border: 1px solid rgba(29,78,216,0.1);">
+        <div class="relative py-8 sm:py-12 mb-8 sm:mb-12 overflow-hidden rounded-lg sm:rounded-xl" style="background:linear-gradient(135deg, rgba(255,255,255,0.03) 0%, transparent 50%); border: 1px solid rgba(255,255,255,0.08);">
           <div class="relative z-10 px-5 sm:px-8">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full mb-3 sm:mb-4" style="background:rgba(29,78,216,0.15);border:1px solid rgba(29,78,216,0.3);">
-              <span class="text-primary-400 text-sm font-medium">{t(lang, "chapter.label")} {lang === "ne" ? toNepaliDigits(chapter.num) : chapter.num}</span>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full mb-3 sm:mb-4" style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);">
+              <span class="text-sm font-medium" style="color:var(--text-heading);">{t(lang, "chapter.label")} {lang === "ne" ? toNepaliDigits(chapter.num) : chapter.num}</span>
             </div>
             <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold mb-3" style="color:var(--text-heading);">
               {chapter.title[lang]}

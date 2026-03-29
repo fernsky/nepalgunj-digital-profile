@@ -13,35 +13,74 @@ const lang = Astro.params.lang as Lang;
 
 <Layout lang={lang} noSpacer={true}>
   <!-- Hero Section - full viewport -->
-  <section class="relative min-h-screen flex items-center overflow-hidden bg-cover bg-center" style="background-image: url('/7/Rupanihiya-Road.jpg');">
+  <section
+    class="relative min-h-screen flex items-center overflow-hidden bg-cover bg-center"
+    style="background-image: url('/7/Rupanihiya-Road.jpg');"
+  >
     <!-- Overlay for readability -->
-    <div class="absolute inset-0 z-0" style="background: var(--bg-overlay);"></div>
-    
+    <div class="absolute inset-0 z-0" style="background: var(--bg-overlay);">
+    </div>
+
     <!-- Base gradient overlay -->
     <div class="absolute inset-0 z-0 opacity-30">
-      <div class="absolute inset-0" style="background:radial-gradient(circle at 10% 30%, rgba(29,78,216,0.15) 0%, transparent 40%);"></div>
+      <div
+        class="absolute inset-0"
+        style="background:radial-gradient(circle at 10% 30%, rgba(255,255,255,0.05) 0%, transparent 40%);"
+      >
+      </div>
     </div>
 
     <!-- Hero Content -->
-    <div class="relative z-10 px-4 sm:px-6 lg:px-14 pb-12 sm:pb-20 pt-36 sm:pt-44 w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:items-start gap-10 sm:gap-16">
+    <div
+      class="relative z-10 px-4 sm:px-6 lg:px-14 pb-12 sm:pb-20 pt-36 sm:pt-44 w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:items-start gap-10 sm:gap-16"
+    >
       <div class="w-full lg:w-1/2">
-        <h1 class="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-6 sm:mb-10 leading-tight" style="color:var(--text-heading);">
+        <h1
+          class="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-6 sm:mb-10 leading-tight"
+          style="color:var(--text-heading);"
+        >
           {t(lang, "hero.title")}
         </h1>
 
-        <p class="text-base sm:text-lg lg:text-xl mb-8 sm:mb-12 leading-relaxed opacity-90 max-w-xl" style="color:var(--text-body);">
+        <p
+          class="text-base sm:text-lg lg:text-xl mb-8 sm:mb-12 leading-relaxed opacity-90 max-w-xl"
+          style="color:var(--text-body);"
+        >
           {t(lang, "hero.description")}
         </p>
 
         <div class="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
-          <a href={`/${lang}/profile`} class="group px-8 sm:px-10 py-4 bg-primary-600 hover:bg-primary-500 text-white font-bold rounded-lg transition-all duration-300 shadow-2xl shadow-primary-900/40 flex items-center justify-center gap-3 no-underline border-0 active:scale-95 text-center">
-             <span>{lang === 'ne' ? 'पूर्ण प्रोफाइल हेर्नुहोस्' : 'View Full Profile'}</span>
-             <svg class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-             </svg>
+          <a
+            href={`/${lang}/profile`}
+            class="group px-8 sm:px-10 py-4 border border-primary-500/30 hover:border-primary-500 hover:bg-primary-500/5 font-bold rounded-lg transition-all duration-300 flex items-center justify-center gap-3 no-underline active:scale-95 text-center"
+            style="color:var(--text-heading);"
+          >
+            <span
+              >{
+                lang === "ne"
+                  ? "पूर्ण प्रोफाइल हेर्नुहोस्"
+                  : "View Full Profile"
+              }</span
+            >
+            <svg
+              class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2.5"
+                d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+            </svg>
           </a>
-          <a href="#demographics-map" class="px-8 sm:px-10 py-4 border border-primary-500/30 hover:border-primary-500 hover:bg-primary-500/5 font-bold rounded-lg transition-all duration-300 no-underline active:scale-95 text-center" style="color:var(--text-heading);">
-             {lang === 'ne' ? 'नक्सा हेर्नुहोस्' : 'Explore Map'}
+          <a
+            href="#demographics-map"
+            class="px-8 sm:px-10 py-4 border border-primary-500/30 hover:border-primary-500 hover:bg-primary-500/5 font-bold rounded-lg transition-all duration-300 no-underline active:scale-95 text-center"
+            style="color:var(--text-heading);"
+          >
+            {lang === "ne" ? "नक्सा हेर्नुहोस्" : "Explore Map"}
           </a>
         </div>
       </div>
@@ -49,23 +88,43 @@ const lang = Astro.params.lang as Lang;
   </section>
 
   <!-- Demographics Map Section -->
-  <section id="demographics-map" class="py-16 sm:py-32 relative overflow-hidden bg-cover bg-center" style="background-image: url('/7/Nepalgunj-Bus-Park.jpg');">
+  <section
+    id="demographics-map"
+    class="py-16 sm:py-32 relative overflow-hidden bg-cover bg-center"
+    style="background-image: url('/7/Nepalgunj-Bus-Park.jpg');"
+  >
     <!-- Overlay for readability -->
-    <div class="absolute inset-0 z-0" style="background: var(--bg-overlay);"></div>
+    <div class="absolute inset-0 z-0" style="background: var(--bg-overlay);">
+    </div>
 
     <!-- Decoration -->
-    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-px h-24 bg-gradient-to-b from-primary-500/50 to-transparent z-10"></div>
+    <div
+      class="absolute top-0 left-1/2 -translate-x-1/2 w-px h-24 bg-gradient-to-b from-primary-500/50 to-transparent z-10"
+    >
+    </div>
 
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-14">
       <div class="mb-10 sm:mb-20">
-        <h2 class="text-2xl sm:text-4xl lg:text-5xl font-black mb-4 sm:mb-6" style="color:var(--text-heading);">
-           {lang === 'ne' ? 'नगरको जनसांख्यिक प्रोफाइल' : 'City Demographic Profile'}
+        <h2
+          class="text-2xl sm:text-4xl lg:text-5xl font-black mb-4 sm:mb-6"
+          style="color:var(--text-heading);"
+        >
+          {
+            lang === "ne"
+              ? "नगरको जनसांख्यिक प्रोफाइल"
+              : "City Demographic Profile"
+          }
         </h2>
-        <div class="w-24 h-2 bg-primary-500 rounded-full mb-8 shadow-[0_0_10px_rgba(59,130,246,0.5)]"></div>
+        <div
+          class="w-24 h-2 bg-primary-500 rounded-full mb-8 shadow-[0_0_10px_rgba(255,255,255,0.15)]"
+        >
+        </div>
         <p class="text-lg max-w-2xl opacity-80" style="color:var(--text-body);">
-           {lang === 'ne' 
-             ? "नेपालगंज उप-महानगरपालिकाका २३ वडाहरूको नक्सा र जनसंख्या वितरण आधारभूत जानकारी हेर्नुहोस्। थप विवरणका लागि नक्सामा वडा छान्नुहोस्।" 
-             : "Explore the ward-wise population distribution and demographic overview of Nepalgunj's 23 wards. Interact with the map to see details."}
+          {
+            lang === "ne"
+              ? "नेपालगंज उप-महानगरपालिकाका २३ वडाहरूको नक्सा र जनसंख्या वितरण आधारभूत जानकारी हेर्नुहोस्। थप विवरणका लागि नक्सामा वडा छान्नुहोस्।"
+              : "Explore the ward-wise population distribution and demographic overview of Nepalgunj's 23 wards. Interact with the map to see details."
+          }
         </p>
       </div>
 
@@ -77,8 +136,12 @@ const lang = Astro.params.lang as Lang;
 
 <style>
   @keyframes spin-slow {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
   }
   .animate-spin-slow {
     animation: spin-slow 15s linear infinite;
