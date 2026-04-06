@@ -145,7 +145,7 @@ const title = content?.title ?? "";
                 const ageLabel = lang === "ne" ? translateLabel("Age", lang) : "Age";
                 const maleLabel = translateLabel("Male", lang);
                 tooltip.html(
-                    `<div class="font-bold text-gray-300 mb-1">${ageLabel}: ${lang === "ne" ? toNepaliDigits(d.age) : d.age}</div><div class="flex justify-between gap-4"><span class="text-blue-400">${maleLabel}:</span><span class="font-medium">${formatNumber(d.male, lang)}</span></div>`
+                    `<div class="font-bold text-gray-300 mb-1">${ageLabel}: ${lang === "ne" ? toNepaliDigits(d.age) : d.age}</div><div class="flex justify-between gap-4"><span class="text-gray-300">${maleLabel}:</span><span class="font-medium">${formatNumber(d.male, lang)}</span></div>`
                 );
                 tooltip.style("display", "block").style("opacity", 1);
             })
@@ -162,7 +162,7 @@ const title = content?.title ?? "";
                 const ageLabel = lang === "ne" ? translateLabel("Age", lang) : "Age";
                 const femaleLabel = translateLabel("Female", lang);
                 tooltip.html(
-                    `<div class="font-bold text-gray-300 mb-1">${ageLabel}: ${lang === "ne" ? toNepaliDigits(d.age) : d.age}</div><div class="flex justify-between gap-4"><span class="text-blue-300">${femaleLabel}:</span><span class="font-medium">${formatNumber(d.female, lang)}</span></div>`
+                    `<div class="font-bold text-gray-300 mb-1">${ageLabel}: ${lang === "ne" ? toNepaliDigits(d.age) : d.age}</div><div class="flex justify-between gap-4"><span class="text-gray-400">${femaleLabel}:</span><span class="font-medium">${formatNumber(d.female, lang)}</span></div>`
                 );
                 tooltip.style("display", "block").style("opacity", 1);
             })

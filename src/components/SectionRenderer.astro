@@ -1,10 +1,11 @@
 ---
 import InteractiveChart from "./InteractiveChart.astro";
 import { toNepaliDigits } from "../i18n/utils";
+import type { Lang } from "../i18n/translations";
 
 interface Props {
   content: any;
-  lang: string;
+  lang: Lang;
   id: string;
 }
 const { content, lang, id } = Astro.props;
@@ -230,14 +231,14 @@ if (content?.type === "multi-block" && content.blocks) {
         {(content.type === "table" || content.table) && !content.blocks && (
           <div class="my-8">
             { (content.table?.title || content.data?.title) && (
-              <div class="text-center font-bold text-lg mb-4" style="color:var(--primary-500);">
+              <div class="text-center font-bold text-lg mb-4" style="color:var(--text-heading);">
                 {content.table?.title || content.data?.title}
               </div>
             )}
             <div class="overflow-x-auto rounded-xl shadow-sm border" style="border-color:var(--card-border);">
               <table class="w-full text-left border-collapse min-w-[600px]">
                 { (content.table?.headers || content.data?.headers) && (
-                  <thead class="bg-blue-500 text-white" style="background-color: #4A88D0;">
+                  <thead style="background: var(--hover-bg);">
                     {(() => {
                       const rawHeaders = content.table?.headers || content.data?.headers;
                       const normalizedHeaders = Array.isArray(rawHeaders[0]) ? rawHeaders : [rawHeaders];
@@ -247,7 +248,8 @@ if (content?.type === "multi-block" && content.blocks) {
                             <th 
                               rowspan={h.rowspan > 1 ? Number(h.rowspan) : undefined} 
                               colspan={h.colspan > 1 ? Number(h.colspan) : undefined} 
-                              class="px-4 py-3 font-semibold border border-white/30 text-center align-middle"
+                              class="px-4 py-3 font-semibold border text-center align-middle"
+                              style="border-color: var(--card-border); color: var(--text-heading);"
                             >
                               {typeof h === 'string' ? h : h.text}
                             </th>
@@ -259,7 +261,7 @@ if (content?.type === "multi-block" && content.blocks) {
                 )}
                 <tbody style="background:var(--card-bg);">
                   {(content.table?.rows || content.data?.rows || []).map((row: any[], i: number) => (
-                    <tr class={i % 2 === 0 ? "" : "bg-blue-50/10 dark:bg-white/5"}>
+                    <tr class={i % 2 === 0 ? "" : "bg-white/[0.02]"}>
                        {row.map((cell: any, j: number) => {
                          const isObj = typeof cell === 'object' && cell !== null;
                          const text = isObj ? cell.text : cell;
